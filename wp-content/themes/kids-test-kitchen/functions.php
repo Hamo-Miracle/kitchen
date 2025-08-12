@@ -379,7 +379,6 @@ function add_private_admin_menu_item() {
         Crb_Current_User()->is( 'crb_facilitator' ) || Crb_Current_User()->is( 'crb_assistant' )
     ) {
         add_menu_page( 'linked_url', 'Team Bulletin', 'read', home_url('/teambulletin'), '', 'dashicons-text', 2 );
-        add_menu_page( 'linked_url', 'Schedule', 'read', home_url('/schedule'), '', 'dashicons-calendar-alt', 2 );
     }
     if (
         Crb_Current_User()->is( 'crb_session_admin' )
@@ -850,14 +849,6 @@ function submit_user_rating() {
     wp_send_json(['message' => 'Thank you for your rating!']);
 }
 
-// Force template assignment for user schedule page
-add_filter('template_include', function($template) {
-    if (is_page('user-schedule')) { // Change 'user-schedule' to your page slug
-        return get_template_directory() . '/page-user-schedule.php';
-    }
-    return $template;
-});
-
 add_action('wp_ajax_get_user_data', 'get_user_data');
 function get_user_data() {
     $user_id = intval($_GET['user_id']);
@@ -986,41 +977,6 @@ function get_airtable_classes() {
     wp_send_json($events);
 }
 
-//user-shcedule
-
-function airtable_user_schedule_shortcode() {
-    // Get current WordPress user
-    $current_user = wp_get_current_user();
-    
-    // If user is not logged in, show a message or return empty
-    if (!$current_user->exists()) {
-        return '<p>Please log in to view your schedule.</p>';
-    }
-    
-    // Get user's display name for filtering
-    $user_name = esc_attr($current_user->user_login);
-	// $rec_id = get_user_meta($current_user->ID, 'rec_id', true);
-
-	// $record_id = $rec_id;
-	// $filter_structure = [0, ["uyBon", 6, [$rec_id]]];
-	// $json_encoded = json_encode($filter_structure);
-	// $base64_encoded = base64_encode($json_encoded);
-	// $filter_param = "ywyKN=b%3A:" . urlencode($base64_encoded);
-	$filter_param = get_user_filter_url($user_name);
-
-	$embed_url = 'https://airtable.com/embed/appwucJ3VAIrqPAQQ/shrcLkdMj5dKnTo9N' . $filter_param;
-    
-    // Create the filtered embed code
-    $embed_code = '<iframe class="airtable-embed"
-      src="' . esc_url($embed_url) . '" 
-      frameborder="0" onmousewheel="" width="100%" height="733" 
-      style="background: transparent; border: 1px solid #ccc;">
-    </iframe>';
-    
-    return $embed_code;
-}
-add_shortcode('schedule', 'airtable_user_schedule_shortcode');
-
 function get_user_filter_url($user_name) {
 	$user_filter_urls = [
         'Alexa Downs' => '?ywyKN=b%3AWzAsWyJ1eUJvbiIsNixbInJlYzU5bmU2cmJTZk5WSEZZIl1dXQ',
@@ -1054,6 +1010,7 @@ function get_user_filter_url($user_name) {
 		'Sheila M Harney' => '?ywyKN=b%3AWzAsWyJ1eUJvbiIsNixbInJlY1RuTXRtSTM1T3JQanhlIl1dXQ',
 		'Sivan Avramovich' => '?ywyKN=b%3AWzAsWyJ1eUJvbiIsNixbInJlY2RWaTdXNVNpM2VCNFdwIl1dXQ',
 		'Sonya Good' => '?ywyKN=b%3AWzAsWyJ1eUJvbiIsNixbInJlYzRjZjR6dWFjOU9vTzNMIl1dXQ',
+        'EMILY TEST' => '?ywyKN=b%3AWzAsWyJ1eUJvbiIsNixbInJlY3Y5eTVUY1k3THoxODNZIl1dXQ',
         // Add more users and their specific filter URLs here
     ];
 
@@ -1061,4 +1018,69 @@ function get_user_filter_url($user_name) {
         ? $user_filter_urls[$user_name] 
         : '';
 	return $filter_url;
+}
+
+/**
+ * Add Schedule admin page accessible at wp-admin/schedule.php
+ */
+add_action('admin_menu', 'add_schedule_admin_page');
+function add_schedule_admin_page()
+{
+    add_menu_page(
+        'Schedule', // Page title
+        'Schedule', // Menu title
+        'read', // Capability required
+        'schedule.php', // Menu slug (this makes it accessible at wp-admin/schedule.php)
+        'schedule_admin_page_callback', // Callback function
+        'dashicons-calendar-alt', // Icon
+        3 // Position
+    );
+}
+
+/**
+ * Display callback for the schedule admin page.
+ */
+function schedule_admin_page_callback()
+{
+    // Check if user has permission to view this page
+    if (!current_user_can('read')) {
+        wp_die(__('You do not have sufficient permissions to access this page.'));
+    }
+    
+    // Get current WordPress user
+    $current_user = wp_get_current_user();
+    
+    // If user is not logged in, show a message
+    if (!$current_user->exists()) {
+        ?>
+        <div class="wrap">
+            <h1>Schedule</h1>
+            <div style="text-align: center; padding: 50px 20px; font-size: 18px; color: #666;">
+                Please log in to view your schedule.
+            </div>
+        </div>
+        <?php
+        return;
+    }
+    
+    // Get user's display name for filtering
+    $user_name = esc_attr($current_user->user_login);
+    $filter_param = get_user_filter_url($user_name);
+    
+    // Create the embed URL
+    $embed_url = 'https://airtable.com/embed/appwucJ3VAIrqPAQQ/shrcLkdMj5dKnTo9N' . $filter_param;
+    
+    // Create the filtered embed code
+    $embed_code = '<iframe class="airtable-embed"
+      src="' . esc_url($embed_url) . '" 
+      frameborder="0" onmousewheel="" width="100%" height="733" 
+      style="background: transparent; border: 1px solid #ccc;">
+    </iframe>';
+    
+    // Display the schedule page with embed code
+    ?>
+    <div class="wrap">
+            <?php echo $embed_code; ?>
+    </div>
+    <?php
 }
