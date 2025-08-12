@@ -33,6 +33,19 @@ class Crb_User_Initialize_Assistant {
 	 * Register User Meta
 	 */
 	function user_meta() {
+		// Add profile display panel
+		Container::make( 'user_meta', 'PROFILE LINK' )
+			->show_on_user_role( $this->role )
+			->show_for( array(
+				'relation' => 'OR',
+				'administrator',
+                'crb_assistant',
+				$this->role
+			) )
+			->add_fields( array(
+				Field::make( 'html', 'crb_profile_display', __( 'Profile', 'crb' ) )
+					->set_html( 'crb_display_user_profile' ),
+			) );
 		Container::make( 'user_meta', 'Address' )
 			->show_on_user_role( $this->role )
 			->show_for( array(

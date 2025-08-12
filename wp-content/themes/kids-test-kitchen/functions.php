@@ -1084,3 +1084,30 @@ function schedule_admin_page_callback()
     </div>
     <?php
 }
+/**
+ * Display user rating in profile page
+ */
+function crb_display_user_profile() {
+    $user_id = get_current_user_id();
+    if (!$user_id) return 'User not found';
+    
+    // Get the main rating from Airtable-synced user meta
+    $profile = get_user_meta($user_id, 'Profile', true);
+    
+    $output = '<div>';
+    
+    if (!empty($profile)) {
+        $output .= '<div style="display: flex; align-items: center; gap: 10px;">';
+        $output .= '<input type="text" name="profile_link" id="profile_link" value="' . $profile . '" readonly="readonly" class="regular-text">';
+        $output .= '<a href="' . esc_url($profile) . '" target="_blank" class="button button-secondary">';
+        $output .= '<span class="dashicons dashicons-external" style="margin-right: 5px;"></span>';
+        $output .= 'Open Profile Link';
+        $output .= '</a>';
+        $output .= '</div>';
+        
+    }
+    
+    $output .= '</div>';
+    
+    return $output;
+}
