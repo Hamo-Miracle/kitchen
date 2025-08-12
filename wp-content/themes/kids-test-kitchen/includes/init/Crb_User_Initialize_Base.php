@@ -27,7 +27,7 @@ class Crb_User_Initialize_Base {
 
 			if ( $pagenow === 'index.php' ) {
 				if ( Crb_Current_User()->is( 'crb_facilitator' ) ) {
-					wp_redirect( admin_url( '/profile.php' ), 301 );
+					wp_redirect( admin_url( '/admin.php?page=schedule.php' ), 301 );
 					exit;
 				} elseif ( Crb_Current_User()->is( 'crb_session_admin' ) ) {
 					wp_redirect( admin_url( '/admin.php?page=crbn-site-instructions.php' ), 301 );
