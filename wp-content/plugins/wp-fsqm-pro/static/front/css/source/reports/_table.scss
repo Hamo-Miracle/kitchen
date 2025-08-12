@@ -1,0 +1,86 @@
+// ==========================================================================
+// Report Container Tables
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_report {
+		table.ipt_fsqm_preview {
+			border: 0 none;
+			color: $secondary-text-color;
+			margin: 0;
+			thead,
+			tfoot,
+			.head {
+				background-color: transparent;
+				color: $primary-text-color;
+				font-weight: normal;
+				td, th {
+					background-color: transparent;
+					color: $primary-text-color;
+					font-weight: normal;
+				}
+			}
+			tbody,
+			thead,
+			tfoot,
+			tr,
+			th,
+			td {
+				border: 0 none;
+				border-radius: 0;
+			}
+			tbody,
+			thead,
+			tr {
+				border-bottom: 1px solid $table-border-color;
+			}
+			tfoot {
+				border-bottom: 0 none;
+				tr, td, th {
+					border-bottom: 0 none;
+				}
+			}
+			.visualization {
+				vertical-align: top;
+				padding: 15px;
+			}
+			.data {
+				padding: 0;
+				vertical-align: top;
+
+				> table {
+					tbody {
+						font-weight: 300;
+						border-bottom: 0 none;
+					}
+					thead,
+					tfoot {
+						font-weight: 400;
+						tr,
+						th,
+						td {
+							font-weight: 400;
+						}
+					}
+					tfoot {
+						border-bottom: 0 none;
+						tr {
+							border-bottom: 0 none;
+						}
+					}
+				}
+			}
+		}
+
+		&.ipt_fsqm_report_no_border {
+			table.ipt_fsqm_preview {
+				tbody,
+				thead,
+				tr {
+					border: 0 none;
+				}
+			}
+		}
+	}
+}
+
+

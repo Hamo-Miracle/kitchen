@@ -1,0 +1,142 @@
+// ==========================================================================
+// Containers, Styled & Collapsibles
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_container {
+		margin-top: 14px;
+		margin-bottom: 14px;
+		// Head
+		.ipt_uif_container_head {
+			h3 {
+				margin-top: 0;
+				margin-bottom: 0;
+				color: $primary-text-color;
+				font-weight: 300;
+				padding: 0 0 14px 0;
+				border-bottom: 1px solid $divider-color;
+				font-size: 1.3em;
+			}
+			.ipticm {
+				font-size: ( 16 / 14 ) * 1em;
+				position: relative;
+				vertical-align: middle;
+				top: -1px;
+			}
+		}
+		// Inner
+		.ipt_uif_container_inner {
+			padding: 14px 0 0;
+		}
+		// Styled container
+		&.eform-styled-container,
+		&.ipt_uif_collapsible {
+			@include material__box-shadow-subtle();
+			background-color: $preset-bg;
+
+
+			> .ipt_uif_container_head {
+				background-color: $styled-container-bg;
+				padding: 0;
+				h3 {
+					padding: 0;
+					margin-bottom: 0;
+					min-height: 3em;
+					line-height: calc(3em - 28px);
+					a {
+						padding: 14px;
+						will-change: color;
+						@include material__smooth-tran( 500ms, color );
+						color: $secondary-text-color;
+						display: block;
+						.collapsible_state {
+							float: right;
+						}
+
+						&:hover,
+						&:active,
+						&:focus {
+							text-decoration: none;
+							color: $secondary-text-color;
+							outline: none;
+						}
+					}
+
+					.collapsible_state {
+						will-change: transform;
+						@include material__smooth-tran( 500ms, transform );
+					}
+				}
+			}
+			&.ipt_uif_collapsible_open {
+				> .ipt_uif_container_head {
+					h3 {
+						a {
+							color: $primary-text-color;
+							&:hover,
+							&:active,
+							&:focus {
+								color: $primary-text-color;
+							}
+						}
+
+						.collapsible_state {
+							-webkit-transform: rotate3d(1, 0, 0, 180deg);
+							        transform: rotate3d(1, 0, 0, 180deg);
+							-webkit-transform-style: preserve-3d;
+							        transform-style: preserve-3d;
+						}
+					}
+				}
+			}
+
+			.ipt_uif_container_inner {
+
+			}
+		}
+		&.eform-styled-container {
+			> .ipt_uif_container_head {
+				h3 {
+					padding: 14px;
+				}
+			}
+			&.ipt_uif_richtext {
+				> .ipt_uif_container_inner {
+					padding: 14px;
+				}
+			}
+		}
+
+		&.ipt_uif_collapsible {
+			margin-bottom: 0;
+			margin-top: -1px;
+			border-top: 1px solid $preset-bg;
+		}
+	}
+
+	.ipt_uif_column {
+		&.ipt_fsqm_container_collapsible,
+		&.ipt_fsqm_container_container {
+			padding: 0;
+			margin: 0;
+			> .ipt_uif_column_inner {
+				padding: 0;
+			}
+		}
+	}
+
+	.ipt_uif_column .ipt_uif_column {
+		&.ipt_fsqm_container_container {
+			> .ipt_uif_column_inner {
+				padding: 0 15px;
+			}
+		}
+	}
+
+	.column-centered-heading {
+		.ipt_uif_container_head {
+			text-align: center;
+		}
+	}
+}
+
+

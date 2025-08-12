@@ -1,0 +1,79 @@
+// ==========================================================================
+// Matrix Form Elements Styles
+// ==========================================================================
+.#{$selector} {
+	// Just vertical align the Element, since it is pretty big
+	.ipt_fsqm_container_matrix,
+	.ipt_fsqm_container_matrix_dropdown,
+	.ipt_fsqm_container_feedback_matrix {
+		.ipt_uif_question {
+			.ipt_uif_question_label,
+			.ipt_uif_question_content {
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
+
+	.ipt_uif_matrix_container {
+		display: block;
+		overflow-x: auto;
+
+		// For radio, checkbox & select2
+		.ipt_uif_matrix {
+			width: 100%;
+			vertical-align: middle;
+			thead th,
+			tfoot th,
+			tbody td {
+				text-align: center;
+			}
+			[type="checkbox"] + label,
+			[type="radio"] + label {
+				display: inline-block;
+				margin: 5px 0;
+				&::before,
+				&::after {
+					margin: 4px;
+				}
+			}
+			td, th {
+				width: 150px;
+				max-width: 100%;
+				@media screen and ( min-width: $screen-md-min ) {
+					width: 300px;
+				}
+			}
+		}
+
+		// For feedback
+		&.ipt_uif_matrix_feedback {
+			.ipt_uif_matrix {
+				min-width: 480px;
+			}
+			tbody td {
+				text-align: left;
+				vertical-align: top;
+				width: 300px;
+			}
+		}
+	}
+
+	// Column adjustments
+	.ipt_uif_column_half,
+	.ipt_uif_column_third,
+	.ipt_uif_column_forth,
+	.ipt_uif_column_two_third,
+	.ipt_uif_column_three_forth {
+		@media screen and ( min-width: $screen-md-min ) {
+			.ipt_uif_matrix {
+				td, th {
+					width: 150px;
+				}
+			}
+		}
+	}
+}
+
+
+

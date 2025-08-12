@@ -1,0 +1,273 @@
+// ==========================================================================
+// Pricing Table Design
+// ==========================================================================
+// == Preset Colors
+$pt-preset-schemes: (
+	'shamrock': #48cfae,
+	'biloba-flower': #ac92ed,
+	'cinnabar': #fb6e52,
+	'bright-turquoise': #03dbda,
+	'charade': #2b2b33,
+	'meteorite': #502783,
+	'vivid-violet': #783393,
+	'tango': #f27c21,
+	'tree-poppy': #f9a11f,
+	'cerulean': #03a9f4,
+	'bahama-blue': #01579b,
+	'aqua-deep': #004d40,
+);
+$pt-bg: $preset-bg !default;
+$pt-text: $primary-text-color !default;
+
+// == Style
+.#{$selector} {
+	.eform-ui-pricing-table-content {
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 15px 0;
+
+		.eform-ui-pricing-table-element {
+			@include material__box-shadow-straight();
+			@include material__smooth-tran();
+
+			margin: 0 0 12px;
+			width: 240px;
+			flex: 0 0 240px;
+			position: relative;
+			background-color: $pt-bg;
+			color: $pt-text;
+			-webkit-transform-origin: center center;
+			        transform-origin: center center;
+
+			// Featured Ribbon
+			.eform-pt-ribbon {
+				height: 24px;
+				background-color: $primary-color-dark;
+				color: $primary-color-text;
+				line-height: 26px;
+				text-transform: uppercase;
+			}
+
+			// Header
+			.eform-pt-header {
+				background-color: $primary-color;
+				color: $primary-color-text;
+				position: relative;
+				margin-bottom: 48px;
+				&::after {
+					display: block;
+					content: '';
+					height: 96px;
+					width: 96px;
+					border-style: solid;
+					border-color: $primary-color transparent transparent
+						transparent;
+					border-width: 48px;
+					position: absolute;
+					-webkit-transform: scale(2.5, 1);
+					        transform: scale(2.5, 1);
+					bottom: -95px;
+					left: 72px;
+				}
+
+				.eform-pt-title {
+					font-size: 26px;
+					color: $primary-color-text;
+					margin: 0;
+					padding: 16px 8px 0;
+				}
+
+				.eform-pt-price {
+					padding: 0;
+					font-size: 48px;
+					position: relative;
+					z-index: 1;
+					bottom: -26px;
+					margin-top: -20px;
+
+					.eform-pt-price-decimal {
+						font-size: 24px;
+						vertical-align: super;
+					}
+				}
+			}
+
+			// Attributes
+			.eform-ui-pricing-table-attr {
+				padding: 24px 32px;
+
+				ul {
+					list-style: none;
+					width: 100%;
+					text-align: center;
+					margin: 0;
+					padding: 0;
+
+					li {
+						padding: 8px;
+						margin: 0;
+						list-style: none;
+						border-bottom: 1px solid $divider-color;
+						box-shadow: 0 1px 0 $pt-bg;
+					}
+				}
+			}
+
+			// Footer
+			.eform-ui-pricing-table-footer {
+				background-color: $primary-color-dark;
+				color: $primary-color-text;
+				padding: 4px 8px;
+				font-size: 24px;
+				text-transform: uppercase;
+				text-align: center;
+			}
+
+			// Item overrides
+			.eform-ui-pricing-table-item {
+				position: relative;
+
+				// Labels
+				label {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					cursor: pointer;
+					z-index: 10;
+				}
+
+				// Color Schemes
+				@each $pt-scheme, $pt-color in $pt-preset-schemes {
+					&.#{$pt-scheme} {
+						.eform-pt-ribbon,
+						.eform-ui-pricing-table-footer {
+							background-color: darken($pt-color, 15%);
+						}
+						.eform-pt-header {
+							background-color: $pt-color;
+							&::after {
+								border-top-color: $pt-color;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Apply with input state
+		.eform-pricing-table-radio {
+			+ .eform-ui-pricing-table-element {
+				@if (lightness($pt-bg) > 50) {
+					background-color: darken($pt-bg, 1%);
+				} @else {
+					background-color: lighten($pt-bg, 1%);
+				}
+
+				opacity: 0.95;
+
+				// == States
+				// Highlighted
+				&.eform-pt-highlight {
+					-webkit-transform: scale(1.08, 1.08);
+					        transform: scale(1.08, 1.08);
+					z-index: 2;
+					opacity: 1;
+					background-color: $pt-bg;
+				}
+				// Hover
+				&:hover {
+					opacity: 1;
+					-webkit-transform: scale(1.07, 1.07);
+					        transform: scale(1.07, 1.07);
+					z-index: 1;
+					background-color: $pt-bg;
+				}
+			}
+			// == Selected
+			&:checked {
+				+ .eform-ui-pricing-table-element {
+					-webkit-transform: scale(1.08, 1.08);
+					        transform: scale(1.08, 1.08);
+					z-index: 2;
+					opacity: 1;
+					background-color: $pt-bg;
+				}
+			}
+		}
+	}
+
+	// == Styles
+	.eform-ui-pricing-table {
+		&.eform-ui-pricing-table-style-rounded {
+			.eform-ui-pricing-table-element {
+				overflow: hidden;
+				border-radius: 16px 16px 0 0;
+
+				// Ribbon
+				.eform-pt-ribbon {
+					position: absolute;
+					top: -50px;
+					right: -50px;
+					width: 100px;
+					height: 100px;
+					-webkit-transform: rotate(45deg);
+					        transform: rotate(45deg);
+					font-size: 10px;
+					line-height: 170px;
+					z-index: 1;
+					&:empty {
+						display: none;
+					}
+				}
+
+				// Header
+				.eform-pt-header {
+					margin-bottom: 0;
+					&::after {
+						display: none;
+					}
+
+					.eform-pt-price {
+						bottom: 0;
+						margin: 0;
+						padding: 8px 0;
+						opacity: 0.9;
+					}
+				}
+
+				// Attributes
+				.eform-ui-pricing-table-attr {
+					padding: 0;
+					ul li {
+						padding: 8px 32px;
+						border: 0 none;
+						box-shadow: none;
+
+						&:nth-child(even) {
+							@if (lightness($pt-bg) > 50) {
+								background-color: darken($pt-bg, 5%);
+							} @else {
+								background-color: lighten($pt-bg, 5%);
+							}
+						}
+					}
+				}
+
+				// Footer
+				.eform-ui-pricing-table-footer {
+					margin: 16px auto;
+					display: inline-block;
+					border-radius: 4em;
+					padding: 8px 16px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,227 @@
+// ==========================================================================
+// Payment Styling
+// ==========================================================================
+$supported-cards: amex, cirrus, dinersclub, discover, jcb, maestro, mastercard,
+	visa;
+.#{$selector} {
+	.ipt_uif_card {
+		-webkit-transform: scale(0.6, 0.6);
+		        transform: scale(0.6, 0.6);
+		@media screen and (min-width: $screen-lg-min) {
+			-webkit-transform: scale(1, 1);
+			        transform: scale(1, 1);
+		}
+	}
+	.ipt_fsqm_container_checkout {
+		padding: 0;
+		margin-bottom: 0;
+		.ipt_uif_column {
+			padding: 0;
+		}
+		.eform-checkout-gateways {
+			margin-bottom: 0;
+		}
+	}
+
+	.ipt_uif_card_holder {
+		max-width: 400px;
+		.ipt_uif_column {
+			margin-bottom: 0;
+		}
+
+		.eform-cc-cardnumber {
+			width: 54%;
+			i.prefix {
+				// Hide the icon
+				&::before {
+					display: none;
+				}
+				// Show the SVG
+				background-image: url('#{$img-path}cards/generic.svg');
+				height: 1.5em;
+				background-size: 32px;
+				background-position: left center;
+				background-repeat: no-repeat;
+			}
+
+			input.ipt_uif_cc_number {
+				width: calc(100% - 38px);
+				margin-left: 0;
+				padding-left: 38px;
+				@each $card in $supported-cards {
+					&.#{$card} ~ i.prefix {
+						background-image: url('#{$img-path}cards/#{$card}.svg');
+					}
+				}
+			}
+			.input-field.has-icon ~ .formError {
+				left: 0 !important;
+			}
+			.side_margin {
+				padding-right: 0;
+			}
+		}
+		.eform-cc-expiry {
+			width: 23%;
+			.side_margin {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			input {
+				text-align: center;
+			}
+		}
+		.eform-cc-cvc {
+			width: 23%;
+			.side_margin {
+				padding-left: 0;
+			}
+			input {
+				text-align: center;
+			}
+		}
+	}
+
+	// == Stripe
+	.eform-stripe-checkout {
+		max-width: 400px;
+		.ipt_uif_column {
+			margin-bottom: 0;
+		}
+
+		.eform-stripe-elements {
+			max-width: 400px;
+			width: 100%;
+			height: 3em;
+			padding: 8px 0;
+			border: none;
+			border-bottom: $input-border;
+			transition: $input-transition;
+
+			~ .formError {
+				margin-top: -1px !important;
+				max-width: 400px;
+			}
+
+			&.StripeElement--focus {
+				border-bottom: 1px solid $input-focus-color;
+				box-shadow: 0 1px 0 0 $input-focus-color;
+			}
+
+			&.StripeElement--invalid {
+				border-bottom: $input-invalid-border;
+				box-shadow: 0 1px 0 0 $input-error-color;
+			}
+
+			&.StripeElement--complete {
+				border-bottom: 1px solid $input-success-color;
+				box-shadow: 0 1px 0 0 $input-success-color;
+			}
+		}
+	}
+	// If inside a centered container
+	.column-centered-heading,
+	.ipt_uif_question_centered {
+		.eform-stripe-checkout,
+		.ipt_uif_card_holder {
+			margin: 0 auto;
+		}
+	}
+
+	// == SVG Cards
+	.eform-card-svg {
+		vertical-align: middle;
+		position: relative;
+		top: -1px;
+	}
+	// CC Safe numbers
+	.eform-cc-safe-number {
+		font-family: $systemMonospace;
+		color: $primary-color-dark;
+		.eform-cc-hiddens {
+			color: $secondary-text-color;
+		}
+	}
+
+	// Override for boxy theme
+	&.eform-override-element-boxy {
+		.ipt_uif_column {
+			margin-bottom: 4px;
+		}
+
+		// Stripe
+		.eform-stripe-checkout .eform-stripe-elements {
+			border: $input-border;
+			border-radius: 4px;
+			box-shadow: inset 0 1px 2px fade-out($input-border-color, 0.7),
+				0 0 0 0 transparent;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+			width: 100%;
+			@include material__smooth-tran();
+			padding-top: 0;
+			padding-bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			> * {
+				flex: 0 0 100%;
+				width: 100%;
+			}
+
+			&.StripeElement--focus {
+				border-color: $input-focus-color;
+				box-shadow: inset 0 0 0 transparent,
+					0 0 0 0.2em fade-out($input-focus-color, 0.75);
+				color: $secondary-text-color;
+			}
+		}
+
+		// Manual card
+		.ipt_uif_card_holder {
+			.eform-cc-cardnumber {
+				input.ipt_uif_cc_number {
+					padding-left: 44px;
+					padding-right: 0;
+					width: calc(100% - 45px);
+					border-right: 0 none;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+				i.prefix {
+					top: 50%;
+					margin-top: -16px;
+				}
+			}
+			.eform-cc-expiry {
+				input.ipt_uif_cc_expiry {
+					padding-left: 0;
+					padding-right: 0;
+					border-radius: 0;
+					width: 100%;
+					border-left: 0 none;
+					border-right: 0 none;
+				}
+			}
+			.eform-cc-cvc {
+				input.ipt_uif_cc_cvc {
+					padding-left: 0;
+					padding-right: 0;
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+					width: calc(100% - 1px);
+					border-left: 0 none;
+				}
+			}
+		}
+	}
+
+	// Center aligned override
+	&.eform-override-alignment-centered {
+		.eform-stripe-checkout,
+		.ipt_uif_card_holder {
+			margin: 0 auto;
+		}
+	}
+}

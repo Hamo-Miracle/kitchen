@@ -1,0 +1,60 @@
+// ==========================================================================
+// Scale Rating Style
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_rating_scale {
+		.ipt_uif_rating_heading {
+			margin: 0 8px 0 0;
+			display: inline-block;
+			padding: 0;
+			font-size: $font-size-base;
+			line-height: 26px;
+			height: 40px;
+			vertical-align: top;
+			color: $secondary-text-color;
+		}
+		[type="radio"] {
+			+ label {
+				display: inline-block;
+				height: 40px;
+				width: 40px;
+				text-align: center;
+				margin: 0 -2px 0 -2px;
+			}
+
+			&:checked {
+				+ label {
+					&:before,
+					&:after {
+						border: 2px solid $radio-empty-color;
+					}
+					&:after {
+						-webkit-transform: scale(0);
+						        transform: scale(0);
+					}
+				}
+			}
+
+			&.hover,
+			&.active {
+				+ label {
+					&:before,
+					&:after {
+						border: $radio-border;
+					}
+					&:after {
+						background-color: $radio-fill-color;
+						-webkit-transform: scale(0.5);
+						        transform: scale(0.5);
+					}
+					&:hover {
+						-webkit-transform: scale( 1.5 );
+						        transform: scale( 1.5 );
+					}
+				}
+			}
+		}
+	}
+}
+
+

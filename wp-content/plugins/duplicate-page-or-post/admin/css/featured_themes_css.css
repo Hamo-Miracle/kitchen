@@ -1,0 +1,164 @@
+.wpdevart_main {
+  margin: 10px 20px 0 2px;
+}
+
+.wpda_featured_themes_title {
+  font-size: 23px;
+  font-weight: 400;
+  padding: 9px 0 4px;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.theme {
+  float: left;
+  margin: 0 4% 4% 0;
+  position: relative;
+  width: 30.6%;
+  border: 1px solid #dcdcde;
+  box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+}
+
+.theme:hover {
+  background: #fff;
+}
+
+.theme:hover img {
+  opacity: 0.4;
+}
+
+.theme:nth-child(3n) {
+  margin-right: 0;
+}
+
+.theme-img {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+}
+
+.theme-img img {
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.theme-name-container {
+  position: relative;
+}
+
+.theme-img {
+  content: "";
+  display: block;
+  padding-top: 66.66666%;
+}
+
+.theme-description {
+  opacity: 0;
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  left: 18%;
+  width: 60%;
+  background: #1d2327;
+  background: rgba(0, 0, 0, .7);
+  color: #fff;
+  font-size: 13px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .6);
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  padding: 15px 12px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  transition: opacity .1s ease-in-out;
+}
+
+.theme:hover .theme-description {
+  opacity: 1;
+}
+
+.theme-name {
+  font-size: 15px;
+  font-weight: 600;
+  height: 18px;
+  margin: 0;
+  padding: 15px;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background: #fff;
+  background: rgba(255, 255, 255, .65);
+}
+
+.theme-actions {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  padding: 9px 15px;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1)
+}
+
+@media only screen and (min-width: 1640px) {
+  .theme {
+    width: 22.7%;
+    margin: 0 3% 3% 0;
+  }
+
+  .theme-img:after {
+    padding-top: 75%;
+  }
+
+  .div-container .theme:nth-child(3n) {
+    margin-right: 3%;
+  }
+
+  .div-container .theme:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .theme {
+    width: 17.6%;
+    margin: 0 3% 3% 0
+  }
+
+  .div-container .theme:nth-child(3n), .div-container .theme:nth-child(4n) {
+    margin-right: 3%
+  }
+
+  .div-container .theme:nth-child(5n) {
+    margin-right: 0
+  }
+}
+
+
+@media only screen and (max-width: 1120px) {
+
+  .div-container .theme:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .div-container .theme:nth-child(odd) {
+    margin-right: 5%;
+  }
+
+  .theme {
+    width: 47.5%;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .theme {
+    width: 100%;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,25 @@
+// ==========================================================================
+// Spinner Container Styling
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_container_spinners {
+		.ipt_uif_fancy_container {
+			.ipt_uif_question_label {
+				position: relative;
+				@media screen and ( min-width: $screen-md-min ) {
+					top: 0.6em;
+				}
+			}
+		}
+
+		.ipt_uif_question_centered {
+			.ipt_uif_fancy_container {
+				.ipt_uif_question_label {
+					top: 0;
+				}
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,22 @@
+// ==========================================================================
+// eForm Reactive Elements Styling
+// ==========================================================================
+.#{$selector} {
+	.eform-react-placeholder {
+		font-weight: inherit;
+		font-style: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		font-family: inherit;
+		&:empty {
+			padding: 0 0.5em;
+			background-color: $disabled-color;
+			color: $disabled-color-text;
+			&::before {
+				content: "\2026";
+				display: inline-block;
+			}
+		}
+	}
+}
+

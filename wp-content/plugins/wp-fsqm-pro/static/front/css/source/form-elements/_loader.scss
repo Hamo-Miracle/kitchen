@@ -1,0 +1,113 @@
+// == Material Preloader
+@import "material-preloader";
+
+// == Some eForm Related stuff
+.ipt-eform-preloader-inner {
+	text-align: center;
+	.ipt-eform-preloader-circle {
+		display: inline-block;
+	}
+
+	.ipt-eform-preloader-text {
+		font-size: 1.5em;
+		-webkit-animation: eform-preloader 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+		        animation: eform-preloader 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+		-webkit-animation-iteration-count: infinite;
+		        animation-iteration-count: infinite;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+		color: $primary-text-color;
+	}
+}
+
+@-webkit-keyframes eform-preloader {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	37.5% {
+		opacity: 0.3;
+	}
+	50% {
+		opacity: 1;
+	}
+	62.5% {
+		opacity: 0.3;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes eform-preloader {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	37.5% {
+		opacity: 0.3;
+	}
+	50% {
+		opacity: 1;
+	}
+	62.5% {
+		opacity: 0.3;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.ipt-eform-preloader {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+	background: fade-out( $primary-color, 0.5 );
+	.ipt-eform-preloader-inner {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translate( 0, -50% );
+		        transform: translate( 0, -50% );
+	}
+}
+
+.ipt-eform-preloader-inline {
+	display: inline-block;
+
+	.ipt-eform-preloader-inner {
+		.ipt-eform-preloader-circle {
+			vertical-align: middle;
+		}
+		.ipt-eform-preloader-text {
+			display: inline-block;
+			margin-left: 1em;
+		}
+	}
+}
+
+.ipt_uif_init_loader {
+	display: block;
+	.ipt-eform-preloader-inner {
+		.ipt-eform-preloader-circle {
+			vertical-align: baseline;
+		}
+		.ipt-eform-preloader-text {
+			display: block;
+			margin-left: 0;
+		}
+	}
+}
+

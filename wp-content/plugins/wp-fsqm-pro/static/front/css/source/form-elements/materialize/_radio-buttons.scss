@@ -1,0 +1,162 @@
+// ==========================================================================
+// eForm Material Radio Buttons
+// ==========================================================================
+
+.#{$selector} {
+	[type="radio"] {
+		// Remove default Radio Buttons
+		&:not(:checked),
+		&:checked {
+			position: absolute;
+			left: -9999px;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&:not(:checked) + label,
+		&:checked + label {
+			position: relative;
+			padding-left: 35px;
+			cursor: pointer;
+			display: inline-block;
+			height: auto;
+			line-height: 28px;
+			min-height: 28px;
+			font-size: 1em;
+			transition: 0.28s ease;
+			font-weight: 400; /* webkit (konqueror) browsers */
+			-webkit-user-select: none;
+			   -moz-user-select: none;
+			    -ms-user-select: none;
+			        user-select: none;
+			color: $secondary-text-color;
+		}
+
+		+ label:before,
+		+ label:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			margin: 1px 4px 4px 4px;
+			width: 24px;
+			height: 24px;
+			z-index: 0;
+			transition: 0.28s ease;
+		}
+
+		/* Unchecked styles */
+		&:not(:checked) + label:before,
+		&:not(:checked) + label:after,
+		&:checked + label:before,
+		&:checked + label:after,
+		&.with-gap:checked + label:before,
+		&.with-gap:checked + label:after {
+			border-radius: 50%;
+		}
+
+		&:not(:checked) + label:before {
+			border: 2px solid $radio-empty-color;
+		}
+
+		&:not(:checked) + label:after {
+			-webkit-transform: scale(0);
+			        transform: scale(0);
+		}
+
+		/* Checked styles */
+		&:checked + label:before {
+			border: $radio-border;
+		}
+
+		&:checked + label:after {
+			background-color: $radio-fill-color;
+		}
+
+		&:checked + label:after {
+			content: attr(data-labelcon);
+			font-family: "ipt-icomoon";
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			-webkit-font-smoothing: antialiased;
+			-webkit-transform: scale(0.5);
+			        transform: scale(0.5);
+			color: $radio-icon-color;
+			line-height: 24px;
+			text-align: center;
+		}
+
+		/* Radio With gap */
+		&:checked + label[data-labelcon]:after {
+			-webkit-transform: scale(1);
+			        transform: scale(1);
+			background-color: transparent;
+			color: $radio-fill-color;
+		}
+
+		/* Focused styles */
+		&:not(:disabled) + label:focus:before {
+			box-shadow: 0 0 0 10px fade-out($box-shadow-color, 0.9);
+		}
+		&:not(:disabled):checked + label:focus:before {
+			box-shadow: 0 0 0 10px fade-out($primary-color, 0.8);
+		}
+
+		/* Disabled Radio With gap */
+		&.with-gap:disabled:checked + label:before {
+			border: 2px solid $input-disabled-color;
+		}
+
+		&.with-gap:disabled:checked + label:after {
+			border: none;
+			background-color: $input-disabled-color;
+		}
+
+		/* Disabled style */
+		&:disabled:not(:checked) + label:before,
+		&:disabled:checked + label:before {
+			background-color: transparent;
+			border-color: $input-disabled-color;
+		}
+
+		&:disabled + label {
+			color: $input-disabled-color;
+		}
+
+		&:disabled:not(:checked) + label:before {
+			border-color: $input-disabled-color;
+		}
+
+		&:disabled:checked + label:after {
+			background-color: $input-disabled-color;
+			border-color: $input-disabled-solid-color;
+		}
+
+		// As buttons
+		&.as-eform-button {
+			+ label {
+				border: 1px solid $radio-empty-color;
+				padding: 6px 24px 6px 48px;
+				border-radius: 4px;
+				box-shadow: inset 0 1px 2px fade-out($radio-empty-color, 0.7),
+					0 0 0 0 transparent;
+				width: 100%;
+
+				&::before,
+				&::after {
+					margin: 0;
+					top: 8px;
+					left: 12px;
+				}
+			}
+			&:checked {
+				+ label {
+					border-color: $primary-color;
+					box-shadow: inset 0 1px 2px fade-out($primary-color, 0.7),
+						0 0 0 0 transparent;
+				}
+			}
+		}
+	}
+}

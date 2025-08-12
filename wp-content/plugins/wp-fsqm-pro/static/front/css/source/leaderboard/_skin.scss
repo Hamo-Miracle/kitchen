@@ -1,0 +1,40 @@
+// ==========================================================================
+// Leaderboard Styling
+// ==========================================================================
+.#{$selector} {
+	&.ipt_eform_leaderboard {
+		.ipt_eform_lb_main_container {
+			border-radius: 0;
+			@include material__box-shadow();
+			background-color: $preset-bg;
+		}
+
+		.ipt_eform_leaderboard_welcome {
+			border-radius: 2px 2px 0 0;
+			background-color: $primary-color;
+			color: $primary-color-text;
+			@include material__box-shadow-straight();
+			h2 {
+				color: $primary-color-text;
+			}
+		}
+	}
+
+	.ipt_eform_lb_table {
+		&.collapsed {
+			td.lb-name {
+				&::before {
+					color: $secondary-text-color;
+				}
+
+			}
+			.parent {
+				td.lb-name::before {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+
+

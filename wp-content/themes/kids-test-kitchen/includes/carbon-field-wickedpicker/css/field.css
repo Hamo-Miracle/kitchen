@@ -1,0 +1,10 @@
+.carbon-Wickedpicker .field-holder {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+}
+.carbon-Wickedpicker select { width: 32%; margin-right: 2%; margin-left: 0; }
+.carbon-Wickedpicker select.mer { margin-right: 0; }
+.carbon-Wickedpicker input { width: 100%; }

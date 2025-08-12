@@ -1,0 +1,40 @@
+.#{$selector} {
+	&.type_0 {
+		.ipt-eform-content {
+			padding: 20px;
+
+			&.ipt-eform-no-wrap {
+				box-shadow: none;
+				background-color: transparent;
+
+				.ipt-eform-material-button-container.ipt_fsqm_form_button_container {
+					background-color: transparent;
+					margin-left: 0;
+					margin-right: 0;
+					margin-bottom: 1em;
+					padding-bottom: 0;
+
+					.eform-button-container-inner {
+						justify-content: center;
+						.ui-button {
+							width: auto;
+							margin: 0 0.5em;
+						}
+					}
+				}
+			}
+
+			.ipt-eform-material-button-container.ipt_fsqm_form_button_container {
+				margin: 0 -20px -20px -20px;
+			}
+		}
+	}
+	.ipt_uif_mother_wrap {
+		padding: 20px;
+	}
+	.ipt-eform-content {
+		.ipt_uif_mother_wrap {
+			padding: 0;
+		}
+	}
+}

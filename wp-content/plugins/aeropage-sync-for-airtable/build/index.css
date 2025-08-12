@@ -1,0 +1,213 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css C:\xampp\htdocs\wordpress\wp-content\plugins\aeropage-wordpress\node_modules\css-loader\dist\cjs.js??ruleSet[1].rules[3].use[1]!C:\xampp\htdocs\wordpress\wp-content\plugins\aeropage-wordpress\node_modules\postcss-loader\dist\cjs.js??ruleSet[1].rules[3].use[2]!C:\xampp\htdocs\wordpress\wp-content\plugins\aeropage-wordpress\node_modules\sass-loader\dist\cjs.js??ruleSet[1].rules[3].use[3]!C:\xampp\htdocs\wordpress\wp-content\plugins\aeropage-wordpress\src\style\main.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+#aeroplugin .app-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.aeropageBuilderModal {
+  position: "relative";
+}
+
+.link:active {
+  border: none;
+  outline: 0;
+  box-shadow: none;
+}
+.link:focus {
+  border: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+#trash:hover svg {
+  stroke: #C22525;
+}
+
+#settings:hover svg, #logs:hover svg {
+  stroke: #633CE3;
+}
+
+#refresh:hover svg {
+  stroke: #633CE3;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.refresh-start {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.react-toggle {
+  touch-action: pan-x;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+  margin-right: 8px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-toggle-screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.react-toggle--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transition: opacity 0.25s;
+}
+
+.react-toggle-track {
+  width: 30px;
+  height: 15px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #4D4D4D;
+  transition: all 0.2s ease;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #000000;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: #19AB27;
+}
+
+.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #128D15;
+}
+
+.react-toggle-track-check {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  left: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-check {
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle-track-x {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  right: 10px;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-x {
+  opacity: 0;
+}
+
+.react-toggle-thumb {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #4D4D4D;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  left: 16px;
+  border-color: #19AB27;
+}
+
+.react-toggle--focus .react-toggle-thumb {
+  box-shadow: 0px 0px 2px 3px #0099E0;
+}
+
+.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+  box-shadow: 0px 0px 5px 5px #0099E0;
+}
+
+.label-text {
+  vertical-align: middle;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.div-wrapper {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  cursor: pointer;
+  background: rgb(99, 60, 227);
+  color: white;
+  padding: 8px 13px;
+  border: none;
+  border-radius: 6px;
+  display: block;
+}
+
+/*# sourceMappingURL=index.css.map*/

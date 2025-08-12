@@ -1,0 +1,23 @@
+// ==========================================================================
+// Processing Block
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_form_message_process {
+		margin: 20px auto;
+		.ui-widget-header {
+			text-align: center;
+			background-color: transparent;
+			color: $primary-text-color;
+			box-shadow: none;
+
+			.ipt-eform-preloader-inline {
+				.ipt-eform-preloader-circle,
+				.ipt-eform-preloader-text {
+					display: block;
+					margin: 10px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

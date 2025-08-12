@@ -1,0 +1,99 @@
+.#{$selector} {
+	.ipt_fsqm_main_tab.ui-tabs {
+		box-shadow: none;
+		font-size: 1em;
+
+		> .ipt-eform-tab-nav-wrap {
+			height: 4em;
+			font-size: 1em;
+			overflow: hidden;
+			box-shadow: 0 -1px 2px 0px fade-out( $box-shadow-color, ( 1 - 0.14 ) ), 0 1px 1px -2px fade-out( $box-shadow-color, ( 1 - 0.2 ) ), 0 1px 5px 0 fade-out( $box-shadow-color, ( 1 - 0.12 ) );
+
+			.eform-tab-active-notifier,
+			.eform-tab-passive-notifier {
+				display: block;
+				position: absolute;
+				height: 4px;
+				background-color: $passive-tab-notifier;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				will-change: left, right;
+				@include material__smooth-tran( 300ms );
+			}
+			.eform-tab-passive-notifier {
+				will-change: none;
+				background: $primary-color-dark;
+				box-shadow: 0 -1px 1px 0px fade-out( $box-shadow-color, 0.6 );
+			}
+
+			.eform-tab-nav {
+				display: block;
+				position: absolute;
+				font-size: 1em;
+				line-height: 4em;
+				font-size: 1em;
+				cursor: pointer;
+				top: 0;
+				left: 0;
+				width: 1em;
+				text-align: center;
+				@include material__smooth-tran();
+				opacity: 1;
+				background-color: $primary-color;
+				&.eform-tab-nav-right {
+					left: auto;
+					right: 0;
+				}
+				&.disabled {
+					opacity: 0.5;
+					cursor: default;
+				}
+			}
+			&.scroll-not-needed {
+				.eform-tab-nav {
+					visibility: hidden;
+				}
+			}
+
+			.ui-tabs-nav {
+				height: calc( 4em + 20px ); /* Adjust height to hide scrollbar by the parent wrap */
+				margin: 0 -1em;
+
+				&::-webkit-scrollbar-track {
+					display: none;
+				}
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+				li {
+					font-size: 1em;
+					line-height: 4em;
+					height: 4em;
+
+					.ui-tabs-anchor {
+
+						.ipticm {
+							font-size: ( 16 / 14 ) * 1em;
+							line-height: ( 16 / 14 ) * 2em;
+							height: 100%;
+							float: left;
+						}
+
+						.eform-tab-labels {
+							.ipt_uif_tab_subtitle {
+								text-align: right;
+								display: block;
+								margin-top: -1.6em;
+								width: 100%;
+								line-height: 1em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

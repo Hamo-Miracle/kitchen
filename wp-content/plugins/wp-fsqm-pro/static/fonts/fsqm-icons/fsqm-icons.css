@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'eform';
+  src:  url('fonts/eform.eot?u7elnz');
+  src:  url('fonts/eform.eot?u7elnz#iefix') format('embedded-opentype'),
+    url('fonts/eform.ttf?u7elnz') format('truetype'),
+    url('fonts/eform.woff?u7elnz') format('woff'),
+    url('fonts/eform.svg?u7elnz#eform') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ipt-fsqmic-"], [class*=" ipt-fsqmic-"],
+.dashicons-fsqm, .dashicons-fsqm:before,
+.mce-i-ipt-fsqmic-small-logo,
+.ipt-fsqmic-small-logo:before,
+.mce-i-ipt-fsqmic-small-logo:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'eform' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dashicons-fsqm:before,
+.ipt-fsqmic-small-logo:before,
+.mce-i-ipt-fsqmic-small-logo:before {
+    content: "\e901";
+}
+.ipt-fsqmic-logo:before {
+    content: "\e900";
+}
+
+.ipt-fsqmic-eform-horizontal:before {
+  content: "\e902";
+}
+.ipt-fsqmic-eform-bold:before {
+  content: "\e903";
+}
+.ipt-fsqmic-eform-large:before {
+  content: "\e900";
+}
+.ipt-fsqmic-eform:before {
+  content: "\e901";
+}
+
+/* Some Fix */
+.mce-window.mce-container.mce-ipt-fsqm-panel .mce-container-body.mce-abs-layout {
+    overflow: hidden;
+}
+

@@ -1,0 +1,171 @@
+// ==========================================================================
+// File Upload Style
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_uploader {
+		.fileupload-buttonbar {
+			margin-bottom: 5px;
+		}
+		.fileinput-button {
+			.ui-button-text {
+				button {
+					border: 0 none;
+					text-transform: uppercase;
+					background-color: transparent;
+					color: inherit;
+				}
+			}
+			input.ipt_uif_uploader_handle {
+				z-index: 100;
+			}
+		}
+		.fileupload-buttons {
+			.ui-button {
+				margin-bottom: 4px;
+			}
+		}
+
+		@media screen and (max-width: $screen-xs-max) {
+			.fileupload-buttons {
+				.cancel,
+				.delete {
+					display: none;
+				}
+			}
+			.delete_toggle input,
+			.delete_toggle input + label,
+			.fileinput-dragdrop {
+				display: none;
+			}
+			.ipt_fsqm_fileuploader_list {
+				.cancel,
+				.delete {
+					.ui-icon {
+						left: 50%;
+						margin-left: -6px !important;
+						top: 50%;
+						margin-top: -6px;
+					}
+				}
+			}
+		}
+
+		.fileinput-dragdrop {
+			height: 150px;
+			border: 1px solid $divider-color;
+			color: $disabled-color-text;
+			line-height: 150px;
+			text-align: center;
+			font-size: 2em;
+			border-radius: 4px;
+			font-variant: small-caps;
+			text-transform: capitalize;
+			margin: 0 0 12px 0;
+			will-change: background-color, color, border-color;
+			@include material__smooth-tran(500ms);
+			&.hover {
+				background-color: $primary-color;
+				border-color: $primary-color-dark;
+				color: $primary-color-text;
+			}
+			span {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: block;
+				height: 150px;
+				white-space: nowrap;
+			}
+		}
+
+		.fileupload-meta {
+			color: $secondary-text-color;
+		}
+
+		.ipt_fsqm_fileuploader_list_wrap {
+			.ipt_fsqm_fileuploader_list {
+				margin: 0;
+
+				thead td {
+					padding: 5px 0;
+				}
+
+				td,
+				th {
+					vertical-align: top;
+				}
+
+				.delete_toggle {
+					vertical-align: top;
+					padding: 5px 0;
+				}
+			}
+			.fileupload-progress {
+				margin: 12px 20px 12px 0;
+			}
+		}
+
+		.fileinput-button {
+			input {
+				bottom: 0;
+			}
+		}
+
+		.progress-extended {
+			color: $secondary-text-color;
+			margin: 12px 0;
+		}
+		.ipt_uif_uploader__recaptcha {
+			display: none;
+		}
+
+		&.ipt_uif_uploader--has-recaptcha {
+			position: relative;
+			min-height: 300px;
+			background-color: rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+			border-radius: 4px;
+			.ipt_uif_uploader__recaptcha {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: transparentize($preset-bg, 0.3);
+				z-index: 10;
+				-webkit-backdrop-filter: blur(4px);
+				        backdrop-filter: blur(4px);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-flow: column nowrap;
+			}
+			.ipt_uif_uploader__recaptcha-title {
+				font-size: $font-size-h4;
+				font-family: $headings-font-family;
+				font-weight: $headings-font-weight;
+				line-height: $headings-line-height;
+				color: $headings-color;
+				margin: 0 0 1em 0;
+				padding: 0 1em;
+				text-align: center;
+			}
+			.ipt_uif_uploader__recaptcha-feedback {
+				padding: 0 1em;
+				text-align: center;
+				color: $secondary-text-color;
+				font-weight: bold;
+				min-height: 1.5em;
+				margin: 1em 0 0 0;
+				&.has-error {
+					color: $error-color;
+				}
+				&.iptAnimated {
+					-webkit-animation-duration: 1s;
+					        animation-duration: 1s;
+					-webkit-animation-iteration-count: infinite;
+					        animation-iteration-count: infinite;
+				}
+			}
+		}
+	}
+}

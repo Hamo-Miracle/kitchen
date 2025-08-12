@@ -1,0 +1,372 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Taxonomy Terms Order\n"
+"POT-Creation-Date: 2025-06-12 16:14+0300\n"
+"PO-Revision-Date: 2025-06-12 16:20+0300\n"
+"Last-Translator: NspCode <contact@nsp-code.com>\n"
+"Language-Team: Nsp Code <electronice_delphi@yahoo.com>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-KeywordsList: esc_html_e;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class.atto.admin.php:138
+msgid "Sort "
+msgstr "並び替え "
+
+#: include/class.atto.admin.php:463 include/class.atto.compatability.php:143
+#: include/class.atto.interface.php:164
+msgid "Taxonomy Order"
+msgstr "タクソノミー順序"
+
+#: include/class.atto.admin.php:509
+msgid "Advanced Taxonomy Terms Order plugin is inactive, please enter your"
+msgstr "Advanced Taxonomy Terms Order プラグインが無効です。以下を入力してください"
+
+#: include/class.atto.admin.php:509 include/class.atto.options.php:414
+#: include/class.atto.options.php:450
+msgid "Licence Key"
+msgstr "ライセンスキー"
+
+#: include/class.atto.interface.php:105
+#, php-format
+msgid "Order type for %s"
+msgstr "%s の順序タイプ"
+
+#: include/class.atto.interface.php:105
+#, php-format
+msgid "switched to %s"
+msgstr "%s に切り替えました"
+
+#: include/class.atto.interface.php:118
+msgid "Order updated"
+msgstr "順序が更新されました"
+
+#: include/class.atto.interface.php:170
+msgid ""
+"This plugin cannot work without javascript, because it uses drag and drop "
+"and AJAX."
+msgstr ""
+"このプラグインはドラッグ&ドロップとAJAXを使用するため、JavaScriptなしでは動作しません。"
+
+#: include/class.atto.interface.php:198
+#, php-format
+msgid "%s Taxonomies"
+msgstr "%s タクソノミー"
+
+#: include/class.atto.interface.php:202 include/class.atto.interface.php:207
+msgid "Taxonomy Title"
+msgstr "タクソノミータイトル"
+
+#: include/class.atto.interface.php:202 include/class.atto.interface.php:207
+msgid "Total Terms"
+msgstr "総ターム数"
+
+#: include/class.atto.interface.php:280
+msgid "Automatic Order"
+msgstr "自動順序"
+
+#: include/class.atto.interface.php:281
+msgid "Manual Order"
+msgstr "手動順序"
+
+#: include/class.atto.interface.php:292
+msgid "Order By"
+msgstr "順序"
+
+#: include/class.atto.interface.php:301
+msgid "Default"
+msgstr "デフォルト"
+
+#: include/class.atto.interface.php:304
+msgid "Creation Time / ID"
+msgstr "作成時間 / ID"
+
+#: include/class.atto.interface.php:307
+msgid "Name"
+msgstr "名前"
+
+#: include/class.atto.interface.php:310
+msgid "Count"
+msgstr "カウント"
+
+#: include/class.atto.interface.php:313
+msgid "Slug"
+msgstr "スラッグ"
+
+#: include/class.atto.interface.php:316 include/class.atto.interface.php:396
+msgid "Random"
+msgstr "ランダム"
+
+#: include/class.atto.interface.php:323
+msgid "Order"
+msgstr "順序"
+
+#: include/class.atto.interface.php:333
+msgid "Descending"
+msgstr "降順"
+
+#: include/class.atto.interface.php:336
+msgid "Ascending"
+msgstr "昇順"
+
+#: include/class.atto.interface.php:345 include/class.atto.interface.php:377
+#: include/class.atto.interface.php:417
+msgid "Update"
+msgstr "更新"
+
+#: include/class.atto.interface.php:391
+msgid "Reverse"
+msgstr "逆順"
+
+#: include/class.atto.interface.php:392
+msgid "Title Asc"
+msgstr "タイトル昇順"
+
+#: include/class.atto.interface.php:393
+msgid "Title Desc"
+msgstr "タイトル降順"
+
+#: include/class.atto.interface.php:394
+msgid "Id order Asc"
+msgstr "ID順昇順"
+
+#: include/class.atto.interface.php:395
+msgid "Id order Desc"
+msgstr "ID順降順"
+
+#: include/class.atto.interface.php:398
+msgid "Collapse All"
+msgstr "すべて折りたたむ"
+
+#: include/class.atto.interface.php:399
+msgid "Expand All"
+msgstr "すべて展開"
+
+#: include/class.atto.interface.php:467
+msgid "Items Order Updated"
+msgstr "アイテムの順序が更新されました"
+
+#: include/class.atto.options.php:55
+msgid "Subscriber"
+msgstr "購読者"
+
+#: include/class.atto.options.php:56
+msgid "Contributor"
+msgstr "寄稿者"
+
+#: include/class.atto.options.php:57
+msgid "Author"
+msgstr "投稿者"
+
+#: include/class.atto.options.php:58
+msgid "Editor"
+msgstr "編集者"
+
+#: include/class.atto.options.php:59
+msgid "Administrator"
+msgstr "管理者"
+
+#: include/class.atto.options.php:87
+msgid "General Settings"
+msgstr "一般設定"
+
+#: include/class.atto.options.php:91
+msgid "Show / Hide re-order interface"
+msgstr "並び替えインターフェースの表示/非表示"
+
+#: include/class.atto.options.php:93
+msgid "Display the Taxonomy Order interface for the specified post types."
+msgstr "指定された投稿タイプにタクソノミー順序インターフェースを表示します。"
+
+#: include/class.atto.options.php:103
+msgid "Show"
+msgstr "表示"
+
+#: include/class.atto.options.php:104
+msgid "Hide"
+msgstr "非表示"
+
+#: include/class.atto.options.php:117
+msgid "Minimum Level to use this plugin"
+msgstr "このプラグインを使用する最小レベル"
+
+#: include/class.atto.options.php:136
+msgid "Auto Sort"
+msgstr "自動ソート"
+
+#: include/class.atto.options.php:140 include/class.atto.options.php:153
+#: include/class.atto.options.php:201
+msgid "OFF"
+msgstr "オフ"
+
+#: include/class.atto.options.php:141 include/class.atto.options.php:154
+#: include/class.atto.options.php:202
+msgid "ON"
+msgstr "オン"
+
+#: include/class.atto.options.php:142
+msgid ""
+"If checked, the plug-in automatically update the WordPress queries to use "
+"the new sort (<b>No code update is necessarily</b>)"
+msgstr ""
+"チェックすると、プラグインが自動的にWordPressクエリを更新して新しいソートを使用します（<b>コードの更新は不要です</b>）"
+
+#: include/class.atto.options.php:142
+msgid "Additional details about this setting can be found at"
+msgstr "この設定の詳細については、以下をご覧ください"
+
+#: include/class.atto.options.php:143
+msgid ""
+"If ON selected, the plug-in automatically update the WordPress queries to "
+"use the new sort (<b>No code update is necessary</b>)"
+msgstr ""
+"オンを選択すると、プラグインが自動的にWordPressクエリを更新して新しいソートを使用します（<b>コードの更新は不要です</b>）"
+
+#: include/class.atto.options.php:143
+#, php-format
+msgid ""
+"Additional details about this setting can be found at <a href=\"%s\" "
+"target=\"_blank\">Autosort Details</a>"
+msgstr ""
+"この設定の詳細については、<a href=\"%s\" target=\"_blank\">自動ソート詳細</a>をご覧ください"
+
+#: include/class.atto.options.php:149
+msgid "Admin Sort"
+msgstr "管理画面ソート"
+
+#: include/class.atto.options.php:156
+msgid "Update order of terms within the admin interface per customised sort"
+msgstr "カスタマイズされたソートに従って管理画面内のタームの順序を更新"
+
+#: include/class.atto.options.php:162
+msgid "Default Interface Sort"
+msgstr "デフォルトインターフェースソート"
+
+#: include/class.atto.options.php:165
+msgid ""
+"Enable sortable drag-and-drop functionality within the default WordPress "
+"taxonomy interface. An "
+msgstr ""
+"デフォルトのWordPressタクソノミーインターフェース内でソート可能なドラッグ&ドロップ機能を有効にします。"
+
+#: include/class.atto.options.php:165
+msgid ""
+" icon will be displayed on the items, allowing for customization of the "
+"order. The option can be further adjusted by the users, through the Screen "
+"Options on the taxonomy page."
+msgstr ""
+" アイコンがアイテムに表示され、順序をカスタマイズできます。このオプションは、タクソノミーページの表示オプションからユーザーがさらに調整できます。"
+
+#: include/class.atto.options.php:167
+msgid "Admin Sort feature must be activated for this functionality."
+msgstr "この機能には管理画面ソート機能を有効にする必要があります。"
+
+#: include/class.atto.options.php:184
+msgid "Yes"
+msgstr "はい"
+
+#: include/class.atto.options.php:185
+msgid "No"
+msgstr "いいえ"
+
+#: include/class.atto.options.php:197
+msgid "WPML Sort Synchronization"
+msgstr "WPMLソート同期"
+
+#: include/class.atto.options.php:204
+msgid ""
+"The WPML Sort Synchronization feature ensures that custom sorting applied to "
+"taxonomy terms is seamlessly synchronized across all translations managed by "
+"the WPML (WordPress Multilingual) plugin"
+msgstr ""
+"WPMLソート同期機能は、タクソノミータームに適用されたカスタムソートが、WPML（WordPress Multilingual）プラグインで管理されるすべての翻訳間でシームレスに同期されることを保証します"
+
+#: include/class.atto.options.php:214
+msgid "Save Settings"
+msgstr "設定を保存"
+
+#: include/class.atto.options.php:251
+msgid "Settings Saved"
+msgstr "設定が保存されました"
+
+#: include/class.atto.options.php:283 include/class.atto.options.php:361
+#, php-format
+msgid "There was a problem connecting to %s"
+msgstr "%s への接続に問題がありました"
+
+#: include/class.atto.options.php:309
+msgid ""
+"There was a problem deactivating the licence on other side, however locally "
+"the key is now removed: "
+msgstr ""
+"相手側でライセンスを無効化する際に問題がありましたが、ローカルではキーが削除されました："
+
+#: include/class.atto.options.php:326 include/class.atto.options.php:399
+#, php-format
+msgid "There was a problem with the data block received from %s"
+msgstr "%s から受信したデータブロックに問題がありました"
+
+#: include/class.atto.options.php:343
+msgid "Licence Key can't be empty"
+msgstr "ライセンスキーは空にできません"
+
+#: include/class.atto.options.php:391
+#, php-format
+msgid "There was a problem activating the licence: %s"
+msgstr "ライセンスの有効化に問題がありました：%s"
+
+#: include/class.atto.options.php:411 include/class.atto.options.php:447
+msgid "Advanced Taxonomy Terms Order License"
+msgstr "Advanced Taxonomy Terms Order ライセンス"
+
+#: include/class.atto.options.php:426
+#, php-format
+msgid ""
+"Enter the Licence Key you received when you purchased this product. If you "
+"lost the key, you can always retrieve it from <a href=\"%s\" "
+"target=\"_blank\">My Account</a>."
+msgstr ""
+"この製品を購入した際に受け取ったライセンスキーを入力してください。キーを紛失した場合は、<a href=\"%s\" target=\"_blank\">マイアカウント</a>からいつでも取得できます。"
+
+#: include/class.atto.options.php:431
+msgid "Save"
+msgstr "保存"
+
+#: include/class.atto.options.php:472
+msgid "Deactivate"
+msgstr "無効化"
+
+#: include/class.atto.options.php:475
+#, php-format
+msgid ""
+"You can generate more keys from <a href=\"%s\" target=\"_blank\">My Account</"
+"a>"
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">マイアカウント</a>からさらにキーを生成できます"
+
+#: include/class.atto.plugin-updater.php:123
+msgid "An error occurred when trying to identify the plugin."
+msgstr "プラグインを識別しようとした際にエラーが発生しました。"
+
+#: include/class.atto.plugin-updater.php:123
+#: include/class.atto.plugin-updater.php:143
+msgid "Try again"
+msgstr "再試行"
+
+#: include/class.atto.plugin-updater.php:143
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "APIリクエスト中に予期しないHTTPエラーが発生しました。"
+
+#: include/class.atto.terms_walker.php:49
+msgid "Move to Top"
+msgstr "先頭に移動"
+
+#: include/class.atto.terms_walker.php:50
+msgid "Move to Bottom"
+msgstr "末尾に移動"

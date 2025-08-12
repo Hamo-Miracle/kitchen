@@ -1,0 +1,133 @@
+// ==========================================================================
+// Reset Helper for material theme
+// ==========================================================================
+// Reset box sizing
+.#{$selector} {
+	@include material__sizing();
+	font-weight: normal;
+	font-family: inherit;
+	* {
+		@include material__sizing();
+		font-weight: normal;
+		font-family: inherit;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		box-shadow: none;
+		border: 0 none;
+		background: transparent none;
+		vertical-align: baseline;
+		text-transform: none;
+		font-variant: normal;
+		font-weight: normal;
+		text-decoration: none;
+	}
+
+	.jetpack-video-wrapper {
+		@include material__sizing(content-box);
+		* {
+			@include material__sizing(content-box);
+		}
+
+		.wp-video {
+			margin: 0 auto;
+		}
+	}
+
+	label {
+		word-wrap: break-word;
+		max-width: none;
+		max-width: none;
+		img {
+			/* Fix IE11 Bug */
+			pointer-events: none !important;
+		}
+	}
+
+	label,
+	button {
+		font-weight: normal;
+		font-family: inherit;
+	}
+
+	[class^='ipt-icomoon-'],
+	[class*=' ipt-icomoon-'],
+	[data-ipt-icomoon] {
+		line-height: inherit;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		clear: none;
+	}
+
+	.clear {
+		display: table;
+		clear: both;
+		&-both,
+		&-left,
+		&-right {
+			display: table;
+			clear: both;
+		}
+		&-left {
+			clear: left;
+		}
+		&-right {
+			clear: right;
+		}
+	}
+
+	// UI Reset
+	.ui-widget,
+	.ui-widget-content,
+	.ui-widget-header,
+	.ui-state-default,
+	.ui-state-active,
+	.ui-state-hover,
+	.ui-state-focus,
+	.ui-state-highlight {
+		font-weight: normal;
+		font-family: inherit;
+		outline: none;
+		box-shadow: none;
+		border: 0 none;
+		background: transparent none;
+		text-transform: none;
+		font-variant: normal;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	.ui-widget-content,
+	.ui-widget-header {
+		.ui-state-default,
+		.ui-state-active,
+		.ui-state-hover,
+		.ui-state-focus,
+		.ui-state-highlight {
+			font-weight: normal;
+			font-family: inherit;
+			outline: none;
+			box-shadow: none;
+			border: 0 none;
+			background: transparent none;
+			text-transform: none;
+			font-variant: normal;
+			font-weight: normal;
+			text-decoration: none;
+		}
+	}
+	[class^='ui-corner'],
+	[class*=' ui-corner'] {
+		border-radius: 0;
+	}
+
+	table {
+		table-layout: auto;
+		border-collapse: collapse;
+	}
+}

@@ -1,0 +1,18 @@
+// ==========================================================================
+// Full View CSS
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_full_preview_sb {
+		padding: 20px;
+		margin: 0;
+	}
+	.ipt_fsqm_full_preview_print {
+		color: #757575;
+		margin: 0;
+		.ipt_uif_divider {
+			color: inherit;
+		}
+	}
+}
+
+

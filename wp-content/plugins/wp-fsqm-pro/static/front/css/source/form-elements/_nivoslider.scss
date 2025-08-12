@@ -1,0 +1,229 @@
+// ==========================================================================
+// Nivo Slider Styling
+// ==========================================================================
+.#{$selector} {
+	/* Background Shadow */
+	.ipt_uif_image_slider_wrap {
+		position: relative;
+		z-index: 1;
+		border-radius: 4px 4px 0 0;
+	}
+	.ipt_uif_image_slider_wrap .ribbon {
+		border-radius: 100%;
+		bottom: 33px;
+		box-shadow: 0 3px 2px fade-out( $box-shadow-color, 0.7 );
+		height: 10px;
+		left: 20px;
+		right: 20px;
+		position: absolute;
+		width: auto;
+		z-index: -1;
+	}
+	/* The Nivo Slider styles */
+	.nivoSlider {
+		position:relative;
+		width:100%;
+		height:auto;
+		overflow: hidden;
+	}
+	.nivoSlider img {
+		position:absolute;
+		top:0px;
+		left:0px;
+		max-width: none;
+	}
+	.nivo-main-image {
+		display: block !important;
+		position: relative !important;
+		width: 100% !important;
+	}
+
+	/* If an image is wrapped in a link */
+	.nivoSlider a.nivo-imageLink {
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		border:0;
+		padding:0;
+		margin:0;
+		z-index:6;
+		display:none;
+		background:white;
+		filter:alpha(opacity=0);
+		opacity:0;
+	}
+	/* The slices and boxes in the Slider */
+	.nivo-slice {
+		display:block;
+		position:absolute;
+		z-index:5;
+		height:100%;
+		top:0;
+	}
+	.nivo-box {
+		display:block;
+		position:absolute;
+		z-index:5;
+		overflow:hidden;
+	}
+	.nivo-box img { display:block; }
+
+	/* Caption styles */
+	.nivo-caption {
+		position: absolute;
+		left: 0px;
+		bottom: 0;
+		border-radius: 0;
+		background: rgba( 0, 0, 0, 0.5 );
+		color: #fff;
+		width: 100%;
+		z-index: 8;
+		padding: 5px 10px;
+		overflow: hidden;
+		display: none;
+	}
+	.nivo-caption p {
+		padding: 5px;
+		margin: 0;
+	}
+	.nivo-caption a {
+		display: inline !important;
+	}
+	.nivo-html-caption {
+		display: none;
+	}
+	/* Direction nav styles (e.g. Next & Prev) */
+	.nivo-directionNav a {
+		cursor:pointer;
+	}
+	/* Control nav styles (e.g. 1,2,3...) */
+	.nivo-controlNav {
+		text-align:center;
+		padding: 15px 0;
+	}
+	.nivo-controlNav a {
+		cursor:pointer;
+	}
+	.nivo-controlNav a.active {
+		font-weight:bold;
+	}
+
+	.theme-ipt-uif-imageslider .nivoSlider {
+		position: relative;
+		background: $preset-bg url( "#{$img-path}ring-alt.svg" ) no-repeat 50% 50%;
+		margin-bottom: 10px;
+		background-size: 64px 64px;
+	}
+	.theme-ipt-uif-imageslider .nivoSlider img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	.theme-ipt-uif-imageslider .nivoSlider a {
+		border: 0;
+		display: block;
+		color: $primary-color;
+	}
+
+	.theme-ipt-uif-imageslider .nivo-controlNav {
+		text-align: center;
+		padding: 0;
+	}
+	.theme-ipt-uif-imageslider .nivo-controlNav a {
+		display: inline-block;
+		width: 22px;
+		height: 22px;
+		background: none transparent;
+		text-indent: -9999px;
+		border: 0;
+		margin: 0 2px;
+		position: relative;
+		color: $primary-color;
+		&:hover {
+			color: $accent-color;
+		}
+	}
+	.theme-ipt-uif-imageslider .nivo-controlNav a:before {
+		font-family: 'ipt-icomoon';
+		speak: none;
+		font-weight: normal;
+		font-variant: normal;
+		line-height: inherit;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		font-size: 16px;
+		text-indent: 0;
+		position: absolute;
+		right: 0;
+		content: '\e191';
+	}
+	.theme-ipt-uif-imageslider .nivo-controlNav a.active:before {
+		content: '\e190';
+	}
+	.theme-ipt-uif-imageslider .nivo-directionNav {
+		position: absolute;
+		bottom: 50%;
+		margin-bottom: -18px;
+		width: 100%;
+		text-align: center;
+		z-index: 9;
+	}
+	.theme-ipt-uif-imageslider .nivo-directionNav a {
+		display: inline-block;
+		width:3em;
+		height:3em;
+		font-size: 1em;
+		text-indent:-9999px;
+		border:0;
+		opacity: 0;
+		transition: all 200ms ease-in-out;
+		text-decoration: none;
+		margin: 0 10px;
+		position: relative;
+		color: $primary-color;
+		&:hover {
+			color: $accent-color;
+		}
+	}
+	.theme-ipt-uif-imageslider:hover .nivo-directionNav a { opacity: 1; }
+	.theme-ipt-uif-imageslider .nivo-directionNav a:before {
+		font-family: 'ipt-icomoon';
+		speak: none;
+		font-weight: normal;
+		font-variant: normal;
+		line-height: 1;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		font-size: 3em;
+		text-indent: 0;
+		position: absolute;
+		right: 0;
+	}
+	.theme-ipt-uif-imageslider a.nivo-prevNav:before {
+		content: '\e14c';
+	}
+	.theme-ipt-uif-imageslider a.nivo-nextNav:before {
+		content: '\e148';
+	}
+	.theme-ipt-uif-imageslider .nivo-controlNav.nivo-thumbs-enabled {
+		width: 100%;
+	}
+	.theme-ipt-uif-imageslider .nivo-controlNav.nivo-thumbs-enabled a {
+		width: auto;
+		height: auto;
+		background: none;
+		margin-bottom: 5px;
+	}
+	.theme-ipt-uif-imageslider .nivo-controlNav.nivo-thumbs-enabled img {
+		display: block;
+		width: 120px;
+		height: auto;
+	}
+}
+
+

@@ -1,0 +1,43 @@
+// ==========================================================================
+// Waves Color Mods
+// ==========================================================================
+.#{$selector} {
+	.waves-effect {
+		.waves-ripple {
+
+		}
+		&.waves-light .waves-ripple {
+			background: fade-out( $primary-color-light, 0.4 );
+			$gradient: fade-out( $primary-color-light, 0.6 ) 0,fade-out( $primary-color-light, .4 ) 40%,fade-out( $primary-color-light, .4 ) 50%,fade-out( $primary-color-light, .3 ) 60%,fade-out( $primary-color-light, 1 ) 70%;
+			background: radial-gradient($gradient);
+		}
+	}
+	.ipt_fsqm_form_button_container,
+	.ipt_fsqm_up_toolbar,
+	td.action_label{
+		.waves-effect {
+			&.waves-light .waves-ripple {
+				background: fade-out( $primary-color, 0.4 );
+				$gradient: fade-out( $primary-color, 0.6 ) 0,fade-out( $primary-color, .4 ) 40%,fade-out( $primary-color, .4 ) 50%,fade-out( $primary-color, .3 ) 60%,fade-out( $primary-color, 1 ) 70%;
+				background: radial-gradient($gradient);
+			}
+		}
+	}
+	.secondary-button {
+		&.waves-effect {
+			&.waves-light .waves-ripple {
+				background: fade-out( $primary-color, 0.4 );
+				$gradient: fade-out( $primary-color, 0.6 ) 0,fade-out( $primary-color, .4 ) 40%,fade-out( $primary-color, .4 ) 50%,fade-out( $primary-color, .3 ) 60%,fade-out( $primary-color, 1 ) 70%;
+				background: radial-gradient($gradient);
+			}
+		}
+	}
+	.ui-datepicker-buttonpane {
+		.waves-light .waves-ripple {
+			background: fade-out( $primary-color, 0.4 );
+			$gradient: fade-out( $primary-color, 0.6 ) 0,fade-out( $primary-color, .4 ) 40%,fade-out( $primary-color, .4 ) 50%,fade-out( $primary-color, .3 ) 60%,fade-out( $primary-color, 1 ) 70%;
+			background: radial-gradient($gradient);
+		}
+	}
+}
+

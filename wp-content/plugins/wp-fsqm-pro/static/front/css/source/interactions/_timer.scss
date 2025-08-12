@@ -1,0 +1,49 @@
+// ==========================================================================
+// Timer Styling
+// ==========================================================================
+body {
+	.ipt_fsqm_timer {
+		height: 60px;
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+		background-color: rgba(0, 0, 0, 0);
+		color: #999;
+		padding: 5px;
+		box-sizing: border-box;
+		transition: background 1000ms ease-in;
+	}
+	.ipt_fsqm_timer.fixed {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 100005;
+		background-color: rgba(0, 0, 0, 0.75);
+		color: #eee;
+	}
+	.ipt_fsqm_timer.fixed h4 {
+		color: #eee;
+	}
+	.ipt_fsqm_timer .ipt_fsqm_timer_inner {
+		height: 50px;
+		width: 150px;
+		margin: 0 auto
+	}
+	.ipt_fsqm_timer_spacer {
+		margin-top: 60px;
+	}
+	@media screen and ( min-width: $screen-sm-min ) {
+		.ipt_fsqm_timer {
+			height: 110px;
+		}
+		.ipt_fsqm_timer_spacer {
+			margin-top: 110px;
+		}
+		.ipt_fsqm_timer .ipt_fsqm_timer_inner {
+			height: 100px;
+			width: 300px;
+		}
+	}
+}
+
+

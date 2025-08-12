@@ -1,0 +1,17 @@
+{
+    "name"          : "nsp-code/advanced-taxonomy-terms-order",
+    "description"   : "Re-Order Categories and all custom taxonomies terms using a Drag and Drop Sortable javascript capability.",
+    "keywords"      : ["category sort", "terms order"],
+    "homepage"      : "https://www.nsp-code.com/",
+    "authors"       : [
+                        {
+                          "name": "Nsp Code",
+                          "email": "contact@nsp-code.com",
+                          "homepage": "http://www.nsp-code.com/"
+                        }
+                      ],
+    "type"          : "wordpress-plugin",
+    "require"       : {
+                            "composer/installers": "~1.0"
+                        }
+}

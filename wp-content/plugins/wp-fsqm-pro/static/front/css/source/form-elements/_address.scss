@@ -1,0 +1,37 @@
+// ==========================================================================
+// Address Element Style
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_container_address {
+		margin: 0;
+		padding: 0;
+
+		.ipt-eform-address-cpz {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			clear: both;
+
+			> * {
+				flex: 0 0 100%;
+				float: none;
+				width: 100%;
+			}
+
+			@media screen and (min-width: $screen-sm-min) {
+				&.cpz-column-half {
+					> * {
+						flex-basis: calc(49% - 7px);
+						width: calc(49% - 7px);
+					}
+				}
+				&.cpz-column-third {
+					> * {
+						flex-basis: calc(32.33333333% - 7px);
+						width: calc(32.33333333% - 7px);
+					}
+				}
+			}
+		}
+	}
+}

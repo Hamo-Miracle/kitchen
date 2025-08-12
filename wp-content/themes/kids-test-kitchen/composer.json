@@ -1,0 +1,22 @@
+{
+    "type": "project",
+    "require": {
+        "htmlburger/carbon-pagination": "*",
+        "htmlburger/carbon-fields": "dev-development",
+        "htmlburger/carbon-common": "*",
+        "htmlburger/carbon-fragment": "*",
+        "htmlburger/admin-column-manager": "*",
+        "pkostadinov-2create/carbon-field-hidden": "*"
+    },
+    "config": {
+        "secure-http": false,
+        "github-oauth": {
+            "github.com": "60c91b6cd016dc2947926b9fe71a17210ee6ca16"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/{$vendor}/{$name}/": ["type:wordpress-plugin"]
+        }
+    }
+}

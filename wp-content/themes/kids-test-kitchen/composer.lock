@@ -1,0 +1,345 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "abe57e58f30fe668991fcf25e29b6f86",
+    "packages": [
+        {
+            "name": "htmlburger/admin-column-manager",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/htmlburger/admin-column-manager.git",
+                "reference": "5758643ee4e720051a1afb1e2347a5e49f1e1a0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/htmlburger/admin-column-manager/get/5758643ee4e720051a1afb1e2347a5e49f1e1a0b.zip",
+                "reference": "5758643ee4e720051a1afb1e2347a5e49f1e1a0b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "carbon-admin-columns-manager.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "htmlBurger",
+                    "email": "info@htmlburger.com"
+                }
+            ],
+            "description": "This plugin provides an easy way to add, remove and manage columns from WordPress administration screens for post, users and taxonomy listing.",
+            "time": "2016-06-27T10:07:39+00:00"
+        },
+        {
+            "name": "htmlburger/carbon-common",
+            "version": "1.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/htmlburger/carbon-common.git",
+                "reference": "aaa0ce3fee89fadbfd514795e2edcc426ba0215c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/htmlburger/carbon-common/get/aaa0ce3fee89fadbfd514795e2edcc426ba0215c.zip",
+                "reference": "aaa0ce3fee89fadbfd514795e2edcc426ba0215c",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "carbon-common.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "htmlBurger",
+                    "email": "info@htmlburger.com"
+                }
+            ],
+            "description": "A collection of common utility functions, useful for building WordPress themes and plugins.",
+            "homepage": "https://bitbucket.org/htmlburger/carbon-common",
+            "time": "2018-11-07T13:14:41+00:00"
+        },
+        {
+            "name": "htmlburger/carbon-fields",
+            "version": "dev-development",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/htmlburger/carbon-fields.git",
+                "reference": "18958b4261f6ff8799aeba6a7e19cffc6a4ea8d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/18958b4261f6ff8799aeba6a7e19cffc6a4ea8d5",
+                "reference": "18958b4261f6ff8799aeba6a7e19cffc6a4ea8d5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.7",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Carbon_Fields\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "htmlBurger",
+                    "email": "wordpress@htmlburger.com",
+                    "homepage": "https://htmlburger.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Marin Atanasov",
+                    "email": "contact@marinatanasov.com",
+                    "homepage": "http://marinatanasov.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Siyan Panayotov",
+                    "homepage": "http://siyanpanayotov.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Georgi Stoyanov",
+                    "email": "stoyanov.gs@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Stanimir Panchev",
+                    "email": "Stan4omir@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Peter Petrov",
+                    "email": "peter.petrov89@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Plamen Kostadinov",
+                    "email": "pkostadinov.2create@gmail.com",
+                    "homepage": "http://plasmen.info/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Stanimir Stoyanov",
+                    "email": "stanimir.k.stoyanov@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Georgi Popov",
+                    "homepage": "http://magadanski.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "German Velchev",
+                    "email": "germozy@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Rashko Petrov",
+                    "email": "brutalenemy666@gmail.com",
+                    "homepage": "http://errorfactory.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Miroslav Mitev",
+                    "email": "mmitev.2create@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Kaloyan Ivanov",
+                    "email": "kaloyanxivanov@gmail.com",
+                    "homepage": "http://vilepixels.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Atanas Angelov",
+                    "email": "atanas.angelov.dev@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Alexander Panayotov",
+                    "email": "alexander.panayotov@gmail.com",
+                    "homepage": "http://alexanderpanayotov.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Viktor Vasilev",
+                    "email": "liberalcho@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Georgi Georgiev",
+                    "email": "george.georgiev96@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Atanas Vasilev",
+                    "email": "atanasvasilev91@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
+            "homepage": "http://carbonfields.net/",
+            "time": "2019-05-23T13:30:26+00:00"
+        },
+        {
+            "name": "htmlburger/carbon-fragment",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/htmlburger/carbon-fragment.git",
+                "reference": "28a3cea0c986cd424bd6b8d5b16f904f5bf74741"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/htmlburger/carbon-fragment/get/28a3cea0c986cd424bd6b8d5b16f904f5bf74741.zip",
+                "reference": "28a3cea0c986cd424bd6b8d5b16f904f5bf74741",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "carbon-fragment.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "htmlBurger",
+                    "email": "info@htmlburger.com"
+                }
+            ],
+            "description": "A tiny tool that allows passing variables to theme fragment files.",
+            "homepage": "https://bitbucket.org/htmlburger/carbon-fragment",
+            "time": "2017-05-30T09:39:44+00:00"
+        },
+        {
+            "name": "htmlburger/carbon-pagination",
+            "version": "v1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/htmlburger/carbon-pagination.git",
+                "reference": "fc3251acc572a0af79a95189816a13c728f570b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/htmlburger/carbon-pagination/get/fc3251acc572a0af79a95189816a13c728f570b7.zip",
+                "reference": "fc3251acc572a0af79a95189816a13c728f570b7",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "carbon-pagination.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marin Atanasov",
+                    "email": "contact@marinatanasov.com"
+                },
+                {
+                    "name": "htmlBurger",
+                    "email": "info@htmlburger.com"
+                }
+            ],
+            "description": "A handy WordPress library for building all kinds of paginations.",
+            "homepage": "https://bitbucket.org/htmlburger/carbon-pagination",
+            "keywords": [
+                "carbon",
+                "comments",
+                "first",
+                "last",
+                "loop",
+                "next",
+                "page",
+                "pages",
+                "pagination",
+                "paging",
+                "prev"
+            ],
+            "time": "2018-09-03T18:21:35+00:00"
+        },
+        {
+            "name": "pkostadinov-2create/carbon-field-hidden",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pkostadinov-2create/carbon-field-hidden.git",
+                "reference": "57c7c5ebbcd921ad06535211d5efd112feb01b35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pkostadinov-2create/carbon-field-hidden/zipball/57c7c5ebbcd921ad06535211d5efd112feb01b35",
+                "reference": "57c7c5ebbcd921ad06535211d5efd112feb01b35",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "carbon-field-hidden.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Plamen Kostadinov",
+                    "email": "pkostadinov.2create@gmail.com"
+                }
+            ],
+            "description": "A basic Carbon Fields extension, that adds support for Hidden type field.",
+            "homepage": "https://github.com/pkostadinov-2create/carbon-field-hidden",
+            "keywords": [
+                "carbon",
+                "carbon-field",
+                "carbon-field-hidden",
+                "wordpress"
+            ],
+            "time": "2016-05-17T13:18:34+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "htmlburger/carbon-fields": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -1,0 +1,8 @@
+.idea/
+.tmb/
+
+# Uploads
+/wp-content/uploads/
+
+wp-config.php
+wp-config-orig.php

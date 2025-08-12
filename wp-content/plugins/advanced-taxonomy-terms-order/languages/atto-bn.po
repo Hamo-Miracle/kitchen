@@ -1,0 +1,381 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Taxonomy Terms Order\n"
+"POT-Creation-Date: 2025-05-23 11:06+0300\n"
+"PO-Revision-Date: 2025-05-23 11:06+0300\n"
+"Last-Translator: NspCode <contact@nsp-code.com>\n"
+"Language-Team: Nsp Code <electronice_delphi@yahoo.com>\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class.atto.admin.php:137
+msgid "Sort "
+msgstr "সাজান "
+
+#: include/class.atto.admin.php:422 include/class.atto.compatability.php:143
+#: include/class.atto.interface.php:166
+msgid "Taxonomy Order"
+msgstr "শ্রেণীবিন্যাস আদেশ"
+
+#: include/class.atto.admin.php:468
+msgid "Advanced Taxonomy Terms Order plugin is inactive, please enter your"
+msgstr "উন্নত শ্রেণীবিন্যাস শর্তাবলী অর্ডার প্লাগইন নিষ্ক্রিয়, অনুগ্রহ করে আপনার লিখুন"
+
+#: include/class.atto.admin.php:468 include/class.atto.options.php:414
+#: include/class.atto.options.php:450
+msgid "Licence Key"
+msgstr "লাইসেন্স কি"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "Order type for %s"
+msgstr "%s-এর জন্য অর্ডারের ধরন"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "switched to %s"
+msgstr "%s এ স্যুইচ করা হয়েছে"
+
+#: include/class.atto.interface.php:120
+msgid "Order updated"
+msgstr "অর্ডার আপডেট করা হয়েছে"
+
+#: include/class.atto.interface.php:172
+msgid ""
+"This plugin cannot work without javascript, because it uses drag and drop and AJAX."
+msgstr ""
+"এই প্লাগইন জাভাস্ক্রিপ্ট ছাড়া কাজ করতে পারে না, কারণ এটি ড্র্যাগ এবং ড্রপ এবং AJAX ব্যবহার করে।"
+
+#: include/class.atto.interface.php:200
+#, php-format
+msgid "%s Taxonomies"
+msgstr "%s শ্রেণীবিন্যাস"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Taxonomy Title"
+msgstr "শ্রেণীবিন্যাস শিরোনাম"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Total Terms"
+msgstr "মোট শর্তাবলী"
+
+#: include/class.atto.interface.php:282
+msgid "Automatic Order"
+msgstr "স্বয়ংক্রিয় আদেশ"
+
+#: include/class.atto.interface.php:283
+msgid "Manual Order"
+msgstr "ম্যানুয়াল অর্ডার"
+
+#: include/class.atto.interface.php:294
+msgid "Order By"
+msgstr "দ্বারা অর্ডার"
+
+#: include/class.atto.interface.php:303
+msgid "Default"
+msgstr "ডিফল্ট"
+
+#: include/class.atto.interface.php:306
+msgid "Creation Time / ID"
+msgstr "তৈরির সময়/আইডি"
+
+#: include/class.atto.interface.php:309
+msgid "Name"
+msgstr "নাম"
+
+#: include/class.atto.interface.php:312
+msgid "Count"
+msgstr "গণনা"
+
+#: include/class.atto.interface.php:315
+msgid "Slug"
+msgstr "স্লাগ"
+
+#: include/class.atto.interface.php:318 include/class.atto.interface.php:398
+msgid "Random"
+msgstr "এলোমেলো"
+
+#: include/class.atto.interface.php:325
+msgid "Order"
+msgstr "অর্ডার"
+
+#: include/class.atto.interface.php:335
+msgid "Descending"
+msgstr "অবরোহী"
+
+#: include/class.atto.interface.php:338
+msgid "Ascending"
+msgstr "আরোহী"
+
+#: include/class.atto.interface.php:347 include/class.atto.interface.php:379
+#: include/class.atto.interface.php:419
+msgid "Update"
+msgstr "হালনাগাদ"
+
+#: include/class.atto.interface.php:393
+msgid "Reverse"
+msgstr "বিপরীত"
+
+#: include/class.atto.interface.php:394
+msgid "Title Asc"
+msgstr "শিরোনাম Asc"
+
+#: include/class.atto.interface.php:395
+msgid "Title Desc"
+msgstr "শিরোনাম বিবরণ"
+
+#: include/class.atto.interface.php:396
+msgid "Id order Asc"
+msgstr "আইডি অর্ডার Asc"
+
+#: include/class.atto.interface.php:397
+msgid "Id order Desc"
+msgstr "আইডি অর্ডার বিবরণ"
+
+#: include/class.atto.interface.php:400
+msgid "Collapse All"
+msgstr "সব ভেঙ্গে"
+
+#: include/class.atto.interface.php:401
+msgid "Expand All"
+msgstr "সব কিছু বিশদভাবে ব্যক্ত করা"
+
+#: include/class.atto.interface.php:469
+#, fuzzy
+#| msgid "Order updated"
+msgid "Items Order Updated"
+msgstr "অর্ডার আপডেট করা হয়েছে"
+
+#: include/class.atto.options.php:55
+msgid "Subscriber"
+msgstr "গ্রাহক"
+
+#: include/class.atto.options.php:56
+msgid "Contributor"
+msgstr "অবদানকারী"
+
+#: include/class.atto.options.php:57
+msgid "Author"
+msgstr "লেখক"
+
+#: include/class.atto.options.php:58
+msgid "Editor"
+msgstr "সম্পাদক"
+
+#: include/class.atto.options.php:59
+msgid "Administrator"
+msgstr "প্রশাসক"
+
+#: include/class.atto.options.php:87
+msgid "General Settings"
+msgstr "সাধারণ সেটিংস"
+
+#: include/class.atto.options.php:91
+#, fuzzy
+#| msgid "Show / Hide Taxonomy Order interface"
+msgid "Show / Hide re-order interface"
+msgstr "ট্যাক্সোনমি অর্ডার ইন্টারফেস প্রদর্শন / লুকান"
+
+#: include/class.atto.options.php:93
+msgid "Display the Taxonomy Order interface for the specified post types."
+msgstr ""
+
+#: include/class.atto.options.php:103
+msgid "Show"
+msgstr "প্রদর্শন"
+
+#: include/class.atto.options.php:104
+msgid "Hide"
+msgstr "লুকান"
+
+#: include/class.atto.options.php:117
+msgid "Minimum Level to use this plugin"
+msgstr "এই প্লাগইন ব্যবহারের জন্য ন্যূনতম স্তর"
+
+#: include/class.atto.options.php:136
+msgid "Auto Sort"
+msgstr "স্বয়ংক্রিয়ভাবে সাজানো"
+
+#: include/class.atto.options.php:140 include/class.atto.options.php:153
+#: include/class.atto.options.php:201
+msgid "OFF"
+msgstr "বন্ধ"
+
+#: include/class.atto.options.php:141 include/class.atto.options.php:154
+#: include/class.atto.options.php:202
+msgid "ON"
+msgstr "চালু"
+
+#: include/class.atto.options.php:142
+msgid ""
+"If checked, the plug-in automatically update the WordPress queries to use the new sort "
+"(<b>No code update is necessarily</b>)"
+msgstr ""
+"যদি চেক করা হয়, প্লাগইন স্বয়ংক্রিয়ভাবে ওয়ার্ডপ্রেস কোয়েরি আপডেট করে নতুন সাজানোর জন্য ব্যবহার "
+"করবে (<b>কোনও কোড আপডেট প্রয়োজন নেই</b>)"
+
+#: include/class.atto.options.php:142
+msgid "Additional details about this setting can be found at"
+msgstr "এই সেটিং সম্পর্কে অতিরিক্ত বিস্তারিত পাওয়া যাবে"
+
+#: include/class.atto.options.php:143
+msgid ""
+"If ON selected, the plug-in automatically update the WordPress queries to use the new "
+"sort (<b>No code update is necessary</b>)"
+msgstr ""
+"যদি চালু করা হয়, প্লাগইন স্বয়ংক্রিয়ভাবে ওয়ার্ডপ্রেস কোয়েরি আপডেট করে নতুন সাজানোর জন্য ব্যবহার "
+"করবে (<b>কোনও কোড আপডেট প্রয়োজন নেই</b>)"
+
+#: include/class.atto.options.php:143
+#, php-format
+msgid ""
+"Additional details about this setting can be found at <a href=\"%s\" "
+"target=\"_blank\">Autosort Details</a>"
+msgstr ""
+"এই সেটিং সম্পর্কে অতিরিক্ত বিস্তারিত পাওয়া যাবে <a href=\"%s\" target=\"_blank\">Autosort "
+"Details</a>"
+
+#: include/class.atto.options.php:149
+msgid "Admin Sort"
+msgstr "অ্যাডমিন সাজানো"
+
+#: include/class.atto.options.php:156
+msgid "Update order of terms within the admin interface per customised sort"
+msgstr "কাস্টমাইজড সাজানোর উপর ভিত্তি করে অ্যাডমিন ইন্টারফেসে টার্মের ক্রম আপডেট করুন"
+
+#: include/class.atto.options.php:162
+msgid "Default Interface Sort"
+msgstr "ডিফল্ট ইন্টারফেস সাজানো"
+
+#: include/class.atto.options.php:165
+#, fuzzy
+#| msgid ""
+#| "Allow drag & drop functionality for sorting within default WordPress taxonomy "
+#| "interface."
+msgid ""
+"Enable sortable drag-and-drop functionality within the default WordPress taxonomy "
+"interface. An "
+msgstr ""
+"ডিফল্ট ওয়ার্ডপ্রেস ট্যাক্সোনমি ইন্টারফেসে সাজানোর জন্য ড্র্যাগ ও ড্রপ ফাংশনালিটি অনুমোদন করুন।"
+
+#: include/class.atto.options.php:165
+msgid ""
+" icon will be displayed on the items, allowing for customization of the order. The "
+"option can be further adjusted by the users, through the Screen Options on the "
+"taxonomy page."
+msgstr ""
+
+#: include/class.atto.options.php:167
+msgid "Admin Sort feature must be activated for this functionality."
+msgstr ""
+
+#: include/class.atto.options.php:184
+msgid "Yes"
+msgstr ""
+
+#: include/class.atto.options.php:185
+msgid "No"
+msgstr ""
+
+#: include/class.atto.options.php:197
+msgid "WPML Sort Synchronization"
+msgstr "WPML সাজানোর সিঙ্ক্রোনাইজেশন"
+
+#: include/class.atto.options.php:204
+msgid ""
+"The WPML Sort Synchronization feature ensures that custom sorting applied to taxonomy "
+"terms is seamlessly synchronized across all translations managed by the WPML "
+"(WordPress Multilingual) plugin"
+msgstr ""
+"WPML Sort Synchronization বৈশিষ্ট্যটি নিশ্চিত করে যে ট্যাক্সোনমি পদগুলিতে প্রয়োগ করা কাস্টম "
+"সর্টিং WPML (ওয়ার্ডপ্রেস বহুভাষিক) প্লাগইন দ্বারা পরিচালিত সমস্ত অনুবাদে নির্বিঘ্নে সিঙ্ক্রোনাইজ "
+"করা হয়।"
+
+#: include/class.atto.options.php:214
+msgid "Save Settings"
+msgstr "সেটিংস সংরক্ষণ করুন"
+
+#: include/class.atto.options.php:251
+msgid "Settings Saved"
+msgstr "সেটিংস সংরক্ষিত হয়েছে"
+
+#: include/class.atto.options.php:283 include/class.atto.options.php:361
+#, php-format
+msgid "There was a problem connecting to %s"
+msgstr "%s এর সাথে সংযোগ করতে একটি সমস্যা ছিল"
+
+#: include/class.atto.options.php:309
+msgid ""
+"There was a problem deactivating the licence on other side, however locally the key is "
+"now removed: "
+msgstr ""
+"অন্য পাশে লাইসেন্স নিষ্ক্রিয় করতে একটি সমস্যা ছিল, তবে স্থানীয়ভাবে কীটি এখন সরানো হয়েছে: "
+
+#: include/class.atto.options.php:326 include/class.atto.options.php:399
+#, php-format
+msgid "There was a problem with the data block received from %s"
+msgstr "%s থেকে প্রাপ্ত ডেটা ব্লকের সাথে একটি সমস্যা ছিল"
+
+#: include/class.atto.options.php:343
+msgid "Licence Key can't be empty"
+msgstr "লাইসেন্স কী খালি হতে পারে না"
+
+#: include/class.atto.options.php:391
+#, php-format
+msgid "There was a problem activating the licence: %s"
+msgstr "লাইসেন্স সক্রিয় করতে একটি সমস্যা ছিল: %s"
+
+#: include/class.atto.options.php:411 include/class.atto.options.php:447
+msgid "Advanced Taxonomy Terms Order License"
+msgstr "অ্যাডভান্সড ট্যাক্সোনমি টার্মস অর্ডার লাইসেন্স"
+
+#: include/class.atto.options.php:426
+#, php-format
+msgid ""
+"Enter the Licence Key you received when you purchased this product. If you lost the "
+"key, you can always retrieve it from <a href=\"%s\" target=\"_blank\">My Account</a>."
+msgstr ""
+"এই পণ্যটি কেনার সময় আপনি যে লাইসেন্স কী পেয়েছিলেন তা প্রবেশ করুন। যদি আপনি কীটি হারিয়ে "
+"ফেলেন, আপনি সবসময় এটি <a href=\"%s\" target=\"_blank\">My Account</a> থেকে পুনরুদ্ধার "
+"করতে পারেন।"
+
+#: include/class.atto.options.php:431
+msgid "Save"
+msgstr "সংরক্ষণ করুন"
+
+#: include/class.atto.options.php:472
+msgid "Deactivate"
+msgstr "নিষ্ক্রিয় করুন"
+
+#: include/class.atto.options.php:475
+#, php-format
+msgid "You can generate more keys from <a href=\"%s\" target=\"_blank\">My Account</a>"
+msgstr "আপনি <a href=\"%s\" target=\"_blank\">My Account</a> থেকে আরও কী তৈরি করতে পারেন"
+
+#: include/class.atto.plugin-updater.php:123
+msgid "An error occurred when trying to identify the plugin."
+msgstr "প্লাগইনটি সনাক্ত করার চেষ্টা করার সময় একটি ত্রুটি ঘটেছে।"
+
+#: include/class.atto.plugin-updater.php:123 include/class.atto.plugin-updater.php:143
+msgid "Try again"
+msgstr "আবার চেষ্টা করুন"
+
+#: include/class.atto.plugin-updater.php:143
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "এপিআই অনুরোধের সময় একটি অপ্রত্যাশিত HTTP ত্রুটি ঘটেছে।"
+
+#: include/class.atto.terms_walker.php:49
+msgid "Move to Top"
+msgstr "উপরে সরান"
+
+#: include/class.atto.terms_walker.php:50
+msgid "Move to Bottom"
+msgstr "নীচে সরান"

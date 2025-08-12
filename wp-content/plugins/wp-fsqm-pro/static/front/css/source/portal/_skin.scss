@@ -1,0 +1,87 @@
+// ==========================================================================
+// Skinning of User Portal
+// Included in the base CSS file
+// ==========================================================================
+.#{$selector} {
+	&.ipt_fsqm_user_portal {
+		// Main Content
+		.ipt_uif_up_main_container {
+			@include material__box-shadow();
+			background-color: $preset-bg;
+
+			.eform-up-login-header {
+				background-color: $primary-color;
+				color: $primary-color-text;
+				margin: 0 -14px 14px -14px;
+				padding: 20px 14px;
+				@include material__box-shadow-straight();
+			}
+		}
+		// == Header
+		.ipt_fsqm_user_portal_welcome {
+			background-color: $primary-color;
+			color: $primary-color-text;
+			border: 1px solid $preset-bg;
+			border-bottom: 0 none;
+
+			// Greeting message
+			h2 {
+				color: $primary-color-text;
+			}
+			// Background color of image
+			.ipt_fsqm_up_profile {
+				img {
+					background-color: $preset-bg;
+				}
+			}
+			// Toolbar
+			.ipt_fsqm_up_toolbar {
+				background-color: $up-button-container;
+				color: $up-button-container-color;
+
+				h6, button {
+					font-size: 1em;
+				}
+				h6 {
+					color: $up-button-container-color;
+					padding: 1em;
+					text-transform: uppercase;
+				}
+
+				.ipt_uif_button {
+					background-color: transparent;
+					box-shadow: none;
+					border: 0 none;
+					color: $preset-button-container-color;
+					@include material__smooth-tran( 200ms, all );
+					&:hover {
+						background-color: $preset-button-container-button-hover;
+						color: $preset-button-container-color;
+					}
+					&:active {
+						background-color: $preset-button-container-button-hover;
+					}
+				}
+			}
+		}
+
+		// Table
+		.ipt_fsqm_up_table {
+			&.collapsed {
+				td.form_label {
+					&::before {
+						color: $secondary-text-color;
+					}
+
+				}
+				.parent {
+					td.form_label::before {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+

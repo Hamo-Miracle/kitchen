@@ -1,0 +1,133 @@
+// ==========================================================================
+// Container Styling
+// ==========================================================================
+.#{$selector} {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $primary-text-color;
+	font-weight: $body-font-weight;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $headings-font-family;
+		font-weight: $headings-font-weight;
+		line-height: $headings-line-height;
+		color: $primary-text-color;
+
+		small {
+			font-weight: normal;
+			line-height: 1;
+			color: $secondary-text-color;
+		}
+	}
+
+	h1,
+	h2,
+	h3 {
+		margin-top: $line-height-computed;
+		margin-bottom: ($line-height-computed / 2);
+
+		small {
+			font-size: 65%;
+		}
+	}
+	h4,
+	h5,
+	h6 {
+		margin-top: ($line-height-computed / 2);
+		margin-bottom: ($line-height-computed / 2);
+
+		small {
+			font-size: 75%;
+		}
+	}
+
+	h1 {
+		font-size: $font-size-h1;
+	}
+	h2 {
+		font-size: $font-size-h2;
+	}
+	h3 {
+		font-size: $font-size-h3;
+	}
+	h4 {
+		font-size: $font-size-h4;
+	}
+	h5 {
+		font-size: $font-size-h5;
+	}
+	h6 {
+		font-size: $font-size-h6;
+	}
+
+	p {
+		margin: 0 0 ($line-height-computed / 2);
+	}
+
+	// Emphasis & misc
+	// -------------------------
+
+	// Ex: (12px small font / 14px base font) * 100% = about 85%
+	small {
+		font-size: floor((100% * $font-size-small / $font-size-base));
+	}
+
+	strong {
+		font-weight: $strong-font-weight;
+	}
+
+	a {
+		color: $primary-color;
+		&:hover {
+			text-decoration: underline;
+			color: darken($accent-color, 30%);
+		}
+		&:active {
+			color: $secondary-text-color;
+		}
+		&:focus {
+			color: darken($secondary-text-color, 15%);
+		}
+	}
+	img {
+		&.alignright,
+		&.alignleft,
+		&.aligncenter {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	img.alignright {
+		float: right;
+		margin: 0 0 1em 1em;
+	}
+	img.alignleft {
+		float: left;
+		margin: 0 1em 1em 0;
+	}
+	img.aligncenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	a img.alignright {
+		float: right;
+		margin: 0 0 1em 1em;
+	}
+	a img.alignleft {
+		float: left;
+		margin: 0 1em 1em 0;
+	}
+	a img.aligncenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

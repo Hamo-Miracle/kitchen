@@ -1,0 +1,306 @@
+/*
+Theme name: Kids Test Kitchen
+Description: Custom Theme
+Template: pluto
+Parent theme URL: https://wordpress.org/themes/pluto/
+*/
+
+/*
+	Source post-css styles are located in the postcss directory.
+	The compiled bundle is in assets/bundle.css; The README.md
+	file contains instructions how to get the compilation
+	process up & running.
+
+	If you need to make a quick fix, feel free to add CSS
+	below this comment. It will override bundle.css styles.
+*/
+
+/* ==========================================================================
+	# Global
+========================================================================== */
+
+.container { position: relative; width: 100%; height: 0; padding-bottom: 56.25%; }
+.video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+body,
+button,
+input,
+select,
+textarea { font-size: 18px; font-size: 1.8rem; }
+
+dfn,
+cite,
+em,
+i { font-style:italic; }
+
+
+blockquote { margin: 2em 1em; }
+
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] { font-size: 24px; font-size: 2.4rem; }
+
+.wp-caption { margin-right: 1em; padding: 5px 10px; }
+.wp-caption-text { font-size: 14px; }
+.wp-caption .wp-caption-text { margin: 0; }
+
+/* ==========================================================================
+	# Main Navigation
+========================================================================== */
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+	background: #333;
+	margin-bottom: 0px;
+	/*box-shadow:0px 3px 3px #333;*/
+}
+.main-navigation a { padding: 1.25em; }
+
+/* ==========================================================================
+	# Header
+========================================================================== */
+
+header#masthead { width: 100%; margin: 0 auto; }
+header#masthead .site-branding { max-width: none; max-height: none; width: 100%; }
+header#masthead .main_logo { max-width: 100%; max-height: 100%; height: auto; margin: 0 auto; }
+
+header#masthead h1.site-title a,
+header#masthead p.site-title a  { display: block; width: 100%; font-size: 72px; text-align: center; }
+
+header#masthead h1.site-title.logo-container a { }
+
+body.page-template-default header#masthead {}
+
+/*body.page-template-default header#masthead { background: url('http://kidstestkitchen.com/wp-content/uploads/2017/02/ktklogo_small.png'); }*/
+
+body.page-template-default #primary { width: 100%; }
+
+.site-branding { width: 100%; }
+
+h1.site-title a,
+p.site-title a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 36px;
+	color: #484848;
+	display: block;
+	margin: 0px;
+}
+.logo-container {
+	margin-bottom: 0;
+}
+
+/* ==========================================================================
+	# Content
+========================================================================== */
+
+#primary {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+		background: white;
+	border:none;
+}
+
+.page-id-79 #primary {
+	width: 64%;
+	float: left;
+	padding: 15px;
+	padding-top: 0px;
+	background: #ffffff;
+	border:none;
+}
+
+.entry-content {
+	margin-top: 0;
+}
+
+.entry-content * { max-width: 100%; }
+
+.flowplayer { /* margin-left:401px; */ }
+
+.fb_iframe_widget {float:right;}
+
+/* ==========================================================================
+	# Articles
+========================================================================== */
+
+article blockquote { background: #00ccff; color:#fff; padding: 2em 4em; }
+article blockquote em { font-style:italic; }
+
+article blockquote {
+	padding: 15px 50px;
+	padding-top: 25px;
+}
+article blockquote:before {
+	content: url("images/quote.png");
+	position: relative;
+		left: -40px;
+		top: 0px;
+	padding: none;
+	display: block;
+	height: 0;
+}
+
+
+#respond textarea { padding: 42px 10px 28px 10px; }
+#respond #submit { width: 250px; }
+
+/* ==========================================================================
+	# Testing
+========================================================================== */
+
+.div1 {
+	margin:20px 0 0 0;
+	background-color: #92d14f;
+	color:white;
+	padding:0 10px;
+}
+
+.div2 {
+	margin:20px 0 0 0;
+	background-color: #01b0f1;
+	color:white;
+	padding:0 10px;
+}
+
+.div2 p a {
+	color:white;
+	text-decoration: underline;
+	font-weight:bold;
+}
+
+.div1 h2,
+.div2 h2 {
+	clear:none;
+}
+
+.div1 p,
+.div2 p,
+div2a p,
+.div1 li {
+ list-style: disc;
+}
+
+.div1 ul,
+.div1 ul li ul {
+	margin: 0 0 1em 1em;
+}
+
+#respond label,
+.required {
+	position: relative;
+	top: 29px;
+	left: 10px;
+	background: transparent;
+	padding: 5px;
+	margin-left: -10px;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#tab-description h2 { display:none; height:0; }
+
+@media screen and (max-width: 767px) {
+	.div1,
+	.div2 { width: 100%; float: none; margin: 0 auto;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	#primary { padding: 4px; }
+	#wpadminbar { overflow: hidden; }
+	#masthead { clear: both; }
+	.menu-toggle { margin-bottom: 0; }
+}
+
+/* ==========================================================================
+	# Footer Menus
+========================================================================== */
+
+.site-footer { padding: 0 !important; }
+
+.site-footer #footer-container > #footer-navigation { display: block; width: 100%; padding: 10px 0; }
+.site-footer #footer-container > #footer-navigation ul { margin: 0; }
+
+/* ==========================================================================
+	# WooCommerce
+========================================================================== */
+
+.woocommerce form .form-row .required { position: static; margin: 0; color: #a00; font-weight: 700; border: 0; background: transparent; padding: 0; font-size: 100%; text-decoration: none; }
+
+body.woocommerce article table th,
+article .woocommerce table th { background-color: inherit; }
+
+/* ==========================================================================
+	# Mobile Menu
+========================================================================== */
+
+@media(max-width: 767px){
+	body .main-navigation.main-navigation .menu-item-has-children.expanded {
+		background-color: #f3f3f3;
+	}
+
+	body .main-navigation.main-navigation .menu-item-has-children.expanded > a {
+		position: relative;
+		color: #404040 !important;
+	}
+
+	body .main-navigation.main-navigation .menu-item-has-children > a:before {
+		position: absolute;
+		content: '';
+		top: 50%;
+		right: 15px;
+		border: solid #fff;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: translateY(-50%) rotate(45deg);
+		-webkit-transform: translateY(-50%) rotate(45deg);
+		transition: transform .3s;
+		pointer-events: none;
+	}
+
+	body .main-navigation.main-navigation .menu-item-has-children.current-menu-item > a:before,
+	body .main-navigation.main-navigation .menu-item-has-children > a:hover:before {
+		border: solid #404040;
+		border-width: 0 3px 3px 0;
+	}
+
+	body .main-navigation.main-navigation .menu-item-has-children.expanded > a:before {
+		border: solid #404040;
+		border-width: 0 3px 3px 0;
+		transform: translateY(-50%) rotate(-135deg);
+		-webkit-transform: translateY(-50%) rotate(-135deg);
+	}
+
+	body .main-navigation.main-navigation .menu-item-has-children.expanded .sub-menu {
+		position: static;
+		display: block !important;
+		float: none;
+		padding-left: 20px;
+	}
+
+	body .main-navigation.main-navigation .menu-item-has-children.expanded .sub-menu > li {
+		background-color: #fff; overflow: hidden;
+	}
+
+	body .main-navigation.main-navigation .menu-item-has-children.expanded .sub-menu a {
+		width: 100%;
+	}
+
+	body .main-navigation.main-navigation .menu-item-has-children.expanded .sub-menu a:hover {
+		background-color: #d9d9d9 !important;
+		color: #333;
+	}
+
+	body .main-navigation.main-navigation .menu-item-has-children .sub-menu a,
+	body .main-navigation.main-navigation .menu-item-has-children .sub-menu a:hover {
+		padding: 8px 20px !important;
+	}
+}

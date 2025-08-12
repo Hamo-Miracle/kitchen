@@ -1,0 +1,50 @@
+# Copyright (C) 2017 BNFW - Custom Fields Add-on
+# This file is distributed under the same license as the BNFW - Custom Fields Add-on package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BNFW - Custom Fields Add-on 1.1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bnfw-custom-"
+"fields\n"
+"POT-Creation-Date: 2017-01-16 05:12:30+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/class-bnfw-custom-field-notification.php:75
+msgid "Post - Custom Field Updated"
+msgstr ""
+
+#: includes/class-bnfw-custom-field-notification.php:81
+msgid "Page - Custom Field Updated"
+msgstr ""
+
+#: includes/class-bnfw-custom-field-notification.php:87
+#: includes/class-bnfw-custom-field-notification.php:167
+msgid "Custom Field Updated"
+msgstr ""
+
+#: includes/class-bnfw-custom-field-notification.php:104
+msgid "Send when these Custom Fields are Updated"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "BNFW - Custom Fields Add-on"
+msgstr ""
+
+#. #-#-#-#-#  bnfw-custom-fields.pot (BNFW - Custom Fields Add-on 1.1.1)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  bnfw-custom-fields.pot (BNFW - Custom Fields Add-on 1.1.1)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://betternotificationsforwp.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Custom Fields Add-on for Better Notifications for WP"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Made with Fuel"
+msgstr ""

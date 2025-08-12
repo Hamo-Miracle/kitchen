@@ -1,0 +1,52 @@
+// ==========================================================================
+// Signature Element Styling
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_jsignature {
+		.ipt_uif_jsignature_pad {
+			background-color: $disabled-color;
+			border-radius: 4px;
+			color: $secondary-text-color;
+
+			canvas {
+				min-height: 150px;
+				cursor: crosshair;
+			}
+
+			input {
+				visibility: hidden;
+			}
+		}
+
+		.ipt-eform-material-button-container {
+			text-align: center;
+			position: relative;
+			top: -23px;
+
+			.eform-button-container-inner {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.ui-button {
+					height: 45px;
+					margin: 0 10px 0 0;
+					+ .ui-button {
+						margin-right: 0;
+					}
+
+					.ui-button-text {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	}
+
+	.ipt_fsqm_container_jsignature {
+		.ipt_uif_container .ipt_uif_container_inner {
+			padding-top: 0;
+		}
+	}
+}
+
+

@@ -1,0 +1,14 @@
+# /themes/mytheme/
+vendor*
+node_modules*
+
+# /themes/mytheme/assets/
+assets/bundle.css
+
+# /themes/mytheme/postcss/
+postcss/_load.css
+postcss/_sprite.css
+
+# /themes/mytheme/images
+images/sprite.@2x.png
+images/sprite.png

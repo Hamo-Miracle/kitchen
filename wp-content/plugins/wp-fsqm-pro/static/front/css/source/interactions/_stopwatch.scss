@@ -1,0 +1,52 @@
+// ==========================================================================
+// Stopwatch Styling
+// ==========================================================================
+body .ipt_uif_front {
+	.ipt_fsqm_form_stopwatch.stp-hidden {
+		display: none !important;
+		visibility: none !important;
+	}
+	.ipt_fsqm_form_stopwatch {
+		height: 80px;
+		margin: 0 auto;
+		max-width: 320px;
+		color: #999;
+	}
+	.ipt_fsqm_form_stopwatch.ipt_fsqm_form_stopwatch_noelem_1 {
+		max-width: 240px;
+	}
+	.ipt_fsqm_form_stopwatch.ipt_fsqm_form_stopwatch_noelem_2 {
+		max-width: 160px;
+	}
+	.ipt_fsqm_form_stopwatch.ipt_fsqm_form_stopwatch_noelem_3 {
+		max-width: 80px;
+	}
+
+	@media screen and ( min-width: $screen-lg-min ) {
+		.ipt_fsqm_form_stopwatch.rotate {
+			-webkit-transform: rotate(90deg);
+			transform: rotate(90deg);
+			-webkit-transform-origin: top left;
+			transform-origin: top left;
+			float: right;
+			margin-right: -400px;
+			margin-top: -10px;
+		}
+		.ipt_fsqm_form_stopwatch.rotate.ipt_fsqm_form_stopwatch_noelem_1 {
+			margin-right: -320px;
+		}
+		.ipt_fsqm_form_stopwatch.rotate.ipt_fsqm_form_stopwatch_noelem_2 {
+			margin-right: -240px;
+		}
+		.ipt_fsqm_form_stopwatch.rotate.ipt_fsqm_form_stopwatch_noelem_3 {
+			margin-right: -160px;
+		}
+	}
+	.ipt_uif_widget_vertical .ipt_fsqm_form_stopwatch.rotate {
+		-webkit-transform: none;
+		transform: none;
+		float: none;
+		margin-right: auto;
+		margin-top: 0;
+	}
+}

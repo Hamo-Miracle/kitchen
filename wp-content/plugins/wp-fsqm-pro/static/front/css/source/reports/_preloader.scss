@@ -1,0 +1,17 @@
+// ==========================================================================
+// Preloader for Reports Pages
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_report_ajax {
+		display: block;
+		margin-top: 1em;
+
+		.ipt-eform-preloader-circle,
+		.ipt-eform-preloader-text {
+			display: block;
+			margin: 0;
+		}
+	}
+}
+
+

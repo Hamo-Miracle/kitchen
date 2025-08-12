@@ -1,0 +1,23 @@
+// ==========================================================================
+// Preloader Styling
+// ==========================================================================
+
+.ipt_fsqm_user_portal  {
+
+	.ipt_fsqm_up_al {
+		display: block;
+		margin-top: 1em;
+
+		.ipt-eform-preloader-circle,
+		.ipt-eform-preloader-text {
+			display: block;
+			margin: 0;
+		}
+	}
+
+	.ipt_fsqm_up_pb {
+		margin: 28px 0;
+	}
+}
+
+

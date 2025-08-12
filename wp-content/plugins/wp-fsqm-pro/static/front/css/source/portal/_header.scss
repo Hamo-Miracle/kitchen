@@ -1,0 +1,61 @@
+// ==========================================================================
+// User Portal Header Section
+// ==========================================================================
+.ipt_fsqm_user_portal {
+	.ipt_fsqm_user_portal_welcome {
+		text-align: left;
+		margin: 0 -14px;
+		padding: 14px 14px 0 14px;
+		position: relative;
+		border-radius: 2px 2px 0 0;
+
+		.ipt_fsqm_up_welcome {
+			margin: 14px 0 0 0;
+			h2 {
+				margin: 0 0 14px 0;
+			}
+			.ipt_fsqm_up_msg {
+				p {
+					margin: 0;
+				}
+			}
+		}
+
+		.ipt_fsqm_up_profile {
+			float: left;
+			margin: 0 14px 14px;
+			img {
+				border-radius: 100%;
+				padding: 8px;
+			}
+		}
+
+		.ipt_fsqm_up_toolbar {
+			margin-left: -14px;
+			margin-right: -14px;
+			&::after {
+				display: block;
+				content: "";
+				clear: both;
+			}
+			.ipt-eform-material-button-container {
+				float: right;
+				font-size: 1em;
+				margin: 0;
+				.ipt_uif_button {
+					margin: 0;
+					border-radius: 0;
+				}
+			}
+			.ipt_fsqm_up_meta {
+				h6 {
+					display: inline-block;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+
+

@@ -1,0 +1,57 @@
+// ==========================================================================
+// User Portal Table
+// ==========================================================================
+.ipt_fsqm_user_portal {
+	.dataTables_processing {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 250px;
+		height: 70px;
+		margin-left: -125px;
+		margin-top: -35px;
+		padding: 0;
+		border: 0 none;
+		text-align: center;
+		background-color: transparent;
+	}
+
+
+
+	.ipt_fsqm_up_dpicker {
+		display: inline;
+		width: 70px;
+	}
+
+	.ipt_fsqm_up_table {
+		&.collapsed {
+			td.form_label {
+				cursor: pointer;
+				&::before {
+					content: "\f055";
+					font-family: ipt-icomoon;
+					speak: none;
+					font-style: normal;
+					font-weight: normal;
+					font-variant: normal;
+					text-transform: none;
+					/* Better Font Rendering =========== */
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					font-size: 28px;
+					line-height: 28px;
+					float: left;
+					display: inline-block;
+					margin-right: 14px;
+				}
+			}
+			.parent {
+				td.form_label::before {
+					content: "\f056";
+				}
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,238 @@
+// ==========================================================================
+// Mathematical Styling
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_container_mathematical {
+		.ipt_uif_question {
+			padding-bottom: 0;
+			.ipt_uif_question_label {
+				width: 35%;
+				padding-bottom: 10px;
+			}
+			.ipt_uif_question_content {
+				width: 65%;
+				padding-left: 15px;
+				padding-bottom: 10px;
+			}
+			&.ipt_uif_question_full {
+				.ipt_uif_question_content {
+					width: 100%;
+					padding-left: 0;
+				}
+			}
+			&.ipt_uif_question_vertical {
+				.ipt_uif_question_label {
+					width: 100%;
+				}
+				.ipt_uif_question_content {
+					width: 100%;
+					padding-left: 0;
+				}
+			}
+		}
+
+		&.ipt-eform-math-row {
+			border-bottom: 1px solid $divider-color;
+			margin: 2px 0 13px;
+
+			.ipt_uif_question {
+				padding-top: 0;
+				text-align: left;
+
+				.ipt_uif_question_label {
+					width: 35%;
+					padding-bottom: 10px;
+					text-align: left;
+					margin-bottom: 0;
+				}
+				.ipt_uif_question_content {
+					width: 65%;
+					padding-left: 15px;
+					padding-bottom: 10px;
+				}
+			}
+
+			.ipt_uif_mathematical {
+				text-align: right;
+				.ipt_uif_mathematical_input.ipt_uif_text {
+					text-align: right;
+					margin-bottom: -13px;
+					position: relative;
+					bottom: -3px;
+					border-bottom-width: 1px;
+					box-shadow: none;
+					&:active,
+					&.active,
+					&:focus,
+					&.valid,
+					&.invalid {
+						border-bottom-width: 1px;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+		&.ipt-eform-math-fancy {
+			.ipt_uif_question {
+				padding-top: 14px;
+				text-align: left;
+				.ipt_uif_question_label {
+					width: auto;
+					float: none;
+					padding-bottom: 10px;
+					text-align: left;
+					clear: none;
+					display: inline-block;
+				}
+				.ipt_uif_question_content {
+					width: auto;
+					float: right;
+					padding-left: 15px;
+					padding-bottom: 10px;
+				}
+			}
+		}
+		&.ipt-eform-math-row,
+		&.ipt-eform-math-fancy {
+			.ipt_uif_question {
+				&.ipt_uif_question_full {
+					.ipt_uif_question_content {
+						width: 100%;
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+	.ipt_uif_mathematical {
+		.ipt_uif_mathematical_input.ipt_uif_text {
+			display: inline-block;
+			width: auto;
+			margin: 0 14px;
+		}
+
+		&.ipt-eform-math-fancy {
+			position: relative;
+			float: right;
+			right: -50px;
+			top: -14px;
+			padding: 10px 40px;
+			height: 50px;
+			line-height: 30px;
+
+			background-color: $primary-color;
+			color: $primary-color-text;
+			font-size: 1.5em;
+			-webkit-filter: drop-shadow(
+				0 2px 2px fade-out($box-shadow-color, (1 - 0.14))
+			);
+			        filter: drop-shadow(
+				0 2px 2px fade-out($box-shadow-color, (1 - 0.14))
+			);
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			&::before {
+				position: absolute;
+				content: '';
+				height: 100%;
+				width: 48px;
+				border: 25px solid $primary-color;
+				border-color: transparent $primary-color transparent transparent;
+				left: -50px;
+				top: 0;
+				display: block;
+			}
+			&::after {
+				position: absolute;
+				content: '';
+				width: 6px;
+				height: 6px;
+				border: 6px solid $primary-color-dark;
+				border-color: $primary-color-dark transparent transparent
+					$primary-color-dark;
+				right: 0;
+				bottom: -12px;
+				display: block;
+			}
+			.ipt_uif_mathematical_input.ipt_uif_text,
+			input[type='text'] {
+				font-size: 0.75em;
+				margin: 0;
+				width: 100px;
+				border-bottom: 0 none !important;
+				padding: 0;
+				line-height: 30px;
+				height: 30px;
+				color: $primary-color-text;
+			}
+		}
+	}
+
+	.ipt_fsqm_container_mathematical_hidden {
+		padding: 0;
+		margin: 0;
+	}
+
+	// Override for vertical
+	&.eform-override-alignment-vertical {
+		.ipt_fsqm_container_mathematical:not(.ipt-eform-math-fancy):not(.ipt-eform-math-row) {
+			.ipt_uif_question {
+				.ipt_uif_question_label {
+					width: 100%;
+				}
+				.ipt_uif_question_content {
+					width: 100%;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	// Override for horizontal
+	&.eform-override-alignment-horizontal {
+		.ipt_fsqm_container_mathematical:not(.ipt-eform-math-fancy):not(.ipt-eform-math-row) {
+			.ipt_uif_question {
+				padding-bottom: 0;
+				.ipt_uif_question_label {
+					width: 35%;
+					padding-bottom: 10px;
+				}
+				.ipt_uif_question_content {
+					width: 65%;
+					padding-left: 15px;
+					padding-bottom: 10px;
+				}
+				&.ipt_uif_question_full {
+					.ipt_uif_question_content {
+						width: 100%;
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// Override for centered
+	&.eform-override-alignment-centered {
+		.ipt_fsqm_container_mathematical:not(.ipt-eform-math-fancy):not(.ipt-eform-math-row) {
+			.ipt_uif_question {
+				.ipt_uif_question_label {
+					width: 100%;
+					text-align: center;
+				}
+				.ipt_uif_question_content {
+					width: 100%;
+					padding-left: 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	// Override for single paged forms
+	&.type_0 {
+		.ipt_uif_mathematical.ipt-eform-math-fancy {
+			right: -48px;
+		}
+	}
+}

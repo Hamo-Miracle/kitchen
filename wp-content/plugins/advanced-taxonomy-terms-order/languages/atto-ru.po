@@ -1,0 +1,457 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: taxonomy-terms-order\n"
+"POT-Creation-Date: 2025-05-23 11:06+0300\n"
+"PO-Revision-Date: 2025-05-23 11:06+0300\n"
+"Last-Translator: NspCode <contact@nsp-code.com>\n"
+"Language-Team: Vadim Bogaiskov <vadim.bogaiskov@gmail.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):"
+"(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class.atto.admin.php:137
+msgid "Sort "
+msgstr ""
+
+#: include/class.atto.admin.php:422 include/class.atto.compatability.php:143
+#: include/class.atto.interface.php:166
+msgid "Taxonomy Order"
+msgstr "Taxonomy Order"
+
+#: include/class.atto.admin.php:468
+msgid "Advanced Taxonomy Terms Order plugin is inactive, please enter your"
+msgstr ""
+"Расширенные условия таксономии Плагин заказа неактивен, пожалуйста, введите"
+
+#: include/class.atto.admin.php:468 include/class.atto.options.php:414
+#: include/class.atto.options.php:450
+msgid "Licence Key"
+msgstr "Ключ лицензии"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "Order type for %s"
+msgstr "Тип заказа на %s"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "switched to %s"
+msgstr "переключился на %s"
+
+#: include/class.atto.interface.php:120
+#, fuzzy
+#| msgid "Items Order Updates"
+msgid "Order updated"
+msgstr "Порядок элементов обновлен"
+
+#: include/class.atto.interface.php:172
+#, fuzzy
+#| msgid ""
+#| "This plugin can't work without javascript, because it's use drag and drop "
+#| "and AJAX."
+msgid ""
+"This plugin cannot work without javascript, because it uses drag and drop "
+"and AJAX."
+msgstr ""
+"Этот плагин не может работать без JavaScript, так как он использует  "
+"перетаскивание drag and drop и AJAX."
+
+#: include/class.atto.interface.php:200
+#, fuzzy, php-format
+#| msgid "Taxonomies"
+msgid "%s Taxonomies"
+msgstr "Систематизация"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Taxonomy Title"
+msgstr "Taxonomy Title"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+#, fuzzy
+#| msgid "Total  Posts"
+msgid "Total Terms"
+msgstr "Всего сообщений"
+
+#: include/class.atto.interface.php:282
+msgid "Automatic Order"
+msgstr "Автоматический заказ"
+
+#: include/class.atto.interface.php:283
+#, fuzzy
+#| msgid "Taxonomy Order"
+msgid "Manual Order"
+msgstr "Taxonomy Order"
+
+#: include/class.atto.interface.php:294
+msgid "Order By"
+msgstr "Сортировать по"
+
+#: include/class.atto.interface.php:303
+msgid "Default"
+msgstr "По умолчанию"
+
+#: include/class.atto.interface.php:306
+msgid "Creation Time / ID"
+msgstr "Время создания / ID"
+
+#: include/class.atto.interface.php:309
+msgid "Name"
+msgstr "Имя"
+
+#: include/class.atto.interface.php:312
+msgid "Count"
+msgstr "Количество"
+
+#: include/class.atto.interface.php:315
+msgid "Slug"
+msgstr "Ярлык"
+
+#: include/class.atto.interface.php:318 include/class.atto.interface.php:398
+msgid "Random"
+msgstr "Случайно"
+
+#: include/class.atto.interface.php:325
+msgid "Order"
+msgstr "Заказ"
+
+#: include/class.atto.interface.php:335
+msgid "Descending"
+msgstr "По убыванию"
+
+#: include/class.atto.interface.php:338
+msgid "Ascending"
+msgstr "По возрастанию"
+
+#: include/class.atto.interface.php:347 include/class.atto.interface.php:379
+#: include/class.atto.interface.php:419
+msgid "Update"
+msgstr "Обновить"
+
+#: include/class.atto.interface.php:393
+msgid "Reverse"
+msgstr "Реверс"
+
+#: include/class.atto.interface.php:394
+msgid "Title Asc"
+msgstr "Название Asc"
+
+#: include/class.atto.interface.php:395
+msgid "Title Desc"
+msgstr "Title Desc"
+
+#: include/class.atto.interface.php:396
+msgid "Id order Asc"
+msgstr "Id порядок Asc"
+
+#: include/class.atto.interface.php:397
+msgid "Id order Desc"
+msgstr "Id заказа Desc"
+
+#: include/class.atto.interface.php:400
+msgid "Collapse All"
+msgstr ""
+
+#: include/class.atto.interface.php:401
+msgid "Expand All"
+msgstr ""
+
+#: include/class.atto.interface.php:469
+#, fuzzy
+#| msgid "Items Order Updates"
+msgid "Items Order Updated"
+msgstr "Порядок элементов обновлен"
+
+#: include/class.atto.options.php:55
+msgid "Subscriber"
+msgstr "Подписчик"
+
+#: include/class.atto.options.php:56
+msgid "Contributor"
+msgstr "Помощник"
+
+#: include/class.atto.options.php:57
+msgid "Author"
+msgstr "Автор"
+
+#: include/class.atto.options.php:58
+msgid "Editor"
+msgstr "Редактор"
+
+#: include/class.atto.options.php:59
+msgid "Administrator"
+msgstr "Администратор"
+
+#: include/class.atto.options.php:87
+msgid "General Settings"
+msgstr "Общие настройки"
+
+#: include/class.atto.options.php:91
+msgid "Show / Hide re-order interface"
+msgstr ""
+
+#: include/class.atto.options.php:93
+msgid "Display the Taxonomy Order interface for the specified post types."
+msgstr ""
+
+#: include/class.atto.options.php:103
+msgid "Show"
+msgstr ""
+
+#: include/class.atto.options.php:104
+msgid "Hide"
+msgstr ""
+
+#: include/class.atto.options.php:117
+msgid "Minimum Level to use this plugin"
+msgstr "Минимальный уровнь для использования этого плагина"
+
+#: include/class.atto.options.php:136
+msgid "Auto Sort"
+msgstr "Автоматическая сортировка"
+
+#: include/class.atto.options.php:140 include/class.atto.options.php:153
+#: include/class.atto.options.php:201
+msgid "OFF"
+msgstr "Выкл"
+
+#: include/class.atto.options.php:141 include/class.atto.options.php:154
+#: include/class.atto.options.php:202
+msgid "ON"
+msgstr "Вкл"
+
+#: include/class.atto.options.php:142
+msgid ""
+"If checked, the plug-in automatically update the WordPress queries to use "
+"the new sort (<b>No code update is necessarily</b>)"
+msgstr ""
+"Если флажок установлен, плагин автоматически обновляет запросы WordPress для "
+"использования новой сортировки (<b>Обновление кода не обязательно)</b>"
+
+#: include/class.atto.options.php:142
+msgid "Additional details about this setting can be found at"
+msgstr "Дополнительные сведения об этой настройке можно найти по адресу"
+
+#: include/class.atto.options.php:143
+msgid ""
+"If ON selected, the plug-in automatically update the WordPress queries to "
+"use the new sort (<b>No code update is necessary</b>)"
+msgstr ""
+"Если выбран параметр ON, плагин автоматически обновляет запросы WordPress "
+"для использования новой сортировки (<b>Обновление кода не требуется)</b>"
+
+#: include/class.atto.options.php:143
+#, php-format
+msgid ""
+"Additional details about this setting can be found at <a href=\"%s\" "
+"target=\"_blank\">Autosort Details</a>"
+msgstr ""
+"Дополнительные сведения об этой настройке можно найти в разделе <a "
+"href=\"%s\" target=\"_blank\">Сведения об автосортировке</a>"
+
+#: include/class.atto.options.php:149
+msgid "Admin Sort"
+msgstr "Сортировка администратора"
+
+#: include/class.atto.options.php:156
+#, fuzzy
+#| msgid "This will change the order of terms within the admin interface"
+msgid "Update order of terms within the admin interface per customised sort"
+msgstr "Это приведет к изменению порядка элементов в интерфейсе администратора"
+
+#: include/class.atto.options.php:162
+msgid "Default Interface Sort"
+msgstr "Сортировка администратора"
+
+#: include/class.atto.options.php:165
+msgid ""
+"Enable sortable drag-and-drop functionality within the default WordPress "
+"taxonomy interface. An "
+msgstr ""
+
+#: include/class.atto.options.php:165
+msgid ""
+" icon will be displayed on the items, allowing for customization of the "
+"order. The option can be further adjusted by the users, through the Screen "
+"Options on the taxonomy page."
+msgstr ""
+
+#: include/class.atto.options.php:167
+msgid "Admin Sort feature must be activated for this functionality."
+msgstr ""
+
+#: include/class.atto.options.php:184
+msgid "Yes"
+msgstr ""
+
+#: include/class.atto.options.php:185
+msgid "No"
+msgstr ""
+
+#: include/class.atto.options.php:197
+msgid "WPML Sort Synchronization"
+msgstr ""
+
+#: include/class.atto.options.php:204
+msgid ""
+"The WPML Sort Synchronization feature ensures that custom sorting applied to "
+"taxonomy terms is seamlessly synchronized across all translations managed by "
+"the WPML (WordPress Multilingual) plugin"
+msgstr ""
+
+#: include/class.atto.options.php:214
+msgid "Save Settings"
+msgstr "Сохранить настройки"
+
+#: include/class.atto.options.php:251
+msgid "Settings Saved"
+msgstr "Настройки сохранены"
+
+#: include/class.atto.options.php:283 include/class.atto.options.php:361
+#, php-format
+msgid "There was a problem connecting to %s"
+msgstr "Возникла проблема с подключением к %s"
+
+#: include/class.atto.options.php:309
+msgid ""
+"There was a problem deactivating the licence on other side, however locally "
+"the key is now removed: "
+msgstr ""
+"Возникла проблема с деактивацией лицензии на другой стороне, однако локально "
+"ключ теперь удален"
+
+#: include/class.atto.options.php:326 include/class.atto.options.php:399
+#, php-format
+msgid "There was a problem with the data block received from %s"
+msgstr "Возникла проблема с блоком данных, полученным от %s"
+
+#: include/class.atto.options.php:343
+msgid "Licence Key can't be empty"
+msgstr "Лицензионный ключ не может быть пустым"
+
+#: include/class.atto.options.php:391
+#, php-format
+msgid "There was a problem activating the licence: %s"
+msgstr "Возникла проблема с активацией лицензии: %s"
+
+#: include/class.atto.options.php:411 include/class.atto.options.php:447
+#, fuzzy
+#| msgid "Taxonomy Terms Order"
+msgid "Advanced Taxonomy Terms Order License"
+msgstr "Taxonomy Terms Order"
+
+#: include/class.atto.options.php:426
+#, php-format
+msgid ""
+"Enter the Licence Key you received when you purchased this product. If you "
+"lost the key, you can always retrieve it from <a href=\"%s\" "
+"target=\"_blank\">My Account</a>."
+msgstr ""
+"Введите лицензионный ключ, который вы получили при покупке этого продукта. "
+"Если вы потеряли ключ, вы всегда можете восстановить его в <a href=\"%s\" "
+"target=\"_blank\">Личном кабинете</a>."
+
+#: include/class.atto.options.php:431
+msgid "Save"
+msgstr "Сохранить"
+
+#: include/class.atto.options.php:472
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: include/class.atto.options.php:475
+#, php-format
+msgid ""
+"You can generate more keys from <a href=\"%s\" target=\"_blank\">My Account</"
+"a>"
+msgstr ""
+"Вы можете сгенерировать больше ключей из <a href=\"%s\" "
+"target=\"_blank\">Моей учетной записи</a>"
+
+#: include/class.atto.plugin-updater.php:123
+msgid "An error occurred when trying to identify the plugin."
+msgstr "При попытке определить плагин произошла ошибка."
+
+#: include/class.atto.plugin-updater.php:123
+#: include/class.atto.plugin-updater.php:143
+msgid "Try again"
+msgstr "Попробуйте еще раз"
+
+#: include/class.atto.plugin-updater.php:143
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "Произошла непредвиденная ошибка HTTP во время запроса API."
+
+#: include/class.atto.terms_walker.php:49
+msgid "Move to Top"
+msgstr ""
+
+#: include/class.atto.terms_walker.php:50
+msgid "Move to Bottom"
+msgstr ""
+
+#~ msgid ""
+#~ "Did you find this plugin useful? Please support our work with a donation "
+#~ "or write an article about this plugin in your blog with a link to our site"
+#~ msgstr ""
+#~ "Вы считаете этот плагин полезным? Пожалуйста, поддержите нашу работу "
+#~ "пожертвованием или напишите статью об этом плагине в Вашем блоге со "
+#~ "ссылкой на наш сайт"
+
+#~ msgid ""
+#~ "Did you know there is available a more advanced version of this plug-in?"
+#~ msgstr "Знаете ли Вы, что имеется более продвинутая версия этого плагина?"
+
+#~ msgid "Read more"
+#~ msgstr "Подробнее..."
+
+#~ msgid "Check our"
+#~ msgstr "Ознакомьтесь с нашим плагином"
+
+#~ msgid ""
+#~ "plugin which allow to custom sort all posts, pages, custom post types"
+#~ msgstr ""
+#~ ", который разрешает пользовательскую сортировку всех сообщений, страниц, "
+#~ "пользовательские типы сообщение"
+
+#~ msgid "General"
+#~ msgstr "Общие"
+
+#~ msgid "global setting"
+#~ msgstr "глобальные настройки"
+
+#~ msgid "Autosort OFF"
+#~ msgstr "Автосортировка откл."
+
+#~ msgid ""
+#~ "No query will be changed, the terms will appear in the original order. To "
+#~ "retrieve the terms in the required order you must use the term_order on "
+#~ "the orderby parameter"
+#~ msgstr ""
+#~ "Ни по одному запросу ничего не будет изменено, условия появятся в "
+#~ "исходном порядке. Для получения условий в требуемом порядке необходимо "
+#~ "использовать term_order в параметре OrderBy"
+
+#~ msgid "See more info on the get_terms usage"
+#~ msgstr "См. подробнее о использовании get_terms"
+
+#~ msgid "here"
+#~ msgstr "здесь"
+
+#~ msgid "Autosort ON"
+#~ msgstr "Автосортировка вкл."
+
+#~ msgid ""
+#~ "The queries will be updated, all terms will appear in the order you "
+#~ "manually defined. This is recommended if you don't want to change any "
+#~ "theme code to apply the terms order"
+#~ msgstr ""
+#~ "Запросы будут обновлены, все условия будут появляться в порядке "
+#~ "определенном Вами вручную. Это рекомендуется делать, если Вы не хотите "
+#~ "изменить код  темы при  упорядочивании"

@@ -1,0 +1,30 @@
+// ==========================================================================
+// Embed iFrame Styling
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_embed {
+		position: relative;
+		overflow: hidden;
+		height: auto;
+		iframe,
+		object,
+		video {
+			position: relative;
+			max-width: 100%;
+			margin: 0 auto;
+			display: block;
+			&.resize {
+				width: 100%;
+			}
+		}
+		&.full-size {
+			iframe,
+			object,
+			video {
+				width: 100%;
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,1172 @@
+<?php
+
+use Carbon_Fields\Container\Container;
+use Carbon_Fields\Field\Field;
+
+/**
+ * Initialize the Classes
+ */
+class Crb_Initialize_Class extends Crb_Initialize_Base {
+	public $singular_name;
+	public $plural_name;
+	public $slug;
+	public $is_edit_post_type_screen = false;
+
+	public function __construct() {
+		$this->singular_name = __( 'Class', 'crb' );
+		$this->plural_name = __( 'Classes', 'crb' );
+		$this->slug = 'crb_class';
+
+		$this->base_init();
+
+		add_action( 'pre_get_posts', array( $this, 'pre_get_posts' ), 10, 4 );
+		add_filter( 'posts_orderby', array( $this, 'posts_orderby' ), 1000, 2 );
+
+		add_action( 'save_post', array( $this, 'save_post_after_meta_is_published' ), 1000, 2 );
+		add_action( 'updated_post_meta', array( $this, 'updated_post_meta' ), 10, 4 );
+
+		// UI Modifications
+		add_filter( 'post_type_labels_' . $this->slug, array( $this, 'modify_labels' ) );
+		add_filter( 'enter_title_here', array( $this, 'enter_title_here' ) );
+		add_filter( 'crb_submit_button_label_schedule', array( $this, 'label_schedule' ), 10 );
+		add_filter( 'crb_submit_button_label_publish', array( $this, 'label_publish' ), 10 );
+		add_filter( 'crb_submit_button_label_submit', array( $this, 'label_submit' ), 10 );
+		add_filter( 'crb_submit_button_label_update', array( $this, 'label_update' ), 10 );
+	}
+
+	/* ==========================================================================
+		# Main Interface
+	========================================================================== */
+
+		/**
+		 * Returns Array of additional post type arguments
+		 */
+		public function get_post_type_args() {
+			return array(
+				'menu_icon' => 'dashicons-megaphone',
+				'supports' => array( 'title', 'author' ),
+			);
+		}
+
+		/**
+		 * Register Carbon Custom Fields for the current post type
+		 */
+		public function register_custom_fields() {
+			// Check date is Scheduled
+
+			$class_id = $this->get_current_screen_id();
+			if ( !empty( $class_id ) ) {
+				$schedule_approve = carbon_get_post_meta( $class_id, 'crb_class_schedule_approve' );
+			}
+
+			$is_scheduled_approved_and_locked = !empty( $schedule_approve ) && !empty( $class_id );
+
+			// Date Fields
+			$base_date_fields = array(
+				Field::make( 'date', 'start', __('Start Date', 'crb') )
+					->set_required( true )
+					->set_width( 32 ),
+				Field::make( 'wickedpicker', 'time_start', __('Recipe Start Time', 'crb') )
+					->set_required( true )
+					->set_width( 32 ),
+				Field::make( 'wickedpicker', 'time_end', __('Recipe End Time', 'crb') )
+					->set_required( true )
+					->set_width( 32 ),
+			);
+
+			// Session Admin Date Fields
+			$session_admin_date_fields = $base_date_fields;
+
+			$session_admin_date_fields[] =  Field::make( 'hidden', 'recipe', __('Select Recipe', 'crb') )
+				->set_width( 2 );
+
+			$session_admin_date_fields[] =  Field::make( 'hidden', 'facilitator', __('Select Facilitator', 'crb') )
+				->set_width( 2 );
+
+			// Admin Date Fields
+
+			$admin_date_fields = $base_date_fields;
+
+			$admin_date_fields[] =  Field::make( 'select_recipe', 'recipe', __('Select Recipe', 'crb'))
+				->set_width( 50 )
+				->set_options( array( 'Crb_Initialize_Recipe', 'get_select_options' ) );
+
+			$admin_date_fields[] =  Field::make( 'select', 'facilitator', __('Select Facilitator', 'crb') )
+				->help_text( 'You can use this field to override the Facilitator setup for the related Class.' )
+				->set_width( 50 )
+				->set_options( array( 'Crb_User_Initialize_Facilitator', 'get_select_options' ) );
+
+			$admin_date_fields[] = Field::make( 'separator', 'additional_recipes_separator', __( 'Additional recipes on this date', 'crb' ) );
+
+			$admin_date_fields[] = Field::make( 'complex', 'additional_recipes', '' )
+					->setup_labels( array(
+						'singular_name' => __( 'Recipe', 'crb' ),
+						'plural_name'   => __( 'Recipes', 'crb' ),
+					) )
+					->add_fields( array(
+						Field::make( 'wickedpicker', 'time_start', __('Recipe Start Time', 'crb') )
+							->set_required( true )
+							->set_width( 50 ),
+						Field::make( 'wickedpicker', 'time_end', __('Recipe End Time', 'crb') )
+							->set_required( true )
+							->set_width( 50 ),
+						Field::make( 'select_recipe', 'recipe', __('Select Recipe', 'crb') )
+							->set_width( 50 )
+							->set_options( array( 'Crb_Initialize_Recipe', 'get_select_options' ) ),
+						Field::make( 'select', 'facilitator', __('Select Facilitator', 'crb') )
+							->help_text( 'You can use this field to override the Facilitator setup for the related Class.' )
+							->set_width( 50 )
+							->set_options( array( 'Crb_User_Initialize_Facilitator', 'get_select_options' ) )
+					) );
+
+			/* ==========================================================================
+				# All Users
+			========================================================================== */
+
+			// No Panels are visible for all, however there are some fields present in multiple panels
+
+			/* ==========================================================================
+				# Publush Dates, Session Admin Only
+			========================================================================== */
+			if ( ( Crb_Current_User()->is( 'crb_session_admin' ) ) && ! $is_scheduled_approved_and_locked ) {
+				Container::make( 'post_meta', sprintf( __( '%s settings', 'crb' ), $this->singular_name ) )
+					->show_on_post_type( $this->slug )
+					->add_fields( array(
+						Field::make( 'select', 'crb_class_location', __( 'Select Location', 'crb' ) )
+							->set_options( array( 'Crb_Initialize_Location', 'get_select_options' ) ),
+						Field::make( 'checkbox_required', 'crb_class_terms_and_conditions', __( 'Please list every date - carefully consider all holidays, early release days, and other site related schedule variations.', 'crb' ) )
+							->set_required( true ),
+						Field::make( 'complex', 'crb_class_dates', __( 'Dates', 'crb' ) )
+							->setup_labels( array(
+								'singular_name' => 'Date',
+								'plural_name' => 'Dates',
+							) )
+							->set_required( true )
+							->help_text( 'Date should be unique.' )
+							->add_fields( $session_admin_date_fields ),
+					) );
+
+			/* ==========================================================================
+				# Review Dates, Session Admin Only
+			========================================================================== */
+			} elseif ( Crb_Current_User()->is( 'crb_session_admin' ) && $is_scheduled_approved_and_locked ) {
+				$html = '';
+
+				$date_ids = get_posts( array(
+					'post_type'      => 'crb_date',
+					'post_status'    => array( 'publish', 'pending' ),
+					'posts_per_page' => -1,
+					'meta_key'       => '_crb_date_class',
+					'meta_value'     => $class_id,
+					'fields'         => 'ids',
+				) );
+
+				$confirmed_dates = array();
+				$requested_dates = array();
+				foreach ( $date_ids as $date_id ) {
+					$date = get_post( $date_id );
+
+					if ( $date->post_status === 'publish' ) {
+						$confirmed_dates[] = crb_get_post_edit_link( $date->ID, carbon_get_post_meta( $date->ID, 'crb_date_start' ) );
+					} else {
+						$requested_dates[] = crb_get_post_edit_link( $date->ID, carbon_get_post_meta( $date->ID, 'crb_date_start' ) );
+					}
+				}
+
+				$html = '';
+				if ( empty( $confirmed_dates ) && empty( $requested_dates ) ) {
+					$html .= 'No sessions scheduled.<br />';
+				}
+				if ( !empty( $confirmed_dates ) ) {
+					$html .= 'Confirmed Dates: ' . implode( ', ', $confirmed_dates ) . '<br />';
+				}
+				if ( !empty( $requested_dates ) ) {
+					$html .= 'Requested Dates: ' . implode( ', ', $requested_dates );
+				}
+
+				Container::make( 'post_meta', sprintf( __( '%s settings', 'crb' ), $this->singular_name ) )
+					->show_on_post_type( $this->slug )
+					->add_fields( array(
+						Field::make( 'select', 'crb_class_location', __( 'Select Location', 'crb' ) )
+							->set_options( array( 'Crb_Initialize_Location', 'get_select_options' ) ),
+						Field::make( 'html', 'crb_class_html', __( 'Review Dates', 'crb' ) )
+							->set_html( $html )
+					) );
+
+			/* ==========================================================================
+				# Edit Dates, Admin Only
+			========================================================================== */
+			} elseif ( Crb_Current_User()->is( 'administrator' ) || Crb_Current_User()->is( 'crb_assistant' ) ) {
+				Container::make( 'post_meta', sprintf( __( '%s Dates settings (Admin only)', 'crb' ), $this->singular_name ) )
+					->show_on_post_type( $this->slug )
+					->add_fields( array(
+						Field::make( 'select', 'crb_class_location', __( 'Select Location', 'crb' ) )
+							->set_options( array( 'Crb_Initialize_Location', 'get_select_options' ) ),
+						Field::make( 'complex', 'crb_class_dates', __( 'Dates', 'crb' ) )
+							->setup_labels( array(
+								'singular_name' => 'Date',
+								'plural_name' => 'Dates',
+							) )
+							->help_text( 'Date should be unique.' )
+							->set_layout( 'tabbed-vertical' )
+							->add_fields( $admin_date_fields )
+							->set_header_template( '
+								<#
+								crb_time_start = "Select Start";
+								crb_time_end = "Select End";
+
+								if ( _models.time_start.isValid() ) {
+									crb_time_start = _models.time_start.get("hours") + ":" + _models.time_start.get("minutes") + " " + _models.time_start.get("mer");
+								}
+								if ( _models.time_end.isValid() ) {
+									crb_time_end = _models.time_end.get("hours") + ":" + _models.time_end.get("minutes") + " " + _models.time_end.get("mer");
+								}
+								#>
+
+								<# if ( start ) { #>
+									{{ start }} -
+									<em style="color: red;">
+										{{ crb_time_start }} -
+										{{ crb_time_end }}
+									</em>
+								<# } else { #>
+									Please select date
+								<#} #>
+							' ),
+					) );
+			}
+
+			/* ==========================================================================
+				# Administrator Only Options
+			========================================================================== */
+			if ( Crb_Current_User()->is( 'administrator' ) || Crb_Current_User()->is( 'crb_assistant' ) ) {
+				Container::make( 'post_meta', sprintf( __( '%s settings (Admin only)', 'crb' ), $this->singular_name ) )
+					->show_on_post_type( $this->slug )
+					->add_fields( array(
+						Field::make( 'checkbox', 'crb_class_schedule_approve', __( 'Approve Schedule', 'crb' ) )
+							->help_text( 'You can use this field to approve the dates schedule.' ),
+						Field::make( 'select', 'crb_class_facilitator', __( 'Select Facilitator', 'crb' ) )
+							->set_options( array( 'Crb_User_Initialize_Facilitator', 'get_select_options' ) ),
+					) );
+			}
+		}
+
+		/**
+		 * Register Custom Taxonomies
+		 */
+		function register_taxonomies() {
+			$taxonomy_slug = 'crb_class_age';
+			$capabilities = $this->generate_taxonomy_capabilities( $taxonomy_slug );
+
+			$this->taxonomy_capabilities[$taxonomy_slug] = $capabilities;
+
+			register_taxonomy(
+				$taxonomy_slug, # Taxonomy name
+				array( $this->slug ), # Post Types
+				array( # Arguments
+					'labels'            => array(
+						'name'              => __( 'Age Ranges', 'crb' ),
+						'singular_name'     => __( 'Age Range', 'crb' ),
+						'search_items'      => __( 'Search Age Ranges', 'crb' ),
+						'all_items'         => __( 'All Age Ranges', 'crb' ),
+						'parent_item'       => __( 'Parent Age Range', 'crb' ),
+						'parent_item_colon' => __( 'Parent Age Range:', 'crb' ),
+						'view_item'         => __( 'View Age Range', 'crb' ),
+						'edit_item'         => __( 'Edit Age Range', 'crb' ),
+						'update_item'       => __( 'Update Age Range', 'crb' ),
+						'add_new_item'      => __( 'Add New Age Range', 'crb' ),
+						'new_item_name'     => __( 'New Age Range Name', 'crb' ),
+						'menu_name'         => __( 'Age Ranges', 'crb' ),
+					),
+					'hierarchical'      => true,
+					'show_ui'           => true,
+					'show_admin_column' => true,
+					'query_var'         => true,
+					'rewrite'           => array( 'slug' => 'class-age' ),
+					'capabilities'      => $capabilities,
+				)
+			);
+		}
+
+		/**
+		 * Register Custom Admin Columns
+		 */
+		function register_admin_columns() {
+			$columns_to_be_removed = array( 'date' );
+
+			if ( ! Crb_Current_User()->is( 'administrator' ) && ! Crb_Current_User()->is( 'crb_assistant' ) ) {
+				$columns_to_be_removed = array( 'date', 'author' );
+			}
+
+			$new_columns = array();
+
+			// Location
+			$new_columns[] = Carbon_Admin_Column::create( 'Location' )
+				->set_name( 'crb-location-column' )
+				->set_callback( array( $this, 'column_callback_location' ) );
+
+			// Facilitator
+			if ( Crb_Current_User()->is( 'administrator' ) || Crb_Current_User()->is( 'crb_assistant' ) ) {
+				$new_columns[] = Carbon_Admin_Column::create( 'Facilitator' )
+					->set_name( 'crb-facilitator-column' )
+					->set_callback( array( $this, 'column_callback_get_facilitator' ) );
+			}
+			if ( Crb_Current_User()->is( 'administrator' ) || Crb_Current_User()->is( 'crb_assistant' ) ) {
+				$new_columns[] = Carbon_Admin_Column::create( 'Download' )
+					->set_name( 'crb-download-column' )
+					->set_callback( array( $this, 'column_callback_get_download' ) );
+			}
+
+			// Dates
+			if ( Crb_Current_User()->is( 'crb_facilitator' ) || Crb_Current_User()->is( 'administrator' ) || Crb_Current_User()->is( 'crb_assistant' ) ) {
+				$new_columns[] = Carbon_Admin_Column::create( 'Date (Recipe)' )
+					->set_name( 'crb-dates-recipes-column' )
+					->set_callback( array( $this, 'column_callback_get_dates' ) );
+			} else {
+				$new_columns[] = Carbon_Admin_Column::create( 'Dates' )
+					->set_name( 'crb-dates-column' )
+					->set_callback( array( $this, 'column_callback_get_dates' ) );
+			}
+
+			// Passed Dates
+			if ( false ) {
+				$new_columns[] = Carbon_Admin_Column::create( 'Passed Dates' )
+					->set_name( 'crb-passed-dates-column' )
+					->set_callback( array( $this, 'column_callback_get_passed_dates' ) );
+			}
+
+			if ( Crb_Current_User()->is( 'administrator' ) ) {
+				// $new_columns[] = Carbon_Admin_Column::create( 'Recipes' )
+				// 	->set_name( 'crb-recipes-column' )
+				// 	->set_callback( array( $this, 'column_callback_get_recipes' ) );
+			}
+
+			// Initialize Columns
+			Carbon_Admin_Columns_Manager::modify_columns( 'post', array( $this->slug ) )
+				->remove( $columns_to_be_removed )
+				->add( $new_columns );
+		}
+
+		/**
+		 * Return options for dropdown
+		 */
+		static function get_select_options( $post_type = '' ) {
+			return PARENT::get_select_options( 'crb_class' );
+		}
+
+	/* ==========================================================================
+		# Actions, Filters
+	========================================================================== */
+
+		/**
+		 * Prepare Date posts
+		 */
+		function save_post_after_meta_is_published( $post_id, $post_obj ) {
+			// Target only current post type
+			if ( $post_obj->post_type !== $this->slug ) {
+				return;
+			}
+
+			$class = new Crb_Class( $post_id );
+			$class->sync_complex_with_date_posts();
+		}
+
+		/**
+		 * Switch all related Dates between Publish/Pending statusses
+		 */
+		function updated_post_meta( $meta_id, $class_id, $meta_key, $meta_value ) {
+			if ( empty( $class_id ) ) {
+				return;
+			}
+
+			if ( in_array( $meta_key, array( '_crb_class_schedule_approve' ) ) ) {
+				$post_status = 'pending';
+				if ( $meta_value == 'yes' ) {
+					$post_status = 'publish';
+				}
+
+				$date_ids = get_posts( array(
+					'post_type'      => 'crb_date',
+					'posts_per_page' => -1,
+					'meta_key'       => '_crb_date_class',
+					'meta_value'     => $class_id,
+					'fields'         => 'ids',
+				) );
+
+				foreach ( $date_ids as $date_id ) {
+					wp_update_post( array(
+						'ID'          => $date_ids,
+						'post_type'   => 'crb_date',
+						'post_status' => $post_status,
+					) );
+				}
+			}
+		}
+
+		/**
+		 * On Dates screen, when the current user is Facilitator, show only Dates for the current Facilitator
+		 * Sort Classes by Title
+		 */
+		function pre_get_posts( $query ) {
+			if (
+				$this->is_edit_post_type_screen &&
+				Crb_Current_User()->is( 'crb_facilitator' )
+			) {
+				$facilitator_id = Crb_Current_User()->get_id();
+
+				// This requires pure SQL, since the Facilitator may be kept in the Date or in the Class post type
+				$date_ids = $this->get_all_classes_by_facilitator( $facilitator_id );
+
+				if ( empty( $date_ids ) ) {
+					$date_ids = array( 0 );
+				}
+
+				$query->set( 'post__in', $date_ids );
+			}
+
+			if (
+				$this->is_edit_post_type_screen &&
+				! isset( $_GET['orderby'] )
+			) {
+
+				$query->set( 'orderby', 'title' );
+				$query->set( 'order', 'ASC' );
+			}
+		}
+
+		/**
+		 * Modify the default Post Type listing Order
+		 * Add for example: "FIND_IN_SET( ID, '15,7,10,22' )"
+		 */
+		public function posts_orderby( $orderby , $query ) {
+			$is_correct_screen = $this->is_edit_post_type_screen && ! isset( $_GET['orderby'] );
+
+			if ( ! $is_correct_screen ) {
+				return $orderby;
+			}
+
+			global $wpdb;
+
+			$compare = '>=';
+
+			$ordered_post_ids = $wpdb->get_col( $wpdb->prepare( "
+				SELECT
+					PM_date_class.meta_value as 'ID'
+				FROM
+					$wpdb->postmeta as PM_date_start
+				INNER JOIN $wpdb->postmeta as PM_date_class
+					ON PM_date_start.post_id = PM_date_class.post_id
+				WHERE
+					PM_date_start.meta_key = '_crb_date_start' AND PM_date_start.meta_value $compare '%s'
+					AND
+					PM_date_class.meta_key = '_crb_date_class'
+
+				ORDER BY CAST(PM_date_start.meta_value AS DATE) ASC
+			", date('Y-m-d') ) );
+
+			$ordered_post_ids = array_unique( $ordered_post_ids );
+
+			$all_other_post_ids = get_posts( array(
+				'post_type'      => 'crb_class',
+				'post__not_in'   => $ordered_post_ids,
+				'post_status'    => 'any',
+				'fields'         => 'ids',
+				'posts_per_page' => -1,
+				'order'          => 'ASC',
+				'orderby'        => 'title',
+			) );
+
+			$sorted_post_ids = array_merge( $ordered_post_ids, $all_other_post_ids );
+			$sorted_post_ids = implode( ',', $sorted_post_ids );
+
+			$orderby = " FIND_IN_SET( $wpdb->posts.id, '$sorted_post_ids' ) ";
+
+			return $orderby;
+		}
+
+	/* ==========================================================================
+		# Callbacks
+	========================================================================== */
+
+		/**
+		 * Display the Location associated with the current Class
+		 */
+		function column_callback_location( $post_id ) {
+			$location_id = carbon_get_post_meta( $post_id, 'crb_class_location' );
+
+			if ( Crb_Current_User()->is( 'crb_facilitator' ) ) {
+				$location_title       = $this->get_post_edit_link( $location_id );
+				$location_obj         = new Crb_Location( $location_id );
+				$location_information = $location_obj->get_location_address();
+
+				return implode( '<br />', array_filter( array( $location_title, $location_information) ) );
+			}
+
+			return $this->get_post_edit_link( $location_id );
+		}
+
+
+		/**
+		 * Display the Location associated with the current Class for PDF
+		 */
+		function column_callback_location_pdf( $post_id ) {
+			$location_id = carbon_get_post_meta( $post_id, 'crb_class_location' );
+
+			//if ( Crb_Current_User()->is( 'crb_facilitator' ) ) {
+				$location_title       = $this->get_post_edit_link( $location_id );
+				$location_obj         = new Crb_Location( $location_id );
+				$location_information = $location_obj->get_location_address();
+
+				return implode( '<br />', array_filter( array( $location_title, $location_information) ) );
+			//}
+
+			return $this->get_post_edit_link( $location_id );
+		}
+
+
+		/**
+		 * Display the Facilitator assigned to the current Class
+		 */
+		function column_callback_get_facilitator( $post_id ) {
+			$facilitators = array();
+
+			$class = new Crb_Class( $post_id );
+			$dates = $class->get_dates();
+
+			if ( ! empty( $dates ) ) {
+				foreach ( $dates as $date_id ) {
+					$date = new Crb_Date( $date_id );
+					$facilitator_id = $date->get_facilitator_id();
+					if ( ! empty( $facilitator_id ) ) {
+						$facilitators[] = crb_get_user_edit_link( $facilitator_id );
+					}
+
+					if ( $additional_recipes = $date->get_additional_date_times() ) {
+						foreach ( $additional_recipes as $additional_recipe ) {
+							if ( ! $additional_recipe["facilitator"] ) {
+								continue;
+							}
+
+							$facilitators[] = crb_get_user_edit_link( $additional_recipe["facilitator"] );
+						}
+					}
+				}
+			}
+
+			$facilitators = array_unique( $facilitators );
+
+			return implode( ', ', $facilitators );
+		}
+		
+		/**
+		 * Display the Facilitator Download to the current Class
+		 */
+		
+		function column_callback_get_download($post_id) {
+			$facilitators = array();
+			$class = new Crb_Class( $post_id );
+			$dates = $class->get_dates();
+
+			if ( ! empty( $dates ) ) {
+				foreach ( $dates as $date_id ) {
+					$date = new Crb_Date( $date_id );
+					$facilitator_id = $date->get_facilitator_id();
+					if ( ! empty( $facilitator_id ) ) {
+						$facilitators[] = crb_get_user_edit_link( $facilitator_id );
+					}
+					
+				}
+			}
+			 if ( get_current_user_id() == $facilitator_id )
+       			$edit_link = get_edit_profile_url( $facilitator_id );
+				else
+				   $edit_link = add_query_arg( 'user_id', $facilitator_id, self_admin_url( 'user-edit.php'));
+				   $user_download_link = self_admin_url( 'edit.php?post_type=crb_class&page=download_page&user_id='.$facilitator_id.'');
+				   
+				 $usernameget = get_user_by( 'id', $facilitator_id );
+				 //echo "<pre>";
+				 //print_r($usernameget);
+				 ?>
+                 <a href="<?php echo $user_download_link; ?>">Download Classes for <?php echo $usernameget->display_name;?> </a>
+                 <?php
+			}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/**
+		 * Display all Dates assigned to the current Class, that are scheduled for order
+		 */
+		function column_callback_get_dates_order( $post_id ) {
+			$class = new Crb_Class( $post_id );
+		    $dates = $class->get_dates();
+			$class_main_facilitator_id = $class->get_main_facilitator();
+			$is_main_facilitator = $class_main_facilitator_id && $class_main_facilitator_id == Crb_Current_User()->get_id();
+
+			// Change the array from "IDs" to "Titles"
+			array_walk( $dates, function( &$date_id ) use( $is_main_facilitator ) {
+				$date = new Crb_Date( $date_id );
+				$is_facilitator = Crb_Current_User()->is( 'crb_facilitator' );
+				// Skip dates for Facilitator, who is not assigned to them
+				if ( $is_facilitator ) {
+					$current_facilitator_id = Crb_Current_User()->get_id();
+					$first_time_facilitator_id = $date->get_facilitator_id();
+
+					if ( $all_facilitators = $date->get_additional_facilitators_ids() ) {
+				        if( $all_facilitators && ! in_array( $first_time_facilitator_id, $all_facilitators ) ) {
+				        	$all_facilitators[] = $first_time_facilitator_id;
+				        }
+					} else {
+				        $all_facilitators[] = $first_time_facilitator_id;
+					}
+
+					if ( in_array( $current_facilitator_id, $all_facilitators ) ) {
+						// Current Facilitator is assigned to the current date, so show the date into the list
+						// Could be either by being assigned to date, or by being assigned to class
+					} else {
+						$date_id = '';
+						return;
+					}
+				}
+
+				$date_title = array();
+
+				// Start Date as title
+				$name = carbon_get_post_meta( $date_id, 'crb_date_start' );
+				
+				$date_title[] =  $this->get_post_edit_link_with_custom_name( $date_id, $name );
+
+				// Replace ID with custom Title
+				// $date_id = implode( ' ', $date_title );
+				foreach ($date_title as $key => $date_title2) {
+					
+                  $new_array = explode(",",$date_title2[0]);
+				  echo '<pre>';
+				 echo count($new_array);
+				// $date_title2;      
+             }
+				
+				//echo '<pre>'; 
+				//print_r($date_title);
+				
+			} );
+
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/**
+		 * Display all Dates assigned to the current Class, that are scheduled
+		 */
+		function column_callback_get_dates( $post_id ) {
+			$class = new Crb_Class( $post_id );
+			$dates = $class->get_dates();
+
+			$class_main_facilitator_id = $class->get_main_facilitator();
+			$is_main_facilitator = $class_main_facilitator_id && $class_main_facilitator_id == Crb_Current_User()->get_id();
+
+			// Change the array from "IDs" to "Titles"
+			array_walk( $dates, function( &$date_id ) use( $is_main_facilitator ) {
+				$date = new Crb_Date( $date_id );
+				$is_facilitator = Crb_Current_User()->is( 'crb_facilitator' );
+				// Skip dates for Facilitator, who is not assigned to them
+				if ( $is_facilitator ) {
+					$current_facilitator_id = Crb_Current_User()->get_id();
+					$first_time_facilitator_id = $date->get_facilitator_id();
+
+					if ( $all_facilitators = $date->get_additional_facilitators_ids() ) {
+				        if( $all_facilitators && ! in_array( $first_time_facilitator_id, $all_facilitators ) ) {
+				        	$all_facilitators[] = $first_time_facilitator_id;
+				        }
+					} else {
+				        $all_facilitators[] = $first_time_facilitator_id;
+					}
+
+					if ( in_array( $current_facilitator_id, $all_facilitators ) ) {
+						// Current Facilitator is assigned to the current date, so show the date into the list
+						// Could be either by being assigned to date, or by being assigned to class
+					} else {
+						$date_id = '';
+						return;
+					}
+				}
+
+				$date_title = array();
+
+				// Start Date as title
+				$name = carbon_get_post_meta( $date_id, 'crb_date_start' );
+				$date_title[] = '<code class="recipe-date">' . $this->get_post_edit_link_with_custom_name( $date_id, $name ) . '</code>';
+
+				// Time Range
+				$time_start = $date->get_time_start();
+				$time_end = $date->get_time_end();
+
+				if ( ( $is_facilitator && $first_time_facilitator_id != $current_facilitator_id ) ) {
+				} else {
+					if ( ! empty( $time_start ) && ! empty( $time_end ) ) {
+						$date_title[] .= sprintf(
+							'<span class="row-indented">- %s~%s</span>',
+							$time_start,
+							$time_end
+						);
+					}
+				}
+
+				// Add recipe info to the title
+				$recipe_id = $date->get_recipe_id();
+				$recipe = new Crb_Recipe( $recipe_id );
+
+				if (
+					! empty( $recipe_id ) &&
+					( $is_main_facilitator || $is_facilitator || Crb_Current_User()->is( 'administrator' ) || Crb_Current_User()->is( 'crb_assistant' ) )
+				) {
+					if ( ( ! Crb_Current_User()->is( 'administrator' ) && ! $is_main_facilitator ) && ( $is_facilitator && $first_time_facilitator_id != $current_facilitator_id ) ) {
+
+					} else {
+						$date_title[] .= sprintf(
+							'<span class="row-indented"><a href="%s" target="_blank">%s</a> %s %s %s %s %s</span>',
+							get_permalink( $recipe_id ),
+							get_the_title( $recipe_id ),
+							$recipe->get_flavors(),
+							$recipe->get_temperatures(),
+							$recipe->get_seasons(),
+                            $recipe->get_alerts(),
+                            $recipe->get_modifications()
+						);
+					}
+				}
+
+				if ( $additional_recipes = $date->get_additional_date_times() ) {
+					foreach ( $additional_recipes as $additional_recipe ) {
+						if ( $is_facilitator && $additional_recipe['facilitator'] != $current_facilitator_id ) {
+							if ( ! $is_main_facilitator ) {
+								continue;
+							}
+						}
+
+						if ( empty( $additional_recipe['time_start'] ) && empty( $additional_recipe['time_end'] ) ) {
+							continue;
+						}
+
+						$date_title[] .= sprintf(
+							'<span class="row-indented">- %s~%s</span>',
+							convert_24h_to_12_time( $additional_recipe['time_start'] ),
+							convert_24h_to_12_time( $additional_recipe['time_end'] )
+						);
+
+						if ( $additional_recipe['recipe'] ) {
+							// Add additional recipe info to the title
+							$recipe = new Crb_Recipe( $additional_recipe['recipe'] );
+
+							if (
+								! empty( $additional_recipe['recipe'] ) &&
+								( Crb_Current_User()->is( 'crb_facilitator' ) || Crb_Current_User()->is( 'administrator' ) || Crb_Current_User()->is( 'crb_assistant' ) )
+							) {
+								$date_title[] .= sprintf(
+									'<span class="row-indented"><a href="%s" target="_blank">%s</a> %s %s %s %s %s</span>',
+									get_permalink( $additional_recipe['recipe'] ),
+									get_the_title( $additional_recipe['recipe'] ),
+									$recipe->get_flavors(),
+									$recipe->get_temperatures(),
+                                    $recipe->get_seasons(),
+                                    $recipe->get_alerts(),
+                                    $recipe->get_modifications()
+
+								);
+							}
+						}
+					}
+				}
+
+				// Replace ID with custom Title
+				$date_id = implode( '<br />', $date_title );
+			} );
+
+			$color = 'red';
+			$is_approved = carbon_get_post_meta( $post_id, 'crb_class_schedule_approve' );
+			if ( $is_approved ) {
+				$color = 'green';
+			}
+
+			$dates = array_filter( $dates );
+			if ( empty( $dates ) ) {
+				return __( 'No upcoming dates are scheduled for this Class.', 'crb' );
+			}
+
+			return sprintf( '<strong style="color: %s;">%s</strong>', $color, implode( '<br />', $dates ) );
+		}
+
+
+
+
+
+		/**
+		 * Display all Dates assigned to the current Class, that are scheduled for Pdf
+		 */
+		function column_callback_get_dates_upcoming( $post_id ) {
+			$class = new Crb_Class( $post_id );
+			$dates = $class->get_dates();
+
+			$class_main_facilitator_id = $class->get_main_facilitator();
+			$is_main_facilitator = $class_main_facilitator_id && $class_main_facilitator_id == Crb_Current_User()->get_id();
+
+			// Change the array from "IDs" to "Titles"
+			array_walk( $dates, function( &$date_id ) use( $is_main_facilitator ) {
+				$date = new Crb_Date( $date_id );
+				$is_facilitator = Crb_Current_User()->is( 'crb_facilitator' );
+				// Skip dates for Facilitator, who is not assigned to them
+				if ( $is_facilitator ) {
+					$current_facilitator_id = Crb_Current_User()->get_id();
+					$first_time_facilitator_id = $date->get_facilitator_id();
+
+					if ( $all_facilitators = $date->get_additional_facilitators_ids() ) {
+				        if( $all_facilitators && ! in_array( $first_time_facilitator_id, $all_facilitators ) ) {
+				        	$all_facilitators[] = $first_time_facilitator_id;
+				        }
+					} else {
+				        $all_facilitators[] = $first_time_facilitator_id;
+					}
+
+					if ( in_array( $current_facilitator_id, $all_facilitators ) ) {
+						// Current Facilitator is assigned to the current date, so show the date into the list
+						// Could be either by being assigned to date, or by being assigned to class
+					} else {
+						$date_id = '';
+						return;
+					}
+				}
+
+				$date_title = array();
+
+				// Start Date as title
+				$name = carbon_get_post_meta( $date_id, 'crb_date_start' );
+				$date_title[] = '<code class="recipe-date">' . $this->get_post_edit_link_with_custom_name( $date_id, $name ) . '</code>';
+
+				// Time Range
+				$time_start = $date->get_time_start();
+				$time_end = $date->get_time_end();
+
+				if ( ( $is_facilitator && $first_time_facilitator_id != $current_facilitator_id ) ) {
+				} else {
+					if ( ! empty( $time_start ) && ! empty( $time_end ) ) {
+						$date_title[] .= sprintf(
+							'<span class="row-indented">- %s~%s</span>',
+							$time_start,
+							$time_end
+						);
+					}
+				}
+
+				// Add recipe info to the title
+				$recipe_id = $date->get_recipe_id();
+				$recipe = new Crb_Recipe( $recipe_id );
+
+				if (
+					! empty( $recipe_id ) &&
+					( $is_main_facilitator || $is_facilitator || Crb_Current_User()->is( 'administrator' ) || Crb_Current_User()->is( 'crb_assistant' ) )
+				) {
+					if ( ( ! Crb_Current_User()->is( 'administrator' ) && ! $is_main_facilitator ) && ( $is_facilitator && $first_time_facilitator_id != $current_facilitator_id ) ) {
+
+					} else {
+						$date_title[] .= sprintf(
+							'<span class="row-indented"><a href="%s" target="_blank">%s</a> %s %s %s %s %s</span>',
+							get_permalink( $recipe_id ),
+							get_the_title( $recipe_id ),
+							$recipe->get_flavors(),
+							$recipe->get_temperatures(),
+							$recipe->get_seasons(),
+                            $recipe->get_alerts(),
+                            $recipe->get_modifications()
+						);
+					}
+				}
+
+				if ( $additional_recipes = $date->get_additional_date_times() ) {
+					foreach ( $additional_recipes as $additional_recipe ) {
+						if ( $is_facilitator && $additional_recipe['facilitator'] != $current_facilitator_id ) {
+							if ( ! $is_main_facilitator ) {
+								continue;
+							}
+						}
+
+						if ( empty( $additional_recipe['time_start'] ) && empty( $additional_recipe['time_end'] ) ) {
+							continue;
+						}
+
+						$date_title[] .= sprintf(
+							'<span class="row-indented">- %s~%s</span>',
+							convert_24h_to_12_time( $additional_recipe['time_start'] ),
+							convert_24h_to_12_time( $additional_recipe['time_end'] )
+						);
+
+						if ( $additional_recipe['recipe'] ) {
+							// Add additional recipe info to the title
+							$recipe = new Crb_Recipe( $additional_recipe['recipe'] );
+
+							if (
+								! empty( $additional_recipe['recipe'] ) &&
+								( Crb_Current_User()->is( 'crb_facilitator' ) || Crb_Current_User()->is( 'administrator' ) || Crb_Current_User()->is( 'crb_assistant' ) )
+							) {
+								$date_title[] .= sprintf(
+									'<span class="row-indented"><a href="%s" target="_blank">%s</a> %s %s %s %s %s</span>',
+									get_permalink( $additional_recipe['recipe'] ),
+									get_the_title( $additional_recipe['recipe'] ),
+									$recipe->get_flavors(),
+									$recipe->get_temperatures(),
+                                    $recipe->get_seasons(),
+                                    $recipe->get_alerts(),
+                                    $recipe->get_modifications()
+
+								);
+							}
+						}
+					}
+				}
+
+				// Replace ID with custom Title
+				$date_id = implode( '<br />', $date_title );
+			} );
+
+			$color = 'red';
+			$is_approved = carbon_get_post_meta( $post_id, 'crb_class_schedule_approve' );
+			if ( $is_approved ) {
+				$color = 'green';
+			}
+
+			$dates = array_filter( $dates );
+			if ( empty( $dates ) ) {
+				return __( 'No upcoming dates are scheduled for this Class.', 'crb' );
+			}
+
+			return sprintf( '<strong style="color: %s;">%s</strong>', $color, implode( '<br />', $dates ) );
+		}
+
+
+
+
+		/**
+		 * Display all Dates assigned to the current Class, that are in the past
+		 */
+		function column_callback_get_passed_dates( $post_id ) {
+			$dates = get_posts( array(
+				'post_type'      => 'crb_date',
+				'posts_per_page' => -1,
+				'meta_key'       => '_crb_date_class',
+				'meta_value'     => $post_id,
+				'fields'         => 'ids',
+				'meta_query'     => array(
+					'key'     => '_crb_date_start',
+					'value'   => date('Y-m-d'),
+					'compare' => '<',
+				),
+			) );
+
+			array_walk( $dates, function( &$date_id ) {
+				$name = carbon_get_post_meta( $date_id, 'crb_date_start' );
+
+				$date_obj = new Crb_Date( $date_id );
+				$facilitator_id = $date_obj->get_facilitator_id();
+
+				$date_id = $this->get_post_edit_link_with_custom_name( $date_id, $name );
+				if ( !empty( $facilitator_id ) ) {
+					$date_id .= ' (' . $this->get_user_edit_link( $facilitator_id ) . ')';
+				}
+			});
+
+			return implode( ',<br />', $dates );
+		}
+
+		/**
+		 * Display all Dates assigned to the current Class, that are in the past
+		 */
+		function column_callback_get_recipes( $post_id ) {
+			$dates = carbon_get_post_meta( $post_id, 'crb_class_dates', 'complex' );
+			$recipes = crb_wp_list_pluck( $dates, 'recipe' );
+			$recipes = array_filter( $recipes );
+
+			array_walk( $recipes, function( &$recipe_id, $index ) {
+				$recipe = new Crb_Recipe( $recipe_id );
+
+				$recipe_id = $recipe->get_admin_label( '<em><small>(', ')</small></em>' );
+			} );
+
+			$recipes = array_filter( $recipes );
+
+			return implode( ',<br /> ', $recipes );
+		}
+
+	/* ==========================================================================
+		# Helpers
+	========================================================================== */
+
+		/**
+		 * Get all Dates with the specified Facilitator directly, or undirectly throught the Class relation
+		 */
+		private function get_all_classes_by_facilitator( $facilitator_id ) {
+			$transient_key = 'crb_facilitator_' . $facilitator_id . '_classes';
+			$cache = get_transient( $transient_key );
+			if ( ! empty( $cache ) ) {
+				return $cache;
+			}
+
+			global $wpdb;
+
+			$subquery_classes_with_dates_overridding_facilitator = $wpdb->prepare( "
+						SELECT PM_Date_Class.meta_value
+						FROM $wpdb->posts as P_Date
+						INNER JOIN $wpdb->postmeta as PM_Date_Facilitator
+							on P_Date.ID = PM_Date_Facilitator.post_id
+						INNER JOIN $wpdb->postmeta as PM_Date_Class
+							on P_Date.ID = PM_Date_Class.post_id
+						WHERE
+							P_Date.post_type = 'crb_date'
+							AND PM_Date_Facilitator.meta_key = '_crb_date_facilitator'
+							AND PM_Date_Facilitator.meta_value = '%s'
+							AND PM_Date_Class.meta_key = '_crb_date_class'
+			", $facilitator_id );
+
+			$subquery_classes_with_facilitator = $wpdb->prepare( "
+						SELECT PM_Class_Facilitator.post_id
+						FROM $wpdb->posts as P_Date
+						INNER JOIN $wpdb->postmeta as PM_Date_Class
+							on P_Date.ID = PM_Date_Class.post_id
+						INNER JOIN $wpdb->postmeta as PM_Class_Facilitator
+							on PM_Date_Class.meta_value = PM_Class_Facilitator.post_id
+						WHERE
+							P_Date.post_type = 'crb_date'
+							AND PM_Date_Class.meta_key = '_crb_date_class'
+							AND PM_Class_Facilitator.meta_key = '_crb_class_facilitator'
+							AND PM_Class_Facilitator.meta_value = '%s'
+			", $facilitator_id );
+
+			$class_ids = $wpdb->get_col( "
+				SELECT facilitators.ID
+				FROM $wpdb->posts AS facilitators
+				WHERE facilitators.post_type = 'crb_class'
+				AND (
+					facilitators.ID IN (
+						$subquery_classes_with_dates_overridding_facilitator
+					)
+					OR
+					facilitators.ID IN (
+						$subquery_classes_with_facilitator
+					)
+					OR facilitators.ID IN (
+						SELECT DISTINCT PM_Class_Facilitator.post_id
+						FROM $wpdb->posts as P_Date
+						INNER JOIN $wpdb->postmeta as PM_Date_Class
+							on P_Date.ID = PM_Date_Class.post_id
+						INNER JOIN $wpdb->postmeta as PM_Class_Facilitator
+							on PM_Date_Class.meta_value = PM_Class_Facilitator.post_id
+						INNER JOIN $wpdb->postmeta as PM_Additional_Recipes
+							on ( PM_Additional_Recipes.post_id = P_Date.ID AND PM_Additional_Recipes.meta_key = '_crb_additional_recipes' )
+						WHERE
+							P_Date.post_type = 'crb_date'
+							AND PM_Date_Class.meta_key = '_crb_date_class'
+							AND PM_Additional_Recipes.meta_value REGEXP 's:11:\"facilitator\";s:[0-9]:\"$facilitator_id\"'
+						GROUP BY PM_Class_Facilitator.post_id
+					)
+				)
+				GROUP BY facilitators.ID
+			" );
+
+			set_transient( $transient_key, $class_ids, HOUR_IN_SECONDS );
+
+			return $class_ids;
+		}
+
+		/**
+		 * Return the current screen ID
+		 */
+		public function get_current_screen_id() {
+			$post = absint( crb_request_param( 'post' ) );
+			if ( empty( $post ) ) {
+				// $_POST['post_ID'] is present during post submit
+				$post = absint( crb_request_param( 'post_ID' ) );
+			}
+
+			if ( empty( $post ) ) {
+				return false;
+			}
+
+			return $post;
+		}
+
+	/* ==========================================================================
+		# UI Modifications
+	========================================================================== */
+
+		// Change Some Labels Throughout Admin
+		function modify_labels( $labels ) {
+			return $labels;
+		}
+
+		// Change Some Labels Throughout Admin
+		function enter_title_here( $title ) {
+			global $pagenow;
+			if ( $pagenow == 'post-new.php' && !empty( $_GET['post_type'] ) && $_GET['post_type'] == $this->slug ) {
+				$title = __( 'Enter Class Name here', 'crb' );
+			}
+
+			return $title;
+		}
+
+		// Change "Schedule" button Text
+		function label_schedule( $label ) {
+			if ( get_post_type() == $this->slug ) {
+				$label = __( 'Schedule Class', 'crb' );
+			}
+
+			return $label;
+		}
+
+		// Change "Publish" button Text
+		function label_publish( $label ) {
+			if ( get_post_type() == $this->slug ) {
+				$label = __( 'Create Class', 'crb' );
+			}
+
+			return $label;
+		}
+
+		// Change "Submit" button Text
+		function label_submit( $label ) {
+			if ( get_post_type() == $this->slug ) {
+				$label = __( 'Submit Class for Review', 'crb' );
+			}
+
+			return $label;
+		}
+
+		// Change "Update" button Text
+		function label_update( $label ) {
+			if ( get_post_type() == $this->slug ) {
+				$label = __( 'Update Class', 'crb' );
+			}
+
+			return $label;
+		}
+
+}
+
+global $Crb_Initialize_Class;
+$Crb_Initialize_Class = new Crb_Initialize_Class();

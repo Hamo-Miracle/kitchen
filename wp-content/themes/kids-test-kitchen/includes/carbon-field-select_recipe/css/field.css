@@ -1,0 +1,17 @@
+.crb-select-recipe-green { border: 1px solid  #fff !important; border-color: green !important; }
+.crb-select-recipe-yellow { border: 1px solid  #fff !important; border-color: #ffbe00 !important; }
+.crb-select-recipe-red { border: 1px solid  #fff !important; border-color: red !important; }
+
+.crb-select-recipe-green .carbon-error-select-recipe { color: green !important; }
+.crb-select-recipe-yellow .carbon-error-select-recipe { color: #ffbe00 !important; }
+.crb-select-recipe-red .carbon-error-select-recipe { color: red !important; }
+
+.current-date-is-latest-use { display: none; }
+.crb-select-recipe-yellow .current-date-is-latest-use { display: block; color: #ffbe00 !important; }
+
+.select2-results .recipe-green { color: green !important; }
+.select2-results .recipe-red { color: red !important; }
+
+.select2-container { width: 100% !important; }
+.select2-selection .recipe-green { color: green !important; }
+.select2-selection .recipe-red { color: red !important; }

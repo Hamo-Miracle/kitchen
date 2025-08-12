@@ -1,0 +1,129 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-12-14T01:32:28+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: publishpress-status-capabilities\n"
+
+#: StatusAdmin.php:61
+msgid "Capability Requirements"
+msgstr ""
+
+#: StatusAdmin.php:65
+msgid "(Default Capabilities)"
+msgstr ""
+
+#: StatusAdmin.php:68
+msgid "Custom Capabilities for this Status"
+msgstr ""
+
+#: StatusAdmin.php:91
+msgid "same as PARENT STATUS (%s)"
+msgstr ""
+
+#: StatusAdmin.php:94
+msgid "same as %s status"
+msgstr ""
+
+#: StatusAdmin.php:103
+msgid "Enforce status-specific capabilities, or share capabilities with another status."
+msgstr ""
+
+#: StatusAdmin.php:140
+#: StatusAdmin.php:147
+#: StatusAdmin.php:154
+msgid "Set"
+msgstr ""
+
+#: StatusAdmin.php:141
+#: StatusAdmin.php:148
+msgid "Read"
+msgstr ""
+
+#: StatusAdmin.php:142
+#: StatusAdmin.php:156
+msgid "Edit Others"
+msgstr ""
+
+#: StatusAdmin.php:143
+#: StatusAdmin.php:158
+msgid "Delete Others"
+msgstr ""
+
+#. translators: %s is a post status name
+#: StatusAdmin.php:164
+msgid "Role can set posts to the \"%s\" status"
+msgstr ""
+
+#. translators: %s is a post status name
+#: StatusAdmin.php:167
+msgid "Role can read \"%s\" posts"
+msgstr ""
+
+#. translators: %s is a post status name
+#: StatusAdmin.php:170
+msgid "Role can edit \"%s\" posts"
+msgstr ""
+
+#. translators: %s is a post status name
+#: StatusAdmin.php:173
+msgid "Role can edit other's \"%s\" posts"
+msgstr ""
+
+#. translators: %s is a post status name
+#: StatusAdmin.php:176
+msgid "Role can delete \"%s\" posts"
+msgstr ""
+
+#. translators: %s is a post status name
+#: StatusAdmin.php:179
+msgid "Role can delete other's \"%s\" posts"
+msgstr ""
+
+#: StatusAdmin.php:385
+msgid "Edit basic role capabilities"
+msgstr ""
+
+#: StatusAdmin.php:396
+msgid "Toggle all capabilities for this role"
+msgstr ""
+
+#: StatusAdmin.php:430
+#: StatusAdmin.php:446
+#: StatusAdmin.php:541
+#: StatusAdmin.php:557
+msgid "%s: assigned by Permission Group"
+msgstr ""
+
+#: StatusAdmin.php:432
+#: StatusAdmin.php:543
+msgid "This capability is %s"
+msgstr ""
+
+#: StatusAdmin.php:435
+msgid "It is required in addition to the type-specific capability."
+msgstr ""
+
+#: StatusCapabilities.php:669
+#: StatusCapabilities.php:688
+msgid "Post Access"
+msgstr ""
+
+#: StatusSave.php:83
+msgid "Custom"
+msgstr ""
+
+#: StatusSave.php:87
+msgid "same as %s"
+msgstr ""
+
+#: StatusSave.php:90
+msgid "Standard"
+msgstr ""

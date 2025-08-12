@@ -1,0 +1,40 @@
+// ==========================================================================
+// Paginated Form Element Appearance
+// ==========================================================================
+.#{$selector} {
+	&.type_2 {
+		.ipt_fsqm_main_tab > .ipt-eform-tab-nav-wrap {
+			display: none;
+		}
+		.ipt_fsqm_main_tab {
+			> .ui-tabs-panel {
+				padding-top: 21px;
+			}
+			&.eform-mtab-pb-top {
+				padding-top: 1.5em;
+			}
+		}
+
+		.ipt_fsqm_main_pb {
+			height: 10px;
+			border-radius: 0;
+			overflow: visible;
+			position: relative;
+			top: 1px;
+			margin: 1px 1px -11px 1px;
+			box-shadow: 0 2px 1px -1px fade-out( $box-shadow-color, ( 1 - 0.4 ) );
+			&.eform-mainpb-bottom {
+				top: 0;
+				margin: 0 -1px 0 -1px;
+				@include material__box-shadow-subtle();
+			}
+
+			.ipt_uif_progress_value {
+				top: auto;
+				bottom: -1.5em;
+			}
+		}
+	}
+}
+
+

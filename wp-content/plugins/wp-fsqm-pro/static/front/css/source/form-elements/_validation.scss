@@ -1,0 +1,83 @@
+// ==========================================================================
+// Validation Engine Helper CSS
+// ==========================================================================
+
+.#{$selector} {
+	.formError {
+		color: $error-color;
+		font-size: (12/14) * 1em;
+		border-top: 2px solid $error-color;
+		padding: 0;
+		padding-top: 0.5em;
+		z-index: 0;
+		display: block;
+		-webkit-animation: fadeInLeft 200ms ease;
+		        animation: fadeInLeft 200ms ease;
+		text-align: left;
+
+		.formErrorContent {
+			background-color: transparent;
+			margin: 0;
+			padding: 0;
+			position: static;
+			width: 100%;
+			font-family: inherit;
+			font-size: inherit;
+			color: inherit;
+			border: 0 none;
+			z-index: 0;
+		}
+
+		br {
+			display: none;
+		}
+		.error-message {
+			// Avada Theme Compatibility
+			color: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			font-weight: inherit;
+			&::before {
+				content: "; ";
+				display: inline;
+				zoom: 1;
+			}
+			&:first-child::before {
+				display: none;
+			}
+		}
+	}
+	.input-field ~ .formError,
+	.ipt_uif_select ~ .formError,
+	.ipt_uif_uispinner ~ .formError,
+	.ipt_uif_conditional_select ~ .formError {
+		top: 0 !important;
+		font-weight: 400;
+		border-top: 0 none;
+	}
+	.ipt_uif_uispinner ~ .formError {
+		top: -18px !important;
+	}
+	.ipt_uif_select ~ .formError,
+	.ipt_uif_conditional_select ~ .formError {
+		top: 0 !important;
+	}
+	.input-field.has-icon ~ .formError {
+		left: 3em !important;
+	}
+	.ipt_uif_select ~ .formError {
+		text-align: center !important;
+	}
+
+	.ipt_uif_container_head + .formError {
+		width: 100% !important;
+		top: -1px !important;
+	}
+
+	// override for boxy
+	&.eform-override-element-boxy {
+		.input-field.has-icon ~ .formError {
+			left: 0.5em !important;
+		}
+	}
+}

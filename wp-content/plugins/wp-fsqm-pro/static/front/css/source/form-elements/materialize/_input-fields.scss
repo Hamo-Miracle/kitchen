@@ -1,0 +1,461 @@
+// ==========================================================================
+// eForm Material Form Elements, input-fields
+// ==========================================================================
+.#{$selector} {
+	/* Text Inputs + Textarea
+		 ========================================================================== */
+
+	/* Style Placeholders */
+
+	::-webkit-input-placeholder {
+		color: $placeholder-text-color;
+	}
+
+	:-moz-placeholder {
+		/* Firefox 18- */
+		color: $placeholder-text-color;
+	}
+
+	::-moz-placeholder {
+		/* Firefox 19+ */
+		color: $placeholder-text-color;
+	}
+
+	:-ms-input-placeholder {
+		color: $placeholder-text-color;
+	}
+
+	/* Text inputs */
+
+	input:not([type]),
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="time"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="search"],
+	textarea.materialize-textarea {
+		// General Styles
+		background-color: transparent;
+		border: none;
+		border-bottom: $input-border;
+		border-radius: 0;
+		outline: none;
+		height: $input-height;
+		width: 100%;
+		font-size: $input-font-size;
+		margin: $input-margin;
+		padding: $input-padding;
+		box-shadow: none;
+		box-sizing: content-box;
+		transition: $input-transition;
+		color: $primary-text-color;
+
+		// Disabled input style
+		&:disabled {
+			color: $input-disabled-color;
+			border-bottom: $input-disabled-border;
+		}
+
+		// Disabled label style
+		&:disabled + label {
+			color: $input-disabled-color;
+		}
+
+		// Focused input style
+		&:focus:not([disabled]) {
+			border-bottom: 1px solid $input-focus-color;
+			box-shadow: 0 1px 0 0 $input-focus-color;
+			color: $secondary-text-color;
+			background-color: transparent;
+		}
+
+		// Focused label style
+		&:focus:not([disabled]) + label {
+			color: $input-focus-color;
+		}
+
+		// Valid Input Style
+		&.valid,
+		&:focus.valid {
+			border-bottom: 1px solid $input-success-color;
+			box-shadow: 0 1px 0 0 $input-success-color;
+		}
+
+		// Custom Success Message
+		&.valid + label:after,
+		&:focus.valid + label:after {
+			content: attr(data-success);
+			color: $input-success-color;
+			opacity: 1;
+		}
+
+		// Invalid Input Style
+		&.invalid,
+		&:focus.invalid {
+			border-bottom: $input-invalid-border;
+			box-shadow: 0 1px 0 0 $input-error-color;
+		}
+
+		// Custom Error message
+		&.invalid + label:after,
+		&:focus.invalid + label:after {
+			content: attr(data-error);
+			color: $input-error-color;
+			opacity: 1;
+		}
+
+		// Full width label when using validate for error messages
+		&.validate + label {
+			width: 100%;
+			pointer-events: none;
+		}
+
+		// Form Message Shared Styles
+		& + label:after {
+			display: block;
+			content: "";
+			position: absolute;
+			top: 60px;
+			opacity: 0;
+			transition: 0.2s opacity ease-out, 0.2s color ease-out;
+		}
+
+		// Spinners
+		&.ipt_uif_uispinner {
+			box-shadow: none;
+			margin-bottom: 18px;
+			text-align: right;
+		}
+
+		// Readonly
+		&[readonly] {
+			background-color: transparent;
+			&:focus {
+				border-bottom: $input-disabled-border;
+				box-shadow: none;
+				+ label {
+					color: $input-disabled-color;
+				}
+			}
+		}
+	}
+	input[type="number"] {
+		text-align: right;
+	}
+
+	// Styling for input field wrapper
+	.input-field {
+		// Inline styles
+		&.inline {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 5px;
+
+			input,
+			.select-dropdown {
+				margin-bottom: 1em;
+			}
+		}
+
+		// Gutter spacing
+		&.col {
+			label {
+				left: $grid-gutter-width / 2;
+			}
+
+			.prefix ~ label,
+			.prefix ~ .validate ~ label {
+				width: calc(100% - 3em - #{$grid-gutter-width});
+			}
+		}
+
+		// Password
+		&.ipt-eform-password {
+			margin-top: 14px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		position: relative;
+		margin-top: 0;
+
+		label {
+			color: $input-border-color;
+			position: absolute;
+			top: 0.8em;
+			left: 0;
+			font-size: 1em;
+			cursor: text;
+			transition: 0.2s ease-out;
+			font-weight: 300;
+			white-space: nowrap;
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			-webkit-user-select: none;
+			   -moz-user-select: none;
+			    -ms-user-select: none;
+			        user-select: none;
+		}
+
+		label.active {
+			font-size: $label-font-size;
+			-webkit-transform: translateY(-140%);
+			        transform: translateY(-140%);
+			font-weight: 400;
+		}
+
+		// Prefix Icons
+		.prefix {
+			position: absolute;
+			width: 1.5em;
+			font-size: 2em;
+			transition: color 0.2s;
+			color: $secondary-text-color;
+			left: 0;
+			top: 0;
+
+			&.active {
+				color: $input-focus-color;
+			}
+		}
+
+		&.has-icon > input,
+		&.has-icon > textarea,
+		&.has-icon > label,
+		&.has-icon > .validate ~ label,
+		&.has-icon > .autocomplete-content {
+			margin-left: 3em;
+			width: 92%;
+			width: calc(100% - 3em);
+		}
+
+		.prefix ~ label {
+			margin-left: 3em;
+		}
+
+		@media #{$medium-and-down} {
+			.prefix ~ input {
+				width: 86%;
+				width: calc(100% - 3em);
+			}
+		}
+
+		@media #{$small-and-down} {
+			.prefix ~ input {
+				width: 80%;
+				width: calc(100% - 3em);
+			}
+		}
+	}
+
+	.ipt_uif_question_others {
+		.input-field {
+			margin-top: 0.5em;
+		}
+	}
+
+	.ipt_fsqm_container_select {
+		.ipt_uif_question_others {
+			.input-field {
+				margin-top: 1.5em;
+			}
+		}
+	}
+
+	/* Search Field */
+
+	.input-field input[type="search"] {
+		display: block;
+		line-height: inherit;
+		padding-left: 4em;
+		width: calc(100% - 4em);
+
+		&:focus {
+			background-color: $input-background;
+			border: 0;
+			box-shadow: none;
+			color: #444;
+
+			& + label i,
+			& ~ .mdi-navigation-close,
+			& ~ .material-icons {
+				color: #444;
+			}
+		}
+
+		& + label {
+			left: 1em;
+		}
+
+		& ~ .mdi-navigation-close,
+		& ~ .material-icons {
+			position: absolute;
+			top: 0;
+			right: 1em;
+			color: transparent;
+			cursor: pointer;
+			font-size: 2em;
+			transition: 0.3s color;
+		}
+	}
+
+	/* Textarea */
+
+	// Default textarea
+	textarea {
+		width: 100%;
+		height: $input-height;
+		background-color: transparent;
+
+		&.materialize-textarea {
+			overflow-y: hidden; /* prevents scroll bar flash */
+			padding: 0.8em 0 1.6em 0; /* prevents text jump on Enter keypress */
+			resize: none;
+			min-height: $input-height;
+		}
+	}
+
+	/* Inline text fields */
+	.eform-inline-label {
+		display: inline-block;
+	}
+	.eform-input-inline {
+		display: inline-block;
+		width: 300px;
+		max-width: 60%;
+		margin: 8px;
+		position: relative;
+		height: 3em;
+
+		.input-field ~ .formError {
+			top: auto !important;
+			position: absolute !important;
+		}
+	}
+
+	// Overrides for boxy design
+	&.eform-override-element-boxy {
+		// Input elements
+		input:not([type]),
+		input[type="text"],
+		input[type="password"],
+		input[type="email"],
+		input[type="url"],
+		input[type="time"],
+		input[type="date"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="tel"],
+		input[type="number"],
+		input[type="search"],
+		textarea.materialize-textarea {
+			border: $input-border;
+			border-radius: 4px;
+			box-shadow: inset 0 1px 2px fade-out($input-border-color, 0.7),
+				0 0 0 0 transparent;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+			width: calc(100% - 1em - 2px);
+			@include material__smooth-tran();
+			~ .prefix {
+				font-size: 1.5em;
+				line-height: 2em;
+				left: 0.5em;
+			}
+
+			// Disabled input style
+			&:disabled {
+				color: $input-disabled-color;
+				border: $input-disabled-border;
+			}
+
+			// Disabled label style
+			&:disabled + label {
+				color: $input-disabled-color;
+			}
+
+			// Focused input style
+			&:focus:not([disabled]) {
+				border-color: $input-focus-color;
+				box-shadow: inset 0 0 0 transparent,
+					0 0 0 0.2em fade-out($input-focus-color, 0.75);
+				color: $secondary-text-color;
+			}
+
+			// Focused label style
+			&:focus:not([disabled]) + label {
+				color: $input-focus-color;
+			}
+
+			// Valid Input Style
+			&.valid {
+				border-color: $input-success-color;
+				&:focus {
+					border-color: $input-success-color;
+					box-shadow: inset 0 0 0 transparent,
+						0 0 0 0.2em fade-out($input-success-color, 0.75);
+				}
+			}
+
+			// Invalid Input Style
+			&.invalid {
+				border-color: $input-error-color;
+				&:focus {
+					border-color: $input-error-color;
+					box-shadow: inset 0 0 0 transparent,
+						0 0 0 0.2em fade-out($input-error-color, 0.75);
+				}
+			}
+		}
+
+		// Input field
+		.input-field {
+			// Placeholder label
+			> label {
+				padding-left: 0.5em;
+				width: calc(100% - 1em);
+				&.active {
+					-webkit-transform: translateY(-150%);
+					        transform: translateY(-150%);
+				}
+			}
+			// With icon
+			&.has-icon > input,
+			&.has-icon > textarea,
+			&.has-icon > label,
+			&.has-icon > .validate ~ label,
+			&.has-icon > .autocomplete-content {
+				padding-left: 2.5em;
+				margin-left: 0;
+				width: calc(100% - 3em);
+			}
+			&.has-icon > input,
+			&.has-icon > textarea {
+				width: calc(100% - 3em - 2px);
+			}
+			&.has-icon > label {
+				&.active {
+					-webkit-transform: translateY(-150%) translateX(-2em);
+					        transform: translateY(-150%) translateX(-2em);
+				}
+			}
+		}
+	}
+}
+
+// For textarea autoresize
+.hiddendiv {
+	display: none;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
+	padding-top: 1.2em; /* prevents text jump on Enter keypress */
+}

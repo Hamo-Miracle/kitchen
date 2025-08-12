@@ -1,0 +1,271 @@
+// ==========================================================================
+// Question Container
+// ==========================================================================
+@mixin centeredQContainer {
+	text-align: center;
+	.ipt_uif_question_label {
+		text-align: center;
+	}
+	.ipt_uif_question_content {
+		text-align: center;
+		.input-field {
+			text-align: left;
+		}
+	}
+	@media screen and (min-width: $screen-lg-min) {
+		.ipt_uif_question_label {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+		.ipt_uif_question_content {
+			width: 100%;
+			padding-left: 0;
+			text-align: center;
+			.input-field {
+				text-align: left;
+			}
+		}
+		.ipt_uif_label_column {
+			text-align: center;
+		}
+	}
+}
+@mixin horizontalQContainer {
+	.ipt_uif_question_label {
+		width: 30%;
+		margin-bottom: 0;
+		text-align: left;
+	}
+	.ipt_uif_question_content {
+		width: 70%;
+		padding-left: $grid-gutter-width;
+		text-align: left;
+	}
+
+	// But for full type questions, make content go 100%
+	&.ipt_uif_question_full > .ipt_uif_question_content {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+.#{$selector} {
+	.ipt_uif_question {
+		width: 100%;
+		float: left;
+		padding: 0;
+
+		.ipt_uif_question_label,
+		.ipt_uif_question_content {
+			float: left;
+			width: 100%;
+			padding: 0;
+		}
+
+		> .ipt_uif_question_label {
+			margin-bottom: 15px;
+		}
+
+		label.ipt_uif_question_title {
+			font-weight: normal;
+			font-size: (16 / 14) * 1em;
+			display: block;
+			color: $primary-text-color;
+			margin: 0 0 5px 0;
+			.ipt_uif_question_required {
+				color: $primary-color;
+				margin-left: 5px;
+			}
+		}
+		label.ipt_uif_question_subtitle {
+			font-weight: 300;
+			font-size: (12 / 14) * 1em;
+			color: $secondary-text-color;
+			margin-top: -4px;
+			font-style: italic;
+			display: block;
+		}
+		.ipt_uif_question_content {
+			color: $secondary-text-color;
+
+			// Nested Questions
+			.ipt_uif_question {
+				label.ipt_uif_question_title {
+					color: $secondary-text-color;
+				}
+				label.ipt_uif_question_subtitle {
+					color: $disabled-color-text;
+				}
+			}
+		}
+
+		.ipt_uif_label_column {
+			width: 100%;
+			float: left;
+			padding: 5px;
+
+			&.column_random {
+				width: auto;
+				display: inline-block;
+				float: none;
+			}
+		}
+
+		@media screen and (min-width: $screen-lg-min) {
+			// Split them horizontally
+			@include horizontalQContainer();
+
+			// But still 100% for vertical
+			&.ipt_uif_question_vertical {
+				> .ipt_uif_question_label {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+				> .ipt_uif_question_content {
+					width: 100%;
+					padding-left: 0;
+				}
+			}
+
+			// Split label columns
+			.ipt_uif_label_column {
+				text-align: left;
+				&.column_2 {
+					width: 50%;
+				}
+				&.column_3 {
+					width: 33.33333333%;
+				}
+				&.column_4 {
+					width: 25%;
+				}
+			}
+		}
+
+		// Centered
+		&.ipt_uif_question_centered {
+			@include centeredQContainer();
+		}
+	}
+
+	.ipt_uif_fancy_container {
+		> .ipt_uif_question {
+			border-bottom: 1px solid $divider-color;
+			padding: 24px 0 0px;
+			&:first-child {
+				padding-top: 6px;
+			}
+		}
+	}
+
+	// Column Optimization
+	.ipt_uif_column_third,
+	.ipt_uif_column_forth {
+		.ipt_uif_question {
+			> .ipt_uif_question_label {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			> .ipt_uif_question_content {
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
+
+	// Vertical all qcontainers inside centered and vertical parent columns
+	.column-vertical-heading,
+	.column-centered-heading {
+		.ipt_uif_question {
+			.ipt_uif_question_label {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			.ipt_uif_question_content {
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
+	.column-centered-heading {
+		.ipt_uif_question_label {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+		.ipt_uif_question_content {
+			width: 100%;
+			padding-left: 0;
+			text-align: center;
+			.input-field {
+				text-align: left;
+			}
+		}
+		.ipt_uif_label_column {
+			text-align: center;
+		}
+	}
+
+	// Override for vertical layout
+	&.eform-override-alignment-vertical {
+		.ipt_uif_question {
+			.ipt_uif_question_label,
+			.ipt_uif_question_content {
+				float: left;
+				width: 100%;
+				padding: 0;
+				text-align: left;
+			}
+
+			> .ipt_uif_question_label {
+				margin-bottom: 15px;
+			}
+		}
+		.ipt_uif_container_head {
+			text-align: left;
+		}
+	}
+
+	// Override for centered layout
+	&.eform-override-alignment-centered {
+		.ipt_uif_question {
+			@include centeredQContainer();
+		}
+		.ipt_uif_container_head {
+			text-align: center;
+		}
+	}
+
+	// Override for horizontal
+	&.eform-override-alignment-horizontal {
+		@media screen and (min-width: $screen-lg-min) {
+			.ipt_uif_question {
+				@include horizontalQContainer();
+			}
+		}
+	}
+}
+
+// When placing inside widgets
+.ipt_uif_widget_vertical {
+	.#{$selector} {
+		.ipt_uif_question {
+			> .ipt_uif_question_label {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			> .ipt_uif_question_content {
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+		.ipt_uif_label_column {
+			&.column_2,
+			&.column_3,
+			&.column_4 {
+				width: 100%;
+			}
+		}
+	}
+}

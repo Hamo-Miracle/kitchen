@@ -1,0 +1,353 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Taxonomy Terms Order\n"
+"POT-Creation-Date: 2025-05-23 11:01+0300\n"
+"PO-Revision-Date: 2025-05-23 11:06+0300\n"
+"Last-Translator: NspCode <contact@nsp-code.com>\n"
+"Language-Team: Nsp Code <electronice_delphi@yahoo.com>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class.atto.admin.php:137
+msgid "Sort "
+msgstr "Třídit"
+
+#: include/class.atto.admin.php:422 include/class.atto.compatability.php:143
+#: include/class.atto.interface.php:166
+msgid "Taxonomy Order"
+msgstr "Po?adí taxonomie"
+
+#: include/class.atto.admin.php:468
+msgid "Advanced Taxonomy Terms Order plugin is inactive, please enter your"
+msgstr ""
+"Pokro?ilá taxonomie Podmínky Zásuvný modul objednávky je neaktivní, zadejte "
+"prosím sv?j"
+
+#: include/class.atto.admin.php:468 include/class.atto.options.php:414
+#: include/class.atto.options.php:450
+msgid "Licence Key"
+msgstr "Licenční klíč"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "Order type for %s"
+msgstr "Typ objednávky pro %s"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "switched to %s"
+msgstr "p?epnuto na %s"
+
+#: include/class.atto.interface.php:120
+msgid "Order updated"
+msgstr "Objednávka aktualizována"
+
+#: include/class.atto.interface.php:172
+msgid ""
+"This plugin cannot work without javascript, because it uses drag and drop "
+"and AJAX."
+msgstr ""
+"Tento plugin nem??e fungovat bez javascriptu, proto?e pou?ívá drag and dropa "
+"AJAX."
+
+#: include/class.atto.interface.php:200
+#, php-format
+msgid "%s Taxonomies"
+msgstr "%s Taxonomie"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Taxonomy Title"
+msgstr "Název taxonomie"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Total Terms"
+msgstr "Celkové podmínky"
+
+#: include/class.atto.interface.php:282
+msgid "Automatic Order"
+msgstr "Automatická objednávka"
+
+#: include/class.atto.interface.php:283
+msgid "Manual Order"
+msgstr "Manuální objednávka"
+
+#: include/class.atto.interface.php:294
+msgid "Order By"
+msgstr "Se?adit podle"
+
+#: include/class.atto.interface.php:303
+msgid "Default"
+msgstr "Výchozí"
+
+#: include/class.atto.interface.php:306
+msgid "Creation Time / ID"
+msgstr "?as vytvo?ení / ID"
+
+#: include/class.atto.interface.php:309
+msgid "Name"
+msgstr "Jméno"
+
+#: include/class.atto.interface.php:312
+msgid "Count"
+msgstr "Po?et"
+
+#: include/class.atto.interface.php:315
+msgid "Slug"
+msgstr "Slimák"
+
+#: include/class.atto.interface.php:318 include/class.atto.interface.php:398
+msgid "Random"
+msgstr "Náhodný"
+
+#: include/class.atto.interface.php:325
+msgid "Order"
+msgstr "Objednat"
+
+#: include/class.atto.interface.php:335
+msgid "Descending"
+msgstr "Klesající"
+
+#: include/class.atto.interface.php:338
+msgid "Ascending"
+msgstr "Vzestupně"
+
+#: include/class.atto.interface.php:347 include/class.atto.interface.php:379
+#: include/class.atto.interface.php:419
+msgid "Update"
+msgstr "Aktualizace"
+
+#: include/class.atto.interface.php:393
+msgid "Reverse"
+msgstr "Zvrátit"
+
+#: include/class.atto.interface.php:394
+msgid "Title Asc"
+msgstr "Titul Asc"
+
+#: include/class.atto.interface.php:395
+msgid "Title Desc"
+msgstr "Název Popis"
+
+#: include/class.atto.interface.php:396
+msgid "Id order Asc"
+msgstr "Id order Asc"
+
+#: include/class.atto.interface.php:397
+msgid "Id order Desc"
+msgstr "Id order Desc"
+
+#: include/class.atto.interface.php:400
+msgid "Collapse All"
+msgstr "Sbalit vše"
+
+#: include/class.atto.interface.php:401
+msgid "Expand All"
+msgstr "Rozbalit vše"
+
+#: include/class.atto.options.php:55
+msgid "Subscriber"
+msgstr "Odb?ratel"
+
+#: include/class.atto.options.php:56
+msgid "Contributor"
+msgstr "P?isp?vatel"
+
+#: include/class.atto.options.php:57
+msgid "Author"
+msgstr "Autor"
+
+#: include/class.atto.options.php:58
+msgid "Editor"
+msgstr "Editor"
+
+#: include/class.atto.options.php:59
+msgid "Administrator"
+msgstr "Správce"
+
+#: include/class.atto.options.php:87
+msgid "General Settings"
+msgstr "Obecné nastavení"
+
+#: include/class.atto.options.php:103
+msgid "Show"
+msgstr "Zobrazit"
+
+#: include/class.atto.options.php:104
+msgid "Hide"
+msgstr "Skrýt"
+
+#: include/class.atto.options.php:117
+msgid "Minimum Level to use this plugin"
+msgstr "Minimální úrove? pro pou?ití tohoto pluginu"
+
+#: include/class.atto.options.php:136
+msgid "Auto Sort"
+msgstr "Automatické ?azení"
+
+#: include/class.atto.options.php:140 include/class.atto.options.php:153
+#: include/class.atto.options.php:201
+msgid "OFF"
+msgstr "VYPNUTO"
+
+#: include/class.atto.options.php:141 include/class.atto.options.php:154
+#: include/class.atto.options.php:202
+msgid "ON"
+msgstr "NA"
+
+#: include/class.atto.options.php:142
+msgid ""
+"If checked, the plug-in automatically update the WordPress queries to use "
+"the new sort (<b>No code update is necessarily</b>)"
+msgstr ""
+"Pokud je za?krtnuto, plug-in automaticky aktualizuje dotazy WordPress k pou?"
+"itínové ?azení (<b>Není nutná aktualizace kódu</b>)"
+
+#: include/class.atto.options.php:142
+msgid "Additional details about this setting can be found at"
+msgstr "Dal?í podrobnosti o tomto nastavení naleznete na"
+
+#: include/class.atto.options.php:143
+msgid ""
+"If ON selected, the plug-in automatically update the WordPress queries to "
+"use the new sort (<b>No code update is necessary</b>)"
+msgstr ""
+"Pokud je vybráno ZAPNUTO, plug-in automaticky aktualizuje dotazy WordPress "
+"napou?ít nové ?azení (<b>Není nutná ?ádná aktualizace kódu</b>)"
+
+#: include/class.atto.options.php:143
+#, php-format
+msgid ""
+"Additional details about this setting can be found at <a href=\"%s\" "
+"target=\"_blank\">Autosort Details</a>"
+msgstr ""
+"Dal?í podrobnosti o tomto nastavení naleznete na <a "
+"href=\"%s\"target=\"_blank\">Podrobnosti automatického ?azení</a>"
+
+#: include/class.atto.options.php:149
+msgid "Admin Sort"
+msgstr "Admin ?azení"
+
+#: include/class.atto.options.php:156
+msgid "Update order of terms within the admin interface per customised sort"
+msgstr ""
+"Aktualizujte po?adí výraz? v rozhraní správce podle p?izp?sobeného ?azení"
+
+#: include/class.atto.options.php:162
+msgid "Default Interface Sort"
+msgstr "Výchozí ?azení rozhraní"
+
+#: include/class.atto.options.php:197
+msgid "WPML Sort Synchronization"
+msgstr "Synchronizace třídění WPML"
+
+#: include/class.atto.options.php:204
+msgid ""
+"The WPML Sort Synchronization feature ensures that custom sorting applied to "
+"taxonomy terms is seamlessly synchronized across all translations managed by "
+"the WPML (WordPress Multilingual) plugin"
+msgstr ""
+"Funkce synchronizace třídění WPML zajišťuje, že vlastní třídění použité na "
+"termíny taxonomie je bezproblémově synchronizováno ve všech překladech "
+"spravovaných pluginem WPML (WordPress Multilingual)"
+
+#: include/class.atto.options.php:214
+msgid "Save Settings"
+msgstr "Ulo?it nastavení"
+
+#: include/class.atto.options.php:251
+msgid "Settings Saved"
+msgstr "Nastavení ulo?eno"
+
+#: include/class.atto.options.php:283 include/class.atto.options.php:361
+#, php-format
+msgid "There was a problem connecting to %s"
+msgstr "Do?lo k problému s p?ipojením k %s"
+
+#: include/class.atto.options.php:309
+msgid ""
+"There was a problem deactivating the licence on other side, however locally "
+"the key is now removed: "
+msgstr ""
+"Vyskytl se problém s deaktivací licence na druhé stran?, nicmén? lokáln?klí? "
+"je nyní odstran?n: "
+
+#: include/class.atto.options.php:326 include/class.atto.options.php:399
+#, php-format
+msgid "There was a problem with the data block received from %s"
+msgstr "Vyskytl se problém s datovým blokem p?ijatým od %s"
+
+#: include/class.atto.options.php:343
+msgid "Licence Key can't be empty"
+msgstr "Licen?ní klí? nem??e být prázdný"
+
+#: include/class.atto.options.php:391
+#, php-format
+msgid "There was a problem activating the licence: %s"
+msgstr "P?i aktivaci licence do?lo k problému: %s"
+
+#: include/class.atto.options.php:411 include/class.atto.options.php:447
+msgid "Advanced Taxonomy Terms Order License"
+msgstr "Pokro?ilá taxonomie Podmínky Objednávka licence"
+
+#: include/class.atto.options.php:426
+#, php-format
+msgid ""
+"Enter the Licence Key you received when you purchased this product. If you "
+"lost the key, you can always retrieve it from <a href=\"%s\" "
+"target=\"_blank\">My Account</a>."
+msgstr ""
+"Zadejte licen?ní klí?, který jste obdr?eli p?i zakoupení tohoto produktu. "
+"jestli tyztratil klí?, v?dy jej m??ete získat z <a "
+"href=\"%s\"target=\"_blank\">M?j ú?et</a>."
+
+#: include/class.atto.options.php:431
+msgid "Save"
+msgstr "Ulo?it"
+
+#: include/class.atto.options.php:472
+msgid "Deactivate"
+msgstr "Deaktivovat"
+
+#: include/class.atto.options.php:475
+#, php-format
+msgid ""
+"You can generate more keys from <a href=\"%s\" target=\"_blank\">My Account</"
+"a>"
+msgstr ""
+"Dal?í klí?e m??ete vygenerovat z <a href=\"%s\" target=\"_blank\">M?j ú?et</"
+"a>"
+
+#: include/class.atto.plugin-updater.php:123
+msgid "An error occurred when trying to identify the plugin."
+msgstr "P?i pokusu o identifikaci pluginu do?lo k chyb?."
+
+#: include/class.atto.plugin-updater.php:123
+#: include/class.atto.plugin-updater.php:143
+msgid "Try again"
+msgstr "Zkus to znovu"
+
+#: include/class.atto.plugin-updater.php:143
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "B?hem po?adavku API do?lo k neo?ekávané chyb? HTTP."
+
+#: include/class.atto.terms_walker.php:49
+msgid "Move to Top"
+msgstr "TOPovat inzerát"
+
+#: include/class.atto.terms_walker.php:50
+msgid "Move to Bottom"
+msgstr "Přesun na dno"
+
+#~ msgid ""
+#~ "Allow drag & drop functionality for sorting within default WordPress "
+#~ "taxonomy interface."
+#~ msgstr ""
+#~ "Povolit funkci drag & drop pro ?azení ve výchozím WordPressrozhraní "
+#~ "taxonomie."

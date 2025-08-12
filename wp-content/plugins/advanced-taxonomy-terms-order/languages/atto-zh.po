@@ -1,0 +1,379 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Taxonomy Terms Order\n"
+"POT-Creation-Date: 2025-05-23 11:06+0300\n"
+"PO-Revision-Date: 2025-05-23 11:06+0300\n"
+"Last-Translator: NspCode <contact@nsp-code.com>\n"
+"Language-Team: Nsp Code <electronice_delphi@yahoo.com>\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class.atto.admin.php:137
+msgid "Sort "
+msgstr ""
+
+#: include/class.atto.admin.php:422 include/class.atto.compatability.php:143
+#: include/class.atto.interface.php:166
+msgid "Taxonomy Order"
+msgstr "分类顺序"
+
+#: include/class.atto.admin.php:468
+msgid "Advanced Taxonomy Terms Order plugin is inactive, please enter your"
+msgstr "高级分类术语顺序插件未激活，请输入您的"
+
+#: include/class.atto.admin.php:468 include/class.atto.options.php:414
+#: include/class.atto.options.php:450
+msgid "Licence Key"
+msgstr "许可证密钥"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "Order type for %s"
+msgstr "%s 的排序类型"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "switched to %s"
+msgstr "切换到 %s"
+
+#: include/class.atto.interface.php:120
+msgid "Order updated"
+msgstr "排序已更新"
+
+#: include/class.atto.interface.php:172
+msgid ""
+"This plugin cannot work without javascript, because it uses drag and drop "
+"and AJAX."
+msgstr "此插件无法在没有 JavaScript 的情况下工作，因为它使用拖放和 AJAX。"
+
+#: include/class.atto.interface.php:200
+#, php-format
+msgid "%s Taxonomies"
+msgstr "%s 分类法"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Taxonomy Title"
+msgstr "分类标题"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Total Terms"
+msgstr "总术语"
+
+#: include/class.atto.interface.php:282
+msgid "Automatic Order"
+msgstr "自动排序"
+
+#: include/class.atto.interface.php:283
+msgid "Manual Order"
+msgstr "手动排序"
+
+#: include/class.atto.interface.php:294
+msgid "Order By"
+msgstr "排序依据"
+
+#: include/class.atto.interface.php:303
+msgid "Default"
+msgstr "默认"
+
+#: include/class.atto.interface.php:306
+msgid "Creation Time / ID"
+msgstr "创建时间 / ID"
+
+#: include/class.atto.interface.php:309
+msgid "Name"
+msgstr "名称"
+
+#: include/class.atto.interface.php:312
+msgid "Count"
+msgstr "计数"
+
+#: include/class.atto.interface.php:315
+msgid "Slug"
+msgstr "别名"
+
+#: include/class.atto.interface.php:318 include/class.atto.interface.php:398
+msgid "Random"
+msgstr "随机"
+
+#: include/class.atto.interface.php:325
+msgid "Order"
+msgstr "顺序"
+
+#: include/class.atto.interface.php:335
+msgid "Descending"
+msgstr "降序"
+
+#: include/class.atto.interface.php:338
+msgid "Ascending"
+msgstr "升序"
+
+#: include/class.atto.interface.php:347 include/class.atto.interface.php:379
+#: include/class.atto.interface.php:419
+msgid "Update"
+msgstr "更新"
+
+#: include/class.atto.interface.php:393
+msgid "Reverse"
+msgstr "反转"
+
+#: include/class.atto.interface.php:394
+msgid "Title Asc"
+msgstr "标题升序"
+
+#: include/class.atto.interface.php:395
+msgid "Title Desc"
+msgstr "标题降序"
+
+#: include/class.atto.interface.php:396
+msgid "Id order Asc"
+msgstr "ID 顺序升序"
+
+#: include/class.atto.interface.php:397
+msgid "Id order Desc"
+msgstr "ID 顺序降序"
+
+#: include/class.atto.interface.php:400
+msgid "Collapse All"
+msgstr "全部折叠"
+
+#: include/class.atto.interface.php:401
+msgid "Expand All"
+msgstr "全部展开"
+
+#: include/class.atto.interface.php:469
+#, fuzzy
+#| msgid "Order updated"
+msgid "Items Order Updated"
+msgstr "排序已更新"
+
+#: include/class.atto.options.php:55
+msgid "Subscriber"
+msgstr "订阅者"
+
+#: include/class.atto.options.php:56
+msgid "Contributor"
+msgstr "贡献者"
+
+#: include/class.atto.options.php:57
+msgid "Author"
+msgstr "作者"
+
+#: include/class.atto.options.php:58
+msgid "Editor"
+msgstr "编辑"
+
+#: include/class.atto.options.php:59
+msgid "Administrator"
+msgstr "管理员"
+
+#: include/class.atto.options.php:87
+msgid "General Settings"
+msgstr "常规设置"
+
+#: include/class.atto.options.php:91
+#, fuzzy
+#| msgid "Show / Hide Taxonomy Order interface"
+msgid "Show / Hide re-order interface"
+msgstr "显示/隐藏分类顺序界面"
+
+#: include/class.atto.options.php:93
+msgid "Display the Taxonomy Order interface for the specified post types."
+msgstr ""
+
+#: include/class.atto.options.php:103
+msgid "Show"
+msgstr "显示"
+
+#: include/class.atto.options.php:104
+msgid "Hide"
+msgstr "隐藏"
+
+#: include/class.atto.options.php:117
+msgid "Minimum Level to use this plugin"
+msgstr "使用此插件的最低级别"
+
+#: include/class.atto.options.php:136
+msgid "Auto Sort"
+msgstr "自动排序"
+
+#: include/class.atto.options.php:140 include/class.atto.options.php:153
+#: include/class.atto.options.php:201
+msgid "OFF"
+msgstr "关闭"
+
+#: include/class.atto.options.php:141 include/class.atto.options.php:154
+#: include/class.atto.options.php:202
+msgid "ON"
+msgstr "开启"
+
+#: include/class.atto.options.php:142
+msgid ""
+"If checked, the plug-in automatically update the WordPress queries to use "
+"the new sort (<b>No code update is necessarily</b>)"
+msgstr ""
+"如果选中，该插件会自动更新 WordPress 查询以使用新的排序方式 (<b>无需更新代码"
+"</b>)"
+
+#: include/class.atto.options.php:142
+msgid "Additional details about this setting can be found at"
+msgstr "关于此设置的更多详细信息可以在以下找到"
+
+#: include/class.atto.options.php:143
+msgid ""
+"If ON selected, the plug-in automatically update the WordPress queries to "
+"use the new sort (<b>No code update is necessary</b>)"
+msgstr ""
+"如果选择开启，该插件会自动更新 WordPress 查询以使用新的排序方式 (<b>无需更新"
+"代码</b>)"
+
+#: include/class.atto.options.php:143
+#, php-format
+msgid ""
+"Additional details about this setting can be found at <a href=\"%s\" "
+"target=\"_blank\">Autosort Details</a>"
+msgstr ""
+"关于此设置的更多详细信息可以在 <a href=\"%s\" target=\"_blank\">Autosort "
+"Details</a> 找到"
+
+#: include/class.atto.options.php:149
+msgid "Admin Sort"
+msgstr "管理员排序"
+
+#: include/class.atto.options.php:156
+msgid "Update order of terms within the admin interface per customised sort"
+msgstr "根据自定义排序更新管理员界面中的术语顺序"
+
+#: include/class.atto.options.php:162
+msgid "Default Interface Sort"
+msgstr "默认界面排序"
+
+#: include/class.atto.options.php:165
+#, fuzzy
+#| msgid ""
+#| "Allow drag & drop functionality for sorting within default WordPress "
+#| "taxonomy interface."
+msgid ""
+"Enable sortable drag-and-drop functionality within the default WordPress "
+"taxonomy interface. An "
+msgstr "允许在默认 WordPress 分类界面内拖放进行排序。"
+
+#: include/class.atto.options.php:165
+msgid ""
+" icon will be displayed on the items, allowing for customization of the "
+"order. The option can be further adjusted by the users, through the Screen "
+"Options on the taxonomy page."
+msgstr ""
+
+#: include/class.atto.options.php:167
+msgid "Admin Sort feature must be activated for this functionality."
+msgstr ""
+
+#: include/class.atto.options.php:184
+msgid "Yes"
+msgstr ""
+
+#: include/class.atto.options.php:185
+msgid "No"
+msgstr ""
+
+#: include/class.atto.options.php:197
+msgid "WPML Sort Synchronization"
+msgstr ""
+
+#: include/class.atto.options.php:204
+msgid ""
+"The WPML Sort Synchronization feature ensures that custom sorting applied to "
+"taxonomy terms is seamlessly synchronized across all translations managed by "
+"the WPML (WordPress Multilingual) plugin"
+msgstr ""
+
+#: include/class.atto.options.php:214
+msgid "Save Settings"
+msgstr "保存设置"
+
+#: include/class.atto.options.php:251
+msgid "Settings Saved"
+msgstr "设置已保存"
+
+#: include/class.atto.options.php:283 include/class.atto.options.php:361
+#, php-format
+msgid "There was a problem connecting to %s"
+msgstr "连接到 %s 时出现问题"
+
+#: include/class.atto.options.php:309
+msgid ""
+"There was a problem deactivating the licence on other side, however locally "
+"the key is now removed: "
+msgstr "在另一端停用许可证时出现问题，但在本地密钥已被移除："
+
+#: include/class.atto.options.php:326 include/class.atto.options.php:399
+#, php-format
+msgid "There was a problem with the data block received from %s"
+msgstr "从 %s 接收到的数据块有问题"
+
+#: include/class.atto.options.php:343
+msgid "Licence Key can't be empty"
+msgstr "许可证密钥不能为空"
+
+#: include/class.atto.options.php:391
+#, php-format
+msgid "There was a problem activating the licence: %s"
+msgstr "激活许可证时出现问题：%s"
+
+#: include/class.atto.options.php:411 include/class.atto.options.php:447
+msgid "Advanced Taxonomy Terms Order License"
+msgstr "高级分类术语顺序许可证"
+
+#: include/class.atto.options.php:426
+#, php-format
+msgid ""
+"Enter the Licence Key you received when you purchased this product. If you "
+"lost the key, you can always retrieve it from <a href=\"%s\" "
+"target=\"_blank\">My Account</a>."
+msgstr ""
+"输入您购买此产品时收到的许可证密钥。如果您丢失了密钥，可以随时从 <a "
+"href=\"%s\" target=\"_blank\">我的帐户</a> 找回。"
+
+#: include/class.atto.options.php:431
+msgid "Save"
+msgstr "保存"
+
+#: include/class.atto.options.php:472
+msgid "Deactivate"
+msgstr "停用"
+
+#: include/class.atto.options.php:475
+#, php-format
+msgid ""
+"You can generate more keys from <a href=\"%s\" target=\"_blank\">My Account</"
+"a>"
+msgstr "您可以从 <a href=\"%s\" target=\"_blank\">我的帐户</a> 生成更多密钥"
+
+#: include/class.atto.plugin-updater.php:123
+msgid "An error occurred when trying to identify the plugin."
+msgstr "尝试识别插件时发生错误。"
+
+#: include/class.atto.plugin-updater.php:123
+#: include/class.atto.plugin-updater.php:143
+msgid "Try again"
+msgstr "再试一次"
+
+#: include/class.atto.plugin-updater.php:143
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "API 请求期间发生意外的 HTTP 错误。"
+
+#: include/class.atto.terms_walker.php:49
+msgid "Move to Top"
+msgstr "移到顶部"
+
+#: include/class.atto.terms_walker.php:50
+msgid "Move to Bottom"
+msgstr "移到底部"

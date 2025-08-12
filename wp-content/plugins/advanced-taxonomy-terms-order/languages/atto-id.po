@@ -1,0 +1,336 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Taxonomy Terms Order\n"
+"POT-Creation-Date: 2024-09-03 19:32+0300\n"
+"PO-Revision-Date: 2025-05-23 11:07+0300\n"
+"Last-Translator: NspCode <contact@nsp-code.com>\n"
+"Language-Team: Nsp Code <electronice_delphi@yahoo.com>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class.atto.admin.php:137
+msgid "Sort "
+msgstr ""
+
+#: include/class.atto.admin.php:430 include/class.atto.compatability.php:138
+#: include/class.atto.interface.php:166
+msgid "Taxonomy Order"
+msgstr "Urutan Taksonomi"
+
+#: include/class.atto.admin.php:476
+msgid "Advanced Taxonomy Terms Order plugin is inactive, please enter your"
+msgstr ""
+"Plugin Pesanan Ketentuan Taksonomi Lanjutan tidak aktif, silakan masukkan"
+
+#: include/class.atto.admin.php:476 include/class.atto.options.php:419
+#: include/class.atto.options.php:455
+msgid "Licence Key"
+msgstr "Kunci Lisensi"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "Order type for %s"
+msgstr "Jenis pesanan untuk %s"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "switched to %s"
+msgstr "beralih ke %s"
+
+#: include/class.atto.interface.php:120
+msgid "Order updated"
+msgstr "Pesanan diperbarui"
+
+#: include/class.atto.interface.php:172
+msgid ""
+"This plugin cannot work without javascript, because it uses drag and drop "
+"and AJAX."
+msgstr ""
+"Plugin ini tidak bisa bekerja tanpa javascript, karena menggunakan drag and "
+"dropdan AJAX."
+
+#: include/class.atto.interface.php:200
+#, php-format
+msgid "%s Taxonomies"
+msgstr "Taksonomi %s"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Taxonomy Title"
+msgstr "Judul Taksonomi"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Total Terms"
+msgstr "Ketentuan Total"
+
+#: include/class.atto.interface.php:282
+msgid "Automatic Order"
+msgstr "Pesanan Otomatis"
+
+#: include/class.atto.interface.php:283
+msgid "Manual Order"
+msgstr "Pesanan Manual"
+
+#: include/class.atto.interface.php:294
+msgid "Order By"
+msgstr "Dipesan oleh"
+
+#: include/class.atto.interface.php:303
+msgid "Default"
+msgstr "Bawaan"
+
+#: include/class.atto.interface.php:306
+msgid "Creation Time / ID"
+msgstr "Waktu Pembuatan / ID"
+
+#: include/class.atto.interface.php:309
+msgid "Name"
+msgstr "Nama"
+
+#: include/class.atto.interface.php:312
+msgid "Count"
+msgstr "Menghitung"
+
+#: include/class.atto.interface.php:315
+msgid "Slug"
+msgstr "Siput"
+
+#: include/class.atto.interface.php:318 include/class.atto.interface.php:398
+msgid "Random"
+msgstr "Acak"
+
+#: include/class.atto.interface.php:325
+msgid "Order"
+msgstr "Memesan"
+
+#: include/class.atto.interface.php:335
+msgid "Descending"
+msgstr "Menurun"
+
+#: include/class.atto.interface.php:338
+msgid "Ascending"
+msgstr "Naik"
+
+#: include/class.atto.interface.php:347 include/class.atto.interface.php:379
+#: include/class.atto.interface.php:419
+msgid "Update"
+msgstr "Memperbarui"
+
+#: include/class.atto.interface.php:393
+msgid "Reverse"
+msgstr "Balik"
+
+#: include/class.atto.interface.php:394
+msgid "Title Asc"
+msgstr "Judul Asc"
+
+#: include/class.atto.interface.php:395
+msgid "Title Desc"
+msgstr "Judul Des"
+
+#: include/class.atto.interface.php:396
+msgid "Id order Asc"
+msgstr "Id memesan Asc"
+
+#: include/class.atto.interface.php:397
+msgid "Id order Desc"
+msgstr "Id order Des"
+
+#: include/class.atto.interface.php:400
+msgid "Collapse All"
+msgstr ""
+
+#: include/class.atto.interface.php:401
+msgid "Expand All"
+msgstr ""
+
+#: include/class.atto.options.php:55
+msgid "Subscriber"
+msgstr "Pelanggan"
+
+#: include/class.atto.options.php:56
+msgid "Contributor"
+msgstr "Penyumbang"
+
+#: include/class.atto.options.php:57
+msgid "Author"
+msgstr "Pengarang"
+
+#: include/class.atto.options.php:58
+msgid "Editor"
+msgstr "Editor"
+
+#: include/class.atto.options.php:59
+msgid "Administrator"
+msgstr "Administrator"
+
+#: include/class.atto.options.php:87
+msgid "General Settings"
+msgstr "Pengaturan Umum"
+
+#: include/class.atto.options.php:103
+msgid "Show"
+msgstr ""
+
+#: include/class.atto.options.php:104
+msgid "Hide"
+msgstr ""
+
+#: include/class.atto.options.php:117
+msgid "Minimum Level to use this plugin"
+msgstr "Level Minimum untuk menggunakan plugin ini"
+
+#: include/class.atto.options.php:136
+msgid "Auto Sort"
+msgstr "Sortir Otomatis"
+
+#: include/class.atto.options.php:140 include/class.atto.options.php:153
+msgid "OFF"
+msgstr "MATI"
+
+#: include/class.atto.options.php:141 include/class.atto.options.php:154
+msgid "ON"
+msgstr "PADA"
+
+#: include/class.atto.options.php:142
+msgid ""
+"If checked, the plug-in automatically update the WordPress queries to use "
+"the new sort (<b>No code update is necessarily</b>)"
+msgstr ""
+"Jika dicentang, plugin secara otomatis memperbarui kueri WordPress untuk "
+"digunakanpengurutan baru (<b>Tidak perlu memperbarui kode</b>)"
+
+#: include/class.atto.options.php:142
+msgid "Additional details about this setting can be found at"
+msgstr "Detail tambahan tentang pengaturan ini dapat ditemukan di"
+
+#: include/class.atto.options.php:143
+msgid ""
+"If ON selected, the plug-in automatically update the WordPress queries to "
+"use the new sort (<b>No code update is necessary</b>)"
+msgstr ""
+"Jika AKTIF dipilih, plugin secara otomatis memperbarui kueri WordPress "
+"kegunakan pengurutan baru (<b>Tidak perlu pembaruan kode</b>)"
+
+#: include/class.atto.options.php:143
+#, php-format
+msgid ""
+"Additional details about this setting can be found at <a href=\"%s\" "
+"target=\"_blank\">Autosort Details</a>"
+msgstr ""
+"Detail tambahan tentang setelan ini dapat ditemukan di <a "
+"href=\"%s\"target=\"_blank\">Detail Sortir Otomatis</a>"
+
+#: include/class.atto.options.php:149
+msgid "Admin Sort"
+msgstr "Sortir Admin"
+
+#: include/class.atto.options.php:156
+msgid "Update order of terms within the admin interface per customised sort"
+msgstr ""
+"Perbarui urutan istilah dalam antarmuka admin per jenis yang disesuaikan"
+
+#: include/class.atto.options.php:162
+msgid "Default Interface Sort"
+msgstr "Sortir Antarmuka Default"
+
+#: include/class.atto.options.php:200
+msgid "Save Settings"
+msgstr "Simpan Pengaturan"
+
+#: include/class.atto.options.php:256
+msgid "Settings Saved"
+msgstr "Setelan Disimpan"
+
+#: include/class.atto.options.php:288 include/class.atto.options.php:366
+#, php-format
+msgid "There was a problem connecting to %s"
+msgstr "Terjadi masalah saat menghubungkan ke %s"
+
+#: include/class.atto.options.php:314
+msgid ""
+"There was a problem deactivating the licence on other side, however locally "
+"the key is now removed: "
+msgstr ""
+"Terjadi masalah saat menonaktifkan lisensi di sisi lain, namun secara "
+"lokalkuncinya sekarang dihapus:"
+
+#: include/class.atto.options.php:331 include/class.atto.options.php:404
+#, php-format
+msgid "There was a problem with the data block received from %s"
+msgstr "Ada masalah dengan blok data yang diterima dari %s"
+
+#: include/class.atto.options.php:348
+msgid "Licence Key can't be empty"
+msgstr "Kunci Lisensi tidak boleh kosong"
+
+#: include/class.atto.options.php:396
+#, php-format
+msgid "There was a problem activating the licence: %s"
+msgstr "Terjadi masalah saat mengaktifkan lisensi: %s"
+
+#: include/class.atto.options.php:416 include/class.atto.options.php:452
+msgid "Advanced Taxonomy Terms Order License"
+msgstr "Lisensi Pemesanan Ketentuan Taksonomi Tingkat Lanjut"
+
+#: include/class.atto.options.php:431
+#, php-format
+msgid ""
+"Enter the Licence Key you received when you purchased this product. If you "
+"lost the key, you can always retrieve it from <a href=\"%s\" "
+"target=\"_blank\">My Account</a>."
+msgstr ""
+"Masukkan Kunci Lisensi yang Anda terima saat membeli produk ini. Jika "
+"kamukehilangan kunci, Anda selalu dapat mengambilnya dari <a "
+"href=\"%s\"target=\"_blank\">Akun Saya</a>."
+
+#: include/class.atto.options.php:436
+msgid "Save"
+msgstr "Menyimpan"
+
+#: include/class.atto.options.php:477
+msgid "Deactivate"
+msgstr "Menonaktifkan"
+
+#: include/class.atto.options.php:480
+#, php-format
+msgid ""
+"You can generate more keys from <a href=\"%s\" target=\"_blank\">My Account</"
+"a>"
+msgstr ""
+"Anda dapat membuat lebih banyak kunci dari <a href=\"%s\" "
+"target=\"_blank\">Akun Saya</a>"
+
+#: include/class.atto.plugin-updater.php:123
+msgid "An error occurred when trying to identify the plugin."
+msgstr "Terjadi kesalahan saat mencoba mengidentifikasi plugin."
+
+#: include/class.atto.plugin-updater.php:123
+#: include/class.atto.plugin-updater.php:143
+msgid "Try again"
+msgstr "Coba lagi"
+
+#: include/class.atto.plugin-updater.php:143
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "Terjadi Kesalahan HTTP Tak Terduga selama permintaan API."
+
+#: include/class.atto.terms_walker.php:49
+msgid "Move to Top"
+msgstr ""
+
+#: include/class.atto.terms_walker.php:50
+msgid "Move to Bottom"
+msgstr ""
+
+#~ msgid ""
+#~ "Allow drag & drop functionality for sorting within default WordPress "
+#~ "taxonomy interface."
+#~ msgstr ""
+#~ "Izinkan fungsionalitas seret & lepas untuk menyortir dalam WordPress "
+#~ "defaultantarmuka taksonomi."

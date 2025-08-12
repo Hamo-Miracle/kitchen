@@ -1,0 +1,186 @@
+// ==========================================================================
+// Payment Estimator Slider & Range
+// ==========================================================================
+$bubble-width: 320px !default;
+.#{$selector} {
+	.eform-ui-estimator {
+		position: relative;
+		margin: 0 auto;
+
+		// Slider + Range
+		// Range is just the same, JS will position it
+		// == Default `block` theme
+		.eform-ui-estimator-slide {
+			margin: 16px 0 32px;
+			padding: 0;
+			.eform-ui-estimator-slide-area {
+				position: relative;
+				background-color: $estimator-slider-bg;
+				height: 8px;
+				width: 100%;
+
+				.eform-ui-estimator-slide-active {
+					@include material__smooth-tran( 400ms );
+
+					position: absolute;
+					left: 0;
+					top: -6px;
+					width: 50%;
+					height: 20px;
+					background-color: $estimator-slider-slide;
+				}
+			}
+
+			// == `knob` theme
+			&.eform-ui-estimator-slide-style-knob {
+				.eform-ui-estimator-slide-area {
+					border-radius: 4px;
+				}
+				.eform-ui-estimator-slide-active {
+					height: 8px;
+					top: 0;
+					border-radius: 4px;
+
+					&::after {
+						@include material__box-shadow();
+
+						display: block;
+						content: "";
+						height: 40px;
+						width: 40px;
+						border-radius: 20px;
+						background-color: $preset-bg;
+						position: absolute;
+						right: -20px;
+						top: -16px;
+					}
+				}
+			}
+		}
+
+		// == Range
+		&.eform-ui-estimator-range {
+			// == `knob` slider theme
+			.eform-ui-estimator-slide-style-knob {
+				.eform-ui-estimator-slide-active {
+					&::before {
+						@include material__box-shadow();
+
+						display: block;
+						content: "";
+						height: 40px;
+						width: 40px;
+						border-radius: 20px;
+						background-color: $preset-bg;
+						position: absolute;
+						left: -20px;
+						top: -16px;
+					}
+				}
+			}
+		}
+
+		// Bubble
+		// == Default `simple` theme
+		.eform-ui-estimator-bubble {
+			@include material__smooth-tran( 400ms );
+
+			display: inline-flex;
+			flex-flow: column wrap;
+			align-items: center;
+			padding: 0 0 8px;
+			margin: 0 0 24px;
+			position: relative;
+			background-color: $preset-bg;
+			border-radius: 4px;
+			-webkit-filter: drop-shadow( 0 1px 2px fade-out( $box-shadow-color, ( 1 - 0.6 ) ) );
+			        filter: drop-shadow( 0 1px 2px fade-out( $box-shadow-color, ( 1 - 0.6 ) ) );
+			max-width: $bubble-width;
+			@media screen and ( max-width: $bubble-width ) {
+				max-width: 95%;
+			}
+
+			// Corner tip
+			.eform-ui-est-bub-tip {
+				@include material__smooth-tran( 400ms );
+
+				position: absolute;
+				height: 24px;
+				width: 24px;
+				background-color: $preset-bg;
+				bottom: -12px;
+				left: 50%;
+				margin-left: -12px;
+				-webkit-transform: rotate( 45deg );
+				        transform: rotate( 45deg );
+				-webkit-transform-origin: center center;
+				        transform-origin: center center;
+				display: block;
+				z-index: -1;
+			}
+
+			// Heading
+			.eform-ui-estimator-bubble-heading {
+				padding: 8px 32px;
+				margin: 0;
+				font-size: 24px;
+				line-height: 36px;
+				width: 100%;
+				text-align: center;
+			}
+
+			// Main Price
+			.eform-ui-estimator-bubble-total {
+				font-size: 20px;
+				padding: 0 32px 8px;
+				text-align: center;
+			}
+
+			// Attribute Heading
+			.eform-ui-est-bub-attr-head {
+				font-size: 18px;
+				padding: 0 32px;
+				text-align: center;
+				margin: 0 0 8px;
+			}
+
+			// Attributes
+			.eform-ui-estimator-bubble-attr {
+				padding: 4px 32px;
+				.eform-ui-est-bub-attr-list {
+					list-style-type: none;
+					display: flex;
+					flex-flow: row wrap;
+
+					.eform-ui-est-bub-attr-listitem {
+						flex: 1 0 50%;
+						padding: 2px 8px;
+						@media screen and ( max-width: $bubble-width ) {
+							flex: 1 0 100%;
+						}
+					}
+				}
+				.eform-ui-est-bub-attr-value {
+					font-weight: 200;
+				}
+			}
+
+			// == `modern` theme
+			&.eform-ui-estimator-bubble-modern {
+				// Heading
+				.eform-ui-estimator-bubble-heading {
+					background-color: $primary-color;
+					color: $primary-color-text;
+					border-radius: 4px 4px 0 0;
+				}
+				// Price
+				.eform-ui-estimator-bubble-total {
+					font-weight: bold;
+					font-size: 28px;
+					padding-top: 16px;
+				}
+			}
+		}
+	}
+}
+

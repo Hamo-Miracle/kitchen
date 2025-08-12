@@ -1,0 +1,102 @@
+// ==========================================================================
+// Grading - Sliders & Ranges
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_slider_box {
+		position: relative;
+		padding-left: 50px;
+		margin-top: 8px;
+		&.ipt-eform-rangebox {
+			padding-right: 50px;
+		}
+
+		.ipt_uif_slider,
+		.ipt_uif_slider_range_max {
+			position: absolute;
+			left: 0;
+			top: -20px;
+			width: 30px;
+			text-align: center;
+			margin: 0;
+			-moz-appearance: textfield;
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				display: none;
+				-webkit-appearance: none;
+				margin: 0;
+			}
+		}
+		.ipt_uif_slider_range_max {
+			left: auto;
+			right: 0;
+		}
+
+		.ipt_uif_slider_count {
+			color: $secondary-text-color;
+			display: block;
+			margin: 38px 0 0 0;
+			text-align: right;
+			font-weight: 400;
+			font-size: 0.8em;
+		}
+
+		&.ipt_uif_slider_vertical {
+			padding-left: 0;
+			padding-bottom: 50px;
+
+			&.ipt-eform-rangebox {
+				padding-right: 0;
+				padding-top: 50px;
+			}
+
+			.ipt_uif_slider {
+				top: auto;
+				bottom: -7px;
+				left: -13px;
+				margin-left: 0;
+				border-bottom: 0 none;
+				border-top: $input-border;
+
+				&:focus:not([disabled]) {
+					border-top: 1px solid $input-focus-color;
+					border-bottom: 0 none;
+					box-shadow: 0 -1px 0 0 $input-focus-color;
+				}
+			}
+			.ipt_uif_slider_range_max {
+				top: -7px;
+				bottom: auto;
+				left: -13px;
+				right: auto;
+				margin-left: 0;
+			}
+
+			.ipt_uif_slider_count {
+				position: absolute;
+				margin: 0;
+				left: 50px;
+				bottom: 50%;
+				-webkit-transform: rotateZ(-90deg);
+				        transform: rotateZ(-90deg);
+				-webkit-transform-origin: left bottom;
+				        transform-origin: left bottom;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.ipt_uif_question_centered {
+		.ipt_uif_slider_vertical {
+			display: inline-block;
+		}
+	}
+
+	// Fix for boxy override
+	&.eform-override-element-boxy {
+		.ipt_uif_slider_box .ipt_uif_slider,
+		.ipt_uif_slider_box .ipt_uif_slider_range_max {
+			width: 25px;
+			padding: 0 4px;
+		}
+	}
+}

@@ -1,0 +1,437 @@
+// ==========================================================================
+// jQuery UI DataTables
+// ==========================================================================
+.#{$selector} {
+	.dataTables_wrapper {
+		margin: 14px 0;
+		position: relative;
+		clear: both;
+		*zoom: 1;
+		// Toolbar
+		.fg-toolbar {
+			color: $secondary-text-color;
+			text-align: center;
+			// Top
+			&.fsqm-up-tt {
+			}
+
+			// Bottom
+			&.fsqm-up-bt {
+			}
+
+			// Elements
+			.dataTables_paginate {
+				.fg-button {
+					box-shadow: none;
+					color: $secondary-text-color;
+					background-color: $up-button-container;
+					border: 0 none;
+					border-radius: 0;
+					@include material__smooth-tran(200ms);
+					&:hover {
+						color: $primary-color-text;
+						background-color: $primary-color;
+						text-decoration: none;
+						outline: none;
+					}
+					&:active {
+						background-color: $primary-color-dark;
+						text-decoration: none;
+						outline: none;
+					}
+					&.ui-state-disabled {
+						background-color: $disabled-color;
+						color: $disabled-color-text;
+					}
+				}
+			}
+		}
+
+		// UI Elements
+		.ipt_uif_select,
+		.ipt_uif_text {
+			color: $secondary-text-color;
+			max-width: 100px;
+			min-width: 0;
+		}
+		.ipt_uif_select {
+			border: 0 none;
+			border-bottom: 1px solid $input-border-color;
+		}
+
+		.date_filter {
+			text-align: center;
+			input {
+				display: inline-block;
+				width: 50px;
+				margin: 0;
+			}
+		}
+
+		.ui-widget-header {
+			background-color: transparent;
+		}
+
+		.ui-toolbar {
+			padding: 5px;
+		}
+
+		.fg-button .ipticm {
+			vertical-align: middle;
+		}
+
+		// Table
+		.dataTable {
+			margin: 14px auto;
+			clear: both;
+			width: 100% !important;
+			border-collapse: collapse;
+			color: inherit;
+			font-size: 1em;
+			vertical-align: middle;
+			border: 0 none;
+
+			tbody,
+			thead,
+			tfoot,
+			tr,
+			th,
+			td {
+				border: 0 none;
+				border-radius: 0;
+				border-collapse: collapse;
+				border-bottom: 1px solid $table-border-color;
+				background-color: transparent;
+				th,
+				td {
+					border-radius: 0;
+					border-collapse: collapse;
+					border-bottom: 1px solid $table-border-color;
+				}
+				.data-id,
+				.numeric-id {
+					font-size: (10 / 14) * 1em;
+					background-color: $preset-button-container;
+					color: $preset-button-container-color;
+					padding: ((1 - (10 / 14)) * 1em) 0.5em;
+					font-weight: 300;
+					position: relative;
+					top: ((1 - (10 / 14)) * -0.5em);
+				}
+			}
+			thead,
+			tfoot {
+				th,
+				td {
+					font-size: 1em;
+					font-weight: bold;
+					vertical-align: middle;
+					text-transform: uppercase;
+					text-align: center;
+					line-height: 2em;
+					border: 1px solid $table-border-color;
+					border-right: 0 none;
+					&:first-child {
+						border-left: 0 none;
+					}
+				}
+			}
+
+			thead {
+				th {
+					padding: 5px;
+					cursor: pointer;
+					*cursor: hand;
+
+					div.DataTables_sort_wrapper {
+						position: relative;
+						padding-right: 20px;
+						span {
+							position: absolute;
+							top: 50%;
+							margin-top: -8px;
+							right: 0;
+						}
+					}
+				}
+			}
+
+			tfoot {
+				th {
+					padding: 5px;
+				}
+			}
+
+			tbody {
+				td {
+					padding: 10px;
+					border: 0 none;
+					vertical-align: middle;
+					&:first-child {
+						font-weight: 700;
+					}
+
+					&.ipt_fsqm_up_number {
+						text-align: right;
+					}
+				}
+				tr.even {
+					background-color: fade-out(#000000, 0.98);
+				}
+				tr.child td {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
+
+			td {
+				&.center,
+				&.dataTables_empty {
+					text-align: center;
+				}
+			}
+
+			td.action_label {
+				.ipt-eform-material-button-container {
+					margin: 0;
+					text-align: center;
+				}
+				background-color: $preset-button-container;
+				color: $preset-button-container-color;
+				text-align: center;
+				padding: 0;
+				.ipt_uif_button {
+					background-color: transparent;
+					color: $preset-button-container-color;
+					margin: 0;
+					border-radius: 0;
+					box-shadow: none;
+					padding: 14px;
+					&:hover {
+						background-color: $preset-button-container-button-hover;
+						color: $preset-button-container-color;
+						text-decoration: none;
+						outline: none;
+					}
+					&:active {
+						background-color: $preset-button-container-button-hover;
+						text-decoration: none;
+						outline: none;
+					}
+				}
+			}
+		}
+
+		.fg-toolbar {
+			font-size: 14px;
+		}
+
+		.yadcf-filter-wrapper {
+			display: block;
+			margin: 10px auto 0;
+			padding: 10px;
+			width: 100%;
+			max-width: 220px;
+			.ipt_uif_select {
+				display: inline-block;
+				width: auto;
+				max-width: 70%;
+			}
+
+			.ipt_uif_text {
+				max-width: 30%;
+				width: auto;
+				display: inline-block;
+			}
+
+			.yadcf-filter-reset-button {
+				margin-left: 10px;
+			}
+		}
+
+		.yadcf-filter-wrapper-inner {
+			display: inline;
+			margin: 0;
+			padding: 0;
+			border: 0 none;
+		}
+
+		.dataTables_filter {
+			float: right;
+			text-align: right;
+		}
+
+		.dataTables_info {
+			padding-top: 3px;
+			clear: both;
+			float: left;
+		}
+
+		.dataTables_paginate {
+			float: right;
+			text-align: right;
+		}
+
+		.dataTables_paginate .ui-button {
+			margin: 1px !important;
+			padding: 8px;
+			font-size: 12px;
+		}
+
+		.paging_two_button .ui-button {
+			float: left;
+			cursor: pointer;
+		}
+
+		.paging_full_numbers .ui-button {
+			padding: 2px 6px;
+			margin: 0;
+			cursor: pointer;
+		}
+
+		.paginate_disabled_previous,
+		.paginate_enabled_previous,
+		.paginate_disabled_next,
+		.paginate_enabled_next {
+			height: 19px;
+			float: left;
+			cursor: pointer;
+			*cursor: hand;
+			&:hover,
+			&:active {
+				text-decoration: none;
+				outline: none;
+			}
+		}
+		.paginate_disabled_previous,
+		.paginate_enabled_previous {
+			padding-left: 23px;
+		}
+
+		.paginate_disabled_next,
+		.paginate_enabled_next {
+			padding-right: 23px;
+			margin-left: 10px;
+		}
+
+		#DataTables_Table_0_filter {
+			label {
+				position: relative;
+				padding-right: 28px;
+
+				&::before {
+					@include icomoon('\f002');
+					position: absolute;
+					right: 6px;
+					top: 0px;
+					font-size: 1em;
+					opacity: 0.5;
+				}
+			}
+
+			.ipt_uif_text {
+				margin: 0;
+				position: relative;
+				right: -28px;
+				padding-right: 28px;
+				padding-left: 8px;
+				width: 200px;
+				max-width: 100%;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.dataTables_filter .ipt_uif_text,
+	.dataTables_length .ipt_uif_select {
+		display: inline;
+		height: 25px;
+		line-height: 18px;
+		width: auto;
+	}
+
+	.dataTables_length .ipt_uif_select {
+		border: 1px solid $input-border-color;
+	}
+
+	// Toolbar positioning
+	.fg-toolbar {
+		.dataTables_length,
+		.dataTables_paginate,
+		.dataTables_filter,
+		.dataTables_info {
+			float: none;
+			display: block;
+			margin: 0 0 10px 0;
+			width: 100%;
+			text-align: center;
+		}
+
+		@media screen and (min-width: $screen-lg-min) {
+			.dataTables_length,
+			.dataTables_paginate {
+				float: left;
+				margin: 0;
+				width: auto;
+				min-width: 250px;
+				text-align: left;
+			}
+			.dataTables_paginate {
+				float: right;
+				margin: 0;
+				width: auto;
+				text-align: right;
+			}
+			.dataTables_filter {
+				display: inline-block;
+				margin: 0;
+				width: auto;
+			}
+			.dataTables_info {
+				width: auto;
+				float: left;
+			}
+		}
+	}
+
+	// Child Elements
+	.dtr-details {
+		list-style: none;
+		margin: 0;
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 8px 16px;
+			border-bottom: 1px solid $table-border-color;
+			&::before {
+				@include icomoon('\f046');
+				line-height: inherit;
+				font-size: 16px;
+				width: 32px;
+				text-align: center;
+				display: inline-block;
+				border-right: 1px solid $table-border-color;
+				margin-right: 16px;
+				color: $secondary-text-color;
+			}
+			.dtr-title {
+				font-weight: bold;
+				width: 100px;
+				display: inline-block;
+				border-right: 1px solid $table-border-color;
+				margin-right: 16px;
+			}
+			.dtr-data {
+				.ipt-eform-material-button-container {
+					display: inline-block;
+					.ipt_uif_button {
+						padding: 10px 15px;
+					}
+				}
+			}
+			&:last-child {
+				border-bottom: 0 none;
+			}
+		}
+	}
+}

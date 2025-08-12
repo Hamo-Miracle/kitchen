@@ -1,0 +1,86 @@
+// ==========================================================================
+// Heading & Divider Styling
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_container_divider,
+	.ipt_fsqm_container_heading {
+		> .ipt_uif_column_inner {
+			padding: 0 15px;
+			border-bottom: 1px solid $divider-color;
+		}
+	}
+	.ipt_uif_divider {
+		padding: 0 0 14px 0;
+		color: $heading-text-color;
+
+		margin-top: 2px;
+		margin-bottom: 8px;
+		&.ipt_fsqm_main_heading {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		// Heading Icon
+		.prefix {
+			margin-right: 8px;
+		}
+
+		// Text & Icon Wrapper
+		.ipt_uif_divider_text {
+			display: flex;
+			align-items: center;
+
+			.subtitle {
+				&:empty {
+					display: none;
+				}
+				display: inline-block;
+				font-size: 0.4em;
+				text-align: center;
+				vertical-align: baseline;
+				position: relative;
+				top: -0.4em;
+				margin-left: 2em;
+				padding: 5px 10px;
+				border-radius: 2px;
+				background: $primary-color;
+				color: $primary-color-text;
+				@include material__box-shadow-subtle();
+			}
+		}
+
+		// Alignment
+		&.ipt_uif_align_center {
+			.ipt_uif_divider_text {
+				justify-content: center;
+			}
+		}
+		&.ipt_uif_align_right {
+			.ipt_uif_divider_text {
+				justify-content: flex-end;
+			}
+			.ipt_uif_scroll_to_top {
+				float: left;
+			}
+		}
+		&.ipt_uif_align_justify {
+			text-align: justify;
+		}
+
+		// Scroll to top
+		.ipt_uif_scroll_to_top {
+			float: right;
+			color: $divider-color;
+			will-change: color;
+			@include material__smooth-tran( 500ms, color );
+			&:hover,
+			&:active,
+			&:focus {
+				color: $primary-color;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+

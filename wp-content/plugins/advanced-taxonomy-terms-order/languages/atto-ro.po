@@ -1,0 +1,390 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Taxonomy Terms Order\n"
+"POT-Creation-Date: 2025-05-23 11:05+0300\n"
+"PO-Revision-Date: 2025-05-23 11:05+0300\n"
+"Last-Translator: NspCode <contact@nsp-code.com>\n"
+"Language-Team: Nsp Code <electronice_delphi@yahoo.com>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class.atto.admin.php:137
+msgid "Sort "
+msgstr "Sortare"
+
+#: include/class.atto.admin.php:422 include/class.atto.compatability.php:143
+#: include/class.atto.interface.php:166
+msgid "Taxonomy Order"
+msgstr "Ordinul taxonomiei"
+
+#: include/class.atto.admin.php:468
+msgid "Advanced Taxonomy Terms Order plugin is inactive, please enter your"
+msgstr ""
+"Termenii avansati de taxonomie Pluginul de comand? este inactiv, v? rug?m s? "
+"introduce?i dvs"
+
+#: include/class.atto.admin.php:468 include/class.atto.options.php:414
+#: include/class.atto.options.php:450
+msgid "Licence Key"
+msgstr "Cheia de licenta"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "Order type for %s"
+msgstr "Tip de comand? pentru %s"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "switched to %s"
+msgstr "a trecut la %s"
+
+#: include/class.atto.interface.php:120
+msgid "Order updated"
+msgstr "Comanda a fost actualizata"
+
+#: include/class.atto.interface.php:172
+msgid ""
+"This plugin cannot work without javascript, because it uses drag and drop "
+"and AJAX."
+msgstr ""
+"Acest plugin nu poate func?iona f?r? javascript, deoarece folose?te drag and "
+"drop?i AJAX."
+
+#: include/class.atto.interface.php:200
+#, php-format
+msgid "%s Taxonomies"
+msgstr "%s Taxonomii"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Taxonomy Title"
+msgstr "Titlul taxonomiei"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Total Terms"
+msgstr "Total Termeni"
+
+#: include/class.atto.interface.php:282
+msgid "Automatic Order"
+msgstr "Comanda automata"
+
+#: include/class.atto.interface.php:283
+msgid "Manual Order"
+msgstr "Comanda manuala"
+
+#: include/class.atto.interface.php:294
+msgid "Order By"
+msgstr "Comand? de"
+
+#: include/class.atto.interface.php:303
+msgid "Default"
+msgstr "Mod implicit"
+
+#: include/class.atto.interface.php:306
+msgid "Creation Time / ID"
+msgstr "Timp de creare / ID"
+
+#: include/class.atto.interface.php:309
+msgid "Name"
+msgstr "Nume"
+
+#: include/class.atto.interface.php:312
+msgid "Count"
+msgstr "Numara"
+
+#: include/class.atto.interface.php:315
+msgid "Slug"
+msgstr "Melc"
+
+#: include/class.atto.interface.php:318 include/class.atto.interface.php:398
+msgid "Random"
+msgstr "Aleatoriu"
+
+#: include/class.atto.interface.php:325
+msgid "Order"
+msgstr "Ordin"
+
+#: include/class.atto.interface.php:335
+msgid "Descending"
+msgstr "Descendent?"
+
+#: include/class.atto.interface.php:338
+msgid "Ascending"
+msgstr "Ascendent"
+
+#: include/class.atto.interface.php:347 include/class.atto.interface.php:379
+#: include/class.atto.interface.php:419
+msgid "Update"
+msgstr "Actualiza?i"
+
+#: include/class.atto.interface.php:393
+msgid "Reverse"
+msgstr "Verso"
+
+#: include/class.atto.interface.php:394
+msgid "Title Asc"
+msgstr "Titlu Asc"
+
+#: include/class.atto.interface.php:395
+msgid "Title Desc"
+msgstr "Titlu Desc"
+
+#: include/class.atto.interface.php:396
+msgid "Id order Asc"
+msgstr "Id comanda Asc"
+
+#: include/class.atto.interface.php:397
+msgid "Id order Desc"
+msgstr "Id comanda Desc"
+
+#: include/class.atto.interface.php:400
+msgid "Collapse All"
+msgstr "Aduna tot"
+
+#: include/class.atto.interface.php:401
+msgid "Expand All"
+msgstr "Desfășoară Tot"
+
+#: include/class.atto.interface.php:469
+#, fuzzy
+#| msgid "Order updated"
+msgid "Items Order Updated"
+msgstr "Comanda a fost actualizata"
+
+#: include/class.atto.options.php:55
+msgid "Subscriber"
+msgstr "Abonat"
+
+#: include/class.atto.options.php:56
+msgid "Contributor"
+msgstr "Colaborator"
+
+#: include/class.atto.options.php:57
+msgid "Author"
+msgstr "Autor"
+
+#: include/class.atto.options.php:58
+msgid "Editor"
+msgstr "Editor"
+
+#: include/class.atto.options.php:59
+msgid "Administrator"
+msgstr "Administrator"
+
+#: include/class.atto.options.php:87
+msgid "General Settings"
+msgstr "setari generale"
+
+#: include/class.atto.options.php:91
+msgid "Show / Hide re-order interface"
+msgstr "Afișați / Ascundeți interfața Taxonomy Order"
+
+#: include/class.atto.options.php:93
+msgid "Display the Taxonomy Order interface for the specified post types."
+msgstr ""
+
+#: include/class.atto.options.php:103
+msgid "Show"
+msgstr "Arată"
+
+#: include/class.atto.options.php:104
+msgid "Hide"
+msgstr "Ascunde"
+
+#: include/class.atto.options.php:117
+msgid "Minimum Level to use this plugin"
+msgstr "Nivel minim pentru a utiliza acest plugin"
+
+#: include/class.atto.options.php:136
+msgid "Auto Sort"
+msgstr "Sortare automat?"
+
+#: include/class.atto.options.php:140 include/class.atto.options.php:153
+#: include/class.atto.options.php:201
+msgid "OFF"
+msgstr "OFF"
+
+#: include/class.atto.options.php:141 include/class.atto.options.php:154
+#: include/class.atto.options.php:202
+msgid "ON"
+msgstr "PE"
+
+#: include/class.atto.options.php:142
+msgid ""
+"If checked, the plug-in automatically update the WordPress queries to use "
+"the new sort (<b>No code update is necessarily</b>)"
+msgstr ""
+"Dac? este bifat, pluginul actualizeaz? automat interog?rile WordPress de "
+"utilizatnoua sortare (<b>Nu este neap?rat nicio actualizare de cod</b>)"
+
+#: include/class.atto.options.php:142
+msgid "Additional details about this setting can be found at"
+msgstr "Detalii suplimentare despre această setare pot fi găsite la"
+
+#: include/class.atto.options.php:143
+msgid ""
+"If ON selected, the plug-in automatically update the WordPress queries to "
+"use the new sort (<b>No code update is necessary</b>)"
+msgstr ""
+"Dacă se selectează ON, plug-in-ul actualizează automat interogările "
+"WordPress pentru a utiliza noua sortare<b>(nu este necesară nicio "
+"actualizare de cod</b>)"
+
+#: include/class.atto.options.php:143
+#, php-format
+msgid ""
+"Additional details about this setting can be found at <a href=\"%s\" "
+"target=\"_blank\">Autosort Details</a>"
+msgstr ""
+"Detalii suplimentare despre această setare pot fi găsite la <a href=\"%s\" "
+"target=\"_blank\">Detalii Autosort</a>"
+
+#: include/class.atto.options.php:149
+msgid "Admin Sort"
+msgstr "Sortare admin"
+
+#: include/class.atto.options.php:156
+msgid "Update order of terms within the admin interface per customised sort"
+msgstr ""
+"Actualiza?i ordinea termenilor în interfa?a de administrare pentru fiecare "
+"sortare personalizat?"
+
+#: include/class.atto.options.php:162
+msgid "Default Interface Sort"
+msgstr "Sortare implicit? a interfe?ei"
+
+#: include/class.atto.options.php:165
+#, fuzzy
+#| msgid ""
+#| "Allow drag & drop functionality for sorting within default WordPress "
+#| "taxonomy interface."
+msgid ""
+"Enable sortable drag-and-drop functionality within the default WordPress "
+"taxonomy interface. An "
+msgstr ""
+"Permite?i func?ionalitatea drag & drop pentru sortarea în WordPress "
+"implicitinterfa?? de taxonomie."
+
+#: include/class.atto.options.php:165
+msgid ""
+" icon will be displayed on the items, allowing for customization of the "
+"order. The option can be further adjusted by the users, through the Screen "
+"Options on the taxonomy page."
+msgstr ""
+
+#: include/class.atto.options.php:167
+msgid "Admin Sort feature must be activated for this functionality."
+msgstr ""
+
+#: include/class.atto.options.php:184
+msgid "Yes"
+msgstr "Da"
+
+#: include/class.atto.options.php:185
+msgid "No"
+msgstr "Nu"
+
+#: include/class.atto.options.php:197
+msgid "WPML Sort Synchronization"
+msgstr ""
+
+#: include/class.atto.options.php:204
+msgid ""
+"The WPML Sort Synchronization feature ensures that custom sorting applied to "
+"taxonomy terms is seamlessly synchronized across all translations managed by "
+"the WPML (WordPress Multilingual) plugin"
+msgstr ""
+
+#: include/class.atto.options.php:214
+msgid "Save Settings"
+msgstr "Salveaz? set?rile"
+
+#: include/class.atto.options.php:251
+msgid "Settings Saved"
+msgstr "Setari Salvate"
+
+#: include/class.atto.options.php:283 include/class.atto.options.php:361
+#, php-format
+msgid "There was a problem connecting to %s"
+msgstr "A ap?rut o problem? la conectarea la %s"
+
+#: include/class.atto.options.php:309
+msgid ""
+"There was a problem deactivating the licence on other side, however locally "
+"the key is now removed: "
+msgstr ""
+"A aparut o problema la dezactivarea licentei pe cealalta parte, totusi la "
+"nivel localcheia este acum inlaturata: "
+
+#: include/class.atto.options.php:326 include/class.atto.options.php:399
+#, php-format
+msgid "There was a problem with the data block received from %s"
+msgstr "A ap?rut o problem? cu blocul de date primit de la %s"
+
+#: include/class.atto.options.php:343
+msgid "Licence Key can't be empty"
+msgstr "Cheia de licenta nu poate fi goala"
+
+#: include/class.atto.options.php:391
+#, php-format
+msgid "There was a problem activating the licence: %s"
+msgstr "A ap?rut o problem? la activarea licen?ei: %s"
+
+#: include/class.atto.options.php:411 include/class.atto.options.php:447
+msgid "Advanced Taxonomy Terms Order License"
+msgstr "Licenta Advanced Taxonomy Terms Order"
+
+#: include/class.atto.options.php:426
+#, php-format
+msgid ""
+"Enter the Licence Key you received when you purchased this product. If you "
+"lost the key, you can always retrieve it from <a href=\"%s\" "
+"target=\"_blank\">My Account</a>."
+msgstr ""
+"Introduceți cheia de licență pe care ați primit-o când ați cumpărat acest "
+"produs. Dacă ați pierdut cheia, o puteți recupera oricând din <a href=\"%s\" "
+"target=\"_blank\">Contul meu</a>."
+
+#: include/class.atto.options.php:431
+msgid "Save"
+msgstr "Salva?i"
+
+#: include/class.atto.options.php:472
+msgid "Deactivate"
+msgstr "Dezactiva?i"
+
+#: include/class.atto.options.php:475
+#, php-format
+msgid ""
+"You can generate more keys from <a href=\"%s\" target=\"_blank\">My Account</"
+"a>"
+msgstr ""
+"Pute?i genera mai multe chei din <a href=\"%s\" target=\"_blank\">Contul "
+"meu</a>"
+
+#: include/class.atto.plugin-updater.php:123
+msgid "An error occurred when trying to identify the plugin."
+msgstr "A ap?rut o eroare la încercarea de a identifica pluginul."
+
+#: include/class.atto.plugin-updater.php:123
+#: include/class.atto.plugin-updater.php:143
+msgid "Try again"
+msgstr "Încearc? din nou"
+
+#: include/class.atto.plugin-updater.php:143
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "A ap?rut o eroare HTTP nea?teptat? în timpul solicit?rii API."
+
+#: include/class.atto.terms_walker.php:49
+msgid "Move to Top"
+msgstr "Mută la inceput"
+
+#: include/class.atto.terms_walker.php:50
+msgid "Move to Bottom"
+msgstr "Mutarea în partea de jos"

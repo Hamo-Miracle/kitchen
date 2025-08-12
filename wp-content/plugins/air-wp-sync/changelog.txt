@@ -1,0 +1,108 @@
+== Changelog ==
+=== Air WP Sync - Airtable to WordPress ===
+
+= 2.7.0 =
+*Release Date: 24th June 2025*
+
+* Compatibility with WordPress 6.8
+* Fix: Added missing translations.
+* Fix: Switched logo on connection page.
+* Fix: Moved menu declaration to default priority.
+* Improvement: Changed required capabilities for connections.
+
+= 2.6.0 =
+*Release Date: 11th Dec. 2024*
+
+* Compatibility with WordPress 6.7
+* Feature: Added checkbox to allow comma-seperated lists of taxonomy terms.
+* Feature: Added support for Multiple Link to Another Record in Taxonomy field.
+* Improvement: Minor code cleanup.
+
+= 2.5.0 =
+*Release Date: 14th Sept. 2024*
+
+* Fix: Added support for singleSelect and multipleSelect fields returned by formula fields. 
+* Feature: Added new UI for Airtable views filters
+* Improvement: Support for comma-seperated list of terms for taxonomy fields
+* Improvement: Fixed admin page javascript
+* Improvement: Minor code comments fixing
+
+= 2.4.0 =
+*Release Date: 25th June 2024*
+
+* Feature: Added ability to import taxonomy terms
+* Improvement: Author mapping support both email and username
+* Improvement: Delete options on uninstall
+
+= 2.3.0 =
+*Release Date: 18th April 2024*
+
+* Compatibility with WordPress 6.5
+* Fix: Prevent password reset when updating users from Airtable.
+* Improvement: Whitelisting values mapped to post_status
+* Improvement: Remove shorter problematic synchronization schedules
+* Improvement: Better emoji support
+* Improvement: Force updates for posts with images when importer started more than 2 hours ago
+
+= 2.2.0 =
+*Release Date: 20th Feb. 2024*
+
+* Fix: Empty column mapped to a taxonomy no longer trigger error log.
+
+= 2.1.0 =
+*Release Date: 21th Nov. 2023*
+
+* Feature: Mapping for post_parent
+
+= 2.0.0 =
+*Release Date: 11th Oct. 2023*
+
+* Feature: Import airtable content as users
+* Feature: Added Post Status and Post Author options when importing posts
+* Feature: Support for "Link to another record" field type
+* Fix: formula field was missing from the mapping
+* Fix: Added cache for table data
+
+= 1.4.0 =
+*Release Date: 13th June 2023*
+
+* Improve: mapping fields sorting
+
+= 1.3.0 =
+*Release Date: 31st March 2023*
+
+* Feature: Add Action Scheduler to handle large imports
+* Improvement: show sync progress and keep state when reloading
+* Improvement: add cancel sync button
+* Improvement: remove use of getmypid() function
+* Fix: mapping fields sorting fixed in Firefox
+* Fix: Filter image urls from record hashes to avoid unnecessary updates
+
+= 1.2.0 =
+*Release Date: 16th Feb. 2023*
+
+* Feature: add Meta API support for better field mapping and field type autodetection
+* Feature: Refreshed UI
+* Fix: Markdown to HTML conversion
+
+= 1.1.1 =
+*Release Date: 04th Nov. 2022*
+
+* Release of the pro version
+
+= 1.1.0 =
+*Release Date: 01st Nov. 2022*
+
+* Feature: handle pro version activation
+
+= 1.0.1 =
+*Release Date: 26th Oct. 2022*
+
+* Fix: tooltips not displaying
+* Fix: PHP error when Parsedown class already loaded
+* Improvement: add custom notices when saving, updating connections
+
+= 1.0.0 =
+*Release Date: 10th Oct. 2022*
+
+* Initial release

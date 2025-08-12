@@ -1,0 +1,107 @@
+// ==========================================================================
+// Like Dislike Rating
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_rating_likedislike {
+		// Rating elements
+		.ipt_uif_likedislike_rating_inner {
+			@media screen and ( max-width: $screen-md-max ) {
+				text-align: center;
+			}
+			label {
+				display: inline-block;
+				will-change: transform;
+				height: 48px;
+				width: 56px;
+				color: $radio-empty-color;
+				&:after,
+				&:before {
+					font-family: 'ipt-icomoon';
+					font-style: normal;
+					font-variant: normal;
+					font-weight: normal;
+					-webkit-font-smoothing: antialiased;
+					border: 0 none;
+					content: "\f087";
+					font-size: 48px;
+					line-height: 48px;
+					background-color: transparent;
+					display: block;
+					height: 48px;
+					width: 48px;
+					will-change: opacity;
+					opacity: 1;
+					color: inherit;
+					@include material__smooth-tran( 200ms, opacity );
+				}
+				&:after {
+					opacity: 0;
+					content: "\f164";
+					-webkit-transform: translate(-1px, -2px);
+					        transform: translate(-1px, -2px);
+
+				}
+				// Hover status
+				&:hover {
+					-webkit-transform: scale( 1.4 );
+					        transform: scale( 1.4 );
+					&:before {
+						opacity: 0;
+					}
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+			// Checked status
+			input:checked + label {
+				color: $radio-fill-color;
+				&:before {
+					opacity: 0;
+				}
+				&:after {
+					opacity: 1;
+				}
+			}
+			// Different icons
+			.ipt_uif_likedislike_rating_radio_dislike + label {
+				-webkit-transform: scale( -1, 1 );
+				        transform: scale( -1, 1 );
+				&:hover {
+					-webkit-transform: scale( -1.4, 1.4 );
+					        transform: scale( -1.4, 1.4 );
+				}
+				&:before {
+					content: "\f088";
+				}
+				&:after {
+					content: "\f165";
+				}
+			}
+		}
+		// Feedback element
+		.ipt_uif_likedislike_rating_feedback_wrap {
+			will-change: opacity;
+			visibility: hidden;
+			height: 0;
+			opacity: 0;
+			@include material__smooth-tran( 500ms, opacity );
+			> .input-field {
+				display: none;
+			}
+		}
+		&.ipt_uif_likedislike_feedback_active {
+			.ipt_uif_likedislike_rating_feedback_wrap {
+				visibility: visible;
+				height: auto;
+				opacity: 1;
+				padding-top: 28px;
+				> .input-field {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+

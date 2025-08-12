@@ -1,0 +1,79 @@
+// ==========================================================================
+// Guest Blogging Style
+// ==========================================================================
+.#{$selector} {
+	.ipt-eform-guestpost-tax-wrap {
+		box-sizing: border-box;
+		float: left;
+		padding: 0;
+		width: 100%;
+	}
+	.ipt-eform-guestpost-tax-column-wrap {
+		margin-bottom: 17px;
+	}
+	.ipt-eform-guestpost-tax-column-2 .ipt-eform-guestpost-tax-wrap {
+		width: 50%;
+		padding: 0 10px;
+	}
+	.ipt-eform-guestpost-tax-column-2 .ipt-eform-guestpost-tax-wrap:nth-child(odd) {
+		padding-left: 0;
+	}
+	.ipt-eform-guestpost-tax-column-2 .ipt-eform-guestpost-tax-wrap:nth-child(even) {
+		padding-right: 0;
+	}
+	.ipt-eform-guestpost-tax-column-3 .ipt-eform-guestpost-tax-wrap {
+		width: 33.33%;
+		padding: 0 10px;
+	}
+	.ipt-eform-guestpost-tax-column-3 .ipt-eform-guestpost-tax-wrap:nth-child(3n+1) {
+		padding-left: 0;
+	}
+	.ipt-eform-guestpost-tax-column-3 .ipt-eform-guestpost-tax-wrap:nth-child(3n+2) {
+		padding: 0 1px;
+	}
+	.ipt-eform-guestpost-tax-column-3 .ipt-eform-guestpost-tax-wrap:nth-child(3n) {
+		padding-right: 0;
+	}
+
+	.ipt-eform-guestpost-tax-wrap .ipt_uif_question_content {
+		overflow: auto;
+		box-sizing: border-box;
+		padding: 10px;
+	}
+	.ipt-eform-guestpost-tax-wrap ul.ipt-eform-guestpost-tax-ul,
+	.ipt-eform-guestpost-tax-wrap ul.ipt-eform-guestpost-tax-ul li,
+	.ipt-eform-guestpost-tax-wrap ul.ipt-eform-guestpost-tax-ul ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.ipt-eform-guestpost-tax-wrap ul.ipt-eform-guestpost-tax-ul ul {
+		margin-left: 2.5em;
+	}
+
+	.ipt-eform-guestpost-tax-wrap .ipt_uif_question_content .ipt_uif_radio + label,
+	.ipt-eform-guestpost-tax-wrap .ipt_uif_question_content .ipt_uif_checkbox + label {
+		font-size: 0.8em;
+	}
+
+	// == Fix for trumbowyg modal
+	.trumbowyg-modal {
+		label {
+			position: relative;
+			overflow: hidden;
+			input {
+				height: 27px;
+				border: 1px solid #dedede;
+				font-size: 14px;
+				width: 70%;
+				padding: 0 7px;
+				max-width: 310px;
+			}
+			.trumbowyg-input-infos {
+				line-height: 27px;
+				height: 27px;
+			}
+		}
+	}
+}
+

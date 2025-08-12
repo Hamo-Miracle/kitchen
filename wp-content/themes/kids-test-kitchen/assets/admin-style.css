@@ -1,0 +1,125 @@
+body.crb_user_role-crb_session_admin ul.subsubsub li.all,
+body.crb_user_role-crb_session_admin ul.subsubsub li.publish { display: none; }
+
+body.crb_user_role-crb_session_admin.post-type-crb_recipe ul.subsubsub li.all,
+body.crb_user_role-crb_session_admin.post-type-crb_recipe ul.subsubsub li.publish { display: inline-block; }
+
+.crb_recipe_recently_used strong .row-title { color: #f00; }
+
+/*body.crb_user_role-crb_facilitator #adminmenu > *:not([aria-hidden]):not(#menu-dashboard):not(#menu-posts-crb_class):not(#menu-posts-crb_date):not(#menu-posts-crb_recipe):not(#menu-users):not(#collapse-menu) { display: none; }*/
+/*.crb_user_role-crb_facilitator .row-actions { display: none }*/
+
+.carbon-user-container .carbon-Html .field-holder > label { position: absolute; left: 0; }
+
+table.locations-classes-dates-table { width: 100%; margin-bottom: 32px; }
+table.locations-classes-dates-table tr > :nth-child(3n+1) { width: 20%; }
+table.locations-classes-dates-table tr > :nth-child(3n+2) { width: 60%; }
+table.locations-classes-dates-table th { padding: 15px 10px; }
+table.locations-classes-dates-table td {}
+
+table .row-indented { display: inline-block; padding-left: 20px; }
+
+.recipe-date { background-color: #eee !important; border-radius: 20px; }
+
+/* Hide Hidden fields */
+#carbon-_crb_class_dates-complex-container .carbon-Hidden { display: none !important; }
+
+/* Hide Profile fields */
+
+/* Session Admin */
+/*body.crb_user_role-crb_session_admin #your-profile > h2:first-of-type,*/
+/*body.crb_user_role-crb_session_admin #your-profile > h2:nth-of-type(1),*/
+/*body.crb_user_role-crb_session_admin #your-profile > h2:nth-of-type(4),*/
+/*body.crb_user_role-crb_session_admin #your-profile > table:nth-of-type(4) { display: none; }*/
+
+body.crb_user_role-crb_session_admin tr.show-admin-bar,
+body.crb_user_role-crb_session_admin tr.user-nickname-wrap,
+body.crb_user_role-crb_session_admin tr.user-display-name-wrap,
+body.crb_user_role-crb_session_admin tr.user-description-wrap,
+body.crb_user_role-crb_session_admin tr.user-rich-editing-wrap,
+body.crb_user_role-crb_session_admin tr.user-comment-shortcuts-wrap,
+body.crb_user_role-crb_session_admin #application-passwords-section,
+body.crb_user_role-crb_session_admin tr.user-profile-picture { display: none; }
+
+/* Facilitator */
+/*body.crb_user_role-crb_facilitator #your-profile > h2:first-of-type,*/
+/*body.crb_user_role-crb_facilitator #your-profile > h2:nth-of-type(1),*/
+/*body.crb_user_role-crb_facilitator #your-profile > h2:nth-of-type(4),*/
+/*body.crb_user_role-crb_facilitator #your-profile > table:nth-of-type(4) { display: none; }*/
+
+body.crb_user_role-crb_facilitator tr.show-admin-bar,
+body.crb_user_role-crb_facilitator tr.user-nickname-wrap,
+body.crb_user_role-crb_facilitator tr.user-display-name-wrap,
+body.crb_user_role-crb_facilitator tr.user-description-wrap,
+body.crb_user_role-crb_facilitator tr.user-rich-editing-wrap,
+body.crb_user_role-crb_facilitator tr.user-comment-shortcuts-wrap,
+body.crb_user_role-crb_facilitator #application-passwords-section,
+body.crb_user_role-crb_facilitator tr.user-profile-picture { display: none; }
+
+/* Cleanup Posts Interface */
+body.crb_user_role-crb_facilitator.post-type-crb_class .subsubsub,
+body.crb_user_role-crb_facilitator.post-type-crb_class .tablenav,
+
+body.crb_user_role-crb_session_admin.post-type-crb_location .subsubsub,
+body.crb_user_role-crb_session_admin.post-type-crb_location .tablenav,
+body.crb_user_role-crb_session_admin.post-type-crb_class .subsubsub,
+body.crb_user_role-crb_session_admin.post-type-crb_class .tablenav { display: none; }
+
+/* Quick Edit */
+body.crb_user_role-crb_session_admin .inline-edit-status,
+body.crb_user_role-crb_session_admin .inline-edit-date,
+body.crb_user_role-crb_session_admin .inline-edit-group,
+body.crb_user_role-crb_session_admin .inline-edit-col label:nth-child(2),
+
+body.crb_user_role-crb_facilitator .inline-edit-status,
+body.crb_user_role-crb_facilitator .inline-edit-date,
+body.crb_user_role-crb_facilitator .inline-edit-group,
+body.crb_user_role-crb_facilitator .inline-edit-col label:nth-child(2)  { display: none; }
+
+/* WP Logo */
+body.crb_user_role-crb_session_admin #wp-admin-bar-wp-logo,
+body.crb_user_role-crb_facilitator #wp-admin-bar-wp-logo { display: none; }
+
+/* Hide Regions */
+body.crb_user_role-crb_session_admin #crb_location_regiondiv { display: none; }
+
+#adminmenu:after { content: ''; display: block; width: 100%; padding-bottom: 83.3333333%; margin: 10px 0; background: url(../images/ktk-admin-head.png) 50% 50% no-repeat;
+	-webkit-background-size: contain;
+			background-size: contain;
+}
+
+/* Hide Collapse button from desktop */
+@media only screen and (min-width: 960px) {
+	#adminmenu #collapse-menu { display: none; }
+	.folded #adminmenu #collapse-menu { display: block; }
+}
+
+.column-crb-enrolled-student-column{
+	text-align:center !important;
+}
+
+/* Remove Footer WP Texts */
+#wpfooter { display: none; }
+
+/* Admin Style For Coplex Dates */
+@media only screen and (min-width: 1100px) {
+	#Classsettings #carbon-_crb_class_dates-complex-container { position: relative; margin: 0; }
+	#Classsettings #carbon-_crb_class_dates-complex-container .group-number { top: 50%; margin-top: -21px; }
+	#Classsettings #carbon-_crb_class_dates-complex-container .carbon-group-actions { top: 50%; margin-top: -10px; }
+	#Classsettings #carbon-_crb_class_dates-complex-container .carbon-group-actions .carbon-btn-collapse { display: none; }
+	#Classsettings #carbon-_crb_class_dates-complex-container .carbon-drag-handle { height: 58px; padding-top: 0; padding-bottom: 0; border: 0; }
+	#Classsettings #carbon-_crb_class_dates-complex-container ~ #carbon-_crb_class_dates-complex-container { }
+	#Classsettings #carbon-_crb_class_dates-complex-container ~ #carbon-_crb_class_dates-complex-container .carbon-drag-handle { height: 40px; }
+	#Classsettings #carbon-_crb_class_dates-complex-container .carbon-drag-handle .group-number { border: 0; }
+	#Classsettings .ui-placeholder-highlight { margin-bottom: 0; }
+
+	#Classsettings #carbon-_crb_class_dates-complex-container .fields-container { position: absolute; top: 0; right: 0; left: 0; bottom: 0; height: 100%; margin: 0 45px 0 44px; overflow: hidden; }
+	#Classsettings #carbon-_crb_class_dates-complex-container .fields-container .carbon-row > label { display: block; padding: 0; }
+	#Classsettings #carbon-_crb_class_dates-complex-container ~ #carbon-_crb_class_dates-complex-container .fields-container .carbon-row > label { display: none; }
+
+	#Classsettings .carbon-field.carbon-CheckboxRequired { padding-bottom: 0; }
+	#Classsettings .carbon-Complex .carbon-field { padding: 5px 10px; }
+	#Classsettings .carbon-groups-holder { border: 1px solid  #e5e5e5; }
+
+	#Classsettings .carbon-groups-holder .carbon-group-actions a.carbon-btn-duplicate { display: none; }
+}

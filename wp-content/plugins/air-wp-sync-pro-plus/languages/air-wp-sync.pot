@@ -1,0 +1,1424 @@
+# Copyright (C) 2025 WP connect
+# This file is distributed under the GPLv2 or later License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Air WP Sync Pro+ - Airtable to WordPress 2.9.0\n"
+"Report-Msgid-Bugs-To: https://wpconnect.freshdesk.com/\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-06-02T07:42:39+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: air-wp-sync\n"
+
+#. Plugin Name of the plugin
+#: air-wp-sync.php
+msgid "Air WP Sync Pro+ - Airtable to WordPress"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: air-wp-sync.php
+msgid "https://wpconnect.co/air-wp-sync-plugin/"
+msgstr ""
+
+#. Description of the plugin
+#: air-wp-sync.php
+msgid "Swiftly sync Airtable to your WordPress website!"
+msgstr ""
+
+#. Author of the plugin
+#: air-wp-sync.php
+msgid "WP connect"
+msgstr ""
+
+#. Author URI of the plugin
+#: air-wp-sync.php
+msgid "https://wpconnect.co/"
+msgstr ""
+
+#: air-wp-sync.php:45
+msgid "Air WP Sync Pro+ and Air WP Sync Pro should not be active at the same time. We've automatically deactivated Air WP Sync Pro."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:36
+msgid "Error:"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:36
+msgid "One or more fields have an error. Please check and try again."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:149
+msgid "Back to list"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:156
+#: includes/admin/class-air-wp-sync-admin-connection.php:157
+msgid "Connection updated."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:158
+msgid "Connection published."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:159
+msgid "Connection saved."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:160
+msgid "Connection draft updated."
+msgstr ""
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:179
+msgid "%s connection updated."
+msgid_plural "%s connections updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:180
+msgid "1 connection not updated, somebody is editing it."
+msgstr ""
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:182
+msgid "%s connection not updated, somebody is editing it."
+msgid_plural "%s connections not updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:184
+msgid "%s connection permanently deleted."
+msgid_plural "%s connections permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:186
+msgid "%s connection moved to the Trash."
+msgid_plural "%s connections moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:188
+msgid "%s connection restored from the Trash."
+msgid_plural "%s connections restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:231
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:81
+msgid "In progress..."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:232
+msgid "Canceling..."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:233
+msgid "You have unsaved changes."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:234
+msgid "This field is required"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:235
+msgid "Please select an option in the \"Import As\" column for all mappings"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:236
+msgid "\"Custom Field\" fields can't be empty."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:237
+msgid "The base you have previously selected is not available anymore, please check your Airtable token access"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:32
+msgid "Last Modified On"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:33
+msgid "Importer Type"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:34
+msgid "Last Synced On"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:35
+#: views/metabox-sync.php:35
+msgid "Trigger"
+msgstr ""
+
+#. Translators: %s Importer's module name (like "Post", "User")
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:56
+msgid "%s Importer"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:66
+#: views/metabox-sync.php:41
+msgid "Manual only"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:69
+#: views/metabox-sync.php:47
+msgid "Recurring"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:80
+#: views/metabox-sync.php:93
+msgid "Instant via Webhook"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:114
+#: modules/post/class-air-wp-sync-post-module.php:88
+msgid "You have a Custom Post Type declared using this connection. Are you sure to delete it?"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-page.php:55
+#: includes/admin/class-air-wp-sync-admin-page.php:56
+#: includes/admin/class-air-wp-sync-admin.php:100
+#: views/settings-page.php:24
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-page.php:103
+msgid "License successfully activated!"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-page.php:123
+msgid "License successfully deactivated."
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-page.php:139
+msgid "Table cache cleared!"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin-page.php:156
+msgid "Settings saved!"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin.php:48
+#: includes/admin/class-air-wp-sync-admin.php:49
+#: views/header.php:15
+msgid "Air WP Sync"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin.php:57
+#: includes/admin/class-air-wp-sync-admin.php:58
+msgid "All Connections"
+msgstr ""
+
+#: includes/admin/class-air-wp-sync-admin.php:64
+#: includes/admin/class-air-wp-sync-admin.php:65
+#: includes/class-air-wp-sync.php:245
+msgid "Add New"
+msgstr ""
+
+#. translators: %s = list of connections using deprecated API keys
+#: includes/admin/class-air-wp-sync-admin.php:126
+msgid "<strong>Air WP Sync:</strong> The following connections use API Keys that will be deprecated. To benefit from all the features of our plugin in a more secure way, please use a personal access token instead: %s"
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-field-mapping.php:26
+msgid "Add all the Airtable fields you want to synchronize and then select the corresponding data types where they will be imported into your post"
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-field-mapping.php:29
+msgid "Field Mapping"
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-global-settings.php:46
+msgid "Airtable Settings"
+msgstr ""
+
+#. translators: %1$s = access token creation URL
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-global-settings.php:87
+msgid "This looks like a user API key that is now deprecated. Please replace it with a <a href=\"%1$s\" target=\"_blank\">personal access token</a>."
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-global-settings.php:369
+msgid "No formula to check"
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:33
+msgid "Actions"
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:88
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:167
+msgid "Finished with errors."
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:148
+msgid "Finished!"
+msgstr ""
+
+#. translators: %s = progress percentage
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:159
+msgid "In progress... %s"
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:195
+msgid "Canceled."
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:202
+msgid "Could not cancel import."
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-importer-settings.php:27
+msgid "Import As..."
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-sync-settings.php:27
+msgid "Sync Settings"
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-sync-settings.php:53
+msgid "Add, Update & Delete"
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-sync-settings.php:54
+msgid "Add & Update"
+msgstr ""
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-sync-settings.php:55
+msgid "Add"
+msgstr ""
+
+#: includes/class-air-wp-sync-abstract-importer.php:161
+msgid "A sync is already running."
+msgstr ""
+
+#. translators: %s = error message
+#: includes/class-air-wp-sync-abstract-importer.php:366
+msgid "Could not refresh attachment URLs: %s"
+msgstr ""
+
+#. translators: %1$s: start link tag, %2$s end link tag.
+#: includes/class-air-wp-sync-abstract-importer.php:445
+msgid "Some tasks have been interrupted, %1$smore details%2$s"
+msgstr ""
+
+#: includes/class-air-wp-sync-filters.php:73
+#: includes/sources/class-air-wp-sync-barcode-source.php:42
+msgid "Value"
+msgstr ""
+
+#: includes/class-air-wp-sync-filters.php:95
+#: includes/sources/class-air-wp-sync-collaborator-source.php:59
+#: modules/post/views/settings.php:34
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:240
+msgid "Name"
+msgstr ""
+
+#. translators: the HTTP response code
+#: includes/class-air-wp-sync-licensing.php:67
+#: includes/class-air-wp-sync-licensing.php:109
+#: includes/class-air-wp-sync-licensing.php:148
+msgid "WP connect server returned an HTTP error, code: %s"
+msgstr ""
+
+#. translators: the license key expiration date
+#: includes/class-air-wp-sync-licensing.php:178
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: includes/class-air-wp-sync-licensing.php:185
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: includes/class-air-wp-sync-licensing.php:190
+msgid "Your license is invalid."
+msgstr ""
+
+#: includes/class-air-wp-sync-licensing.php:194
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#: includes/class-air-wp-sync-licensing.php:197
+msgid "Your license key has reached its activation limit."
+msgstr ""
+
+#: includes/class-air-wp-sync-licensing.php:200
+msgid "An error occurred, please try again."
+msgstr ""
+
+#. translators: the plugin name.
+#: includes/class-air-wp-sync-updater.php:318
+msgid "There is a new version of %1$s available."
+msgstr ""
+
+#: includes/class-air-wp-sync-updater.php:324
+msgid "Contact your network administrator to install the update."
+msgstr ""
+
+#. translators: 1. opening anchor tag, do not translate 2. the new plugin version 3. closing anchor tag, do not translate.
+#: includes/class-air-wp-sync-updater.php:329
+msgid "%1$sView version %2$s details%3$s."
+msgstr ""
+
+#. translators: %1$s = opening anchor tag, %2$s = version, %3$s = closing anchor tag, %4$s = opening anchor tag, %5$s = closing anchor tag
+#: includes/class-air-wp-sync-updater.php:338
+msgid "%1$sView version %2$s details%3$s or %4$supdate now%5$s."
+msgstr ""
+
+#: includes/class-air-wp-sync-updater.php:349
+msgid "Update now."
+msgstr ""
+
+#: includes/class-air-wp-sync-updater.php:588
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: includes/class-air-wp-sync-updater.php:588
+#: views/metabox-side/infos.php:31
+msgid "Error"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:143
+msgid "Air WP Sync and Air WP Sync Pro should not be active at the same time. We've automatically deactivated Air WP Sync."
+msgstr ""
+
+#: includes/class-air-wp-sync.php:145
+msgid "Air WP Sync and Air WP Sync Pro should not be active at the same time. We've automatically deactivated Air WP Sync Pro."
+msgstr ""
+
+#: includes/class-air-wp-sync.php:212
+msgid "Every 5 minutes"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:216
+msgid "Every 10 minutes"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:220
+msgid "Every 30 minutes"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:243
+msgid "Connections"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:244
+msgid "Connection"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:246
+msgid "Add New Connection"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:247
+msgid "Edit Connection"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:248
+msgid "New Connection"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:249
+msgid "View Connection"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:250
+msgid "Search Connections"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:251
+msgid "No Connections found"
+msgstr ""
+
+#: includes/class-air-wp-sync.php:252
+msgid "No Connections found in Trash"
+msgstr ""
+
+#: includes/sources/class-air-wp-sync-barcode-source.php:37
+msgid "Type"
+msgstr ""
+
+#: includes/sources/class-air-wp-sync-collaborator-source.php:49
+msgid "ID"
+msgstr ""
+
+#: includes/sources/class-air-wp-sync-collaborator-source.php:54
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:165
+msgid "Email"
+msgstr ""
+
+#. Translators: %s the field name.
+#: includes/sources/class-air-wp-sync-link-to-another-record-source.php:91
+msgid "[All records] %s"
+msgstr ""
+
+#: modules/post/class-air-wp-sync-post-helpers.php:87
+msgid "Create new post type..."
+msgstr ""
+
+#: modules/post/class-air-wp-sync-post-module.php:59
+msgid "Importing as: "
+msgstr ""
+
+#: modules/post/class-air-wp-sync-post-module.php:89
+msgid "Only lowercase alphanumeric characters, dashes, and underscores are allowed."
+msgstr ""
+
+#: modules/post/class-air-wp-sync-post-module.php:90
+msgid "This slug is already in use, please choose another."
+msgstr ""
+
+#: modules/post/class-air-wp-sync-post-module.php:91
+msgid "This slug exceeds the 20-character limit. Please use a shorter one."
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:165
+msgid "Post"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:177
+#: pro-plus/includes/destinations/acf/class-air-wp-sync-abstract-acf-destination.php:254
+msgid "Title"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:183
+msgid "Content"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:189
+msgid "Excerpt"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:195
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:246
+msgid "Slug"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:201
+msgid "Author"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:207
+msgid "Status"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:213
+msgid "Publication Date"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:224
+msgid "Post parent (ID)"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-meta-destination.php:122
+msgid "Featured Image"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-post-meta-destination.php:130
+#: modules/term/destinations/class-air-wp-sync-term-meta-destination.php:104
+#: modules/user/destinations/class-air-wp-sync-user-meta-destination.php:105
+msgid "Custom Field..."
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-taxonomy-destination.php:103
+msgid "Taxonomies"
+msgstr ""
+
+#: modules/post/destinations/class-air-wp-sync-taxonomy-destination.php:131
+#: pro-plus/includes/destinations/acf/class-air-wp-sync-abstract-acf-destination.php:449
+msgid "Split comma-separated string into terms"
+msgstr ""
+
+#: modules/post/views/settings.php:21
+msgid "Post Type"
+msgstr ""
+
+#: modules/post/views/settings.php:36
+#: modules/post/views/settings.php:56
+#: views/metabox-airtable-settings.php:21
+#: views/metabox-airtable-settings.php:49
+#: views/metabox-airtable-settings.php:80
+#: assets/src/metabox-mapping/src/App.js:40
+#: assets/src/metabox-mapping/src/App.js:45
+#: assets/src/metabox-mapping/src/MappingRow.js:43
+#: assets/src/metabox-mapping/src/MappingRow.js:107
+#: assets/src/metabox-mapping/src/MappingRow.js:135
+msgid " (required)"
+msgstr ""
+
+#: modules/post/views/settings.php:50
+msgid "The name of your Custom Post Type."
+msgstr ""
+
+#: modules/post/views/settings.php:54
+msgid "Url Prefix"
+msgstr ""
+
+#. translators: %s = home url
+#: modules/post/views/settings.php:73
+msgid "The prefix used in the URL structure as in <code>%s/<b>prefix/</b>post-name/</code>."
+msgstr ""
+
+#: modules/post/views/settings.php:88
+msgid "Default Post Status"
+msgstr ""
+
+#: modules/post/views/settings.php:100
+msgid "Default Post Author"
+msgstr ""
+
+#: modules/term/class-air-wp-sync-term-importer.php:49
+msgid "Term name is missing"
+msgstr ""
+
+#: modules/term/class-air-wp-sync-term-module.php:66
+msgid "It is mandatory to map the term name."
+msgstr ""
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:226
+msgid "Terms"
+msgstr ""
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:252
+msgid "Taxonomy"
+msgstr ""
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:258
+msgid "Description"
+msgstr ""
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:264
+msgid "Parent (by ID)"
+msgstr ""
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:270
+msgid "Parent (by name)"
+msgstr ""
+
+#: modules/term/views/settings.php:18
+msgid "Default taxonomy"
+msgstr ""
+
+#: modules/user/class-air-wp-sync-user-module.php:68
+msgid "It is mandatory to map the user e-mail address."
+msgstr ""
+
+#: modules/user/class-air-wp-sync-user-module.php:69
+msgid "It is mandatory to map the Username field."
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:126
+msgid "User"
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:140
+msgid "Username"
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:143
+msgid "Please note that usernames cannot be changed once created."
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:147
+msgid "First name"
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:153
+msgid "Last name"
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:159
+msgid "Nickname"
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:171
+msgid "Website"
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:177
+msgid "Biographical Info"
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:183
+msgid "Role"
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:189
+msgid "Locale"
+msgstr ""
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:195
+msgid "Registered Date"
+msgstr ""
+
+#: modules/user/views/settings.php:19
+msgid "Default role"
+msgstr ""
+
+#: modules/user/views/settings.php:35
+msgid "Language"
+msgstr ""
+
+#: modules/user/views/settings.php:60
+msgid "Send User Notification"
+msgstr ""
+
+#: modules/user/views/settings.php:63
+msgid "Send the new user an email about their account."
+msgstr ""
+
+#: pro-plus/includes/destinations/acf/class-air-wp-sync-abstract-acf-destination.php:259
+msgid "URL"
+msgstr ""
+
+#: pro-plus/includes/destinations/acf/class-air-wp-sync-abstract-acf-destination.php:268
+msgid "Address"
+msgstr ""
+
+#: pro-plus/includes/destinations/acf/class-air-wp-sync-abstract-acf-destination.php:272
+msgid "Latitude"
+msgstr ""
+
+#: pro-plus/includes/destinations/acf/class-air-wp-sync-abstract-acf-destination.php:276
+msgid "Longitude"
+msgstr ""
+
+#: pro-plus/includes/destinations/acf/class-air-wp-sync-abstract-acf-destination.php:605
+msgid "Please note that we don't support nested repeater yet."
+msgstr ""
+
+#: pro-plus/includes/destinations/acf/class-air-wp-sync-abstract-acf-destination.php:819
+msgid "ACF"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:199
+msgid "All in One SEO"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:240
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:191
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:194
+msgid "Meta Title"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:246
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:197
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:200
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:189
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:126
+msgid "Meta Description"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:252
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:195
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:132
+msgid "Focus Keyphrase"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:258
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:209
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:212
+msgid "Canonical URL"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:264
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:215
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:218
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:213
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:138
+msgid "Facebook Title"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:270
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:221
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:224
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:219
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:144
+msgid "Facebook Description"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:276
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:227
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:230
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:225
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:156
+msgid "X(Twitter) Title"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:282
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:233
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:236
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:231
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:162
+msgid "X(Twitter) Description"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:288
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:239
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:237
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:150
+msgid "Facebook Image"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:294
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:245
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:243
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:168
+msgid "X(Twitter) Image"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-aioseo-destination.php:300
+msgid "Use data from Facebook Tab"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:150
+msgid "RankMath SEO"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:203
+msgid "Focus Keyword"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-rankmath-destination.php:251
+msgid "Use data from Facebook tab"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:154
+msgid "SEOPress"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:206
+msgid "Target keywords"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:242
+msgid "Facebook Thumbnail"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:248
+msgid "X(Twitter) Thumbnail"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:255
+msgid "noindex"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:261
+msgid "nofollow"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:267
+msgid "noimageindex"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:273
+msgid "noarchive"
+msgstr ""
+
+#: pro-plus/includes/destinations/class-air-wp-sync-seopress-destination.php:279
+msgid "nosnippet"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:292
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-organizer.php:167
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:180
+msgid "The Events Calendar"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:344
+msgid "Event Start Date"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:350
+msgid "Event End Date"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:356
+msgid "Event All Day"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:362
+msgid "Event Timezone"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:368
+msgid "Event Status"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:374
+msgid "Event Venue ID"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:380
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:266
+msgid "Show Map"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:386
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:272
+msgid "Show map link"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:392
+msgid "Event Organizer ID"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:398
+msgid "Event URL"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:404
+msgid "Currency Symbol"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:410
+msgid "Currency Position"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:416
+msgid "Currency Code"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:422
+msgid "Event cost"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:428
+msgid "Featured Event"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-event.php:434
+msgid "Hide From Event Listings"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-organizer.php:202
+msgid "Organizer Phone"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-organizer.php:208
+msgid "Organizer Website"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-organizer.php:214
+msgid "Organizer Email"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:224
+msgid "Venue Address"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:230
+msgid "Venue City"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:236
+msgid "Venue Country"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:242
+msgid "Venue State or Province"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:248
+msgid "Venue Zipcode"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:254
+msgid "Venue Phone"
+msgstr ""
+
+#: pro-plus/includes/destinations/events-calendar/class-air-wp-sync-events-calendar-destination-venue.php:260
+msgid "Venue URL"
+msgstr ""
+
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:142
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:106
+msgid "Yoast SEO"
+msgstr ""
+
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:183
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:120
+msgid "SEO Title"
+msgstr ""
+
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:201
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:180
+msgid "Breadcrumbs Title (Advanced)"
+msgstr ""
+
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-post.php:207
+#: pro-plus/includes/destinations/yoast/class-air-wp-sync-yoast-destination-term.php:174
+msgid "Canonical URL (Advanced)"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:19
+msgid "Access Token"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:22
+msgid "Create your access token from <a href=\"https://airtable.com/create/tokens\" target=\"_blank\">https://airtable.com/create/tokens</a>"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:40
+msgid "Make sure your token has the <code>data.records:read</code> and <code>schema.bases:read</code> scopes and has access to the base you want to import."
+msgstr ""
+
+#: views/metabox-airtable-settings.php:47
+msgid "Base"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:78
+msgid "Table"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:96
+msgid "View"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:114
+msgid "Filter By Formula"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:115
+msgid "Optionally enter an airtable formula used to filter records. The formula will be evaluated for each record, and if the result is not 0, false, \"\", NaN, [], or #Error! the record will be imported. We recommend testing your formula in the Formula field UI before using it."
+msgstr ""
+
+#: views/metabox-airtable-settings.php:124
+msgid "Use filters UI"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:138
+msgid "Include \"Link to another record\" field(s)"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:143
+msgid "The <a href=\"https://www.airtable.com/guides/build/connect-data-with-linked-records\" target=\"_blank\">\"Link to another record\"</a> feature in Airtable enables creating relationships between records in different tables."
+msgstr ""
+
+#: views/metabox-airtable-settings.php:158
+msgid "Yes"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:159
+msgid "No"
+msgstr ""
+
+#: views/metabox-airtable-settings.php:169
+msgid "<strong>Warning:</strong> Including \"Link to another record\" field(s) may extend synchronization times.<br /> Be aware that this could <strong>significantly increase the processing time.</strong><br /> Therefore, it might generate timeouts and you may need to contact your hosting provider."
+msgstr ""
+
+#: views/metabox-airtable-settings.php:177
+msgid "I understood"
+msgstr ""
+
+#: views/metabox-import-infos.php:27
+msgid "Sync now"
+msgstr ""
+
+#: views/metabox-import-infos.php:31
+msgid "Cancel"
+msgstr ""
+
+#: views/metabox-import-infos.php:33
+msgid "You will be able to sync your Airtable content once you have saved this connection."
+msgstr ""
+
+#: views/metabox-importer-settings.php:20
+msgid "Import as"
+msgstr ""
+
+#: views/metabox-side/infos.php:25
+msgid "Last Sync"
+msgstr ""
+
+#: views/metabox-side/infos.php:29
+msgid "Successful!"
+msgstr ""
+
+#: views/metabox-side/infos.php:33
+msgid "Canceled"
+msgstr ""
+
+#. translators: %s: Date
+#: views/metabox-side/infos.php:59
+msgid "Date: %s"
+msgstr ""
+
+#. translators: %s = Number of processed posts
+#: views/metabox-side/infos.php:75
+#: views/metabox-side/infos.php:87
+msgid "Processed posts: %d"
+msgstr ""
+
+#: views/metabox-side/infos.php:102
+msgid "Download the latest log file."
+msgstr ""
+
+#. translators: %s = Next scheduled sync date
+#: views/metabox-side/infos.php:116
+msgid "Scheduled Next Sync: %s"
+msgstr ""
+
+#: views/metabox-sync.php:21
+msgid "Strategy"
+msgstr ""
+
+#: views/metabox-sync.php:22
+msgid "Select the method to synchronize your Airtable content with WordPress.<br><br><strong>Add:</strong> only adds new content.<br><br><strong>Add & Update:</strong> same + updates content from modified records.<br><br><strong>Add, Update & Delete:</strong> same + deletes content that is no longer in Airtable."
+msgstr ""
+
+#: views/metabox-sync.php:42
+msgid "Disables automatic synchronization of your Airtable content. You can still do it manually by clicking on the 'Sync Now' button in the side panel."
+msgstr ""
+
+#: views/metabox-sync.php:48
+msgid "Enables recurring synchronization of your Airtable content. Choose a frequency and it will take effect from the date and time the connection is updated."
+msgstr ""
+
+#: views/metabox-sync.php:51
+msgid "Frequency"
+msgstr ""
+
+#: views/metabox-sync.php:60
+msgid "We recommend <a href=\"https://wpconnect.co/blog/setup-cron-wordpress\" target=\"_blank\">setting up WP-Cron</a> as a cron job for better performance."
+msgstr ""
+
+#: views/metabox-sync.php:73
+msgid "Day of week"
+msgstr ""
+
+#: views/metabox-sync.php:76
+msgid "Monday"
+msgstr ""
+
+#: views/metabox-sync.php:77
+msgid "Tuesday"
+msgstr ""
+
+#: views/metabox-sync.php:78
+msgid "Wednesday"
+msgstr ""
+
+#: views/metabox-sync.php:79
+msgid "Thursday"
+msgstr ""
+
+#: views/metabox-sync.php:80
+msgid "Friday"
+msgstr ""
+
+#: views/metabox-sync.php:81
+msgid "Saturday"
+msgstr ""
+
+#: views/metabox-sync.php:82
+msgid "Sunday"
+msgstr ""
+
+#: views/metabox-sync.php:86
+msgid "Time"
+msgstr ""
+
+#: views/metabox-sync.php:94
+msgid "Enables instant synchronization of your content. Using an Airtable automation, you can choose your own trigger and the connection will be updated as soon as the webhook url below is called."
+msgstr ""
+
+#: views/metabox-sync.php:98
+msgid "Webhook URL"
+msgstr ""
+
+#: views/metabox-sync.php:103
+msgid "To create an automation and call a webhook, <a href=\"https://wpconnect.co/blog/create-airtable-automation\" target=\"_blank\">click here</a>"
+msgstr ""
+
+#: views/metabox-sync.php:114
+msgid "Webhook URL will be available once you have saved this connection."
+msgstr ""
+
+#: views/settings-page.php:34
+msgid "License Key"
+msgstr ""
+
+#: views/settings-page.php:35
+msgid "Get your License Key from your <a href=\"https://wpconnect.co/my-account/\" target=\"_blank\">WP connect account</a>"
+msgstr ""
+
+#: views/settings-page.php:45
+msgid "De-activate"
+msgstr ""
+
+#: views/settings-page.php:46
+msgid "Your license is valid and activated."
+msgstr ""
+
+#: views/settings-page.php:48
+msgid "Activate"
+msgstr ""
+
+#: views/settings-page.php:55
+msgid "Cache duration (minutes)"
+msgstr ""
+
+#: views/settings-page.php:64
+msgid "WordPress caches your Airtable table structure for 15 minutes by default to improve performance. If changes made in Airtable aren’t showing right away, try clearing the cache or adjusting the duration above."
+msgstr ""
+
+#: views/settings-page.php:75
+msgid "Update settings"
+msgstr ""
+
+#: views/settings-page.php:80
+msgid "Clear Cache"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:3
+msgid "+ Add Filter"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:4
+msgid "+ Add Filter Group"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:5
+msgid "Where"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:6
+msgid "And"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:7
+msgid "Or"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:8
+msgid "Conjunction"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:9
+msgid "Filter conditions can only be nested 3 levels deep"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:10
+msgid "Checked"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:12
+msgid "contains..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:13
+msgid "does not contain..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:14
+msgid "is..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:15
+msgid "is not..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:16
+msgid "is empty"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:17
+msgid "is not empty"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:18
+msgid "is within..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:19
+msgid "is before..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:20
+msgid "is after..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:21
+msgid "is on or before..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:22
+msgid "is on or after..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:23
+msgid "is any of..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:24
+msgid "is none of..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:25
+msgid "has any of..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:26
+msgid "has all of..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:27
+msgid "is exactly..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:28
+msgid "has none of..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:29
+msgid "filenames contain..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:30
+msgid "has file type..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:32
+msgid "Choose the field"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:33
+msgid "Choose the condition"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:34
+msgid "Set the value"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:36
+msgid "the past week"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:37
+msgid "the past month"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:38
+msgid "the past year"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:39
+msgid "the next week"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:40
+msgid "the next month"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:41
+msgid "the next year"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:42
+msgid "this calendar week"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:43
+msgid "this calendar month"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:44
+msgid "this calendar year"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:45
+msgid "the next number of days..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:46
+msgid "the past number of days..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:47
+msgid "exact date..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:48
+msgid "today"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:49
+msgid "tomorrow"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:50
+msgid "yesterday"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:51
+msgid "one week ago"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:52
+msgid "one week from now"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:53
+msgid "one month ago"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:54
+msgid "one month from now"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:55
+msgid "number of days ago..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:56
+msgid "number of days from now..."
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:59
+msgid "image"
+msgstr ""
+
+#: assets/src/filters/src/resources/texts.js:60
+msgid "text"
+msgstr ""
+
+#: assets/src/metabox-mapping/src/App.js:38
+#: assets/src/metabox-mapping/src/MappingRow.js:105
+msgid "Airtable Field"
+msgstr ""
+
+#: assets/src/metabox-mapping/src/App.js:43
+#: assets/src/metabox-mapping/src/MappingRow.js:133
+msgid "Import As"
+msgstr ""
+
+#: assets/src/metabox-mapping/src/App.js:60
+msgid "Click the <strong>+ Add Field</strong> button to create your first field."
+msgstr ""
+
+#: assets/src/metabox-mapping/src/App.js:78
+msgid "+ Add Field"
+msgstr ""
+
+#: assets/src/metabox-mapping/src/MappingRow.js:41
+msgid "Custom Field"
+msgstr ""
+
+#: assets/src/metabox-mapping/src/MappingRow.js:115
+msgid "Fields"
+msgstr ""
+
+#: assets/src/metabox-mapping/src/MappingRow.js:159
+msgid "Sort"
+msgstr ""
+
+#: assets/src/metabox-mapping/src/MappingRow.js:163
+msgid "Remove"
+msgstr ""

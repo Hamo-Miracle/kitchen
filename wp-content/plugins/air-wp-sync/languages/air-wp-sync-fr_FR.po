@@ -1,0 +1,1568 @@
+# Copyright (C) 2022 WP connect
+# This file is distributed under the same license as the Air WP Sync plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Air WP Sync 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wpconnect.freshdesk.com/\n"
+"POT-Creation-Date: 2025-06-20T07:24:00+00:00\n"
+"PO-Revision-Date: 2025-06-20 09:28+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.6\n"
+"X-Domain: airwpsync\n"
+
+#. Plugin Name of the plugin
+#: air-wp-sync.php
+msgid "Air WP Sync - Airtable to WordPress"
+msgstr "Air WP Sync - Airtable vers WordPress"
+
+#. Plugin URI of the plugin
+#: air-wp-sync.php
+msgid "https://wpconnect.co/air-wp-sync-plugin/"
+msgstr "https://wpconnect.co/air-wp-sync-plugin/"
+
+#. Description of the plugin
+#: air-wp-sync.php
+msgid "Swiftly sync Airtable to your WordPress website!"
+msgstr "Synchronisez facilement Airtable avec votre site WordPress !"
+
+#. Author of the plugin
+#: air-wp-sync.php
+msgid "WP connect"
+msgstr "WP connect"
+
+#. Author URI of the plugin
+#: air-wp-sync.php
+msgid "https://wpconnect.co/"
+msgstr "https://wpconnect.co/"
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:46
+msgid "Error:"
+msgstr "Erreur :"
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:46
+msgid "One or more fields have an error. Please check and try again."
+msgstr ""
+"Une ou plusieurs erreurs ont été trouvées parmi vos champs. Veuillez "
+"vérifier et réessayer."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:175
+msgid "Back to list"
+msgstr "Retour à la liste"
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:182
+#: includes/admin/class-air-wp-sync-admin-connection.php:183
+msgid "Connection updated."
+msgstr "Connexion mise à jour."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:184
+msgid "Connection published."
+msgstr "Connexion mise en ligne."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:185
+msgid "Connection saved."
+msgstr "Connexion enregistrée."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:186
+msgid "Connection draft updated."
+msgstr "Le brouillon de la connexion a été mis à jour."
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:205
+msgid "%s connection updated."
+msgid_plural "%s connections updated."
+msgstr[0] "%s connexion mise à jour."
+msgstr[1] "%s connexions mises à jour."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:206
+msgid "1 connection not updated, somebody is editing it."
+msgstr ""
+"1 connexion n’a pas été mise à jour, car quelqu’un est en train de la "
+"modifier."
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:208
+msgid "%s connection not updated, somebody is editing it."
+msgid_plural "%s connections not updated, somebody is editing them."
+msgstr[0] "%s connexion non actualisée, quelqu’un la modifie."
+msgstr[1] "%s connexions non actualisées, quelqu’un les modifie."
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:210
+msgid "%s connection permanently deleted."
+msgid_plural "%s connections permanently deleted."
+msgstr[0] "%s connexion définitivement supprimée."
+msgstr[1] "%s connexions définitivement supprimées."
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:212
+msgid "%s connection moved to the Trash."
+msgid_plural "%s connections moved to the Trash."
+msgstr[0] "%s connexion déplacée dans la corbeille."
+msgstr[1] "%s connexions déplacées dans la corbeille."
+
+#. translators: %s: Number of connections.
+#: includes/admin/class-air-wp-sync-admin-connection.php:214
+msgid "%s connection restored from the Trash."
+msgid_plural "%s connections restored from the Trash."
+msgstr[0] "%s connexion restaurée depuis la corbeille."
+msgstr[1] "%s connexions restaurées depuis la corbeille."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:251
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:70
+msgid "In progress..."
+msgstr "En cours..."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:252
+msgid "Canceling..."
+msgstr "Annulation..."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:253
+msgid "You have unsaved changes."
+msgstr "Vous avez des modifications non enregistrées."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:254
+msgid "This fields is required"
+msgstr "Ce champ est requis"
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:255
+msgid "Please select an option in the \"Import As\" column for all mappings"
+msgstr ""
+"Veuillez sélectionner une option dans la colonne \"Importer en tant que\" "
+"pour tous les mappages"
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:256
+msgid "\"Custom Field\" fields can't be empty."
+msgstr "Les champs \"Champ personnalisé\" ne peuvent pas être vides."
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:257
+msgid ""
+"The base you have previously selected is not available anymore, please check "
+"your Airtable token access"
+msgstr ""
+"La base que vous avez sélectionnée précédemment n'est plus disponible, "
+"veuillez vérifier l'accès à votre token Airtable"
+
+#: includes/admin/class-air-wp-sync-admin-connection.php:288
+msgid ""
+"Thank you for using the Free Version of our plugin! You already have an "
+"active connection. To be able to create as many active connections as you "
+"want, <a href=\"https://wpconnect.co/air-wp-sync-plugin/#pricing-plan\" "
+"target=\"_blank\">Upgrade to Pro+ Version</a>."
+msgstr ""
+"Merci d’utiliser la version gratuite de notre plugin ! Vous avez déjà une "
+"connexion active. Pour pouvoir créer autant de connexions que vous le "
+"souhaitez, <a href=\"https://wpconnect.co/air-wp-sync-plugin/#pro-version\" "
+"target=\"_blank\">passez à la version Pro+</a>."
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:25
+msgid "Last Modified On"
+msgstr "Dernière modification le"
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:26
+msgid "Importer Type"
+msgstr "Type d’outil d’importation"
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:27
+msgid "Last Synced On"
+msgstr "Dernière synchronisation le"
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:28
+#: views/metabox-sync.php:27
+msgid "Trigger"
+msgstr "Déclencheur"
+
+#. Translators: %s Importer's module name (like "Post", "User")
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:49
+msgid "%s Importer"
+msgstr "Outil d’importation %s"
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:54
+#: views/metabox-sync.php:33
+msgid "Manual only"
+msgstr "Manuel uniquement"
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:57
+#: views/metabox-sync.php:39
+msgid "Recurring"
+msgstr "Récurrent"
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:68
+msgid "Instant via Webhook"
+msgstr "Instantané via Webhook"
+
+#: includes/admin/class-air-wp-sync-admin-connections-list.php:102
+#: modules/post/class-air-wp-sync-post-module.php:64
+msgid ""
+"You have a Custom Post Type declared using this connection. Are you sure to "
+"delete it?"
+msgstr ""
+"Vous avez un type de publication personnalisé déclaré via cette connexion. "
+"Êtes-vous sûr de le supprimer?"
+
+#: includes/admin/class-air-wp-sync-admin.php:38
+#: includes/admin/class-air-wp-sync-admin.php:39 views/header.php:13
+msgid "Air WP Sync"
+msgstr "Air WP Sync"
+
+#: includes/admin/class-air-wp-sync-admin.php:47
+#: includes/admin/class-air-wp-sync-admin.php:48
+msgid "All Connections"
+msgstr "Toutes les connexions"
+
+#: includes/admin/class-air-wp-sync-admin.php:54
+#: includes/admin/class-air-wp-sync-admin.php:55
+#: includes/class-air-wp-sync.php:171
+msgid "Add New"
+msgstr "Ajouter"
+
+#: includes/admin/class-air-wp-sync-admin.php:85
+msgid "Upgrade to pro+ version"
+msgstr "Mise à niveau vers la Pro+"
+
+#. translators: %s = list of connections using deprecated API keys
+#: includes/admin/class-air-wp-sync-admin.php:111
+msgid ""
+"<strong>Air WP Sync:</strong> The following connections use API Keys that "
+"will be deprecated. To benefit from all the features of our plugin in a more "
+"secure way, please use a personal access token instead: %s"
+msgstr ""
+"<strong>Air WP Sync :</strong> Les connexions suivantes utilisent des clés "
+"API qui seront bientôt obsolètes. Pour bénéficier de toutes les "
+"fonctionnalités de notre extension et de manière plus sécurisée, veuillez "
+"utiliser un jeton d’accès personnel à la place : %s"
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-field-mapping.php:21
+msgid ""
+"Add all the Airtable fields you want to synchronize and then select the "
+"corresponding data types where they will be imported into your post"
+msgstr ""
+"Ajoutez tous les champs Airtable que vous souhaitez synchroniser, puis "
+"sélectionnez les types de données correspondants où ils seront importés dans "
+"votre publication"
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-field-mapping.php:24
+msgid "Field Mapping"
+msgstr "Association de champs"
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-global-settings.php:41
+msgid "Airtable Settings"
+msgstr "Réglages Airtable"
+
+#. translators: %1$s = access token creation URL
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-global-settings.php:75
+msgid ""
+"This looks like a user API key that is now deprecated. Please replace it "
+"with a <a href=\"%1$s\" target=\"_blank\">personal access token</a>."
+msgstr ""
+"Cela ressemble à une clé d’API utilisateur qui est maintenant obsolète. "
+"Veuillez la remplacer par un <a href=\"%1$s\" target=\"_blank\">jeton "
+"d’accès personnel</a>."
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-global-settings.php:351
+msgid "No formula to check"
+msgstr "Pas de formule à vérifier"
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:28
+msgid "Actions"
+msgstr "Actions"
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:77
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:154
+msgid "Finished with errors."
+msgstr "Terminée avec des erreurs."
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:135
+msgid "Finished!"
+msgstr "Terminée !"
+
+#. translators: %s = progress percentage
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:146
+msgid "In progress... %s"
+msgstr "En cours... %s"
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:180
+msgid "Canceled."
+msgstr "Annulée."
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-import-infos.php:187
+msgid "Could not cancel import."
+msgstr "Impossible d’annuler l’importation."
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-importer-settings.php:22
+msgid "Import As..."
+msgstr "Importer en tant que..."
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-sync-settings.php:22
+msgid "Sync Settings"
+msgstr "Réglages de synchronisation"
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-sync-settings.php:45
+msgid "Add, Update & Delete"
+msgstr "Ajouter, mettre à jour et supprimer"
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-sync-settings.php:46
+msgid "Add & Update"
+msgstr "Ajouter et mettre à jour"
+
+#: includes/admin/metaboxes/class-air-wp-sync-metabox-sync-settings.php:47
+msgid "Add"
+msgstr "Ajouter"
+
+#: includes/class-air-wp-sync-filters.php:73
+#: includes/sources/class-air-wp-sync-barcode-source.php:27
+msgid "Value"
+msgstr "Valeur"
+
+#: includes/class-air-wp-sync-filters.php:95
+#: includes/sources/class-air-wp-sync-collaborator-source.php:39
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:239
+msgid "Name"
+msgstr "Nom"
+
+#: includes/class-air-wp-sync.php:108
+msgid ""
+"Multiple Air WP Sync plugins should not be active at the same time. We've "
+"automatically deactivated Air WP Sync."
+msgstr ""
+"Plusieurs extensions Air WP SyncAir ne doivent pas être actives en même "
+"temps. Nous avons automatiquement désactivé Air WP Sync."
+
+#: includes/class-air-wp-sync.php:110
+msgid ""
+"Multiple Air WP Sync plugins should not be active at the same time. We've "
+"automatically deactivated all other Air WP Sync plugins."
+msgstr ""
+"Plusieurs extensions Air WP SyncAir ne doivent pas être actives en même "
+"temps. Nous avons automatiquement désactivé les autres extensions Air WP "
+"Sync."
+
+#: includes/class-air-wp-sync.php:138
+msgid "Every 5 minutes"
+msgstr "Toutes les 5 minutes"
+
+#: includes/class-air-wp-sync.php:142
+msgid "Every 10 minutes"
+msgstr "Toutes les 10 minutes"
+
+#: includes/class-air-wp-sync.php:146
+msgid "Every 30 minutes"
+msgstr "Toutes les 30 minutes"
+
+#: includes/class-air-wp-sync.php:169
+msgid "Connections"
+msgstr "Connexions"
+
+#: includes/class-air-wp-sync.php:170
+msgid "Connection"
+msgstr "Connexion"
+
+#: includes/class-air-wp-sync.php:172
+msgid "Add New Connection"
+msgstr "Ajouter une nouvelle connexion"
+
+#: includes/class-air-wp-sync.php:173
+msgid "Edit Connection"
+msgstr "Modifier la connexion"
+
+#: includes/class-air-wp-sync.php:174
+msgid "New Connection"
+msgstr "Nouvelle connexion"
+
+#: includes/class-air-wp-sync.php:175
+msgid "View Connection"
+msgstr "Afficher la connexion"
+
+#: includes/class-air-wp-sync.php:176
+msgid "Search Connections"
+msgstr "Rechercher des connexions"
+
+#: includes/class-air-wp-sync.php:177
+msgid "No Connections found"
+msgstr "Aucune connexion trouvée"
+
+#: includes/class-air-wp-sync.php:178
+msgid "No Connections found in Trash"
+msgstr "Aucune connexion trouvée dans la corbeille"
+
+#: includes/sources/class-air-wp-sync-barcode-source.php:22
+msgid "Type"
+msgstr "Type"
+
+#: includes/sources/class-air-wp-sync-collaborator-source.php:29
+msgid "ID"
+msgstr "ID"
+
+#: includes/sources/class-air-wp-sync-collaborator-source.php:34
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:127
+msgid "Email"
+msgstr "E-mail"
+
+#: modules/post/class-air-wp-sync-post-helpers.php:82
+msgid "Create new post type... (Pro+ version)"
+msgstr "Créer un nouveau type de publication... (version Pro+)"
+
+#: modules/post/class-air-wp-sync-post-module.php:39
+msgid "Importing as: "
+msgstr "Importer comme : "
+
+#: modules/post/class-air-wp-sync-post-module.php:65
+msgid ""
+"Only lowercase alphanumeric characters, dashes, and underscores are allowed."
+msgstr ""
+"Seuls les caractères alphanumériques, les tirets et les traits de "
+"soulignement minuscules sont autorisés."
+
+#: modules/post/class-air-wp-sync-post-module.php:66
+msgid "This slug is already in use, please choose another."
+msgstr "Ce slug est déjà utilisé, veuillez en choisir un autre."
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:124
+msgid "Post"
+msgstr "Publication"
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:136
+msgid "Title"
+msgstr "Titre"
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:142
+msgid "Content"
+msgstr "Contenu"
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:148
+msgid "Excerpt"
+msgstr "Extrait"
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:154
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:245
+msgid "Slug"
+msgstr "Slug"
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:160
+msgid "Author"
+msgstr "Auteur"
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:166
+msgid "Status"
+msgstr "Statut"
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:172
+msgid "Publication Date"
+msgstr "Date de publication"
+
+#: modules/post/destinations/class-air-wp-sync-post-destination.php:182
+msgid "Post parent (ID)"
+msgstr "Publication parente (ID)"
+
+#: modules/post/destinations/class-air-wp-sync-post-meta-destination.php:88
+msgid "Featured Image"
+msgstr "Image mise en avant"
+
+#: modules/post/destinations/class-air-wp-sync-post-meta-destination.php:96
+msgid "Custom Field... (Pro+ version)"
+msgstr "Champ personnalisé... (version Pro+)"
+
+#: modules/post/destinations/class-air-wp-sync-taxonomy-destination.php:64
+msgid "Taxonomies"
+msgstr "Taxonomies"
+
+#: modules/post/destinations/class-air-wp-sync-taxonomy-destination.php:94
+msgid "Split comma-separated string into terms"
+msgstr "Extraire les termes séparés par des virgules"
+
+#: modules/post/views/settings.php:12
+msgid "Post Type"
+msgstr "Type de publication"
+
+#: modules/post/views/settings.php:24
+msgid "Default Post Status"
+msgstr "Statut de l’article par défaut"
+
+#: modules/post/views/settings.php:36
+msgid "Default Post Author"
+msgstr "Auteur de l’article par défaut"
+
+#: modules/term/class-air-wp-sync-term-importer.php:49
+msgid "Term name is missing"
+msgstr "Le nom du terme est manquant"
+
+#: modules/term/class-air-wp-sync-term-module.php:66
+msgid "It is mandatory to map the term name."
+msgstr "Associer le nom du terme est obligatoire."
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:225
+msgid "Terms"
+msgstr "Termes"
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:251
+msgid "Taxonomy"
+msgstr "Taxonomie"
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:257
+msgid "Description"
+msgstr "Description"
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:263
+msgid "Parent (by ID)"
+msgstr "Parent (par ID)"
+
+#: modules/term/destinations/class-air-wp-sync-term-destination.php:269
+msgid "Parent (by name)"
+msgstr "Parent (par nom)"
+
+#: modules/term/destinations/class-air-wp-sync-term-meta-destination.php:104
+#: modules/user/destinations/class-air-wp-sync-user-meta-destination.php:72
+msgid "Custom Field..."
+msgstr "Champ personnalisé..."
+
+#: modules/term/views/settings.php:18
+msgid "Default taxonomy"
+msgstr "Taxonomie par défaut"
+
+#: modules/user/class-air-wp-sync-user-module.php:50
+msgid "It is mandatory to map the user e-mail address."
+msgstr "Associer l’e-mail de l’utilisateur est obligatoire."
+
+#: modules/user/class-air-wp-sync-user-module.php:51
+msgid "It is mandatory to map the Username field."
+msgstr "Associer l’identifiant de l’utilisateur est obligatoire."
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:90
+msgid "User"
+msgstr "Utilisateur"
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:102
+msgid "Username"
+msgstr "Identifiant"
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:105
+msgid "Please note that usernames cannot be changed once created."
+msgstr ""
+"Veuillez noter que les identifiants ne peuvent pas être changés une fois "
+"créés."
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:109
+msgid "First name"
+msgstr "Prénom"
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:115
+msgid "Last name"
+msgstr "Nom"
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:121
+msgid "Nickname"
+msgstr "Pseudonyme"
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:133
+msgid "Website"
+msgstr "Site web"
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:139
+msgid "Biographical Info"
+msgstr "Information biographiques"
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:145
+msgid "Role"
+msgstr "Rôle"
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:151
+msgid "Locale"
+msgstr "Langue"
+
+#: modules/user/destinations/class-air-wp-sync-user-destination.php:157
+msgid "Registered Date"
+msgstr "Date d’inscription"
+
+#: modules/user/views/settings.php:12
+msgid "Default role"
+msgstr "Rôle par défaut"
+
+#: modules/user/views/settings.php:29
+msgid "Language"
+msgstr "Langue"
+
+#: modules/user/views/settings.php:53
+msgid "Send User Notification"
+msgstr "Envoyer une notification pour l’utilisateur"
+
+#: views/header.php:18
+msgid "👋 Want more features? <strong>Upgrade to Pro+ version</strong>! 🚀"
+msgstr ""
+"👋 Vous souhaitez plus de fonctionnalités? <strong>Passer à la version Pro+</"
+"strong> ! 🚀"
+
+#: views/metabox-airtable-settings.php:14
+msgid "Access Token"
+msgstr "Jeton d’accès"
+
+#: views/metabox-airtable-settings.php:16
+#: views/metabox-airtable-settings.php:44
+#: views/metabox-airtable-settings.php:63
+#: assets/src/metabox-mapping/src/App.js:40
+#: assets/src/metabox-mapping/src/App.js:45
+#: assets/src/metabox-mapping/src/MappingRow.js:43
+#: assets/src/metabox-mapping/src/MappingRow.js:107
+#: assets/src/metabox-mapping/src/MappingRow.js:135
+msgid " (required)"
+msgstr " (requis)"
+
+#: views/metabox-airtable-settings.php:17
+msgid ""
+"Create your access token from <a href=\"https://airtable.com/create/tokens\" "
+"target=\"_blank\">https://airtable.com/create/tokens</a>"
+msgstr ""
+"Créez votre jeton d’accès depuis <a href=\"https://airtable.com/create/"
+"tokens\" target=\"_blank\">https://airtable.com/create/tokens</a>"
+
+#: views/metabox-airtable-settings.php:35
+msgid ""
+"Make sure your token has the <code>data.records:read</code> and <code>schema."
+"bases:read</code> scopes and has access to the base you want to import."
+msgstr ""
+"Assurez-vous que votre jeton d'accès ait bien les droits <code>data.records:"
+"read</code> et <code>schema.bases:read</code> et qu’il ait accès à la base "
+"que vous souhaitez importer."
+
+#: views/metabox-airtable-settings.php:42
+msgid "Base"
+msgstr "Base"
+
+#: views/metabox-airtable-settings.php:61
+msgid "Table"
+msgstr "Table"
+
+#: views/metabox-airtable-settings.php:79
+msgid "View"
+msgstr "Vue"
+
+#: views/metabox-airtable-settings.php:97
+msgid "Filter By Formula"
+msgstr "Filtrer par formule"
+
+#: views/metabox-airtable-settings.php:98
+msgid ""
+"Optionally enter an airtable formula used to filter records. The formula "
+"will be evaluated for each record, and if the result is not 0, false, \"\", "
+"NaN, [], or #Error! the record will be imported. We recommend testing your "
+"formula in the Formula field UI before using it."
+msgstr ""
+"Vous pouvez éventuellement saisir une formule Airtable qui sera utilisée "
+"pour filtrer les enregistrements. La formule sera évaluée pour chaque "
+"enregistrement, et si le résultat n’est pas 0, faux, «  », NaN, [], ou "
+"#Error! L’enregistrement sera importé. Nous vous recommandons de tester "
+"votre formule dans un champs Formule avant de l’utiliser."
+
+#: views/metabox-airtable-settings.php:107
+msgid "Use filters UI"
+msgstr "Utiliser l’interface des filtres"
+
+#: views/metabox-airtable-settings.php:121
+msgid "Include \"Link to another record\" field(s)"
+msgstr "Inclure les champs de type « Lier à une autre entrée »"
+
+#: views/metabox-airtable-settings.php:126
+msgid ""
+"The <a href=\"https://www.airtable.com/guides/build/connect-data-with-linked-"
+"records\" target=\"_blank\">\"Link to another record\"</a> feature in "
+"Airtable enables creating relationships between records in different tables."
+msgstr ""
+"La fonctionnalité <a href=\"https://www.airtable.com/guides/build/connect-"
+"data-with-linked-records\" target=\"_blank\">« Lier à une autre entrée »</a> "
+"dans Airtable permet de créer des relations entre les entrées de différentes "
+"tables."
+
+#: views/metabox-airtable-settings.php:141
+msgid "Yes"
+msgstr "Oui"
+
+#: views/metabox-airtable-settings.php:142
+msgid "No"
+msgstr "Non"
+
+#: views/metabox-airtable-settings.php:152
+msgid ""
+"<strong>Warning:</strong> Including \"Link to another record\" field(s) may "
+"extend synchronization times.<br /> Be aware that this could "
+"<strong>significantly increase the processing time.</strong><br /> "
+"Therefore, it might generate timeouts and you may need to contact your "
+"hosting provider."
+msgstr ""
+"<strong>Attention : </strong>inclure les champs de type « Lier à une autre "
+"entrée » peut allonger les temps de synchronisation.<br /> Soyez conscients "
+"que cela pourrait <strong>augmenter de façon considérable le temps de "
+"traitement.</strong><br /> De ce fait, cela pourrait générer des erreurs de "
+"dépassement du délai d’exécution et vous aurez peut-être besoin de contacter "
+"votre hébergeur."
+
+#: views/metabox-airtable-settings.php:160
+msgid "I understood"
+msgstr "J’ai compris"
+
+#: views/metabox-import-infos.php:17
+msgid "Sync now"
+msgstr "Synchroniser"
+
+#: views/metabox-import-infos.php:21
+msgid "Cancel"
+msgstr "Annuler"
+
+#: views/metabox-import-infos.php:23
+msgid ""
+"You will be able to sync your Airtable content once you have saved this "
+"connection."
+msgstr ""
+"Vous pourrez synchroniser votre contenu Airtable une fois que vous aurez "
+"enregistré cette connexion."
+
+#: views/metabox-importer-settings.php:13
+msgid "Import as"
+msgstr "Importer en tant que"
+
+#: views/metabox-side/infos.php:1
+msgid "Last Sync Status"
+msgstr "État de la dernière synchronisation"
+
+#: views/metabox-side/infos.php:5
+msgid "Successful!"
+msgstr "Réussie !"
+
+#: views/metabox-side/infos.php:7
+msgid "Error"
+msgstr "Erreur"
+
+#: views/metabox-side/infos.php:9
+msgid "Canceled"
+msgstr "Annulée"
+
+#: views/metabox-side/infos.php:19
+msgid "Last Sync"
+msgstr "Dernière synchronisation"
+
+#: views/metabox-side/infos.php:29
+msgid "Scheduled Next Sync"
+msgstr "Prochaine synchronisation"
+
+#: views/metabox-sync.php:13
+msgid "Strategy"
+msgstr "Stratégie"
+
+#: views/metabox-sync.php:14
+msgid ""
+"Select the method to synchronize your Airtable content with WordPress."
+"<br><br><strong>Add:</strong> only adds new content.<br><br><strong>Add & "
+"Update:</strong> same + updates content from modified records."
+"<br><br><strong>Add, Update & Delete:</strong> same + deletes content that "
+"is no longer in Airtable."
+msgstr ""
+"Sélectionnez la méthode de synchronisation de votre contenu Airtable avec "
+"WordPress.<br><br><strong>Ajouter :</strong> ajoute uniquement du nouveau "
+"contenu.<br><br><strong>Ajouter et mettre à jour :</strong> idem + met à "
+"jour le contenu des enregistrements modifiés.<br><br><strong>Ajouter, mettre "
+"à jour et supprimer :</strong> idem + supprime le contenu qui n’est plus "
+"dans Airtable."
+
+#: views/metabox-sync.php:34
+msgid ""
+"Disables automatic synchronization of your Airtable content. You can still "
+"do it manually by clicking on the 'Sync Now' button in the side panel."
+msgstr ""
+"Désactive la synchronisation automatique de votre contenu Airtable. Vous "
+"pouvez toujours la faire manuellement en cliquant sur le bouton "
+"« Synchroniser » dans le panneau latéral."
+
+#: views/metabox-sync.php:40
+msgid ""
+"Enables recurring synchronization of your Airtable content. Choose a "
+"frequency and it will take effect from the date and time the connection is "
+"updated."
+msgstr ""
+"Permet la synchronisation récurrente de votre contenu Airtable. Choisissez "
+"une fréquence et elle prendra effet à partir de la date et de l’heure de "
+"mise à jour de la connexion."
+
+#: views/metabox-sync.php:43
+msgid "Frequency"
+msgstr "Fréquence"
+
+#: views/metabox-sync.php:52
+msgid ""
+"We recommend <a href=\"https://wpconnect.co/blog/setup-cron-wordpress\" "
+"target=\"_blank\">setting up WP-Cron</a> as a cron job for better "
+"performance."
+msgstr ""
+"Nous vous recommandons de <a href=\"https://wpconnect.co/blog/setup-cron-"
+"wordpress\" target=\"_blank\">configurer WP-Cron</a> en tant que tâche cron "
+"pour de meilleures performances."
+
+#: views/metabox-sync.php:65
+msgid "Day of week"
+msgstr "Jour de la semaine"
+
+#: views/metabox-sync.php:68
+msgid "Monday"
+msgstr "Lundi"
+
+#: views/metabox-sync.php:69
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: views/metabox-sync.php:70
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: views/metabox-sync.php:71
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: views/metabox-sync.php:72
+msgid "Friday"
+msgstr "Vendredi"
+
+#: views/metabox-sync.php:73
+msgid "Saturday"
+msgstr "Samedi"
+
+#: views/metabox-sync.php:74
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: views/metabox-sync.php:78
+msgid "Time"
+msgstr "Heure"
+
+#: views/metabox-sync.php:85
+msgid "Instant via Webhook (Pro+ version)"
+msgstr "Instantané via Webhook (version Pro+)"
+
+#: views/metabox-sync.php:86
+msgid ""
+"Enables instant synchronization of your content. Using an Airtable "
+"automation, you can choose your own trigger and the connection will be "
+"updated as soon as the webhook url below is called."
+msgstr ""
+"Permet la synchronisation instantanée de votre contenu. Grâce à une "
+"automatisation Airtable, vous pouvez choisir votre propre déclencheur et la "
+"connexion sera mise à jour dès que le webhook ci-dessous sera appelé."
+
+#: assets/src/filters/src/resources/texts.js:3
+msgid "+ Add Filter"
+msgstr "+ Ajouter une condition"
+
+#: assets/src/filters/src/resources/texts.js:4
+msgid "+ Add Filter Group"
+msgstr "+ Ajouter un groupe de conditions"
+
+#: assets/src/filters/src/resources/texts.js:5
+msgid "Where"
+msgstr "Lorsque"
+
+#: assets/src/filters/src/resources/texts.js:6
+msgid "And"
+msgstr "Et"
+
+#: assets/src/filters/src/resources/texts.js:7
+msgid "Or"
+msgstr "Ou"
+
+#: assets/src/filters/src/resources/texts.js:8
+msgid "Conjunction"
+msgstr "Conjonction"
+
+#: assets/src/filters/src/resources/texts.js:9
+msgid "Filter conditions can only be nested 3 levels deep"
+msgstr "Les conditions ne peuvent être imbriquées au delà de 3 niveaux"
+
+#: assets/src/filters/src/resources/texts.js:10
+msgid "Checked"
+msgstr "Coché"
+
+#: assets/src/filters/src/resources/texts.js:12
+msgid "contains..."
+msgstr "contient…"
+
+#: assets/src/filters/src/resources/texts.js:13
+msgid "does not contain..."
+msgstr "ne contient pas…"
+
+#: assets/src/filters/src/resources/texts.js:14
+msgid "is..."
+msgstr "est…"
+
+#: assets/src/filters/src/resources/texts.js:15
+msgid "is not..."
+msgstr "n’est pas…"
+
+#: assets/src/filters/src/resources/texts.js:16
+msgid "is empty"
+msgstr "est vide"
+
+#: assets/src/filters/src/resources/texts.js:17
+msgid "is not empty"
+msgstr "n’est pas vide"
+
+#: assets/src/filters/src/resources/texts.js:18
+msgid "is within..."
+msgstr "est compris dans la période…"
+
+#: assets/src/filters/src/resources/texts.js:19
+msgid "is before..."
+msgstr "est antérieur à…"
+
+#: assets/src/filters/src/resources/texts.js:20
+msgid "is after..."
+msgstr "est ultérieur à …"
+
+#: assets/src/filters/src/resources/texts.js:21
+msgid "is on or before..."
+msgstr "à cette date ou antérieur…"
+
+#: assets/src/filters/src/resources/texts.js:22
+msgid "is on or after..."
+msgstr "à cette date ou ultérieur…"
+
+#: assets/src/filters/src/resources/texts.js:23
+msgid "is any of..."
+msgstr "est n’importe laquelle des valeurs…"
+
+#: assets/src/filters/src/resources/texts.js:24
+msgid "is none of..."
+msgstr "n’est aucune des valeurs…"
+
+#: assets/src/filters/src/resources/texts.js:25
+msgid "has any of..."
+msgstr "contient n’importe laquelle des valeurs…"
+
+#: assets/src/filters/src/resources/texts.js:26
+msgid "has all of..."
+msgstr "contient toutes les valeurs…"
+
+#: assets/src/filters/src/resources/texts.js:27
+msgid "is exactly..."
+msgstr "est exactement…"
+
+#: assets/src/filters/src/resources/texts.js:28
+msgid "has none of..."
+msgstr "ne contient aucune des valeurs…"
+
+#: assets/src/filters/src/resources/texts.js:29
+msgid "filenames contain..."
+msgstr "les noms de fichier contiennent…"
+
+#: assets/src/filters/src/resources/texts.js:30
+msgid "has file type..."
+msgstr "correspond au type de fichier…"
+
+#: assets/src/filters/src/resources/texts.js:32
+msgid "Choose the field"
+msgstr "Choisir un champ"
+
+#: assets/src/filters/src/resources/texts.js:33
+msgid "Choose the condition"
+msgstr "Choisir un opérator"
+
+#: assets/src/filters/src/resources/texts.js:34
+msgid "Set the value"
+msgstr "Saisir une valeur"
+
+#: assets/src/filters/src/resources/texts.js:36
+msgid "the past week"
+msgstr "il y a une semaine"
+
+#: assets/src/filters/src/resources/texts.js:37
+msgid "the past month"
+msgstr "il y a un mois"
+
+#: assets/src/filters/src/resources/texts.js:38
+msgid "the past year"
+msgstr "il y a un an"
+
+#: assets/src/filters/src/resources/texts.js:39
+msgid "the next week"
+msgstr "dans une semaine"
+
+#: assets/src/filters/src/resources/texts.js:40
+msgid "the next month"
+msgstr "dans un mois"
+
+#: assets/src/filters/src/resources/texts.js:41
+msgid "the next year"
+msgstr "dans un an"
+
+#: assets/src/filters/src/resources/texts.js:42
+msgid "this calendar week"
+msgstr "cette semaine calendaire"
+
+#: assets/src/filters/src/resources/texts.js:43
+msgid "this calendar month"
+msgstr "ce mois calendaire"
+
+#: assets/src/filters/src/resources/texts.js:44
+msgid "this calendar year"
+msgstr "cette année calendaire"
+
+#: assets/src/filters/src/resources/texts.js:45
+msgid "the next number of days..."
+msgstr "dans un certain nombre de jours…"
+
+#: assets/src/filters/src/resources/texts.js:46
+msgid "the past number of days..."
+msgstr "depuis un certain nombre de jours…"
+
+#: assets/src/filters/src/resources/texts.js:47
+msgid "exact date..."
+msgstr "date exacte…"
+
+#: assets/src/filters/src/resources/texts.js:48
+msgid "today"
+msgstr "aujourd’hui"
+
+#: assets/src/filters/src/resources/texts.js:49
+msgid "tomorrow"
+msgstr "demain"
+
+#: assets/src/filters/src/resources/texts.js:50
+msgid "yesterday"
+msgstr "hier"
+
+#: assets/src/filters/src/resources/texts.js:51
+msgid "one week ago"
+msgstr "il y a une semaine"
+
+#: assets/src/filters/src/resources/texts.js:52
+msgid "one week from now"
+msgstr "dans une semaine"
+
+#: assets/src/filters/src/resources/texts.js:53
+msgid "one month ago"
+msgstr "il y a un mois"
+
+#: assets/src/filters/src/resources/texts.js:54
+msgid "one month from now"
+msgstr "dans un mois"
+
+#: assets/src/filters/src/resources/texts.js:55
+msgid "number of days ago..."
+msgstr "il y a un certain nombre de jours…"
+
+#: assets/src/filters/src/resources/texts.js:56
+msgid "number of days from now..."
+msgstr "nombre de jours à compter de maintenant…"
+
+#: assets/src/filters/src/resources/texts.js:59
+msgid "image"
+msgstr "image"
+
+#: assets/src/filters/src/resources/texts.js:60
+msgid "text"
+msgstr "texte"
+
+#: assets/src/metabox-mapping/src/App.js:38
+#: assets/src/metabox-mapping/src/MappingRow.js:105
+msgid "Airtable Field"
+msgstr "Champs Airtable"
+
+#: assets/src/metabox-mapping/src/App.js:43
+#: assets/src/metabox-mapping/src/MappingRow.js:133
+msgid "Import As"
+msgstr "Importer en tant que"
+
+#: assets/src/metabox-mapping/src/App.js:60
+msgid ""
+"Click the <strong>+ Add Field</strong> button to create your first field."
+msgstr ""
+"Cliquez sur le bouton <strong>+ Ajouter un champ</strong> pour créer votre "
+"premier champ."
+
+#: assets/src/metabox-mapping/src/App.js:78
+msgid "+ Add Field"
+msgstr "+ Ajouter un champ"
+
+#: assets/src/metabox-mapping/src/MappingRow.js:41
+msgid "Custom Field"
+msgstr "Champ personnalisé"
+
+#: assets/src/metabox-mapping/src/MappingRow.js:115
+msgid "Fields"
+msgstr "Champs"
+
+#: assets/src/metabox-mapping/src/MappingRow.js:159
+msgid "Sort"
+msgstr "Trier"
+
+#: assets/src/metabox-mapping/src/MappingRow.js:163
+msgid "Remove"
+msgstr "Retirer"
+
+#~ msgid ""
+#~ "Air WP Sync and Air WP Sync Pro should not be active at the same time. "
+#~ "We've automatically deactivated Air WP Sync Pro."
+#~ msgstr ""
+#~ "Air WP Sync et Air WP Sync Pro ne doivent pas être actives en même temps. "
+#~ "Nous avons automatiquement désactivé Air WP Sync Pro."
+
+#~ msgid ""
+#~ "Air WP Sync Pro+ and Air WP Sync Pro should not be active at the same "
+#~ "time. We've automatically deactivated Air WP Sync Pro."
+#~ msgstr ""
+#~ "Air WP Sync et Air WP Sync Pro ne doivent pas être actifs en même temps. "
+#~ "Nous avons automatiquement désactivé Air WP Sync Pro."
+
+#~ msgid "Settings"
+#~ msgstr "Réglages"
+
+#~ msgid "License successfully activated!"
+#~ msgstr "Licence activée avec succès !"
+
+#~ msgid "License successfully deactivated."
+#~ msgstr "Licence désactivée avec succès."
+
+#~ msgid "Table cache cleared!"
+#~ msgstr "Le cache des tables a été vidé !"
+
+#~ msgid "Settings saved!"
+#~ msgstr "Configuration enregistrée !"
+
+#~ msgid "A sync is already running."
+#~ msgstr "Une synchronisation est déjà en cours."
+
+#~ msgid "Could not refresh attachment URLs: %s"
+#~ msgstr "Impossible de rafraîchir les URLs des fichier joints : %s"
+
+#~ msgid "Some tasks have been interrupted, %1$smore details%2$s"
+#~ msgstr "Certaines tâches ont été interrompues, %1$svoir les détails%2$s"
+
+#~ msgid "WP connect server returned an HTTP error, code: %s"
+#~ msgstr "Le serveur WP connect a renvoyé une erreur HTTP, code : %s"
+
+#~ msgid "Your license key expired on %s."
+#~ msgstr "Votre clé de licence a expiré le %s."
+
+#~ msgid "Your license key has been disabled."
+#~ msgstr "Votre clé de licence a été désactivée."
+
+#~ msgid "Your license is invalid."
+#~ msgstr "Votre licence est invalide."
+
+#~ msgid "Your license is not active for this URL."
+#~ msgstr "Votre licence n’est pas active pour cette URL."
+
+#~ msgid "Your license key has reached its activation limit."
+#~ msgstr "Votre clé de licence a atteint sa limite d’activation."
+
+#~ msgid "An error occurred, please try again."
+#~ msgstr "Une erreur est survenue, veuillez réessayer."
+
+#~ msgid "There is a new version of %1$s available."
+#~ msgstr "Il existe une nouvelle version disponible de %1$s."
+
+#~ msgid "Contact your network administrator to install the update."
+#~ msgstr ""
+#~ "Contactez votre administrateur réseau pour installer la mise à jour."
+
+#~ msgid "%1$sView version %2$s details%3$s."
+#~ msgstr "%1$sVoir les détails de la version %2$s%3$s."
+
+#~ msgid "%1$sView version %2$s details%3$s or %4$supdate now%5$s."
+#~ msgstr ""
+#~ "%1$Voir les détails de la version %2$s%3$s ou %4$smettre à jour "
+#~ "maintenant%5$s."
+
+#~ msgid "Update now."
+#~ msgstr "Mettez à jour maintenant."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr ""
+#~ "Vous n’avez pas la permission d’installer les mises à jour de l’extension"
+
+#~ msgid "[All records] %s"
+#~ msgstr "[Toutes les entrées] %s"
+
+#~ msgid "This slug exceeds the 20-character limit. Please use a shorter one."
+#~ msgstr ""
+#~ "Ce slug dépasse la limite de 20 caractères. Veuillez en utiliser un plus "
+#~ "court."
+
+#~ msgid "The name of your Custom Post Type."
+#~ msgstr "Le nom de votre type de publication personnalisé."
+
+#~ msgid "Url Prefix"
+#~ msgstr "Préfixe d’URL"
+
+#~ msgid ""
+#~ "The prefix used in the URL structure as in <code>%s/<b>prefix/</b>post-"
+#~ "name/</code>."
+#~ msgstr ""
+#~ "Le préfixe utilisé dans la structure d’URL comme dans <code>%s/<b>prefix/"
+#~ "</b>nom-du-post/</code>."
+
+#~ msgid "Send the new user an email about their account."
+#~ msgstr "Envoyer au nouvel utilisateur un e-mail concernant son compte."
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "Address"
+#~ msgstr "Adresse"
+
+#~ msgid "Latitude"
+#~ msgstr "Latitude"
+
+#~ msgid "Longitude"
+#~ msgstr "Longitude"
+
+#~ msgid "Please note that we don't support nested repeater yet."
+#~ msgstr ""
+#~ "Veuillez noter que nous ne supportons pas encore les champs répéteurs "
+#~ "imbriqués."
+
+#~ msgid "ACF"
+#~ msgstr "ACF"
+
+#~ msgid "All in One SEO"
+#~ msgstr "All in One SEO"
+
+#~ msgid "Meta Title"
+#~ msgstr "Méta Titre"
+
+#~ msgid "Meta Description"
+#~ msgstr "Méta Description"
+
+#~ msgid "Focus Keyphrase"
+#~ msgstr "Requête cible"
+
+#~ msgid "Canonical URL"
+#~ msgstr "URL canonique (Avancé)"
+
+#~ msgid "Facebook Title"
+#~ msgstr "Titre Facebook"
+
+#~ msgid "Facebook Description"
+#~ msgstr "Description Facebook"
+
+#~ msgid "X(Twitter) Title"
+#~ msgstr "Titre X(Twitter)"
+
+#~ msgid "X(Twitter) Description"
+#~ msgstr "Description X(Twitter)"
+
+#~ msgid "Facebook Image"
+#~ msgstr "Image Facebook"
+
+#~ msgid "X(Twitter) Image"
+#~ msgstr "Image X(Twitter)"
+
+#~ msgid "Use data from Facebook Tab"
+#~ msgstr "Utiliser les données de l’onglet Facebook"
+
+#~ msgid "RankMath SEO"
+#~ msgstr "RankMath SEO"
+
+#~ msgid "Focus Keyword"
+#~ msgstr "Requête cible"
+
+#~ msgid "Use data from Facebook tab"
+#~ msgstr "Utiliser les données de l’onglet Facebook"
+
+#~ msgid "SEOPress"
+#~ msgstr "SEOPress"
+
+#~ msgid "Target keywords"
+#~ msgstr "Mots-clés ciblés"
+
+#~ msgid "Facebook Thumbnail"
+#~ msgstr "Image Facebook"
+
+#~ msgid "X(Twitter) Thumbnail"
+#~ msgstr "Image X(Twitter)"
+
+#~ msgid "noindex"
+#~ msgstr "noindex"
+
+#~ msgid "nofollow"
+#~ msgstr "nofollow"
+
+#~ msgid "noimageindex"
+#~ msgstr "noimageindex"
+
+#~ msgid "noarchive"
+#~ msgstr "noarchive"
+
+#~ msgid "nosnippet"
+#~ msgstr "nosnippet"
+
+#~ msgid "The Events Calendar"
+#~ msgstr "The Events Calendar"
+
+#~ msgid "Event Start Date"
+#~ msgstr "Date de début de l'événement"
+
+#~ msgid "Event End Date"
+#~ msgstr "Date de fin de l’événement"
+
+#~ msgid "Event All Day"
+#~ msgstr "Événement sur toute la journée"
+
+#~ msgid "Event Timezone"
+#~ msgstr "Fuseau horaire de l’événement"
+
+#~ msgid "Event Status"
+#~ msgstr "État de l’événement"
+
+#~ msgid "Event Venue ID"
+#~ msgstr "ID du lieu de l'événement"
+
+#~ msgid "Show Map"
+#~ msgstr "Afficher la carte"
+
+#~ msgid "Show map link"
+#~ msgstr "Afficher le lien vers la carte"
+
+#~ msgid "Event Organizer ID"
+#~ msgstr "IDs des organisateurs de l'événement"
+
+#~ msgid "Event URL"
+#~ msgstr "URL de l'événement"
+
+#~ msgid "Currency Symbol"
+#~ msgstr "Symbole de la devise"
+
+#~ msgid "Currency Position"
+#~ msgstr "Position de la devise"
+
+#~ msgid "Currency Code"
+#~ msgstr "Code de devise ISO"
+
+#~ msgid "Event cost"
+#~ msgstr "Prix"
+
+#~ msgid "Featured Event"
+#~ msgstr "Événement mis en avant"
+
+#~ msgid "Hide From Event Listings"
+#~ msgstr "Rendre invisible sur les listes des évènements"
+
+#~ msgid "Organizer Phone"
+#~ msgstr "Téléphone de l’organisateur"
+
+#~ msgid "Organizer Website"
+#~ msgstr "Site web de l’organisateur"
+
+#~ msgid "Organizer Email"
+#~ msgstr "Email de l’organisateur"
+
+#~ msgid "Venue Address"
+#~ msgstr "Adresse du lieu"
+
+#~ msgid "Venue City"
+#~ msgstr "Ville du lieu"
+
+#~ msgid "Venue Country"
+#~ msgstr "Pays du lieu"
+
+#~ msgid "Venue State or Province"
+#~ msgstr "État ou province du lieu"
+
+#~ msgid "Venue Zipcode"
+#~ msgstr "Code postal du lieu"
+
+#~ msgid "Venue Phone"
+#~ msgstr "Téléphone du lieu"
+
+#~ msgid "Venue URL"
+#~ msgstr "URL du lieu"
+
+#~ msgid "Yoast SEO"
+#~ msgstr "Yoast SEO"
+
+#~ msgid "SEO Title"
+#~ msgstr "Titre SEO"
+
+#~ msgid "Breadcrumbs Title (Advanced)"
+#~ msgstr "Titre pour le fil d’Ariane (Avancé)"
+
+#~ msgid "Canonical URL (Advanced)"
+#~ msgstr "URL canonique (Avancé)"
+
+#~ msgid "Date: %s"
+#~ msgstr "Date: %s"
+
+#~ msgid "Processed posts: %d"
+#~ msgstr "Publications traités : %d"
+
+#~ msgid "Download the latest log file."
+#~ msgstr "Télécharger le fichier journal."
+
+#~ msgid "Webhook URL"
+#~ msgstr "URL Webhook"
+
+#~ msgid ""
+#~ "To create an automation and call a webhook, <a href=\"https://wpconnect."
+#~ "co/blog/create-airtable-automation\" target=\"_blank\">click here</a>"
+#~ msgstr ""
+#~ "Pour créer une automatisation et l’appel d’un webhook, <a href=\"https://"
+#~ "wpconnect.co/blog/create-airtable-automation\" target=\"_blank\">cliquez-"
+#~ "ici</a>"
+
+#~ msgid "Webhook URL will be available once you have saved this connection."
+#~ msgstr ""
+#~ "L’URL du webhook sera disponible une fois que vous aurez enregistré cette "
+#~ "connexion."
+
+#~ msgid "License Key"
+#~ msgstr "Clé de licence"
+
+#~ msgid ""
+#~ "Get your License Key from your <a href=\"https://wpconnect.co/my-account/"
+#~ "\" target=\"_blank\">WP connect account</a>"
+#~ msgstr ""
+#~ "Obtenez votre clé de licence à partir de votre <a href=\"https://"
+#~ "wpconnect.co/my-account/\" target=\"_blank\">compte WP connect</a>"
+
+#~ msgid "De-activate"
+#~ msgstr "Désactiver"
+
+#~ msgid "Your license is valid and activated."
+#~ msgstr "Votre licence est valide et activée."
+
+#~ msgid "Activate"
+#~ msgstr "Activer"
+
+#~ msgid "Cache duration (minutes)"
+#~ msgstr "Durée du cache (minutes)"
+
+#~ msgid ""
+#~ "WordPress caches your Airtable table structure for 15 minutes by default "
+#~ "to improve performance. If changes made in Airtable aren’t showing right "
+#~ "away, try clearing the cache or adjusting the duration above."
+#~ msgstr ""
+#~ "WordPress met en cache la structure de votre table Airtable pendant 15 "
+#~ "minutes par défaut pour améliorer les performances. Si les changements "
+#~ "effectués dans Airtable ne s'affichent pas immédiatement, essayez de "
+#~ "vider le cache ou d'ajuster la durée ci-dessus."
+
+#~ msgid "Update settings"
+#~ msgstr "Mettre à jour les réglages"
+
+#~ msgid "Clear Cache"
+#~ msgstr "Vider le cache"
+
+#~ msgid ""
+#~ "WordPress caches your Airtable table structure for performance reasons. "
+#~ "Clear cache if you do not see your Airtable changes right away."
+#~ msgstr ""
+#~ "WordPress mets les structure des tables en cache pour des raisons de "
+#~ "performances. Videz le cache si les changements dans Airtable ne sont pas "
+#~ "reflétés immédiatement."
+
+#~ msgid "Use Data from Facebook Tab"
+#~ msgstr "Utiliser les données de l’onglet Facebook"
+
+#~ msgid "Some required fields are missing."
+#~ msgstr "Certains champs obligatoires sont manquants."
+
+#~ msgid "Invalid license."
+#~ msgstr "Licence invalide."
+
+#~ msgid "Instant"
+#~ msgstr "Instantané"
+
+#~ msgid ""
+#~ "Please <a href=\"https://wpconnect.co/blog/configure-webhook-airtable\" "
+#~ "target=\"_blank\">configure Airtable</a> to trigger a script that will "
+#~ "call this webhook URL."
+#~ msgstr ""
+#~ "Veuillez <a href=\"https://wpconnect.co/blog/configure-webhook-airtable\" "
+#~ "target=\"_blank\">configurer Airtable</a> pour déclencher un script qui "
+#~ "appellera cette URL de webhook."
+
+#~ msgid "Air WP Sync Pro"
+#~ msgstr "Air WP Sync Pro"
+
+#~ msgid "Wrong API Key"
+#~ msgstr "Mauvaise clé API"
+
+#~ msgid "The Airtable field mapped to the featured image seems invalid."
+#~ msgstr ""
+#~ "Le champs Airtable choisi pour l’image mise en avant ne semble pas valide."
+
+#~ msgid "The Airtable field mapped to the publication date seems invalid."
+#~ msgstr ""
+#~ "Le champs Airtable choisi pour la date de publication ne semble pas "
+#~ "valide."
+
+#~ msgid "API Key"
+#~ msgstr "Clé API"
+
+#~ msgid ""
+#~ "Visit your Airtable <a href=\"https://airtable.com/account\" "
+#~ "target=\"_blank\">account overview page</a> to generate an API key."
+#~ msgstr ""
+#~ "Visitez <a href=\"https://airtable.com/account\" target=\"_blank\">la "
+#~ "page de présentation de votre compte</a> Airtable pour générer une clé "
+#~ "API."
+
+#~ msgid "App ID"
+#~ msgstr "App ID"
+
+#~ msgid ""
+#~ "Open your database on Airtable and look at the URL in your browser bar. "
+#~ "The app ID is the part starting with ‘app’ and located between two "
+#~ "slashes."
+#~ msgstr ""
+#~ "Ouvrez votre base de données sur Airtable et regardez l’URL dans la barre "
+#~ "de votre navigateur. L’App ID est la partie commençant par « app » et "
+#~ "située entre deux slashs."
+
+#~ msgid ""
+#~ "Enter the table name from which you want to synchronize your posts. You "
+#~ "can also use the part starting with ‘tbl’ located between two slashes in "
+#~ "the URL."
+#~ msgstr ""
+#~ "Entrez le nom de la table à partir de laquelle vous souhaitez "
+#~ "synchroniser vos publications. Vous pouvez également utiliser la partie "
+#~ "commençant par 'tbl' située entre deux slashs dans l’URL."
+
+#~ msgid ""
+#~ "Optionally enter a view name from which you want to synchronize your "
+#~ "posts. You can also use the part starting with ’viw’ located between two "
+#~ "slashes in the URL."
+#~ msgstr ""
+#~ "Vous pouvez éventuellement saisir le nom de la vue à partir de laquelle "
+#~ "vous souhaitez synchroniser vos publications. Vous pouvez également "
+#~ "utiliser la partie commençant par ‘viw’ située entre deux slashs dans "
+#~ "l’URL."
+
+#~ msgid "Convert Airtable rich text formatting"
+#~ msgstr "Convertir le texte riche de Airtable"
+
+#~ msgid "(Pro+ version)"
+#~ msgstr "(version Pro+)"
+
+#~ msgid "Custom Post Type (Pro+ version)"
+#~ msgstr "Type de publication personnalisé (version Pro+)"
+
+#~ msgid "Instant (Pro+ version)"
+#~ msgstr "Instantané (version Pro+)"
+
+#~ msgid ""
+#~ "You are currently using the free version of our plugin.\n"
+#~ "\t\t\t\t\t\t<br>To be able to activate more than two simultaneous "
+#~ "connections, you can upgrade to the Pro+ version (thanks for your "
+#~ "support!).\n"
+#~ "\t\t\t\t\t\t<br>Otherwise, you just have to deactivate at least one of "
+#~ "the two active connections you already have and then try come back to "
+#~ "activate this one."
+#~ msgstr ""
+#~ "Vous utilisez actuellement la version gratuite de notre plugin.<br>Pour "
+#~ "pouvoir activer plus de deux connexions simultanées, vous pouvez passer à "
+#~ "la version Pro (merci pour votre soutien !).<br>Sinon, il vous suffit de "
+#~ "désactiver au moins une des deux connexions actives que vous avez déjà, "
+#~ "puis de revenir pour activer celle-ci."
+
+#~ msgid "Recurrence"
+#~ msgstr "Récurrence"

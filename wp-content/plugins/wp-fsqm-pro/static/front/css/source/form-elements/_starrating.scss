@@ -1,0 +1,86 @@
+// ==========================================================================
+// Star Rating Styling
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_rating_star {
+		.ipt_uif_rating_heading {
+			margin: 0 8px 0 0;
+			display: inline-block;
+			padding: 0;
+			font-size: $font-size-base;
+			line-height: 26px;
+			height: 40px;
+			vertical-align: top;
+			color: $secondary-text-color;
+		}
+		[type="radio"] {
+			+ label {
+				display: inline-block;
+				height: 40px;
+				width: 40px;
+				text-align: center;
+				margin: 0 -2px 0 -2px;
+				font-size: 32px;
+				color: $radio-empty-color;
+
+				&:before,
+				&:after {
+					-webkit-transform: none;
+					        transform: none;
+					background-color: transparent;
+					color: inherit;
+					border: 0 none;
+					font-family: 'ipt-icomoon';
+					font-style: normal;
+					font-variant: normal;
+					font-weight: normal;
+					font-size: inherit;
+					-webkit-font-smoothing: antialiased;
+					content: "\f006";
+					will-change: opacity, transform;
+					@include material__smooth-tran( 200ms, opacity );
+					opacity: 1;
+					transition-delay: 0ms;
+					margin: 0;
+				}
+				&:after {
+					opacity: 0;
+					content: "\f005";
+				}
+			}
+
+			&:checked {
+				+ label {
+					&:before {
+						opacity: 1;
+						margin: 0;
+					}
+					&:after {
+						opacity: 0;
+						-webkit-transform: scale(1);
+						        transform: scale(1);
+						margin: 0;
+						line-height: 28px;
+					}
+				}
+			}
+
+			&.hover,
+			&.active {
+				+ label {
+					color: $radio-fill-color;
+					&:before {
+						opacity: 0;
+					}
+					&:after {
+						opacity: 1;
+					}
+					&:hover {
+						-webkit-transform: scale( 1.5 );
+						        transform: scale( 1.5 );
+					}
+				}
+			}
+		}
+	}
+}

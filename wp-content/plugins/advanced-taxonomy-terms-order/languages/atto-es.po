@@ -1,0 +1,355 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Taxonomy Terms Order\n"
+"POT-Creation-Date: 2025-05-23 11:02+0300\n"
+"PO-Revision-Date: 2025-05-23 11:07+0300\n"
+"Last-Translator: NspCode <contact@nsp-code.com>\n"
+"Language-Team: Nsp Code <electronice_delphi@yahoo.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class.atto.admin.php:137
+msgid "Sort "
+msgstr "Ordenar "
+
+#: include/class.atto.admin.php:422 include/class.atto.compatability.php:143
+#: include/class.atto.interface.php:166
+msgid "Taxonomy Order"
+msgstr "Orden de taxonomía"
+
+#: include/class.atto.admin.php:468
+msgid "Advanced Taxonomy Terms Order plugin is inactive, please enter your"
+msgstr ""
+"Términos de taxonomía avanzados El complemento de pedido está inactivo, "
+"ingrese su"
+
+#: include/class.atto.admin.php:468 include/class.atto.options.php:414
+#: include/class.atto.options.php:450
+msgid "Licence Key"
+msgstr "Clave de licencia"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "Order type for %s"
+msgstr "Tipo de orden para %s"
+
+#: include/class.atto.interface.php:107
+#, php-format
+msgid "switched to %s"
+msgstr "cambiado a %s"
+
+#: include/class.atto.interface.php:120
+msgid "Order updated"
+msgstr "Pedido actualizado"
+
+#: include/class.atto.interface.php:172
+msgid ""
+"This plugin cannot work without javascript, because it uses drag and drop "
+"and AJAX."
+msgstr ""
+"Este complemento no puede funcionar sin javascript, porque usa arrastrar y "
+"soltary AJAX."
+
+#: include/class.atto.interface.php:200
+#, php-format
+msgid "%s Taxonomies"
+msgstr "%s taxonomías"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Taxonomy Title"
+msgstr "Título de taxonomía"
+
+#: include/class.atto.interface.php:204 include/class.atto.interface.php:209
+msgid "Total Terms"
+msgstr "Términos totales"
+
+#: include/class.atto.interface.php:282
+msgid "Automatic Order"
+msgstr "Orden Automático"
+
+#: include/class.atto.interface.php:283
+msgid "Manual Order"
+msgstr "Orden manual"
+
+#: include/class.atto.interface.php:294
+msgid "Order By"
+msgstr "Ordenar por"
+
+#: include/class.atto.interface.php:303
+msgid "Default"
+msgstr "Por defecto"
+
+#: include/class.atto.interface.php:306
+msgid "Creation Time / ID"
+msgstr "Hora de creación / ID"
+
+#: include/class.atto.interface.php:309
+msgid "Name"
+msgstr "Nombre"
+
+#: include/class.atto.interface.php:312
+msgid "Count"
+msgstr "Contar"
+
+#: include/class.atto.interface.php:315
+msgid "Slug"
+msgstr "Babosa"
+
+#: include/class.atto.interface.php:318 include/class.atto.interface.php:398
+msgid "Random"
+msgstr "Aleatorio"
+
+#: include/class.atto.interface.php:325
+msgid "Order"
+msgstr "Orden"
+
+#: include/class.atto.interface.php:335
+msgid "Descending"
+msgstr "Descendente"
+
+#: include/class.atto.interface.php:338
+msgid "Ascending"
+msgstr "Ascendente"
+
+#: include/class.atto.interface.php:347 include/class.atto.interface.php:379
+#: include/class.atto.interface.php:419
+msgid "Update"
+msgstr "Actualizar"
+
+#: include/class.atto.interface.php:393
+msgid "Reverse"
+msgstr "Contrarrestar"
+
+#: include/class.atto.interface.php:394
+msgid "Title Asc"
+msgstr "Título Ascendente"
+
+#: include/class.atto.interface.php:395
+msgid "Title Desc"
+msgstr "Descripción del título"
+
+#: include/class.atto.interface.php:396
+msgid "Id order Asc"
+msgstr "ID orden Asc"
+
+#: include/class.atto.interface.php:397
+msgid "Id order Desc"
+msgstr "Id orden Desc"
+
+#: include/class.atto.interface.php:400
+msgid "Collapse All"
+msgstr "Desplegar todo"
+
+#: include/class.atto.interface.php:401
+msgid "Expand All"
+msgstr "Expandir todo"
+
+#: include/class.atto.options.php:55
+msgid "Subscriber"
+msgstr "Abonado"
+
+#: include/class.atto.options.php:56
+msgid "Contributor"
+msgstr "Contribuyente"
+
+#: include/class.atto.options.php:57
+msgid "Author"
+msgstr "Autor"
+
+#: include/class.atto.options.php:58
+msgid "Editor"
+msgstr "Editor"
+
+#: include/class.atto.options.php:59
+msgid "Administrator"
+msgstr "Administrador"
+
+#: include/class.atto.options.php:87
+msgid "General Settings"
+msgstr "Configuración general"
+
+#: include/class.atto.options.php:103
+msgid "Show"
+msgstr "Mostrar"
+
+#: include/class.atto.options.php:104
+msgid "Hide"
+msgstr "Ocultar"
+
+#: include/class.atto.options.php:117
+msgid "Minimum Level to use this plugin"
+msgstr "Nivel mínimo para usar este complemento"
+
+#: include/class.atto.options.php:136
+msgid "Auto Sort"
+msgstr "Clasificación automática"
+
+#: include/class.atto.options.php:140 include/class.atto.options.php:153
+#: include/class.atto.options.php:201
+msgid "OFF"
+msgstr "APAGADO"
+
+#: include/class.atto.options.php:141 include/class.atto.options.php:154
+#: include/class.atto.options.php:202
+msgid "ON"
+msgstr "EN"
+
+#: include/class.atto.options.php:142
+msgid ""
+"If checked, the plug-in automatically update the WordPress queries to use "
+"the new sort (<b>No code update is necessarily</b>)"
+msgstr ""
+"Si está marcado, el complemento actualiza automáticamente las consultas de "
+"WordPress para usarel nuevo tipo (<b>Ninguna actualización de código es "
+"necesariamente</b>)"
+
+#: include/class.atto.options.php:142
+msgid "Additional details about this setting can be found at"
+msgstr "Se pueden encontrar detalles adicionales sobre esta configuración en"
+
+#: include/class.atto.options.php:143
+msgid ""
+"If ON selected, the plug-in automatically update the WordPress queries to "
+"use the new sort (<b>No code update is necessary</b>)"
+msgstr ""
+"Si está activado, el complemento actualiza automáticamente las consultas de "
+"WordPress parause el nuevo tipo (<b>No es necesario actualizar el código</b>)"
+
+#: include/class.atto.options.php:143
+#, php-format
+msgid ""
+"Additional details about this setting can be found at <a href=\"%s\" "
+"target=\"_blank\">Autosort Details</a>"
+msgstr ""
+"Se pueden encontrar detalles adicionales sobre esta configuración en <a "
+"href=\"%s\"target=\"_blank\">Detalles de clasificación automática</a>"
+
+#: include/class.atto.options.php:149
+msgid "Admin Sort"
+msgstr "Clasificación de administrador"
+
+#: include/class.atto.options.php:156
+msgid "Update order of terms within the admin interface per customised sort"
+msgstr ""
+"Actualice el orden de los términos dentro de la interfaz de administración "
+"por orden personalizado"
+
+#: include/class.atto.options.php:162
+msgid "Default Interface Sort"
+msgstr "Clasificación de interfaz predeterminada"
+
+#: include/class.atto.options.php:197
+msgid "WPML Sort Synchronization"
+msgstr "Sincronización WPML"
+
+#: include/class.atto.options.php:204
+msgid ""
+"The WPML Sort Synchronization feature ensures that custom sorting applied to "
+"taxonomy terms is seamlessly synchronized across all translations managed by "
+"the WPML (WordPress Multilingual) plugin"
+msgstr ""
+"La función de sincronización de ordenación de WPML garantiza que la "
+"ordenación personalizada aplicada a los términos de taxonomía se sincroniza "
+"perfectamente en todas las traducciones gestionadas por el plugin WPML "
+"(WordPress Multilingual)"
+
+#: include/class.atto.options.php:214
+msgid "Save Settings"
+msgstr "Guardar ajustes"
+
+#: include/class.atto.options.php:251
+msgid "Settings Saved"
+msgstr "Ajustes guardados"
+
+#: include/class.atto.options.php:283 include/class.atto.options.php:361
+#, php-format
+msgid "There was a problem connecting to %s"
+msgstr "Hubo un problema al conectarse a %s"
+
+#: include/class.atto.options.php:309
+msgid ""
+"There was a problem deactivating the licence on other side, however locally "
+"the key is now removed: "
+msgstr ""
+"Hubo un problema al desactivar la licencia en el otro lado, sin embargo "
+"localmentela clave ahora se elimina: "
+
+#: include/class.atto.options.php:326 include/class.atto.options.php:399
+#, php-format
+msgid "There was a problem with the data block received from %s"
+msgstr "Hubo un problema con el bloque de datos recibido de %s"
+
+#: include/class.atto.options.php:343
+msgid "Licence Key can't be empty"
+msgstr "La clave de licencia no puede estar vacía"
+
+#: include/class.atto.options.php:391
+#, php-format
+msgid "There was a problem activating the licence: %s"
+msgstr "Hubo un problema al activar la licencia: %s"
+
+#: include/class.atto.options.php:411 include/class.atto.options.php:447
+msgid "Advanced Taxonomy Terms Order License"
+msgstr "Licencia de pedido de términos de taxonomía avanzada"
+
+#: include/class.atto.options.php:426
+#, php-format
+msgid ""
+"Enter the Licence Key you received when you purchased this product. If you "
+"lost the key, you can always retrieve it from <a href=\"%s\" "
+"target=\"_blank\">My Account</a>."
+msgstr ""
+"Ingrese la clave de licencia que recibió cuando compró este producto. Si "
+"ustedperdió la clave, siempre puede recuperarla de <a "
+"href=\"%s\"target=\"_blank\">Mi Cuenta</a>."
+
+#: include/class.atto.options.php:431
+msgid "Save"
+msgstr "Ahorrar"
+
+#: include/class.atto.options.php:472
+msgid "Deactivate"
+msgstr "Desactivar"
+
+#: include/class.atto.options.php:475
+#, php-format
+msgid ""
+"You can generate more keys from <a href=\"%s\" target=\"_blank\">My Account</"
+"a>"
+msgstr ""
+"Puede generar más claves desde <a href=\"%s\" target=\"_blank\">Mi cuenta</a>"
+
+#: include/class.atto.plugin-updater.php:123
+msgid "An error occurred when trying to identify the plugin."
+msgstr "Ocurrió un error al intentar identificar el complemento."
+
+#: include/class.atto.plugin-updater.php:123
+#: include/class.atto.plugin-updater.php:143
+msgid "Try again"
+msgstr "Intentar otra vez"
+
+#: include/class.atto.plugin-updater.php:143
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "Se produjo un error HTTP inesperado durante la solicitud de la API."
+
+#: include/class.atto.terms_walker.php:49
+msgid "Move to Top"
+msgstr "Mover hacia arriba"
+
+#: include/class.atto.terms_walker.php:50
+msgid "Move to Bottom"
+msgstr "Mover hacia abajo"
+
+#~ msgid ""
+#~ "Allow drag & drop functionality for sorting within default WordPress "
+#~ "taxonomy interface."
+#~ msgstr ""
+#~ "Permitir la funcionalidad de arrastrar y soltar para ordenar dentro de "
+#~ "WordPress predeterminadointerfaz de taxonomía."

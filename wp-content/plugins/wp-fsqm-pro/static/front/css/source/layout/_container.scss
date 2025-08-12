@@ -1,0 +1,32 @@
+// ==========================================================================
+// Container Styling
+// ==========================================================================
+.#{$selector} {
+	.ipt-eform-width-restrain {
+		margin: 0 auto;
+	}
+	.ipt-eform-content {
+		margin: 0 auto;
+		background-color: $preset-bg;
+		@include material__box-shadow();
+		&.eform-payment-retry {
+			.ipt_uif_mother_wrap {
+				padding: 14px;
+			}
+		}
+	}
+	.ipt_fsqm_form_logo {
+		text-align: center;
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+			box-shadow: none;
+			border: 0 none;
+			height: auto;
+		}
+	}
+	.ipt-eform-admin-edit-ui {
+		background-color: $preset-bg;
+	}
+}

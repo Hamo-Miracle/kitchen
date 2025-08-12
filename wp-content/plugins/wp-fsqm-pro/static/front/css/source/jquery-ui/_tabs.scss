@@ -1,0 +1,104 @@
+// ==========================================================================
+// jQuery UI Tab Styling
+// ==========================================================================
+.#{$selector} {
+	.ui-tabs {
+		.ui-tabs-panel {
+			padding: 14px 20px;
+		}
+		.ipt-eform-tab-nav-wrap {
+			position: relative;
+			display: flex;
+			padding: 0 2em;
+			background-color: $primary-color;
+			color: $primary-color-text;
+			margin: -0.2em -0.2em 0 -0.2em;
+
+			.eform-tab-active-notifier,
+			.eform-tab-passive-notifier {
+				display: none;
+			}
+			.eform-tab-passive-notifier {
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -4px;
+				height: 4px;
+				background: $primary-color-dark;
+				box-shadow: 0 -1px 1px 0px fade-out( $box-shadow-color, 0.6 );
+			}
+
+			.eform-tab-nav {
+				display: none;
+			}
+		}
+		.ui-tabs-nav {
+			position: relative;
+			overflow-x: auto;
+			overflow-y: hidden;
+			height: 3em;
+			white-space: nowrap;
+			padding: 0;
+			margin: 0;
+
+			&::-webkit-scrollbar-track {
+				background-color: rgba( 255, 255, 255, 0.5 );
+			}
+
+			&::-webkit-scrollbar {
+				height: 4px;
+				background-color: rgba( 0, 0, 0, 0.2 );
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: rgba( 0, 0, 0, 0.5 );
+			}
+
+			li {
+				display: inline-block;
+				text-align: left;
+				line-height: 3em;
+				height: 3em;
+				padding: 0;
+				margin: 0;
+				float: none;
+				opacity: 0.5;
+				@include material__smooth-tran( 200ms, opacity );
+				&.ui-tabs-active {
+					opacity: 1;
+				}
+
+				.ui-tabs-anchor {
+					display: block;
+					width: 100%;
+					height: 100%;
+					font-size: 1.5em;
+					padding: 0 0.5em;
+					color: $primary-color-text;
+					/*text-overflow: ellipsis;*/
+					/*overflow: hidden;*/
+					text-shadow: 0 0 1px fade-out( $box-shadow-color, 0.5 );
+					&:focus,
+					&:active {
+						outline: none;
+					}
+
+					.ipticm {
+						vertical-align: middle;
+						margin-right: 4px;
+						display: inline-block;
+					}
+
+					.eform-tab-labels {
+						display: inline-block;
+
+						.ipt_uif_tab_subtitle {
+							font-size: 0.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+}

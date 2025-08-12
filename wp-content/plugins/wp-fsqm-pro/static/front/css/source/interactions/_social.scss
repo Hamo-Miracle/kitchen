@@ -1,0 +1,25 @@
+// ==========================================================================
+// Social Sharing Icons
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_social_share {
+		text-align: center;
+		a {
+			color: $primary-color;
+			@include material__smooth-tran( 400ms, color );
+			will-change: color;
+			font-size: 48px;
+			&:hover {
+				color: $primary-color-dark;
+				text-decoration: none;
+				outline: none;
+			}
+			&:focus {
+				outline: none;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+

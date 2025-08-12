@@ -1,0 +1,140 @@
+// ==========================================================================
+// Leaderboard Structure
+// ==========================================================================
+.ipt_eform_leaderboard {
+	.ipt_eform_lb_main_container  {
+		padding: 14px;
+
+		.ipt_eform_leaderboard_welcome {
+			margin: -14px -14px 14px -14px;
+
+			.ipt_eform_leaderboard_form_logo {
+				margin: 0;
+				img {
+					margin: 0 auto;
+					padding: 0;
+					border: 0 none;
+					border-radius: 0;
+				}
+			}
+			.ipt_eform_lb_title {
+				margin: 0;
+				padding: 20px 14px;
+			}
+			.ipt_fsqm_lb_msg {
+				padding: 0 16px 8px;
+			}
+		}
+
+		.ipt_eform_leaderboard_data {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.eform-lb-rank {
+		font-size: 24px;
+		text-align: center;
+	}
+	.ipt_eform_lb_avatar {
+		text-align: center;
+		margin: 0 0 10px 0;
+	}
+	.ipt_eform_lb_username {
+		clear: both;
+		margin: 5px 0;
+		text-align: center;
+	}
+	.ipt_eform_lb_umeta {
+		overflow: hidden;
+		h6 {
+			text-align: center;
+			margin: 0 0 5px 0;
+		}
+	}
+
+	@media screen and ( min-width: $screen-md-min ) {
+		.eform-lb-rank {
+			float: right;
+		}
+		.ipt_eform_lb_avatar {
+			float: left;
+			margin: 0 10px 0 0;
+		}
+		.ipt_eform_lb_username {
+			clear: none;
+			text-align-last: left;
+			margin: 10px 0;
+		}
+		.ipt_eform_lb_umeta {
+			overflow: hidden;
+			h6 {
+				text-align-last: left;
+				float: left;
+				clear: none;
+				margin: 0 10px 0 0;
+			}
+		}
+	}
+
+	.dataTables_processing {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 250px;
+		height: 70px;
+		margin-left: -125px;
+		margin-top: -35px;
+		padding: 0;
+		border: 0 none;
+		text-align: center;
+		background-color: transparent;
+	}
+
+	.ipt_eform_lb_table {
+		td {
+			&.lb-score,
+			&.lb-pscore,
+			&.lb-mscore,
+			&.lb-date {
+				text-align: right;
+			}
+		}
+
+		&.collapsed {
+			td.lb-name {
+				cursor: pointer;
+				position: relative;
+				&::before {
+					@include icomoon( "\f055" );
+					font-size: 48px;
+					line-height: 64px;
+					float: left;
+					display: inline-block;
+					margin-right: 14px;
+					position: absolute;
+					top: 50%;
+					margin-top: -32px;
+					@media screen and ( min-width: $screen-md-min ) {
+						position: static;
+						margin-top: 0;
+						top: auto;
+					}
+				}
+			}
+			.parent {
+				td.lb-name::before {
+					content: "\f056";
+				}
+			}
+		}
+	}
+
+	@media screen and ( min-width: $screen-sm-min ) {
+		.ipt_eform_lb_username,
+		.ipt_eform_lb_umeta {
+			margin-top: 10px;
+		}
+	}
+}
+
+

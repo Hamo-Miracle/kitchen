@@ -1,0 +1,91 @@
+// ==========================================================================
+// Summary Table
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_preview {
+		border-collapse: collapse;
+		background-color: #fff;
+		tbody,
+		thead,
+		tfoot,
+		tr,
+		td,
+		th {
+			border-radius: 0;
+			border: 1px solid #e1e1e1;
+			color: #555;
+		}
+		thead,
+		th {
+			color: #212121;
+			font-weight: normal;
+		}
+
+		td.td-separator {
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+
+		&.bordered > tbody > tr {
+			border-bottom-color: #e1e1e1;
+		}
+
+		thead,
+		tfoot,
+		.head {
+			border-color: $primary-color;
+			background-color: $primary-color;
+			color: $primary-text-color;
+			td,
+			th {
+				border-color: $primary-color;
+				background-color: $primary-color;
+				color: $primary-color-text;
+			}
+		}
+
+		table {
+			height: 100%;
+			margin: -1px 0px -1px -1px;
+			width: calc(100% + 1px);
+		}
+
+		img {
+			max-width: none;
+		}
+		.icons {
+			text-align: center;
+			vertical-align: middle;
+			img {
+				width: 16px;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+				padding: 0;
+			}
+		}
+	}
+
+	.eform-fb-correct {
+		font-weight: bold;
+		> * {
+			font-weight: bold;
+		}
+	}
+
+	@media print {
+		-webkit-print-color-adjust: exact;
+		thead,
+		tfoot,
+		.head {
+			border-color: $primary-color !important;
+			background-color: $primary-color !important;
+			color: $primary-text-color !important;
+			td,
+			th {
+				border-color: $primary-color !important;
+				background-color: $primary-color !important;
+				color: $primary-color-text !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,121 @@
+// ==========================================================================
+// Messages Styling
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_message,
+	.ipt_fsqm_form_message_success,
+	.ipt_fsqm_form_message_error,
+	.ipt_fsqm_form_validation_error,
+	.ipt_fsqm_form_message_restore,
+	.eform-styled-widget {
+		margin: 20px auto;
+		padding: 0;
+		@include material__box-shadow-subtle();
+		.ui-widget-header {
+			background-color: $primary-color;
+			border-bottom: 4px solid $primary-color-dark;
+			@include material__box-shadow-subtle();
+			display: flex;
+			align-items: center;
+			width: 100%;
+
+			> * {
+				margin: 0;
+				color: $primary-color-text;
+				padding: 10px 14px;
+				vertical-align: middle;
+				width: 100%;
+				font-size: (18 / 14) * 1em;
+
+				.ipt_uif_message_close {
+					float: right;
+					text-decoration: none;
+					&:hover,
+					&:active {
+						text-decoration: none;
+					}
+				}
+			}
+			[class*='ipt-icomoon-'] {
+				vertical-align: baseline;
+				margin-right: 0.2em;
+				line-height: inherit;
+				position: relative;
+				top: 1px;
+			}
+		}
+
+		.ui-widget-content {
+			padding: 7px 14px;
+			background-color: $preset-bg;
+			color: $secondary-text-color;
+			p {
+				margin-top: 10px;
+			}
+		}
+
+		.ipt_fsqm_sm_meta {
+			margin: 0;
+			padding: 5px 15px;
+			text-align: center;
+			background-color: $preset-button-container;
+			color: $preset-button-container-color;
+		}
+	}
+
+	.ipt_fsqm_form_message_error,
+	.ipt_fsqm_form_validation_error,
+	.ipt_fsqm_uif_message_red,
+	.ipt_fsqm_uif_message_error {
+		.ui-widget-header {
+			background-color: $error-color;
+			border-bottom: 4px solid darken($error-color, 20%);
+		}
+	}
+
+	.ipt_fsqm_form_message_restore {
+		.ipt_fsqm_form_message_close {
+			float: right;
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+		h3 {
+			display: block;
+			width: 100%;
+		}
+
+		.ui-widget-content {
+			overflow: hidden;
+			padding: 14px 0 0 0;
+
+			p {
+				margin: 0 7px 14px 7px;
+			}
+		}
+
+		.ipt_fsqm_sayt_reset {
+			margin: 0;
+			width: 100%;
+			// background: transparent;
+			// color: $preset-button-container-color;
+			// box-shadow: none;
+			font-size: 1em;
+			border-radius: 0;
+			// &:active,
+			// &:focus {
+			// 	color: $preset-button-container-color;
+			// }
+			// &:hover {
+			// 	background-color: $preset-button-container-button-hover;
+			// 	box-shadow: none;
+			// 	color: $secondary-text-color;
+			// }
+			&[disabled] {
+				opacity: 0.5;
+			}
+		}
+	}
+}

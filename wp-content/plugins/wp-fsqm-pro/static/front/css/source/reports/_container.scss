@@ -1,0 +1,47 @@
+// ==========================================================================
+// Reports Container
+// ==========================================================================
+.#{$selector} {
+	.ipt_fsqm_report_container {
+		margin: 0 0 14px 0;
+		@include material__box-shadow-subtle();
+
+		> .ipt_uif_container:not( .ipt_uif_collapsible ) {
+			> .ipt_uif_container_head {
+				background-color: $primary-color;
+				border-bottom: 4px solid $primary-color-dark;
+				@include material__box-shadow-subtle();
+				display: flex;
+				align-items: center;
+				width: 100%;
+
+				h3 {
+					margin: 0;
+					color: $primary-color-text;
+					padding: 14px 14px 10px 14px;
+					vertical-align: middle;
+					border: 0 none;
+
+					[class*="ipt-icomoon-"] {
+						margin-right: 0.2em;
+					}
+				}
+			}
+
+			> .ipt_uif_container_inner {
+				padding: 0 15px;
+			}
+		}
+
+		.ipt_uif_collapsible {
+			margin: 14px 0;
+		}
+	}
+	.ipt_fsqm_report_no_wrap {
+		.ipt_fsqm_report_container {
+			box-shadow: none;
+		}
+	}
+}
+
+

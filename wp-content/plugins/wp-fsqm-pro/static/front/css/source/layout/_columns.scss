@@ -1,0 +1,73 @@
+// ==========================================================================
+// eForm Material Theme Columns
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_column {
+		float: left;
+		width: 100%;
+		min-height: 10px;
+		padding: 5px 0;
+		margin: 2px 0 15px;
+		&[class*="ipt_fsqm_container_col_"],
+		&[class^="ipt_fsqm_container_col_"] {
+			margin: 0;
+			padding: 0;
+		}
+		&.ipt_fsqm_main_heading_column {
+			margin-bottom: 0;
+		}
+		&.ipt_fsqm_container_heading {
+			margin-bottom: 10px;
+		}
+		.ipt_uif_column_inner {
+			padding: 0;
+			&.side_margin {
+				padding: 0 $grid-gutter-width;
+			}
+		}
+
+		// All 50% width for small devices
+		@media screen and ( min-width: $screen-sm-min ) {
+			&.ipt_uif_column_half,
+			&.ipt_uif_column_third,
+			&.ipt_uif_column_two_third,
+			&.ipt_uif_column_forth,
+			&.ipt_uif_column_three_forth {
+				width: 50%;
+			}
+		}
+
+		@media screen and ( min-width: $screen-lg-min ) {
+			&.ipt_uif_column_third {
+				width: 33.3333333333%;
+			}
+			&.ipt_uif_column_two_third {
+				width: 66.6666666666%;
+			}
+			&.ipt_uif_column_forth {
+				width: 25%;
+			}
+			&.ipt_uif_column_three_forth {
+				width: 75%;
+			}
+		}
+		&.column-centered {
+			text-align: center;
+		}
+	}
+	.clear {
+		clear: both;
+	}
+}
+
+.ipt_uif_widget_vertical {
+	.#{$selector} {
+		.ipt_uif_column {
+			width: 100%;
+			&[class*=" ipt_uif_column_"],
+			&[class^="ipt_uif_column_"] {
+				width: 100%;
+			}
+		}
+	}
+}

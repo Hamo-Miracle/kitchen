@@ -1,0 +1,17 @@
+// ==========================================================================
+// Basic Widget Styling
+// ==========================================================================
+.#{$selector} {
+	.ui-widget {
+		@include material__box-shadow();
+	}
+
+	.ui-widget-header {
+		background: $primary-color;
+		color: $primary-color-text;
+
+		a {
+			color: $primary-color-text;
+		}
+	}
+}

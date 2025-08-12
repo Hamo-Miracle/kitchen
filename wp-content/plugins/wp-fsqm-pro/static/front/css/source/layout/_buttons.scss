@@ -1,0 +1,72 @@
+.#{$selector} {
+	.ipt-eform-material-button-container.ipt_fsqm_form_button_container {
+		padding: #{$grid-gutter-width * 2};
+		margin: 0;
+		text-align: center;
+		clear: both;
+
+		// Soft hide it
+		// Because we don't know what we are going to break
+		// otherwise
+		&.eform-progress-button-hidden {
+			display: none;
+		}
+
+		.eform-button-container-inner {
+			justify-content: center;
+			.ui-button {
+				font-size: 1.142857142857143em;
+				&.small,
+				&.large {
+					font-size: 1.142857142857143em;
+				}
+			}
+		}
+
+		// Classic design
+		&.ipt_fsqm_form_button_container--classic {
+			background-color: $preset-button-container;
+			margin: 0;
+			padding: 0;
+			.eform-button-container-inner {
+				justify-content: space-around;
+				.ui-button {
+					flex: 3 0 auto;
+					width: auto;
+					margin: 0;
+					&.ipt_fsqm_form_button_interval_save,
+					&.ipt_fsqm_form_button_reset {
+						// max-width: 100px;
+						flex-grow: 1;
+					}
+				}
+			}
+
+			// Alternate color
+			&.eform-material-alternate-pb {
+				background-color: $primary-color;
+				.ui-button {
+					background-color: $primary-color;
+					color: $primary-color-text;
+
+					.waves-ripple {
+						background-color: $primary-color-light;
+					}
+
+					&:hover {
+						background-color: $primary-color-dark;
+					}
+
+					&:active,
+					&:focus {
+						color: $primary-color-text;
+					}
+
+					&:focus {
+						box-shadow: 0 0 0 2px fade-out($primary-color, 0.8);
+					}
+				}
+			}
+		}
+	}
+}

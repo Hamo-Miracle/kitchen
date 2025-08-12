@@ -1,0 +1,139 @@
+// ==========================================================================
+// SDA Listing
+// ==========================================================================
+.#{$selector} {
+	.ipt_uif_sda {
+		padding: 0;
+		.ipt_uif_sda_body {
+			padding: 14px 0;
+			position: relative;
+			&.eform-sda-has-toolbar {
+				.ipt_uif_sda_elem {
+					padding-top: 24px;
+				}
+			}
+		}
+
+		&.ipt-uif-sda-empty {
+			.ipt_uif_sda_body {
+				&::before {
+					content: attr( data-buttontext );
+					display: block;
+					padding: 14px;
+					color: $disabled-color-text;
+					border: 1px solid $divider-color;
+					margin: 7px 0;
+					text-align: center;
+				}
+			}
+		}
+
+		&.eform-sda-reached-min {
+			.ipt_uif_sda_elem .ipt-eform-sda-toolbar .ipt_uif_sda_del {
+				background-color: $disabled-color;
+				color: $disabled-color-text;
+				opacity: 0.7;
+				cursor: not-allowed;
+				&:hover,
+				&:active {
+					background-color: $disabled-color;
+					color: $disabled-color-text;
+				}
+			}
+		}
+	}
+
+	.ipt_uif_sda_elem {
+		padding: 10px 0;
+		position: relative;
+		border: 1px solid $preset-button-container;
+		margin: 10px 0;
+
+		.ipt-eform-sda-toolbar {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: auto;
+			height: 32px;
+			background-color: $preset-button-container;
+			color: $preset-button-container-color;
+			text-align: center;
+
+			.ipt_uif_sda_drag,
+			.ipt_uif_sda_del {
+				display: inline-block;
+				float: left;
+				font-size: 14px;
+				line-height: 32px;
+				height: 32px;
+				width: 32px;
+				text-align: center;
+				color: $preset-button-container-color;
+				will-change: background-color, color;
+				@include material__smooth-tran( 200ms, all );
+				cursor: move;
+				background-color: transparent;
+
+				&:hover {
+					background-color: $primary-color;
+					color: $primary-color-text;
+				}
+			}
+			.ipt_uif_sda_del {
+				cursor: pointer;
+
+				i {
+					position: relative;
+					top: -1px;
+					left: 1px;
+				}
+
+				&:hover {
+					background-color: $error-color;
+				}
+			}
+		}
+	}
+
+	.eform-sda-sortable-helper {
+		background-color: $divider-color;
+	}
+
+	.ipt_uif_sda_elem {
+		&.ui-sortable-helper {
+			background-color: fade-out( $preset-bg, 0.1 );
+			opacity: 0.8 !important;
+			@media screen and ( min-width: $screen-lg-min ) {
+				-webkit-filter: blur( 1px );
+				        filter: blur( 1px );
+			}
+		}
+	}
+
+	.ipt_uif_sda_highlight {
+		background-color: $disabled-color;
+		border-top: 1px solid $divider-color;
+		border-bottom: 1px solid $divider-color;
+		min-height: 50px;
+		width: 100%;
+		border-radius: 2px;
+	}
+
+	// Hide Icons
+	.eform-repeatable-container-noicon {
+		.input-field {
+			.ipticm.prefix {
+				display: none;
+			}
+			input {
+				margin-left: 0;
+				width: 100%;
+			}
+			label {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,148 @@
+// ==========================================================================
+// Keyboard UI Styling
+// ==========================================================================
+
+.#{$selector} {
+	.ui-keyboard {
+		background-color: $keyboard-bg;
+		color: $keyboard-color;
+		padding: 10px;
+		margin: 0;
+		font-size: $font-size-base;
+		font-family: $font-family-base;
+		font-weight: 300;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 16000;
+		/* see issue #484 */
+		touch-action: manipulation;
+
+		.ui-keyboard-button {
+			display: inline-block;
+			width: auto;
+			min-width: 32px;
+			height: 32px;
+			margin: 2px;
+			padding: 0 10px;
+			border-radius: 4px;
+			text-align: center;
+			cursor: pointer;
+			overflow: hidden;
+			line-height: 32px;
+			border: 0 none;
+			background-color: $keyboard-regular-bg;
+			color: $keyboard-color;
+			-moz-user-focus: ignore;
+			will-change: background-color, color, border-color;
+			transition: color 200ms ease, background-color 200ms ease,
+				border-color 200ms ease;
+			span {
+				padding: 0;
+				margin: 0;
+				white-space: nowrap;
+				display: inline-block;
+			}
+
+			&.ui-keyboard-actionkey {
+				background-color: $keyboard-action-bg;
+			}
+			&.ui-keyboard-shift {
+				width: 93px;
+			}
+			&.ui-keyboard-enter {
+				width: 65px;
+			}
+			&.ui-keyboard-space {
+				width: 335px;
+				text-indent: -9999px;
+			}
+			&.ui-keyboard-bksp,
+			&.ui-keyboard-tab {
+				width: 80px;
+			}
+			&.ui-keyboard-accept,
+			&.ui-keyboard-cancel {
+				width: 104px;
+			}
+			&.ui-keyboard-97,
+			&.ui-keyboard-65 {
+				margin-left: 90px;
+			}
+			&.ui-keyboard-96,
+			&.ui-keyboard-49,
+			&.ui-keyboard-50,
+			&.ui-keyboard-51,
+			&.ui-keyboard-52,
+			&.ui-keyboard-53,
+			&.ui-keyboard-54,
+			&.ui-keyboard-57,
+			&.ui-keyboard-48,
+			&.ui-keyboard-45,
+			&.ui-keyboard-61,
+			&.ui-keyboard-126,
+			&.ui-keyboard-33,
+			&.ui-keyboard-64,
+			&.ui-keyboard-35,
+			&.ui-keyboard-36,
+			&.ui-keyboard-37,
+			&.ui-keyboard-94,
+			&.ui-keyboard-38,
+			&.ui-keyboard-42,
+			&.ui-keyboard-40,
+			&.ui-keyboard-41,
+			&.ui-keyboard-95,
+			&.ui-keyboard-43,
+			&.ui-keyboard-55,
+			&.ui-keyboard-56,
+			&.ui-keyboard-47,
+			&.ui-keyboard-46 {
+				border: $keyboard-num-border;
+			}
+
+			&.ui-state-hover,
+			&:hover {
+				border-color: $keyboard-hover-bg;
+				background-color: $keyboard-hover-bg;
+				color: $keyboard-hover-text;
+			}
+			&:active,
+			&:focus {
+				border-color: $keyboard-active-bg;
+				background-color: $keyboard-active-bg;
+				color: $keyboard-hover-text;
+			}
+		}
+
+		.ui-keyboard-button-endrow {
+			clear: left;
+		}
+
+		@media screen and (max-width: $screen-xs-max) {
+			padding: 10px;
+			font-size: 12px;
+
+			.ui-keyboard-button {
+				min-width: 14px;
+				width: auto !important;
+				height: 16px;
+				border-radius: 1px;
+				padding: 0 6px;
+				line-height: 12px;
+				margin: 2px 1px !important;
+				&.ui-keyboard-space {
+					width: 150px !important;
+				}
+			}
+		}
+
+		&[data-ui-keyboard-layout='num'] {
+			.ui-keyboard-button {
+				width: 32px;
+			}
+		}
+	}
+	.ui-keyboard-has-focus {
+		z-index: 16001;
+	}
+}
